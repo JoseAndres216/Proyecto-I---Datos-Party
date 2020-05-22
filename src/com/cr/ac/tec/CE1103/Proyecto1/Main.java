@@ -8,5 +8,6 @@ public class Main {
 	    prueba del github
 	    hola mundo x2
 	    */
+        System.out.println("hola mundo");
     }
 }
