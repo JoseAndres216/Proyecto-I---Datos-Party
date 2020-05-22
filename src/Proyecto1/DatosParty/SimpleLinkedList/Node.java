@@ -1,6 +1,6 @@
-package com.cr.ac.tec.CE1103.Proyecto1.SimpleLinkedList;
+package Proyecto1.DatosParty.SimpleLinkedList;
 
-public class Node<T extends Comparable<T>> {
+public class Node<T> {
     private Node next = null;
     private T data = null;
 

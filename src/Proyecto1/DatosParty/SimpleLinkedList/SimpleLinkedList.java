@@ -1,6 +1,8 @@
-package com.cr.ac.tec.CE1103.Proyecto1.SimpleLinkedList;
+package Proyecto1.DatosParty.SimpleLinkedList;
 
-public class SimpleLinkedList <T extends Comparable<T>> {
+import Proyecto1.DatosParty.MotherList.MotherList;
+
+public class SimpleLinkedList <T> extends MotherList {
     private Node<T> head = null;
     private int extension = 0;
 
@@ -11,7 +13,6 @@ public class SimpleLinkedList <T extends Comparable<T>> {
     public boolean isEmpty(){
         return this.head == null;
     }
-
 
     public void insertFirst(T data){
         Node node = new Node(data);
@@ -25,7 +26,6 @@ public class SimpleLinkedList <T extends Comparable<T>> {
             this.extension++;
         }
     }
-
     public void insertLast(T data){
         Node node = new Node(data);
         if(isEmpty()){
@@ -40,7 +40,6 @@ public class SimpleLinkedList <T extends Comparable<T>> {
             this.extension++;
         }
     }
-
     public void insertPosition(int position, T data) {
         if(position > this.extension){
             System.out.println("Invalid position");
@@ -58,7 +57,6 @@ public class SimpleLinkedList <T extends Comparable<T>> {
             this.extension++;
         }
     }
-
     public boolean isNode(T data){
         Node temp = this.head;
         int nodesLeft = this.extension;
@@ -73,7 +71,6 @@ public class SimpleLinkedList <T extends Comparable<T>> {
         }
         return false;
     }
-
     public int searchPosition(T data){
         Node temp = this.head;
         int position=1;
@@ -88,7 +85,6 @@ public class SimpleLinkedList <T extends Comparable<T>> {
         }
         return -1;
     }
-
     public void editNode(int position, T newData){
         if(position<=0 || position>this.extension){
             System.out.println("The node doesn't exists");
@@ -102,16 +98,13 @@ public class SimpleLinkedList <T extends Comparable<T>> {
             temp.setData(newData);
         }
     }
-
     public void editNodebyData(T previousData, T newData){
         editNode(searchPosition(previousData), newData);
     }
-
     public void deleteFirstnode(){
         Node temp = this.head;
         this.head = temp.getNext();
     }
-
     public void deleteLastnode(){
         Node temp = this.head;
         while(temp.getNext().getNext()!=null){
@@ -119,7 +112,6 @@ public class SimpleLinkedList <T extends Comparable<T>> {
         }
         temp.setNext(null);
     }
-
     public void deleteNodebyData(T data){
         int position = searchPosition(data);
         if(position==-1) {
@@ -139,16 +131,20 @@ public class SimpleLinkedList <T extends Comparable<T>> {
         }
     }
 
-    public void retrnList(){
-        if(isEmpty()){
-            System.out.println("List empty");
-        } else{
-            System.out.println("List: ");
-            Node temp = this.head;
-            while(temp != null){
-                System.out.println("["+temp.getData()+"] ");
-                temp = temp.getNext();
-            }
+
+    @Override
+    public String toString() {
+        if (this.head == null) {
+            return "[]";
         }
+        StringBuilder stringBuilder = new StringBuilder("[ ");
+        Node<T> temp = this.head;
+        while (temp != null) {
+            stringBuilder.append(temp.getData().toString());
+            stringBuilder.append(", ");
+            temp = temp.getNext();
+        }
+        stringBuilder.append(" ]");
+        return stringBuilder.toString();
     }
 }
