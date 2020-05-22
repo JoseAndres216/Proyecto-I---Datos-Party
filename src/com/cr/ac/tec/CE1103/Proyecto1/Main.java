@@ -6,7 +6,7 @@ public class Main {
 	// write your code here
 	    /*
 	    prueba del github
-	    hola mundo
+	    hola mundo x2
 	    */
     }
 }
