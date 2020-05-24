@@ -2,6 +2,7 @@ package Proyecto1.DatosParty.DoubleLinkedList;
 import Proyecto1.DatosParty.MotherList.MotherList;
 import Proyecto1.DatosParty.SimpleLinkedList.Node;
 
+import java.io.IOException;
 
 public class DoubleLinkedList<T> extends MotherList{
 
@@ -28,7 +29,6 @@ public class DoubleLinkedList<T> extends MotherList{
          }
     }
     public void insertLast(T data){
-
         DoubleNode newElement = new DoubleNode<T>(data);
         if(this.head == null){
             this.head = this.tail = newElement;
@@ -40,22 +40,57 @@ public class DoubleLinkedList<T> extends MotherList{
             this.tail = tail;
             this.len++;
         }
-
-
     }
 
-    @Override
-    public String toString() {
-        if (this.head == null) {
-            return "Double list: []";
+    public T index(int i){
+        if(((i) > (this.len-1))| i < 0){
+            return null;
         }
-        StringBuilder stringBuilder = new StringBuilder("Double list: [ ");
+        else{
+            if(i ==0){
+                return this.head.getData();
+            }
+            else if(i == (this.len-1)){
+                return this.tail.getData();
+            }
+            DoubleNode temp = this.head;
+            int var = 0;
+            while(var != i){
+                var++;
+                temp = temp.getNext();
+            }
+            return (T) temp.getData();
+        }
+    }
+    public String print() {
+        if (this.head == null) {
+            return "Double list of: ";
+        }
+        StringBuilder stringBuilder = new StringBuilder("Double list of: ");
         DoubleNode<T> temp = this.head;
         while (temp != null) {
             stringBuilder.append(temp.getData().toString());
             stringBuilder.append(", ");
             temp = temp.getNext();
         }
+        stringBuilder.append(" ]");
+        return stringBuilder.toString();
+    }
+
+    public String printReverse() {
+        if (this.head == null) {
+            return "Double list (reversed) of:  ";
+        }
+        StringBuilder stringBuilder = new StringBuilder("Double list:  ");
+        DoubleNode<T> temp = this.tail;
+
+
+        while (temp != null) {
+            stringBuilder.append(temp.getData().toString());
+            stringBuilder.append(", ");
+            temp = temp.getPrev();
+        }
+
         stringBuilder.append(" ]");
         return stringBuilder.toString();
     }

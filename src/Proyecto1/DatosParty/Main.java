@@ -11,5 +11,24 @@ public class Main {
 
     public static void main(String[] args) {
 
+    DoubleLinkedList<Integer> listaDoble = new DoubleLinkedList<>();
+    listaDoble.insertFirst(4);
+    listaDoble.insertFirst(3);
+    listaDoble.insertFirst(2);
+    listaDoble.insertFirst(1);
+
+
+    System.out.println(listaDoble.index(0));
+    System.out.println(listaDoble.index(1));
+    System.out.println(listaDoble.index(2));
+    System.out.println(listaDoble.index(3));
+
+
+
+    System.out.println(listaDoble.print());
+
+
+
+
     }
 }
