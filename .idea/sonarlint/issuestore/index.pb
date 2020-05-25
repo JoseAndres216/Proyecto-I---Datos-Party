@@ -27,3 +27,5 @@ R
 "src/Proyecto1/DatosParty/Main.java,c\9\c96e86a4ff57aaf2bce7eb5202091ffa63e84cae
 o
 ?src/Proyecto1/DatosParty/SimpleLinkedList/SimpleLinkedList.java,5\5\5593653909631b83bd8b18c2acff892cf53bff13
+i
+9src/Proyecto1/DatosParty/DoubleLinkedList/DoubleNode.java,6\4\64748a50dcb4a5773dc89262ec3e8fedf65458cc

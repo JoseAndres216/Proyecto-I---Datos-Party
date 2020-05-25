@@ -2,7 +2,7 @@ package Proyecto1.DatosParty.SimpleLinkedList;
 
 import Proyecto1.DatosParty.MotherList.MotherList;
 
-public class SimpleLinkedList <T> extends MotherList {
+public class SimpleLinkedList <T> implements MotherList {
     private Node<T> head = null;
     private int extension = 0;
 

@@ -4,7 +4,7 @@ import Proyecto1.DatosParty.SimpleLinkedList.Node;
 
 import java.io.IOException;
 
-public class DoubleLinkedList<T> extends MotherList{
+public class DoubleLinkedList<T> implements MotherList{
 
     private DoubleNode<T> head, tail;
     private int len;

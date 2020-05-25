@@ -98,6 +98,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Observer/Box.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Observer/BoxObserver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Observer/Observable.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Observer/Observer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Phases/Fase.java">
           <value>
             <set />
@@ -129,6 +149,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/SimpleLinkedList/SimpleLinkedList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java">
           <value>
             <set />
           </value>
