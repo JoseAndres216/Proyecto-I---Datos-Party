@@ -2,7 +2,7 @@ package Proyecto1.DatosParty.SimpleLinkedList;
 
 import Proyecto1.DatosParty.MotherList.MotherList;
 
-public class SimpleLinkedList <T> implements MotherList {
+public class SimpleLinkedList <T> implements MotherList<T> {
     private Node<T> head = null;
     private int extension = 0;
 
@@ -40,6 +40,12 @@ public class SimpleLinkedList <T> implements MotherList {
             this.extension++;
         }
     }
+
+    @Override
+    public T index(int i) {
+        return null;
+    }
+
     public void insertPosition(int position, T data) {
         if(position > this.extension){
             System.out.println("Invalid position");

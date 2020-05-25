@@ -4,7 +4,7 @@ import Proyecto1.DatosParty.SimpleLinkedList.Node;
 
 import java.io.IOException;
 
-public class DoubleLinkedList<T> implements MotherList{
+public class DoubleLinkedList<T> implements MotherList<T>{
 
     private DoubleNode<T> head, tail;
     private int len;
@@ -41,7 +41,6 @@ public class DoubleLinkedList<T> implements MotherList{
             this.len++;
         }
     }
-
     public T index(int i){
         if(((i) > (this.len-1))| i < 0){
             return null;
@@ -62,6 +61,7 @@ public class DoubleLinkedList<T> implements MotherList{
             return (T) temp.getData();
         }
     }
+
     public String print() {
         if (this.head == null) {
             return "Double list of: ";
@@ -76,7 +76,6 @@ public class DoubleLinkedList<T> implements MotherList{
         stringBuilder.append(" ]");
         return stringBuilder.toString();
     }
-
     public String printReverse() {
         if (this.head == null) {
             return "Double list (reversed) of:  ";
@@ -94,4 +93,5 @@ public class DoubleLinkedList<T> implements MotherList{
         stringBuilder.append(" ]");
         return stringBuilder.toString();
     }
+
 }

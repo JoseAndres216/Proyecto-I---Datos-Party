@@ -2,7 +2,7 @@ package Proyecto1.DatosParty.CircularDoubleList;
 
 import Proyecto1.DatosParty.MotherList.MotherList;
 
-public class CircularDoubleList<T> implements MotherList {
+public class CircularDoubleList<T> implements MotherList<T> {
     private Node<T> head = null;
     private int extension;
 
@@ -14,7 +14,7 @@ public class CircularDoubleList<T> implements MotherList {
         return this.head == null;
     }
 
-    /*public void insertFirst(T data){
+    public void insertFirst(T data){
         Node<T> node = new Node(data);
         if(isEmpty()){
             this.head = node;
@@ -40,7 +40,7 @@ public class CircularDoubleList<T> implements MotherList {
             }
             node.setPrev(temp);
         }
-    }*/
+    }
 
     public void insertLast(T data){
         Node<T> node = new Node(data);
@@ -62,6 +62,11 @@ public class CircularDoubleList<T> implements MotherList {
             this.head.setPrev(node);
             this.extension++;
         }
+    }
+
+    @Override
+    public T index(int i) {
+        return null;
     }
 
     /*public void insertPosition(int position, T data) {

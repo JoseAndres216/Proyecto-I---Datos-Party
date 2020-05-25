@@ -2,7 +2,7 @@ package Proyecto1.DatosParty.SimpleCircularList;
 
 import Proyecto1.DatosParty.MotherList.MotherList;
 
-public class SimpleCircularList<T> implements MotherList {
+public class SimpleCircularList<T> implements MotherList<T> {
     private Node<T> head = null;
     private int extension;
 
@@ -43,6 +43,11 @@ public class SimpleCircularList<T> implements MotherList {
             node.setNext(this.head);
             this.extension++;
         }
+    }
+
+    @Override
+    public T index(int i) {
+        return null;
     }
 
     /*public void insertPosition(int position, T data) {
