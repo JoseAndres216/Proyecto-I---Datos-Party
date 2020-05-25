@@ -9,38 +9,10 @@ public class CircularDoubleList<T> implements MotherList<T> {
     private int getExtension(){
         return this.extension;
     }
-
     public boolean isEmpty(){
         return this.head == null;
     }
 
-    public void insertFirst(T data){
-        Node<T> node = new Node(data);
-        if(isEmpty()){
-            this.head = node;
-            node.setNext(this.head);
-            node.setPrev(this.head);
-            this.extension++;
-        } else{
-            Node<T> temp = this.head;
-            this.head = node;
-            temp.setPrev(node);
-            node.setNext(temp);
-            this.extension++;
-            temp = this.head;
-            for(int i=1; i!=this.extension; i++){
-                if(temp.getNext()==temp){
-                    temp.setNext(this.head);
-                }
-                temp=temp.getNext();
-            }
-            temp=this.head;
-            while(temp.getNext()!=this.head){
-                temp=temp.getNext();
-            }
-            node.setPrev(temp);
-        }
-    }
 
     public void insertLast(T data){
         Node<T> node = new Node(data);
@@ -63,46 +35,6 @@ public class CircularDoubleList<T> implements MotherList<T> {
             this.extension++;
         }
     }
-
-    @Override
-    public T index(int i) {
-        return null;
-    }
-
-    /*public void insertPosition(int position, T data) {
-        if(position > this.extension){
-            System.out.println("Invalid position");
-        } else if(position==1){
-            insertFirst(data);
-        } else{
-            Proyecto1.DatosParty.SimpleLinkedList.Node temp = this.head;
-            while((position-2)!=0){
-                temp = temp.getNext();
-                position--;
-            }
-            Proyecto1.DatosParty.SimpleLinkedList.Node node = new Proyecto1.DatosParty.SimpleLinkedList.Node(data);
-            node.setNext(temp.getNext());
-            temp.setNext(node);
-            this.extension++;
-        }
-    }*/
-
-    public boolean isNode(T data){
-        Node<T> temp = this.head;
-        int nodesLeft = this.extension;
-        while(nodesLeft!=0){
-            if(temp.getData()==data){
-                return true;
-            }
-            else{
-                temp = temp.getNext();
-                nodesLeft--;
-            }
-        }
-        System.out.println("Couldn't find the node");
-        return false;
-    }
-
     public int searchPosition(T data){
         Node<T> temp = this.head;
         int position=1;
@@ -123,77 +55,48 @@ public class CircularDoubleList<T> implements MotherList<T> {
         }
         return -1;
     }
-    public void editNode(int position, T newData){
-        if(position<=0 || position>this.extension){
-            System.out.println("The node doesn't exists");
-        }else{
-            Node<T> temp = this.head;
-            int counter = 1;
-            while(counter!=position){
-                temp = temp.getNext();
-                counter++;
-            }
-            temp.setData(newData);
-        }
-    }
-    public void editNodebyData(T previousData, T newData){
-        editNode(searchPosition(previousData), newData);
-    }
-    public void deleteFirstnode(){
+
+    public void deleteFirstnode() {
         Node<T> temp = this.head;
-        while(temp.getNext()!=this.head){
-            temp=temp.getNext();
+        while (temp.getNext() != this.head) {
+            temp = temp.getNext();
         }
         temp.setNext(temp.getNext().getNext());
         this.head = temp.getNext();
         this.head.setPrev(temp);
 
     }
-    public void deleteLastnode(){
+
+    public void deleteLastNode() {
         Node<T> temp = this.head;
-        while(temp.getNext().getNext()!=this.head){
-            temp=temp.getNext();
+        while (temp.getNext().getNext() != this.head) {
+            temp = temp.getNext();
         }
         temp.setNext(this.head);
         this.head.setPrev(temp);
     }
-    public void deleteNodebyData(T data){
-        int position = searchPosition(data);
-        if(position==-1) {
-            System.out.println("Couldn't find the node");
-        }else if(position==1) {
-            deleteFirstnode();
-        }else if(position==this.extension){
-            deleteLastnode();
-        } else{
-            Node<T> temp = this.head;
-            int counter = 1;
-            while((counter+1)!=position){
-                temp = temp.getNext();
-                counter++;
-            }
-            temp.setNext(temp.getNext().getNext());
-            temp.getNext().setPrev(temp);
-        }
-    }
 
-    public T retrnNodedata(int index){
-        if(index<0 || index>=this.extension){
+    public T accessNode(int index) {
+        if (index < 0 || index >= this.extension) {
             System.out.println("Node out of range.");
             return null;
-        } else{
+        } else {
             Node<T> temp = this.head;
-            while(index!=0){
-                temp=temp.getNext();
+            while (index != 0) {
+                temp = temp.getNext();
                 index--;
             }
             return temp.getData();
         }
     }
 
-
     @Override
-    public String toString() {
+    public int len() {
+        return 0;
+    }
+
+
+    public String print() {
         if (this.head == null) {
             return "[]";
         }

@@ -1,8 +1,6 @@
 package Proyecto1.DatosParty.DoubleLinkedList;
-import Proyecto1.DatosParty.MotherList.MotherList;
-import Proyecto1.DatosParty.SimpleLinkedList.Node;
 
-import java.io.IOException;
+import Proyecto1.DatosParty.MotherList.MotherList;
 
 public class DoubleLinkedList<T> implements MotherList<T>{
 
@@ -33,33 +31,36 @@ public class DoubleLinkedList<T> implements MotherList<T>{
         if(this.head == null){
             this.head = this.tail = newElement;
             this.len++;
-        }
-        else{
+        } else {
             this.tail.setNext(newElement);
             newElement.setPrev(this.tail);
             this.tail = tail;
             this.len++;
         }
     }
-    public T index(int i){
-        if(((i) > (this.len-1))| i < 0){
+
+    public T accessNode(int i) {
+        if (((i) > (this.len - 1)) | i < 0) {
             return null;
-        }
-        else{
-            if(i ==0){
+        } else {
+            if (i == 0) {
                 return this.head.getData();
-            }
-            else if(i == (this.len-1)){
+            } else if (i == (this.len - 1)) {
                 return this.tail.getData();
             }
             DoubleNode temp = this.head;
             int var = 0;
-            while(var != i){
+            while (var != i) {
                 var++;
                 temp = temp.getNext();
             }
             return (T) temp.getData();
         }
+    }
+
+    @Override
+    public int len() {
+        return 0;
     }
 
     public String print() {

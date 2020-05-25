@@ -1,8 +1,14 @@
 package Proyecto1.DatosParty.MotherList;
 
-public interface MotherList<T>{
-    public boolean isEmpty();
-    public void insertFirst(T data);
-    public void insertLast(T data);
-    public T index(int i);
+public interface MotherList<T> {
+    boolean isEmpty();
+
+    void insertLast(T data);
+
+    T accessNode(int i);
+
+    int len();
+
 }
+
+

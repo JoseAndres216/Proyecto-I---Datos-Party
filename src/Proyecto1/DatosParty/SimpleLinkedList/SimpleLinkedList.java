@@ -6,7 +6,7 @@ public class SimpleLinkedList <T> implements MotherList<T> {
     private Node<T> head = null;
     private int extension = 0;
 
-    public int getExtension() {
+    public int len() {
         return extension;
     }
 
@@ -42,9 +42,10 @@ public class SimpleLinkedList <T> implements MotherList<T> {
     }
 
     @Override
-    public T index(int i) {
+    public T accessNode(int i) {
         return null;
     }
+
 
     public void insertPosition(int position, T data) {
         if(position > this.extension){

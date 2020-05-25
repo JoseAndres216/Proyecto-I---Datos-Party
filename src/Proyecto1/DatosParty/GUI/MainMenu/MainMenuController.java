@@ -1,4 +1,4 @@
-package sample;
+package Proyecto1.DatosParty.GUI.MainMenu;
 
-public class Controller {
+public class MainMenuController {
 }

@@ -1,0 +1,8 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öØ¸×
+N
+java:S1068",Remove this unused "observer" private field.(ÒŞÀ×ıÿÿÿÿ8‰äÔ£.
+R
+java:S1874"0Remove this use of "Observer"; it is deprecated.(ÒŞÀ×ıÿÿÿÿ8‚òèÕ£.
+E
+java:S1068"(Remove this unused "busy" private field.(Â·8Úà©Ô£.

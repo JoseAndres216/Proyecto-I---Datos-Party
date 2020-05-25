@@ -46,9 +46,16 @@ public class SimpleCircularList<T> implements MotherList<T> {
     }
 
     @Override
-    public T index(int i) {
+    public T accessNode(int i) {
         return null;
     }
+
+    @Override
+    public int len() {
+        return 0;
+    }
+
+
 
     /*public void insertPosition(int position, T data) {
         if(position > this.extension){

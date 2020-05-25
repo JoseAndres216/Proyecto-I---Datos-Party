@@ -1,0 +1,17 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÒÁÕ³8˜õŞ©¤.
+p
+java:S1128"SRemove this unused import 'Proyecto1.DatosParty.SimpleLinkedList.SimpleLinkedList'.(ƒ§³¹8€¯­©¤.
+y
+java:S1128"WRemove this unused import 'Proyecto1.DatosParty.CircularDoubleList.CircularDoubleList'.(ÉïŒüÿÿÿÿ8€¯­©¤.
+]
+java:S1128";Remove this unused import 'Proyecto1.DatosParty.Boxes.Box'.(ƒ¢õ§ıÿÿÿÿ8€¯­©¤.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¦İê¥şÿÿÿÿ8€¯­©¤.
+t
+java:S1128"WRemove this unused import 'Proyecto1.DatosParty.SimpleCircularList.SimpleCircularList'.(ÅÙÀÄ8ò»”Ö£.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(íí‘ƒşÿÿÿÿ8˜õŞ©¤.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ñ¾Ş8˜õŞ©¤.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹»˜¦ÿÿÿÿÿ
+d
+java:S1128"GRemove this unused import 'Proyecto1.DatosParty.MotherList.MotherList'.(Ş§•º8€¯­©¤.
+T	java:S106"9Replace this use of System.out or System.err by a logger.(º¤úc8€¯­©¤.

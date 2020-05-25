@@ -1,0 +1,12 @@
+
+d
+java:S1128"GRemove this unused import 'Proyecto1.DatosParty.SimpleLinkedList.Node'.(Ü•‹‚8„¯­©¤.
+;
+java:S2178."Correct this "|" to "||".(Å¯ºÉüÿÿÿÿ8š–ê©¤.
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ8„¯­©¤.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Þâƒ•
+>
+java:S1659	""Declare "tail" on a separate line.(õô¡R8„¯­©¤.
+„
+java:S4165("bRemove this useless assignment; "tail" already holds the assigned value along all execution paths.(ü–ý•øÿÿÿÿ8„¯­©¤.

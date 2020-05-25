@@ -1,0 +1,6 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Óá¤Ë
+_
+java:S2094"BRemove this empty class, write its code or make it an "interface".(Ú×‚÷8¿ß‘Ö£.
+W
+java:S1610":Convert the abstract class "MotherList" into an interface.(Ú×‚÷8ÝØøÕ£.
