@@ -150,6 +150,19 @@ public class SimpleCircularList<T> extends MotherList {
         }
     }
 
+    public T retrnNodedata(int index){
+        if(index<0 || index>=this.extension){
+            System.out.println("Node out of range.");
+            return null;
+        } else{
+            Node<T> temp = this.head;
+            while(index!=0){
+                temp=temp.getNext();
+                index--;
+            }
+            return temp.getData();
+        }
+    }
 
     @Override
     public String toString() {
