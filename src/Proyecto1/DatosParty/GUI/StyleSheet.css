@@ -1,15 +1,25 @@
 .HeadingsColor {
-
     -fx-Background-color: #581845
+}
 
+.greenColor {
+    -fx-Background-color: #6cb74b;
+    -fx-stroke: #6cb74b;
+}
+
+.blueColor {
+    -fx-Background-color: #3790e5;
+    -fx-stroke: #3790e5;
+}
+
+.turquesaColor {
+    -fx-Background-color: #43b6a7
 }
 
 .backGroundColor {
 
-    -fx-Background-color: #e3dbbe
-
+    -fx-Background-color: #ffffff
 }
-
 
 
 

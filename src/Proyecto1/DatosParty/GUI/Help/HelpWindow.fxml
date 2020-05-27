@@ -1,144 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
-<?import java.lang.String?>
 <AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0"
             styleClass="backGroundColor" stylesheets="@../StyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Proyecto1.DatosParty.GUI.Help.HelpWindow">
-    <children>
-        <Pane prefHeight="142.0" prefWidth="800.0" styleClass="HeadingsColor" stylesheets="@../StyleSheet.css">
-            <children>
-                <Text fill="#e3dbbe" fontSmoothingType="LCD" layoutX="166.0" layoutY="95.0" strokeType="OUTSIDE"
-                      strokeWidth="0.0" styleClass="text" text="How to play!?" textAlignment="CENTER"
-                      wrappingWidth="481.35662841796875">
-                    <font>
-                        <Font name="Jokerman" size="62.0"/>
-                    </font>
-                </Text>
-            </children>
-        </Pane>
-        <Text fill="#581845" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game rules"
-              textAlignment="CENTER" wrappingWidth="398.1566219329834">
-            <font>
-                <Font name="Arial" size="39.0"/>
-            </font>
-            <styleClass>
-                <String fx:value="text"/>
-                <String fx:value="backGroundColor"/>
-                <String fx:value="text"/>
-            </styleClass>
-        </Text>
-        <Line endX="-9.0" endY="444.0" layoutX="409.0" layoutY="156.0" startX="-9.0" startY="-20.800018310546875"
-              stroke="#581845" strokeWidth="2.0" styleClass="HeadingsColor"/>
-        <Text fill="#581845" layoutX="401.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text"
-              text="Controls" textAlignment="CENTER" wrappingWidth="398.1566219329834">
-            <font>
-                <Font name="Jokerman" size="39.0"/>
-            </font>
-        </Text>
-        <Text layoutX="32.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="Each player gets 1 turn to roll dices, when all players are finished, a round is counted."
-              wrappingWidth="334.496826171875">
-            <font>
-                <Font name="Jokerman" size="15.0"/>
-            </font>
-        </Text>
-        <Text layoutX="32.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="For advancing through the table, players must roll the dices." wrappingWidth="334.496826171875">
-            <font>
-                <Font name="Jokerman" size="15.0"/>
-            </font>
-        </Text>
-        <Text layoutX="32.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="A minigame will be started after the ending of a round, the awards are:  "
-              wrappingWidth="334.496826171875">
-            <font>
-                <Font name="Jokerman" size="15.0"/>
-            </font>
-        </Text>
-        <Text layoutX="63.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 coins for the 1st"
-              wrappingWidth="334.496826171875">
-            <font>
-                <Font name="Jokerman" size="13.0"/>
-            </font>
-        </Text>
-        <Text layoutX="63.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3 coins for the 2nd"
-              wrappingWidth="334.496826171875">
-            <font>
-                <Font name="Jokerman" size="13.0"/>
-            </font>
-        </Text>
-        <Text layoutX="63.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 coin for the 3rd"
-              wrappingWidth="334.496826171875">
-            <font>
-                <Font name="Jokerman" size="13.0"/>
-            </font>
-        </Text>
-        <Text layoutX="37.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*"
-              wrappingWidth="11.296844482421875">
-            <font>
-                <Font name="Jokerman" size="27.0"/>
-            </font>
-        </Text>
-        <Text layoutX="8.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*"
-              wrappingWidth="11.296844482421875">
-            <font>
-                <Font name="Jokerman" size="27.0"/>
-            </font>
-        </Text>
-        <Text layoutX="8.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*"
-              wrappingWidth="11.296844482421875">
-            <font>
-                <Font name="Jokerman" size="27.0"/>
-            </font>
-        </Text>
-        <Text layoutX="8.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*"
-              wrappingWidth="11.296844482421875">
-            <font>
-                <Font name="Jokerman" size="27.0"/>
-            </font>
-        </Text>
-        <Text layoutX="37.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*"
-              wrappingWidth="11.296844482421875">
-            <font>
-                <Font name="Jokerman" size="27.0"/>
-            </font>
-        </Text>
-        <Text layoutX="37.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*"
-              wrappingWidth="11.296844482421875">
-            <font>
-                <Font name="Jokerman" size="27.0"/>
-            </font>
-        </Text>
-        <Text layoutX="32.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="If two playersa are together on the same box, a 1v1 will decide who goes backwards"
-              wrappingWidth="334.496826171875">
-            <font>
-                <Font name="Jokerman" size="15.0"/>
-            </font>
-        </Text>
-        <Text layoutX="8.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*"
-              wrappingWidth="11.296844482421875">
-            <font>
-                <Font name="Jokerman" size="27.0"/>
-            </font>
-        </Text>
-        <Text layoutX="32.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="The player who has more stars at the ending of all rounds, will be the winner!!, a star is worth 10 coins."
-              wrappingWidth="334.496826171875">
-            <font>
-                <Font name="Jokerman" size="15.0"/>
-            </font>
-        </Text>
-        <Text layoutX="13.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*"
-              wrappingWidth="11.296844482421875">
-            <font>
-                <Font name="Jokerman" size="27.0"/>
-            </font>
-        </Text>
-    </children>
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Proyecto1.DatosParty.GUI.Help.HelpWindowController">
+   <children>
+      <ImageView fitHeight="155.0" fitWidth="200.0" layoutX="300.0" layoutY="-22.0">
+         <image>
+            <Image url="@../Resources/images/helpLogo.jpeg"/>
+         </image>
+      </ImageView>
+
+
+      <Line endX="219.0" layoutX="581.0" layoutY="53.0" startX="-100.0" stroke="#3998ef" strokeWidth="3.0"
+            styleClass="blueColor"/>
+      <Line endX="219.0" layoutX="581.0" layoutY="49.0" startX="-100.0" stroke="#71c04f" strokeWidth="3.0"/>
+      <Line endX="219.0" layoutX="581.0" layoutY="45.0" startX="-100.0" strokeWidth="3.0"/>
+      <Line endX="67.20001220703125" layoutX="257.0" layoutY="45.0" startX="-267.8956298828125" strokeWidth="3.0"
+            AnchorPane.leftAnchor="-12.3956298828125" AnchorPane.rightAnchor="474.29998779296875"/>
+      <Line endX="269.8786926269531" endY="3.814697265625E-6" layoutX="55.04936523437516" layoutY="49.0"
+            startX="-100.0" stroke="#71c04f" strokeWidth="3.0" styleClass="greenColor"
+            AnchorPane.rightAnchor="472.9506195068358"/>
+      <Line endX="216.60003662109375" layoutX="108.0" layoutY="53.0" startX="-116.00000762939453" stroke="#3998ef"
+            strokeWidth="3.0" styleClass="blueColor"/>
+      <ImageView fitHeight="90.0" fitWidth="102.0" layoutX="590.0" layoutY="56.0">
+         <image>
+            <Image url="@../Resources/images/keyboard.png"/>
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="102.0" layoutX="89.0" layoutY="64.0">
+         <image>
+            <Image url="@../Resources/images/daRules.png"/>
+         </image>
+      </ImageView>
+      <Line endX="2.0" endY="431.0" layoutX="398.0" layoutY="169.0" startX="1.79998779296875"
+            startY="-66.80000305175781" strokeWidth="3.0"/>
+      <Line endX="1.79998779296875" endY="431.0" layoutX="403.0" layoutY="169.0" startX="1.79998779296875"
+            startY="-67.29997253417969" stroke="#1bfd01" strokeWidth="3.0" styleClass="greenColor"/>
+      <Line endX="1.79998779296875" endY="428.0" layoutX="408.0" layoutY="172.0" startX="1.79998779296875"
+            startY="-70.0999755859375" stroke="#1528d5" strokeWidth="3.0" styleClass="blueColor"/>
+      <Line endX="1.79998779296875" endY="412.0" layoutX="393.0" layoutY="188.0" startX="1.79998779296875"
+            startY="-86.29997253417969" stroke="#1bfd01" strokeWidth="3.0" styleClass="greenColor"/>
+      <Line endX="1.79998779296875" endY="420.0" layoutX="388.0" layoutY="180.0" startX="1.79998779296875"
+            startY="-77.89997863769531" stroke="#1528d5" strokeWidth="3.0" styleClass="blueColor"/>
+      <Text layoutX="43.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="∙Each player has 1 turn to roll dices, when all players are finished, a round is counted."
+            textAlignment="JUSTIFY" wrappingWidth="334.496826171875">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="17.0"/>
+         </font>
+      </Text>
+      <Text layoutX="43.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="∙For advancing through the table, players must roll the dices." textAlignment="JUSTIFY"
+            wrappingWidth="334.496826171875">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="17.0"/>
+         </font>
+      </Text>
+      <Text layoutX="43.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="∙A minigame will be started after the ending of a round, the awards are:  " textAlignment="JUSTIFY"
+            wrappingWidth="334.496826171875">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="17.0"/>
+         </font>
+      </Text>
+      <Text layoutX="74.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="∙ 5 coins for the 1st"
+            textAlignment="JUSTIFY" wrappingWidth="334.496826171875">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="17.0"/>
+         </font>
+      </Text>
+      <Text layoutX="74.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="∙ 3 coins for the 2nd"
+            textAlignment="JUSTIFY" wrappingWidth="334.496826171875">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="17.0"/>
+         </font>
+      </Text>
+      <Text layoutX="74.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="∙ 1 coin for the 3rd"
+            textAlignment="JUSTIFY" wrappingWidth="334.496826171875">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="17.0"/>
+         </font>
+      </Text>
+      <Text layoutX="43.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="∙If two players are together on the same box, a 1v1 will decide who goes backwards"
+            textAlignment="JUSTIFY" wrappingWidth="334.496826171875">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="17.0"/>
+         </font>
+      </Text>
+      <Text layoutX="43.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="∙The player who has more stars at the ending of all rounds, will be the winner!!, a star is worth 10 coins."
+            textAlignment="JUSTIFY" wrappingWidth="334.496826171875">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="17.0"/>
+         </font>
+      </Text>
+      <Text layoutX="3.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sofi 🤘"/>
+   </children>
 </AnchorPane>
