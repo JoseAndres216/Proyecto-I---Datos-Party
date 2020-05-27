@@ -2,7 +2,12 @@ package Proyecto1.DatosParty.DoubleLinkedList;
 
 import Proyecto1.DatosParty.MotherList.MotherList;
 
-public class DoubleLinkedList<T> implements MotherList<T>{
+/**
+ * Doubly linked list
+ *
+ * @param <T> data type for the content of the node
+ */
+public class DoubleLinkedList<T> implements MotherList<T> {
 
     private DoubleNode<T> head, tail;
     private int len;
@@ -10,25 +15,27 @@ public class DoubleLinkedList<T> implements MotherList<T>{
     public int getExtension() {
         return this.len;
     }
-    public boolean isEmpty(){
+
+    public boolean isEmpty() {
         return this.head == null;
     }
-    public void insertFirst(T data){
+
+    public void insertFirst(T data) {
         DoubleNode newElement = new DoubleNode<T>(data);
-         if(this.head == null){
-             this.head = this.tail = newElement;
-             this.len++;
-         }
-         else{
-             newElement.setNext(this.head);
-             this.head.setPrev(newElement);
-             this.head = newElement;
-             this.len++;
-         }
+        if (this.head == null) {
+            this.head = this.tail = newElement;
+            this.len++;
+        } else {
+            newElement.setNext(this.head);
+            this.head.setPrev(newElement);
+            this.head = newElement;
+            this.len++;
+        }
     }
-    public void insertLast(T data){
+
+    public void insertLast(T data) {
         DoubleNode newElement = new DoubleNode<T>(data);
-        if(this.head == null){
+        if (this.head == null) {
             this.head = this.tail = newElement;
             this.len++;
         } else {
@@ -77,6 +84,7 @@ public class DoubleLinkedList<T> implements MotherList<T>{
         stringBuilder.append(" ]");
         return stringBuilder.toString();
     }
+
     public String printReverse() {
         if (this.head == null) {
             return "Double list (reversed) of:  ";

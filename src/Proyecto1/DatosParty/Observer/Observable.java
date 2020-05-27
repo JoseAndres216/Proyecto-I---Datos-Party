@@ -1,25 +1,38 @@
 package Proyecto1.DatosParty.Observer;
-/*
-Abstract class for the observable
 
+/**
+ * Abstract class of a Observable subject, for the observer pattern,
  */
 public class Observable {
     private Observer observer;
-    /*
-    Observer: a observer to attach
+
+    /**
+     * Method for attaching a observer
+     *
+     * @param observer
      */
-    public void attach(Observer observer){
+    public void attach(Observer observer) {
         this.observer = observer;
     }
-    void notifyObservers(){
+
+    void notifyObservers() {
     }
-    public boolean getState(){
-       return true;
+
+
+    /**
+     * Method for sharing the actual status of the box
+     *
+     * @return true if its being used by other player, false if not.
+     */
+    public boolean getState() {
+        return true;
     }
-    void setState(boolean newState){
+
+    void setState(boolean newState) {
 
     }
-    void notifyObserver(){
+
+    void notifyObserver() {
         this.observer.update();
     }
 }

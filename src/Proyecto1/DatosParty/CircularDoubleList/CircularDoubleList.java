@@ -2,29 +2,35 @@ package Proyecto1.DatosParty.CircularDoubleList;
 
 import Proyecto1.DatosParty.MotherList.MotherList;
 
+/**
+ * Circular doubly linked list
+ *
+ * @param <T> value type of the content of the nodes
+ */
 public class CircularDoubleList<T> implements MotherList<T> {
     private Node<T> head = null;
     private int extension;
 
-    private int getExtension(){
+    private int getExtension() {
         return this.extension;
     }
-    public boolean isEmpty(){
+
+    public boolean isEmpty() {
         return this.head == null;
     }
 
 
-    public void insertLast(T data){
+    public void insertLast(T data) {
         Node<T> node = new Node(data);
-        if(isEmpty()){
+        if (isEmpty()) {
             this.head = node;
             node.setNext(this.head);
             node.setPrev(this.head);
             this.extension++;
-        } else{
+        } else {
             Node<T> temp = this.head;
             Node<T> tempnext = temp.getNext();
-            while(tempnext!=this.head){
+            while (tempnext != this.head) {
                 temp = temp.getNext();
                 tempnext = tempnext.getNext();
             }
@@ -35,21 +41,21 @@ public class CircularDoubleList<T> implements MotherList<T> {
             this.extension++;
         }
     }
-    public int searchPosition(T data){
+
+    public int searchPosition(T data) {
         Node<T> temp = this.head;
-        int position=1;
-        if(temp.getData().equals(data)) {
+        int position = 1;
+        if (temp.getData().equals(data)) {
             return position;
-        }else {
+        } else {
             temp = temp.getNext();
             position++;
         }
-        while(temp!=this.head){
-            if(temp.getData().equals(data)){
+        while (temp != this.head) {
+            if (temp.getData().equals(data)) {
                 return position;
-            }
-            else{
-                temp=temp.getNext();
+            } else {
+                temp = temp.getNext();
                 position++;
             }
         }

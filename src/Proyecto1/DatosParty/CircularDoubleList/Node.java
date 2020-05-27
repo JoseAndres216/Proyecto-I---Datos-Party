@@ -1,5 +1,10 @@
 package Proyecto1.DatosParty.CircularDoubleList;
 
+/**
+ * Node with previous and next references
+ *
+ * @param <T> data type for the node content
+ */
 public class Node<T> {
     private Node next = null;
     private Node prev = null;
@@ -12,10 +17,12 @@ public class Node<T> {
     public void setData(T data){
         this.data = data;
     }
+
     public void setNext(Node next) {
 
         this.next = next;
     }
+
     public void setPrev(Node prev) {
 
         this.prev = prev;
@@ -25,6 +32,7 @@ public class Node<T> {
     public T getData() {
         return this.data;
     }
+
     public Node getNext() {
         return this.next;
     }

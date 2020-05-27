@@ -1,16 +1,22 @@
 package Proyecto1.DatosParty.SimpleCircularList;
 
-public class Node <T> {
-    private  Node next = null;
+/**
+ * Node for the simple circular list.
+ *
+ * @param <T> data type for the nodes content.
+ */
+public class Node<T> {
+    private Node next = null;
     private T data = null;
 
-    public Node(T data){
+    public Node(T data) {
         this.data = data;
     }
 
     public void setData(T data) {
         this.data = data;
     }
+
     public void setNext(Node next) {
         this.next = next;
     }
@@ -18,6 +24,7 @@ public class Node <T> {
     public T getData() {
         return data;
     }
+
     public Node getNext() {
         return next;
     }

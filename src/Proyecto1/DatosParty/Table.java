@@ -1,5 +1,6 @@
 package Proyecto1.DatosParty;
 
+
 import Proyecto1.DatosParty.Boxes.Box;
 import Proyecto1.DatosParty.Boxes.GreenBox;
 import Proyecto1.DatosParty.Boxes.RedBox;
@@ -8,20 +9,24 @@ import Proyecto1.DatosParty.CircularDoubleList.CircularDoubleList;
 import Proyecto1.DatosParty.DoubleLinkedList.DoubleLinkedList;
 import Proyecto1.DatosParty.MotherList.MotherList;
 import Proyecto1.DatosParty.SimpleLinkedList.SimpleLinkedList;
+import javafx.scene.canvas.Canvas;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Class Table
+ */
 public class Table {
     private SimpleLinkedList<Box> faseA, faseB;
     private DoubleLinkedList<Box> faseC;
     private CircularDoubleList<Box> faseD;
 
     /**
-     * @param list
-     * @param green
-     * @param red
-     * @param yellow
-     * @return
+     * @param list   a list for adding the boxes
+     * @param green  amount of green boxes
+     * @param red    amount of red boxes
+     * @param yellow amount of yellow boxes
+     * @return a list with all the boxes inside, in a random order.
      */
     public MotherList generatePhases(MotherList list, int green, int red, int yellow) {
         int counter = 1;
@@ -60,5 +65,11 @@ public class Table {
     }
 
 
+    /**
+     * @param canvas: canvas for drawing the boxes
+     */
+    public void drawTable(Canvas canvas) {
+
+    }
 }
 

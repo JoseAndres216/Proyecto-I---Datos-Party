@@ -2,25 +2,30 @@ package Proyecto1.DatosParty.SimpleCircularList;
 
 import Proyecto1.DatosParty.MotherList.MotherList;
 
+/**
+ * Simply linked list
+ *
+ * @param <T> data type for the content of the node
+ */
 public class SimpleCircularList<T> implements MotherList<T> {
     private Node<T> head = null;
     private int extension;
 
-    private int getExtension(){
+    private int getExtension() {
         return this.extension;
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return this.head == null;
     }
 
-    public void insertFirst(T data){
+    public void insertFirst(T data) {
         Node<T> node = new Node(data);
-        if(isEmpty()){
+        if (isEmpty()) {
             this.head = node;
             node.setNext(this.head);
             this.extension++;
-        } else{
+        } else {
             Node<T> temp = this.head;
             this.head = node;
             node.setNext(temp);
@@ -28,15 +33,15 @@ public class SimpleCircularList<T> implements MotherList<T> {
         }
     }
 
-    public void insertLast(T data){
+    public void insertLast(T data) {
         Node<T> node = new Node(data);
-        if(isEmpty()){
+        if (isEmpty()) {
             this.head = node;
             node.setNext(this.head);
             this.extension++;
-        } else{
+        } else {
             Node<T> temp = this.head;
-            while(temp.getNext()!=this.head){
+            while (temp.getNext() != this.head) {
                 temp = temp.getNext();
             }
             temp.setNext(node);
@@ -75,14 +80,13 @@ public class SimpleCircularList<T> implements MotherList<T> {
         }
     }*/
 
-    public boolean isNode(T data){
+    public boolean isNode(T data) {
         Node<T> temp = this.head;
         int nodesLeft = this.extension;
-        while(nodesLeft!=0){
-            if(temp.getData()==data){
+        while (nodesLeft != 0) {
+            if (temp.getData() == data) {
                 return true;
-            }
-            else{
+            } else {
                 temp = temp.getNext();
                 nodesLeft--;
             }
@@ -91,70 +95,74 @@ public class SimpleCircularList<T> implements MotherList<T> {
         return false;
     }
 
-    public int searchPosition(T data){
+    public int searchPosition(T data) {
         Node<T> temp = this.head;
-        int position=1;
-        if(temp.getData().equals(data)) {
+        int position = 1;
+        if (temp.getData().equals(data)) {
             return position;
-        }else {
+        } else {
             temp = temp.getNext();
             position++;
         }
-        while(temp!=this.head){
-            if(temp.getData().equals(data)){
+        while (temp != this.head) {
+            if (temp.getData().equals(data)) {
                 return position;
-            }
-            else{
-                temp=temp.getNext();
+            } else {
+                temp = temp.getNext();
                 position++;
             }
         }
         return -1;
     }
-    public void editNode(int position, T newData){
-        if(position<=0 || position>this.extension){
+
+    public void editNode(int position, T newData) {
+        if (position <= 0 || position > this.extension) {
             System.out.println("The node doesn't exists");
-        }else{
+        } else {
             Node<T> temp = this.head;
             int counter = 1;
-            while(counter!=position){
+            while (counter != position) {
                 temp = temp.getNext();
                 counter++;
             }
             temp.setData(newData);
         }
     }
-    public void editNodebyData(T previousData, T newData){
+
+    public void editNodebyData(T previousData, T newData) {
         editNode(searchPosition(previousData), newData);
     }
-    public void deleteFirstnode(){
+
+    public void deleteFirstnode() {
         Node<T> temp = this.head;
-        while(temp.getNext()!=this.head){
-            temp=temp.getNext();
+        while (temp.getNext() != this.head) {
+            temp = temp.getNext();
         }
         temp.setNext(temp.getNext().getNext());
         this.head = temp.getNext();
 
     }
-    public void deleteLastnode(){
+
+    public void deleteLastnode() {
         Node<T> temp = this.head;
-        while(temp.getNext().getNext()!=this.head){
-            temp=temp.getNext();
+        while (temp.getNext().getNext() != this.head) {
+            temp = temp.getNext();
         }
         temp.setNext(this.head);
     }
-    public void deleteNodebyData(T data){
+
+    public void deleteNodebyData(T data) {
         int position = searchPosition(data);
-        if(position==-1) {
+        if (position == -1) {
             System.out.println("Couldn't find the node");
-        }else if(position==1) {
+        } else if (position == 1) {
             deleteFirstnode();
-        }else if(position==this.extension){
+        } else if (position == this.extension) {
             deleteLastnode();
-        } else{
+        } else {
             Node<T> temp = this.head;
             int counter = 1;
-            while((counter+1)!=position){
+            while ((counter + 1) != position) {
                 temp = temp.getNext();
                 counter++;
             }
@@ -162,14 +170,14 @@ public class SimpleCircularList<T> implements MotherList<T> {
         }
     }
 
-    public T retrnNodedata(int index){
-        if(index<0 || index>=this.extension){
+    public T retrnNodedata(int index) {
+        if (index < 0 || index >= this.extension) {
             System.out.println("Node out of range.");
             return null;
-        } else{
+        } else {
             Node<T> temp = this.head;
-            while(index!=0){
-                temp=temp.getNext();
+            while (index != 0) {
+                temp = temp.getNext();
                 index--;
             }
             return temp.getData();
