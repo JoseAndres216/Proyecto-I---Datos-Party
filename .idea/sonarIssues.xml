@@ -68,6 +68,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Help/HelpWindow.fxml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Help/HelpWindowController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Help/HelpWindowStart.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/StyleSheet.css">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/GreenBox.java">
           <value>
             <set />

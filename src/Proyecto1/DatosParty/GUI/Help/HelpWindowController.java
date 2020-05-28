@@ -3,13 +3,13 @@ package Proyecto1.DatosParty.GUI.Help;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
-
+import javafx.stage.Stage;
 import java.io.IOException;
 
-
+/**
+ * Controller for the help window fxml file
+ */
 public class HelpWindowController {
 
     @FXML
@@ -24,13 +24,14 @@ public class HelpWindowController {
     @FXML
     private ImageView keyboardLogo;
 
-    public HelpWindowController() throws IOException {
-    }
-
-
+    /**
+     * Event handler to exit the window when the button is pressed.
+     * @param event Event of mouse click
+     */
     public void pressedExitButton(Event event) {
-        System.out.println("Pressed exit button" + exitButton.getId());
-
-        //Codigo para cerrar la ventana
+        // Get the stage
+        Stage stage = (Stage) this.exitButton.getScene().getWindow();
+        // close the window
+        stage.close();
     }
 }
