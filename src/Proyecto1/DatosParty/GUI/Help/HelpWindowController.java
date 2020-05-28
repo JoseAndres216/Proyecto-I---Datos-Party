@@ -11,7 +11,7 @@ import java.io.IOException;
 
 
 public class HelpWindowController {
-    Image help = new Image("file: src/Proyecto1/DatosParty/GUI/Resources/images/helpLogo.jpeg");
+
     @FXML
     private Button exitButton;
 
@@ -30,7 +30,7 @@ public class HelpWindowController {
 
     public void pressedExitButton(Event event) {
         System.out.println("Pressed exit button" + exitButton.getId());
-        helpLogo.setImage(help);
+
         //Codigo para cerrar la ventana
     }
 }
