@@ -1,6 +1,8 @@
-package Proyecto1.DatosParty.SimpleCircularList;
+package Proyecto1.DatosParty.DataStructures.SimpleCircularList;
 
-import Proyecto1.DatosParty.MotherList.MotherList;
+import Proyecto1.DatosParty.DataStructures.BaseModels.FatherNode;
+import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
+import Proyecto1.DatosParty.DataStructures.Nodes.SimpleNode;
 
 /**
  * Simply linked list
@@ -8,7 +10,8 @@ import Proyecto1.DatosParty.MotherList.MotherList;
  * @param <T> data type for the content of the node
  */
 public class SimpleCircularList<T> implements MotherList<T> {
-    private Node<T> head = null;
+
+    private SimpleNode<T> head = null;
     private int extension;
 
     private int getExtension() {
@@ -20,34 +23,38 @@ public class SimpleCircularList<T> implements MotherList<T> {
     }
 
     public void insertFirst(T data) {
-        Node<T> node = new Node(data);
+        SimpleNode<T> simpleNode = new SimpleNode(data);
         if (isEmpty()) {
-            this.head = node;
-            node.setNext(this.head);
+            this.head = simpleNode;
+            simpleNode.setNext(this.head);
             this.extension++;
         } else {
-            Node<T> temp = this.head;
-            this.head = node;
-            node.setNext(temp);
+            SimpleNode<T> temp = this.head;
+            this.head = simpleNode;
+            simpleNode.setNext(temp);
             this.extension++;
         }
     }
 
     public void insertLast(T data) {
-        Node<T> node = new Node(data);
+        SimpleNode<T> simpleNode = new SimpleNode(data);
         if (isEmpty()) {
-            this.head = node;
-            node.setNext(this.head);
+            this.head = simpleNode;
+            simpleNode.setNext(this.head);
             this.extension++;
         } else {
-            Node<T> temp = this.head;
+            SimpleNode<T> temp = this.head;
             while (temp.getNext() != this.head) {
                 temp = temp.getNext();
             }
-            temp.setNext(node);
-            node.setNext(this.head);
+            temp.setNext(simpleNode);
+            simpleNode.setNext(this.head);
             this.extension++;
         }
+    }
+
+    public void insertSpecialNode(FatherNode newNode) {
+
     }
 
     @Override
@@ -57,31 +64,11 @@ public class SimpleCircularList<T> implements MotherList<T> {
 
     @Override
     public int len() {
-        return 0;
+        return this.extension;
     }
 
-
-
-    /*public void insertPosition(int position, T data) {
-        if(position > this.extension){
-            System.out.println("Invalid position");
-        } else if(position==1){
-            insertFirst(data);
-        } else{
-            Proyecto1.DatosParty.SimpleLinkedList.Node temp = this.head;
-            while((position-2)!=0){
-                temp = temp.getNext();
-                position--;
-            }
-            Proyecto1.DatosParty.SimpleLinkedList.Node node = new Proyecto1.DatosParty.SimpleLinkedList.Node(data);
-            node.setNext(temp.getNext());
-            temp.setNext(node);
-            this.extension++;
-        }
-    }*/
-
     public boolean isNode(T data) {
-        Node<T> temp = this.head;
+        SimpleNode<T> temp = this.head;
         int nodesLeft = this.extension;
         while (nodesLeft != 0) {
             if (temp.getData() == data) {
@@ -96,7 +83,7 @@ public class SimpleCircularList<T> implements MotherList<T> {
     }
 
     public int searchPosition(T data) {
-        Node<T> temp = this.head;
+        SimpleNode<T> temp = this.head;
         int position = 1;
         if (temp.getData().equals(data)) {
             return position;
@@ -119,7 +106,7 @@ public class SimpleCircularList<T> implements MotherList<T> {
         if (position <= 0 || position > this.extension) {
             System.out.println("The node doesn't exists");
         } else {
-            Node<T> temp = this.head;
+            SimpleNode<T> temp = this.head;
             int counter = 1;
             while (counter != position) {
                 temp = temp.getNext();
@@ -134,7 +121,7 @@ public class SimpleCircularList<T> implements MotherList<T> {
     }
 
     public void deleteFirstnode() {
-        Node<T> temp = this.head;
+        SimpleNode<T> temp = this.head;
         while (temp.getNext() != this.head) {
             temp = temp.getNext();
         }
@@ -144,7 +131,7 @@ public class SimpleCircularList<T> implements MotherList<T> {
     }
 
     public void deleteLastnode() {
-        Node<T> temp = this.head;
+        SimpleNode<T> temp = this.head;
         while (temp.getNext().getNext() != this.head) {
             temp = temp.getNext();
         }
@@ -160,7 +147,7 @@ public class SimpleCircularList<T> implements MotherList<T> {
         } else if (position == this.extension) {
             deleteLastnode();
         } else {
-            Node<T> temp = this.head;
+            SimpleNode<T> temp = this.head;
             int counter = 1;
             while ((counter + 1) != position) {
                 temp = temp.getNext();
@@ -175,7 +162,7 @@ public class SimpleCircularList<T> implements MotherList<T> {
             System.out.println("Node out of range.");
             return null;
         } else {
-            Node<T> temp = this.head;
+            SimpleNode<T> temp = this.head;
             while (index != 0) {
                 temp = temp.getNext();
                 index--;
@@ -192,7 +179,7 @@ public class SimpleCircularList<T> implements MotherList<T> {
         StringBuilder stringBuilder = new StringBuilder("[ ");
         stringBuilder.append(this.head.getData().toString());
         stringBuilder.append(", ");
-        Node<T> temp = this.head.getNext();
+        SimpleNode<T> temp = this.head.getNext();
         while (temp != this.head) {
             stringBuilder.append(temp.getData().toString());
             stringBuilder.append(", ");
@@ -200,6 +187,10 @@ public class SimpleCircularList<T> implements MotherList<T> {
         }
         stringBuilder.append("]");
         return stringBuilder.toString();
+    }
+
+    public FatherNode getHead() {
+        return this.head;
     }
 }
 

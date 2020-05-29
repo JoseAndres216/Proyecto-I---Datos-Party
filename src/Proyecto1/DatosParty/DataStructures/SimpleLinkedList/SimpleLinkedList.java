@@ -1,9 +1,10 @@
-package Proyecto1.DatosParty.SimpleLinkedList;
+package Proyecto1.DatosParty.DataStructures.SimpleLinkedList;
 
-import Proyecto1.DatosParty.MotherList.MotherList;
+import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
+import Proyecto1.DatosParty.DataStructures.Nodes.SimpleNode;
 
 public class SimpleLinkedList <T> implements MotherList<T> {
-    private Node<T> head = null;
+    private SimpleNode<T> head = null;
     private int extension = 0;
 
     public int len() {
@@ -15,28 +16,28 @@ public class SimpleLinkedList <T> implements MotherList<T> {
     }
 
     public void insertFirst(T data){
-        Node node = new Node(data);
+        SimpleNode simpleNode = new SimpleNode(data);
         if(isEmpty()){
-            this.head = node;
+            this.head = simpleNode;
             this.extension++;
-        } else{
-            Node temp = this.head;
-            this.head = node;
-            node.setNext(temp);
+        } else {
+            SimpleNode temp = this.head;
+            this.head = simpleNode;
+            simpleNode.setNext(temp);
             this.extension++;
         }
     }
     public void insertLast(T data){
-        Node node = new Node(data);
+        SimpleNode simpleNode = new SimpleNode(data);
         if(isEmpty()){
-            this.head = node;
+            this.head = simpleNode;
             this.extension++;
         } else{
-            Node temp = this.head;
+            SimpleNode temp = this.head;
             while(temp.getNext()!=null){
                 temp = temp.getNext();
             }
-            temp.setNext(node);
+            temp.setNext(simpleNode);
             this.extension++;
         }
     }
@@ -52,20 +53,20 @@ public class SimpleLinkedList <T> implements MotherList<T> {
             System.out.println("Invalid position");
         } else if(position==1){
             insertFirst(data);
-        } else{
-            Node temp = this.head;
-            while((position-2)!=0){
+        } else {
+            SimpleNode temp = this.head;
+            while ((position - 2) != 0) {
                 temp = temp.getNext();
                 position--;
             }
-            Node node = new Node(data);
-            node.setNext(temp.getNext());
-            temp.setNext(node);
+            SimpleNode simpleNode = new SimpleNode(data);
+            simpleNode.setNext(temp.getNext());
+            temp.setNext(simpleNode);
             this.extension++;
         }
     }
     public boolean isNode(T data){
-        Node temp = this.head;
+        SimpleNode temp = this.head;
         int nodesLeft = this.extension;
         while(nodesLeft!=0){
             if(temp.getData()==data){
@@ -79,8 +80,8 @@ public class SimpleLinkedList <T> implements MotherList<T> {
         return false;
     }
     public int searchPosition(T data){
-        Node temp = this.head;
-        int position=1;
+        SimpleNode temp = this.head;
+        int position = 1;
         while(temp!=null){
             if(temp.getData().equals(data)){
                 return position;
@@ -96,7 +97,7 @@ public class SimpleLinkedList <T> implements MotherList<T> {
         if(position<=0 || position>this.extension){
             System.out.println("The node doesn't exists");
         }else{
-            Node temp = this.head;
+            SimpleNode temp = this.head;
             int counter = 1;
             while(counter!=position){
                 temp = temp.getNext();
@@ -109,11 +110,11 @@ public class SimpleLinkedList <T> implements MotherList<T> {
         editNode(searchPosition(previousData), newData);
     }
     public void deleteFirstnode(){
-        Node temp = this.head;
+        SimpleNode temp = this.head;
         this.head = temp.getNext();
     }
     public void deleteLastnode(){
-        Node temp = this.head;
+        SimpleNode temp = this.head;
         while(temp.getNext().getNext()!=null){
             temp=temp.getNext();
         }
@@ -128,7 +129,7 @@ public class SimpleLinkedList <T> implements MotherList<T> {
         }else if(position==this.extension){
             deleteLastnode();
         } else{
-            Node temp = this.head;
+            SimpleNode temp = this.head;
             int counter = 1;
             while((counter+1)!=position){
                 temp = temp.getNext();
@@ -145,7 +146,7 @@ public class SimpleLinkedList <T> implements MotherList<T> {
             return "[]";
         }
         StringBuilder stringBuilder = new StringBuilder("[ ");
-        Node<T> temp = this.head;
+        SimpleNode<T> temp = this.head;
         while (temp != null) {
             stringBuilder.append(temp.getData().toString());
             stringBuilder.append(", ");

@@ -1,6 +1,7 @@
-package Proyecto1.DatosParty.CircularDoubleList;
+package Proyecto1.DatosParty.DataStructures.CircularDoubleList;
 
-import Proyecto1.DatosParty.MotherList.MotherList;
+import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
+import Proyecto1.DatosParty.DataStructures.Nodes.DoubleNode;
 
 /**
  * Circular doubly linked list
@@ -8,7 +9,7 @@ import Proyecto1.DatosParty.MotherList.MotherList;
  * @param <T> value type of the content of the nodes
  */
 public class CircularDoubleList<T> implements MotherList<T> {
-    private Node<T> head = null;
+    private DoubleNode<T> head = null;
     private int extension;
 
     private int getExtension() {
@@ -21,15 +22,15 @@ public class CircularDoubleList<T> implements MotherList<T> {
 
 
     public void insertLast(T data) {
-        Node<T> node = new Node(data);
+        DoubleNode<T> node = new DoubleNode(data);
         if (isEmpty()) {
             this.head = node;
             node.setNext(this.head);
             node.setPrev(this.head);
             this.extension++;
         } else {
-            Node<T> temp = this.head;
-            Node<T> tempnext = temp.getNext();
+            DoubleNode<T> temp = this.head;
+            DoubleNode<T> tempnext = temp.getNext();
             while (tempnext != this.head) {
                 temp = temp.getNext();
                 tempnext = tempnext.getNext();
@@ -42,8 +43,9 @@ public class CircularDoubleList<T> implements MotherList<T> {
         }
     }
 
+
     public int searchPosition(T data) {
-        Node<T> temp = this.head;
+        DoubleNode<T> temp = this.head;
         int position = 1;
         if (temp.getData().equals(data)) {
             return position;
@@ -63,7 +65,7 @@ public class CircularDoubleList<T> implements MotherList<T> {
     }
 
     public void deleteFirstnode() {
-        Node<T> temp = this.head;
+        DoubleNode<T> temp = this.head;
         while (temp.getNext() != this.head) {
             temp = temp.getNext();
         }
@@ -74,7 +76,7 @@ public class CircularDoubleList<T> implements MotherList<T> {
     }
 
     public void deleteLastNode() {
-        Node<T> temp = this.head;
+        DoubleNode<T> temp = this.head;
         while (temp.getNext().getNext() != this.head) {
             temp = temp.getNext();
         }
@@ -87,7 +89,7 @@ public class CircularDoubleList<T> implements MotherList<T> {
             System.out.println("Node out of range.");
             return null;
         } else {
-            Node<T> temp = this.head;
+            DoubleNode<T> temp = this.head;
             while (index != 0) {
                 temp = temp.getNext();
                 index--;
@@ -109,7 +111,7 @@ public class CircularDoubleList<T> implements MotherList<T> {
         StringBuilder stringBuilder = new StringBuilder("[ ");
         stringBuilder.append(this.head.getData().toString());
         stringBuilder.append(", ");
-        Node<T> temp = this.head.getPrev();
+        DoubleNode<T> temp = this.head.getPrev();
         while (temp != this.head) {
             stringBuilder.append(temp.getData().toString());
             stringBuilder.append(", ");

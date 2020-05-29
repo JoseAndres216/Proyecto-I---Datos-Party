@@ -1,6 +1,7 @@
-package Proyecto1.DatosParty.DoubleLinkedList;
+package Proyecto1.DatosParty.DataStructures.DoubleLinkedList;
 
-import Proyecto1.DatosParty.MotherList.MotherList;
+import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
+import Proyecto1.DatosParty.DataStructures.Nodes.DoubleNode;
 
 /**
  * Doubly linked list
