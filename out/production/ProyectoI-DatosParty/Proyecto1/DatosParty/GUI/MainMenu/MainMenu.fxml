@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1900.0" styleClass="greenColor" stylesheets="@/Proyecto1/DatosParty/GUI/StyleSheet.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71c04f" height="520.0" layoutX="97.0" layoutY="253.0" stroke="#efefef" strokeWidth="8.0" width="1703.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71c04f" height="110.0" layoutX="810.0" layoutY="197.0" stroke="#efefef" strokeWidth="8.0" width="280.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#efefef" height="301.0" layoutX="216.0" layoutY="333.0" stroke="#efefef" strokeWidth="3.0" width="268.0" />
+        <Label alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="940.0" text="DATOS PARTY 1" textFill="#efefef" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0">
+            <font>
+                <Font name="Tw Cen MT Condensed Extra Bold" size="120.0" />
+            </font>
+        </Label>
+        <Button alignment="CENTER" layoutX="1764.0" layoutY="833.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="82.0" text="?" textFill="#71c04f" wrapText="true" AnchorPane.bottomAnchor="52.0" AnchorPane.rightAnchor="55.0">
+            <font>
+                <Font name="Tw Cen MT Condensed Extra Bold" size="42.0" />
+            </font>
+        </Button>
+        <ImageView fx:id="manmask" fitHeight="268.0" fitWidth="312.0" layoutX="216.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="1416.0" AnchorPane.topAnchor="356.0">
+            <image>
+                <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/man-mask2.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#efefef" height="52.0" layoutX="216.0" layoutY="677.0" stroke="#efefef" strokeWidth="3.0" width="268.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#efefef" height="52.0" layoutX="616.0" layoutY="677.0" stroke="#efefef" strokeWidth="3.0" width="268.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#efefef" height="301.0" layoutX="616.0" layoutY="333.0" stroke="#efefef" strokeWidth="3.0" width="268.0" />
+        <ImageView fitHeight="268.0" fitWidth="312.0" layoutX="616.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="616.0" AnchorPane.rightAnchor="1016.0" AnchorPane.topAnchor="356.0">
+            <image>
+                <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/woman-mask.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="828.0" layoutY="210.0" prefHeight="83.0" prefWidth="239.0" text="PLAYERS" textAlignment="CENTER" textFill="#efefef">
+            <font>
+                <Font name="Tw Cen MT Condensed Extra Bold" size="72.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#efefef" height="301.0" layoutX="1018.0" layoutY="333.0" stroke="#efefef" strokeWidth="3.0" width="268.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#efefef" height="52.0" layoutX="1018.0" layoutY="677.0" stroke="#efefef" strokeWidth="3.0" width="268.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#efefef" height="52.0" layoutX="1418.0" layoutY="677.0" stroke="#efefef" strokeWidth="3.0" width="268.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#efefef" height="301.0" layoutX="1418.0" layoutY="333.0" stroke="#efefef" strokeWidth="3.0" width="268.0" />
+      <ImageView fitHeight="268.0" fitWidth="312.0" layoutX="1416.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="1416.0" AnchorPane.rightAnchor="216.0" AnchorPane.topAnchor="356.0">
+         <image>
+             <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/woman-mask2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="268.0" fitWidth="312.0" layoutX="1016.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="1016.0" AnchorPane.rightAnchor="616.0" AnchorPane.topAnchor="356.0">
+         <image>
+             <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/man-mask.png" />
+         </image>
+      </ImageView>
+      <TextField alignment="CENTER" layoutX="214.0" layoutY="675.0" prefHeight="55.0" prefWidth="271.0" promptText="Username">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" layoutX="614.0" layoutY="675.0" prefHeight="55.0" prefWidth="271.0" promptText="Username">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" layoutX="1016.0" layoutY="675.0" prefHeight="55.0" prefWidth="271.0" promptText="Username">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" layoutX="1416.0" layoutY="675.0" prefHeight="55.0" prefWidth="271.0" promptText="Username">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </TextField>
+      <Button layoutX="720.0" layoutY="821.0" mnemonicParsing="false" prefHeight="146.0" prefWidth="459.0" text="PLAY" textFill="#71c04f">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="96.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="99.0" layoutX="501.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@../Resources/images/double-arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="99.0" layoutX="901.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@../Resources/images/double-arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="99.0" layoutX="1303.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@../Resources/images/double-arrow.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="534.0" layoutY="450.0" text="2M" textFill="#efefef">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="933.0" layoutY="450.0" text="2M" textFill="#efefef">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="1334.0" layoutY="450.0" text="2M" textFill="#efefef">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
