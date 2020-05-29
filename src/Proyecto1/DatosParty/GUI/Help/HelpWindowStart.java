@@ -23,6 +23,12 @@ public class HelpWindowStart extends Application {
 
     }
 
+    public void setOpen(boolean open) {
+        this.open = open;
+    }
+
+    private boolean open;
+
     public static synchronized HelpWindowStart getInstance() {
         if (instance == null) {
             instance = new HelpWindowStart();
@@ -32,6 +38,10 @@ public class HelpWindowStart extends Application {
     }
 
     public void start(Stage stage) throws Exception {
+        if (this.open) {
+            return;
+        }
+        this.open = true;
         Parent root = FXMLLoader.load(getClass().getResource("HelpWindow.fxml"));
         stage.setAlwaysOnTop(true);
         stage.setTitle("Help!");

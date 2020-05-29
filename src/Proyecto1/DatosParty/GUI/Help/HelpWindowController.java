@@ -31,6 +31,7 @@ public class HelpWindowController {
         // Get the stage
         Stage stage = (Stage) this.exitButton.getScene().getWindow();
         // close the window
+        HelpWindowStart.getInstance().setOpen(false);
         stage.close();
     }
 }
