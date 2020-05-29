@@ -8,6 +8,7 @@ import Proyecto1.DatosParty.Boxes.YellowBox;
 import Proyecto1.DatosParty.CircularDoubleList.CircularDoubleList;
 import Proyecto1.DatosParty.DoubleLinkedList.DoubleLinkedList;
 import Proyecto1.DatosParty.MotherList.MotherList;
+import Proyecto1.DatosParty.SimpleCircularList.SimpleCircularList;
 import Proyecto1.DatosParty.SimpleLinkedList.SimpleLinkedList;
 import javafx.scene.canvas.Canvas;
 
@@ -17,6 +18,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Class Table
  */
 public class Table {
+    private SimpleCircularList<MotherList> tablero = new SimpleCircularList<>();
     private SimpleLinkedList<Box> faseA, faseB;
     private DoubleLinkedList<Box> faseC;
     private CircularDoubleList<Box> faseD;
@@ -66,9 +68,9 @@ public class Table {
 
 
     /**
-     * @param canvas: canvas for drawing the boxes
+     * @param canvas canvas for drawing the boxes
      */
-    public void drawTable(Canvas canvas) {
+    public void drawPhase(Canvas canvas, MotherList list) {
 
     }
 }
