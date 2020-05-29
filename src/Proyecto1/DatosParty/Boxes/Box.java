@@ -6,12 +6,11 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-import java.awt.*;
-
 /**
  * This class is the base for all the other boxes
  */
 public abstract class Box extends Observable {
+
     protected boolean busy;
     protected static int id;
     protected Observer observer;

@@ -13,14 +13,27 @@ import javafx.stage.StageStyle;
 public class HelpWindowStart extends Application {
     /**
      * method for drawing help window, a normal window with always on top feature
+     *
      * @param stage
      * @throws Exception IO exception from the FXML loader
      */
-    @Override
+    private static HelpWindowStart instance = null;
+
+    private HelpWindowStart() {
+
+    }
+
+    public static synchronized HelpWindowStart getInstance() {
+        if (instance == null) {
+            instance = new HelpWindowStart();
+
+        }
+        return instance;
+    }
+
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("HelpWindow.fxml"));
         stage.setAlwaysOnTop(true);
-        root.getStylesheets().add("file:stylesheet.css");
         stage.setTitle("Help!");
         stage.setScene(new Scene(root, 800, 600));
         stage.resizableProperty().setValue(false);
@@ -30,8 +43,4 @@ public class HelpWindowStart extends Application {
 
     }
 
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 }
