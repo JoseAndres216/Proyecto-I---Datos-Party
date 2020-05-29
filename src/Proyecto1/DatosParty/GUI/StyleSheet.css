@@ -3,8 +3,8 @@
 }
 
 .greenColor {
-    -fx-Background-color: #6cb74b;
-    -fx-stroke: #6cb74b;
+    -fx-Background-color: #71c04f;
+    -fx-stroke: #71c04f;
 }
 
 .blueColor {
@@ -18,7 +18,7 @@
 
 .backGroundColor {
 
-    -fx-Background-color: #ffffff
+    -fx-Background-color: #efefef
 }
 
 
