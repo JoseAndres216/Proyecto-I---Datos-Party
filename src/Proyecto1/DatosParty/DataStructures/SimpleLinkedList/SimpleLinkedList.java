@@ -7,6 +7,10 @@ public class SimpleLinkedList <T> implements MotherList<T> {
     private SimpleNode<T> head = null;
     private int extension = 0;
 
+    public SimpleNode getHead(){
+        return this.head;
+    }
+
     public int len() {
         return extension;
     }
