@@ -1,7 +1,6 @@
 package Proyecto1.DatosParty.Boxes;
 
-import Proyecto1.DatosParty.MotherList.MotherList;
-import Proyecto1.DatosParty.SimpleCircularList.SimpleCircularList;
+import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 
 public class IntersectionBox extends Box{
 
