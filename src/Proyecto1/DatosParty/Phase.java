@@ -9,12 +9,14 @@ public class Phase {
 
     public MotherList<Box> phaseList;
     public int exitPoint;
-    public Phase(MotherList list){
+    public boolean isTable;
+    public Phase(MotherList list, boolean isTable){
         this.phaseList = list;
+        this.isTable = isTable;
     }
 
-    public MotherList<Box> getPhaseList() {
-        return phaseList;
+    public Box getPhaseListElement(int i) {
+        return phaseList.accessNode(i);
     }
 
     public int getExitPoint() {
@@ -28,9 +30,10 @@ public class Phase {
      * @param whiteBoxes  amount of white boxes
      * @param exitPoint   zero-based index position of the mainTable list box that is the exit point fo the phase (-1) on the phase D
      */
-    public void config(int greenBoxes, int redBoxes, int yellowBoxes, int whiteBoxes, int exitPoint) {
+    public void config(int greenBoxes, int redBoxes, int yellowBoxes, int whiteBoxes, int exitPoint ) {
         this.generatePhases(greenBoxes, redBoxes, yellowBoxes, whiteBoxes);
         this.exitPoint = exitPoint;
+
     }
 
     /**

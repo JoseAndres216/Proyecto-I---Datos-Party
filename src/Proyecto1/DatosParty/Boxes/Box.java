@@ -2,6 +2,7 @@ package Proyecto1.DatosParty.Boxes;
 
 import Proyecto1.DatosParty.Observer.Observable;
 import Proyecto1.DatosParty.Observer.Observer;
+import Proyecto1.DatosParty.Phase;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
@@ -12,7 +13,7 @@ import javafx.scene.paint.Color;
 public abstract class Box extends Observable {
 
     protected boolean busy;
-    protected int id;
+    public int id;
     protected Observer observer;
     protected String tag;
     public Color bodyColor;
@@ -70,4 +71,13 @@ public abstract class Box extends Observable {
         gc.strokeRect(x, y, this.height, this.width);
 
     }
+
+    public void iteract(){
+
+    }
+
+    public Phase getPhase() {
+        return null;
+    }
+    public int getIdNumber(){return this.id;}
 }

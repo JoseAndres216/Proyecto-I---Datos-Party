@@ -59,10 +59,21 @@ public class SimpleCircularList<T> implements MotherList<T> {
 
     @Override
     public T accessNode(int i) {
-        return null;
-    }
+        if (i < 0 || i > this.extension) {
+            System.out.println("The node doesn't exists");
+        }
 
-    @Override
+
+            SimpleNode<T> temp = this.head;
+            int counter = 0;
+            while (counter != i) {
+                temp = temp.getNext();
+                counter++;
+            }
+            return temp.getData();
+        }
+
+
     public int len() {
         return this.extension;
     }
