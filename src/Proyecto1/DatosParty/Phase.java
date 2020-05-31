@@ -9,24 +9,46 @@ public class Phase {
 
     public MotherList<Box> phaseList;
     public int exitPoint;
+    public Phase(MotherList list){
+        this.phaseList = list;
+    }
+
+    public MotherList<Box> getPhaseList() {
+        return phaseList;
+    }
+
+    public int getExitPoint() {
+        return exitPoint;
+    }
+
+    /**
+     * @param greenBoxes  amount of green boxes
+     * @param redBoxes    amount of red boxes
+     * @param yellowBoxes amount of yellow boxes
+     * @param whiteBoxes  amount of white boxes
+     * @param exitPoint   zero-based index position of the mainTable list box that is the exit point fo the phase (-1) on the phase D
+     */
+    public void config(int greenBoxes, int redBoxes, int yellowBoxes, int whiteBoxes, int exitPoint) {
+        this.generatePhases(greenBoxes, redBoxes, yellowBoxes, whiteBoxes);
+        this.exitPoint = exitPoint;
+    }
 
     /**
      * Method for filling the phase with the amount of boxes in a random order
-     * @param greenBoxes amount of green boxes
-     * @param redBoxes amount of red boxes
+     *
+     * @param greenBoxes  amount of green boxes
+     * @param redBoxes    amount of red boxes
      * @param yellowBoxes amount of yellow boxes
-     * @param whiteBoxes amount of white boxes
+     * @param whiteBoxes  amount of white boxes
      */
     public void generatePhases(int greenBoxes, int redBoxes, int yellowBoxes, int whiteBoxes) {
         while (greenBoxes != 0 || redBoxes != 0 || yellowBoxes != 0 || whiteBoxes != 0) {
             int randomNum = ThreadLocalRandom.current().nextInt(0, 4);
-
             switch (randomNum) {
                 case 0:
                     if (greenBoxes != 0) {
                         this.phaseList.insertLast(new GreenBox());
                         greenBoxes--;
-
                     }
                     break;
                 case 1:
@@ -46,34 +68,8 @@ public class Phase {
                         this.phaseList.insertLast(new WhiteBox());
                         whiteBoxes--;
                     }
-
             }
-
         }
-        System.out.println(this.phaseList);
-
-
-    }
-
-    public MotherList<Box> getPhaseList() {
-        return phaseList;
-    }
-
-    public int getExitPoint() {
-        return exitPoint;
-    }
-
-    /**
-     *
-     * @param greenBoxes amount of green boxes
-     * @param redBoxes amount of red boxes
-     * @param yellowBoxes amount of yellow boxes
-     * @param whiteBoxes amount of white boxes
-     * @param exitPoint zero-based index position of the mainTable list box that is the exit point fo the phase (-1) on the phase D
-     */
-    public void config(int greenBoxes, int redBoxes, int yellowBoxes, int whiteBoxes, int exitPoint){
-        this.generatePhases(greenBoxes,redBoxes,yellowBoxes,whiteBoxes);
-        this.exitPoint = exitPoint;
     }
 
 }

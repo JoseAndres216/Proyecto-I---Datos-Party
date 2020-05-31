@@ -15,26 +15,13 @@ import java.util.concurrent.ThreadLocalRandom;
  * Class Table
  */
 public class Table {
-    //Initialization of the lists thas will be part of phases for generation.
-    private SimpleLinkedList<Box> phaseAList = new SimpleLinkedList<>(), phaseBList = new SimpleLinkedList<>();
-    private DoubleLinkedList<Box> phaseCList = new DoubleLinkedList<>();
-    private CircularDoubleList<Box> phaseDList = new CircularDoubleList<>();
-
     //Intialization of the Phases, (the main table will not be a phase)
-    private Phase phaseA = new Phase();
-    private Phase phaseB = new Phase();
-    private Phase phaseC = new Phase();
-    private Phase phaseD = new Phase();
+    private Phase phaseA = new Phase(new SimpleLinkedList<Box>());
+    private Phase phaseB = new Phase(new SimpleLinkedList<Box>());
+    private Phase phaseC = new Phase(new DoubleLinkedList<Box>());
+    private Phase phaseD = new Phase(new CircularDoubleList<Box>());
     //Creating the main table
     private SimpleCircularList<Box> tableList = new SimpleCircularList<>();
-    /**
-     * @param list   a list for adding the boxes
-     * @param green  amount of green boxes
-     * @param red    amount of red boxes
-     * @param yellow amount of yellow boxes
-     * @return a list with all the boxes inside, in a random order.
-     */
-
 
     /**
      * Method for generating a random box, for creating the main table.
@@ -68,10 +55,16 @@ public class Table {
     public void generateTable() {
         //Setting the phases with the lists
         this.phaseA.config(3,3,1,  3,  7);//exit point esta basado en el modelo del excel
-        this.phaseA.config(0,0,10, 0,  16);//exit point esta basado en el modelo del excel
-        this.phaseA.config(3,3,3,  1,  25);//exit point esta basado en el modelo del excel
-        this.phaseA.config(0,0,12, 0, -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
-
+        this.phaseB.config(0,0,10, 0,  16);//exit point esta basado en el modelo del excel
+        this.phaseC.config(3,3,3,  1,  25);//exit point esta basado en el modelo del excel
+        this.phaseD.config(0,0,12, 0, -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
+        /*
+        Flag prints, for control
+         */
+        System.out.println("Fase A largo: " + phaseA.phaseList.len());
+        System.out.println("Fase B largo: " + phaseB.phaseList.len());
+        System.out.println("Fase C largo: " + phaseC.phaseList.len());
+        System.out.println("Fase D largo: " + phaseD.phaseList.len());
         //Generate the main table, made of 36 boxes with intersections that connect phases
         //and random generated boxes on the other parts of the table.
         for (int i = 0; i < 36; i++) {
@@ -94,9 +87,6 @@ public class Table {
                     break;
             }
         }
-
-
-        System.out.println(this.tableList);
     }
 
     /**

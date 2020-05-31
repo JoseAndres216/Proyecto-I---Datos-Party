@@ -100,7 +100,7 @@ public class CircularDoubleList<T> implements MotherList<T> {
 
     @Override
     public int len() {
-        return 0;
+        return this.extension;
     }
 
 
