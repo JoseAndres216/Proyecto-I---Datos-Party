@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee66dd22-e32e-4710-af44-09944fffcbea" name="Default Changelist" comment="">
+    <list default="true" id="6bcdad32-13ea-41e4-a0bb-ee28db2fcf02" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/IntersectionBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/Box.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/Box.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/GreenBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/GreenBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/RedBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/RedBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/WhiteBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/WhiteBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/YellowBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/YellowBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/CircularDoubleList/CircularDoubleList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/CircularDoubleList/CircularDoubleList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/CircularDoubleList/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/CircularDoubleList/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/DoubleLinkedList/DoubleLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/DoubleLinkedList/DoubleLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/DoubleLinkedList/DoubleNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/DoubleLinkedList/DoubleNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Help/HelpWindowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Help/HelpWindowController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Help/HelpWindowStart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Help/HelpWindowStart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/MainMenu/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/MainMenu/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/MainMenu/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/MainMenu/MainMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/table/TableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/table/TableController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/MainMenu/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/MainMenu/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/MotherList/MotherList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/MotherList/MotherList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Observer/BoxObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Observer/BoxObserver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Observer/Observable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Observer/Observable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Observer/Observer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Observer/Observer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/SimpleCircularList/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/SimpleCircularList/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/SimpleCircularList/SimpleCircularList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/SimpleCircularList/SimpleCircularList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/SimpleLinkedList/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/SimpleLinkedList/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/SimpleLinkedList/SimpleLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/SimpleLinkedList/SimpleLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,38 +44,17 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Eduardo Zumbado Granados &lt;42503164+eduardo2108@users.noreply.github.com&gt;" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Observer/Observer.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Main.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/Box.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/DoubleLinkedList/DoubleLinkedList.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/DoubleLinkedList/DoubleNode.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/DoubleLinkedList/DoubleLinkedList.java" root0="SKIP_INSPECTION" />
   </component>
-  <component name="JQLSearcherProjectManager">
-    <selected>-1</selected>
-    <searchers />
-  </component>
-  <component name="JiraServerManager">
-    <servers>
-      <JiraServer apiToken="dfc0dffddffedf93dff8dfc5dff2dfdbdfdbdf93df92df93dfc9dfecdfe8dfcddfeddfdddfcddfd8dfefdfefdf98df9a" type="API_TOKEN" url="https://joseandres216.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=PD&amp;selectedIssue=PD-6" useremail="eduardo212792@gmail.com" />
-    </servers>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="vmOptionsForImporter" value="-Xmx768m" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1c4IaTxTu7sq1zDRKdyJT6ZA6RV" />
+  <component name="ProjectId" id="1ceSS0xHX73OfLcORilbUzZi6j6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
@@ -76,45 +65,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="Proyecto1" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\eduar\Desktop\ProyectoI-DatosParty\out\production\ProyectoI-DatosParty\Proyecto1\DatosParty\GUI\Resources\images" />
-      <recent name="C:\Users\eduar\Desktop\ProyectoI-DatosParty\out\production\ProyectoI-DatosParty\Proyecto1\DatosParty\GUI" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Proyecto1.DatosParty" />
-      <recent name="Proyecto1.cr.ac.tec.CE1103.Proyecto1" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="HelpWindowStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.GUI.Help.HelpWindowStart" />
-      <module name="ProyectoI-DatosParty" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Proyecto1.DatosParty.GUI.Help.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.Main" />
       <module name="ProyectoI-DatosParty" />
       <extension name="coverage">
@@ -127,46 +85,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.cr.ac.tec.CE1103.Proyecto1.Main" />
-      <module name="ProyectoI-DatosParty" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.Main" />
-      <module name="ProyectoI-DatosParty" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Proyecto1.DatosParty.Boxes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.Main" />
-      <module name="ProyectoI-DatosParty" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Proyecto1.DatosParty.Phases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.HelpWindowStart" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -176,211 +96,54 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ee66dd22-e32e-4710-af44-09944fffcbea" name="Default Changelist" comment="Implemented one new method in SimpleLinkedCircularList and DoubleLinkedCircularList.&#10;Method: retrnNodedata(int index) [returns tha data of a node by an index]" />
-      <created>1589781501581</created>
+      <changelist id="6bcdad32-13ea-41e4-a0bb-ee28db2fcf02" name="Default Changelist" comment="" />
+      <created>1590887580612</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1589781501581</updated>
-      <workItem from="1590209320414" duration="11349000" />
-      <workItem from="1590298322795" duration="2418000" />
-      <workItem from="1590376689369" duration="5026000" />
+      <updated>1590887580612</updated>
     </task>
-    <task id="LOCAL-00001" summary="Added SimpleList for implementation of game stages">
-      <created>1590118352844</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1590118352844</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added directories and SimpleLinkedList is complete, part of [PD-06] user storie.">
-      <created>1590124206495</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1590124206495</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Implemented DoubleLinkedList and it's methods.">
-      <created>1590214392421</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1590214392421</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Implemented method for getting a node, given it´s position on list, and print and reversePrint in doubly linked list.">
-      <created>1590300764807</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1590300764807</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Added images for the help window, bug makes images dont appear on window.">
-      <created>1590653747576</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1590653747576</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Solved Bug that caused trouble with images on help window">
-      <created>1590654978858</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1590654978858</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added the MainMenu screen to the game and fixed some bugs">
-      <created>1590712208126</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1590712208126</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added SimpleList for implementation of game stages" />
-    <MESSAGE value="Added directories and SimpleLinkedList is complete, part of [PD-06] user storie." />
-    <MESSAGE value="Implemented DoubleLinkedList and it's methods." />
-    <MESSAGE value="Implemented method for getting a node, given it´s position on list, and print and reversePrint in doubly linked list." />
-    <MESSAGE value="Added images for the help window, bug makes images dont appear on window." />
-    <MESSAGE value="Solved Bug that caused trouble with images on help window" />
-    <MESSAGE value="Added the MainMenu screen to the game and fixed some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the MainMenu screen to the game and fixed some bugs" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590712534198">
+    <state x="231" y="6" key="CommitChangelistDialog2" timestamp="1590894713094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590712534198" />
-    <state x="522" y="281" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1590713813367">
+    <state x="231" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590894713094" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1590745901481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="522" y="281" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1536.824@0.0.1536.824" timestamp="1590713813367" />
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1590647428139">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="718" y="-926" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590209788395" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1590120794360" />
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590380114259" />
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1590647428139" />
-    <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1590120723171">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590745901481" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1590745901481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1590120723171" />
-    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1590705583744">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590745901481" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1590745901481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1590705583744" />
-    <state x="566" y="318" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1590120724701">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590745901481" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1590745901481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="566" y="318" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1590120724701" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590379613876">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590379613876" />
-    <state x="707" y="-828" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590214299149">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state x="707" y="-828" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590214299149" />
-    <state x="253" y="0" width="1118" height="1047" key="CommitChangelistDialog2" timestamp="1590712205236">
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590745901481" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590745901482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="316" y="-1080" key="CommitChangelistDialog2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590214391742" />
-    <state x="253" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590712205236" />
-    <state x="206" y="-1080" key="CommitChangelistDialog2/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376838159" />
-    <state x="165" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1590654978200" />
-    <state x="206" y="-1080" width="1118" height="1047" key="CommitChangelistDialog2/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300762432" />
-    <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1590705528050">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590745901482" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1590745901482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="740" y="-806" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590214274619" />
-    <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590705528050" />
-    <state width="746" height="99" key="GridCell.Tab.0.bottom" timestamp="1590738618942">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590745901482" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1590745901481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="492" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404924" />
-    <state width="746" height="99" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590738618942" />
-    <state width="1493" height="94" key="GridCell.Tab.0.bottom/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788713" />
-    <state width="1493" height="441" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1590655725088" />
-    <state width="1877" height="492" key="GridCell.Tab.0.bottom/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="746" height="99" key="GridCell.Tab.0.center" timestamp="1590738618942">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590745901481" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1590745901482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="492" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
-    <state width="746" height="99" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590738618942" />
-    <state width="1493" height="94" key="GridCell.Tab.0.center/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788712" />
-    <state width="1493" height="441" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1590655725088" />
-    <state width="1877" height="492" key="GridCell.Tab.0.center/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="746" height="99" key="GridCell.Tab.0.left" timestamp="1590738618942">
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590745901482" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1590745857519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="492" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
-    <state width="746" height="99" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590738618942" />
-    <state width="1493" height="94" key="GridCell.Tab.0.left/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788712" />
-    <state width="1493" height="441" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1590655725088" />
-    <state width="1877" height="492" key="GridCell.Tab.0.left/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="746" height="99" key="GridCell.Tab.0.right" timestamp="1590738618942">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="492" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
-    <state width="746" height="99" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590738618942" />
-    <state width="1493" height="94" key="GridCell.Tab.0.right/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788713" />
-    <state width="1493" height="441" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1590655725088" />
-    <state width="1877" height="492" key="GridCell.Tab.0.right/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590707846089">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590707846089" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1590707846089">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590707846089" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1590707846089">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590707846089" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1590707846089">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590707846089" />
-    <state x="146" y="0" key="SettingsEditor" timestamp="1590713767709">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="183" y="-1080" key="SettingsEditor/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590300152289" />
-    <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590713767709" />
-    <state x="183" y="-1080" key="SettingsEditor/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376881091" />
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1590712211341">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="326" y="-980" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590300622519" />
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590712211341" />
-    <state x="326" y="-979" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376825667" />
-    <state x="261" y="80" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1590655021488" />
-    <state x="326" y="-976" key="Vcs.Push.Dialog.v2/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300769663" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1590118204939">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1590118204939" />
-    <state x="374" y="156" key="git4idea.merge.GitPullDialog" timestamp="1590738610898">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="468" y="-883" key="git4idea.merge.GitPullDialog/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590298437188" />
-    <state x="374" y="156" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1590738610898" />
-    <state x="468" y="-881" key="git4idea.merge.GitPullDialog/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376761112" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1590715241116">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1590715241116" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1590654501280">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590121749613" />
-    <state x="539" y="-895" width="840" height="864" key="search.everywhere.popup/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376804466" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1590654501280" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590745857519" />
   </component>
 </project>

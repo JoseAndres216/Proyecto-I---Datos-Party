@@ -16,6 +16,8 @@ public abstract class Box extends Observable {
     protected Observer observer;
     protected String tag;
     public Color bodyColor;
+    public boolean isJoint = false;
+    public boolean isIntersection = false;
 
     //settings for the graphic representation of box
     private int height = 50;
