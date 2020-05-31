@@ -12,24 +12,24 @@ public class Main extends Application {
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
 
-
     @Override
     public void start(Stage stage) throws Exception {
 
         Parent root = FXMLLoader.load(getClass().getResource("\\GUI\\MainMenu\\MainMenu.fxml"));
         stage.setAlwaysOnTop(false);
-        stage.setTitle("Main Menu");
+        stage.setTitle("Datos Party!");
         stage.setScene(new Scene(root));
         stage.resizableProperty().setValue(false);
         stage.setFullScreen(false);
         stage.show();
 
-
     }
-
 
     public static void main(String[] args) {
         launch(args);
+        Table tableroPrueba = new Table();
+
+        tableroPrueba.generateTable();
     }
 }
 

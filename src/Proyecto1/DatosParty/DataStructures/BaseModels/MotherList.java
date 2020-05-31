@@ -1,4 +1,4 @@
-package Proyecto1.DatosParty.MotherList;
+package Proyecto1.DatosParty.DataStructures.BaseModels;
 
 /**
  * Base model for the implementation of the lists
@@ -13,6 +13,7 @@ public interface MotherList<T> {
     T accessNode(int i);
 
     int len();
+
 
 }
 
