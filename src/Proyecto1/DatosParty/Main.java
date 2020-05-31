@@ -11,6 +11,11 @@ import java.awt.*;
 public class Main extends Application {
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
+    public static void main(String[] args) {
+        launch(args);
+        Table tableroPrueba = new Table();
+        tableroPrueba.generateTable();
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -23,13 +28,6 @@ public class Main extends Application {
         stage.setFullScreen(false);
         stage.show();
 
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-        Table tableroPrueba = new Table();
-
-        tableroPrueba.generateTable();
     }
 }
 

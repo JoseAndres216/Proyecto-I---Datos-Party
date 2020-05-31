@@ -37,5 +37,4 @@ public class SimpleNode<T> implements FatherNode<T> {
         return this.next;
     }
 
-
 }
