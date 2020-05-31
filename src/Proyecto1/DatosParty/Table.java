@@ -34,42 +34,7 @@ public class Table {
      * @param yellow amount of yellow boxes
      * @return a list with all the boxes inside, in a random order.
      */
-    public void generatePhases(MotherList list, int green, int red, int yellow, int white) {
-        while (green != 0 || red != 0 || yellow != 0 || white != 0) {
-            int randomNum = ThreadLocalRandom.current().nextInt(0, 4);
 
-            switch (randomNum) {
-                case 0:
-                    if (green != 0) {
-                        list.insertLast(new GreenBox());
-                        green--;
-
-                    }
-                    break;
-                case 1:
-                    if (yellow != 0) {
-                        list.insertLast(new YellowBox());
-                        yellow--;
-                    }
-                    break;
-                case 2:
-                    if (red != 0) {
-                        list.insertLast(new RedBox());
-                        red--;
-                    }
-                    break;
-                case 3:
-                    if (white != 0) {
-                        list.insertLast(new WhiteBox());
-                        white--;
-                    }
-
-            }
-
-        }
-
-
-    }
 
     /**
      * Method for generating a random box, for creating the main table.
@@ -101,17 +66,11 @@ public class Table {
 
     //Method for puttin together the phases and the main table.
     public void generateTable() {
-        //Fill the phases of the board with random order of boxes
-        this.generatePhases(phaseAList, 3, 3, 1, 3);
-        this.generatePhases(phaseBList, 0, 0, 10, 0);
-        this.generatePhases(phaseCList, 3, 3, 3, 1);
-        this.generatePhases(phaseDList, 0, 0, 12, 0);
-
         //Setting the phases with the lists
-        this.phaseA.config(this.phaseAList, 7);//exit point esta basado en el modelo del excel
-        this.phaseA.config(this.phaseBList, 7);//exit point esta basado en el modelo del excel
-        this.phaseA.config(this.phaseCList, 7);//exit point esta basado en el modelo del excel
-        this.phaseA.config(this.phaseDList, -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
+        this.phaseA.config(3,3,1,  3,  7);//exit point esta basado en el modelo del excel
+        this.phaseA.config(0,0,10, 0,  16);//exit point esta basado en el modelo del excel
+        this.phaseA.config(3,3,3,  1,  25);//exit point esta basado en el modelo del excel
+        this.phaseA.config(0,0,12, 0, -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
 
         //Generate the main table, made of 36 boxes with intersections that connect phases
         //and random generated boxes on the other parts of the table.
