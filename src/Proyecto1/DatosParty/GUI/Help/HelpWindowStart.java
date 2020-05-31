@@ -24,6 +24,7 @@ public class HelpWindowStart extends Application {
     }
 
     public void setOpen(boolean open) {
+
         this.open = open;
     }
 
