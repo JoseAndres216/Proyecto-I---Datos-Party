@@ -12,7 +12,7 @@ import javafx.scene.paint.Color;
 public abstract class Box extends Observable {
 
     protected boolean busy;
-    protected static int id;
+    protected int id;
     protected Observer observer;
     protected String tag;
     public Color bodyColor;
