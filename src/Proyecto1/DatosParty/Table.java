@@ -19,9 +19,14 @@ public class Table {
     //Intialization of the Phases, (the main table will not be a phase)
     public Phase phaseA = new Phase(new SimpleLinkedList<Box>(),false);
     public Phase phaseB = new Phase(new SimpleLinkedList<Box>(),false);
+    public Phase phaseC = new Phase(new DoubleLinkedList<Box>(),false);
+    public Phase phaseD = new Phase(new CircularDoubleList<Box>(),true);
+    //Intialization of the main table.
+    public Phase mainPhase = new Phase(new SimpleCircularList(),true);
     private Table(){
         this.generateTable();
     }
+
     public static synchronized Table getInstance(){
 
         if(instance == null){
@@ -29,6 +34,7 @@ public class Table {
         }
         return instance;
     }
+
     public Phase getPhaseA() {
         return phaseA;
     }
@@ -49,10 +55,6 @@ public class Table {
         return mainPhase;
     }
 
-    public Phase phaseC = new Phase(new DoubleLinkedList<Box>(),false);
-    private Phase phaseD = new Phase(new CircularDoubleList<Box>(),false);
-
-    public Phase mainPhase = new Phase(new SimpleCircularList(),true);
     //Creating the main table
 
 
@@ -86,11 +88,6 @@ public class Table {
 
     //Method for puttin together the phases and the main table.
     public void generateTable() {
-        //Setting the phases with the lists
-        this.phaseA.config(3,3,1,  3,  7);//exit point esta basado en el modelo del excel
-        this.phaseB.config(0,0,10, 0,  16);//exit point esta basado en el modelo del excel
-        this.phaseC.config(3,3,3,  1,  25);//exit point esta basado en el modelo del excel
-        this.phaseD.config(0,0,12, 0,  -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
 
         //Generate the main table, made of 36 boxes with intersections that connect phases
         //and random generated boxes on the other parts of the table.
@@ -116,6 +113,12 @@ public class Table {
             }
             counterCasillasPrincipal++;
         }
+        //Setting the phases with the lists
+        this.phaseA.config(3,3,1,  3,  7);//exit point esta basado en el modelo del excel
+        this.phaseB.config(0,0,10, 0,  16);//exit point esta basado en el modelo del excel
+        this.phaseC.config(3,3,3,  1,  25);//exit point esta basado en el modelo del excel
+        this.phaseD.config(0,0,12, 0,  -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
+
     }
 
     /**

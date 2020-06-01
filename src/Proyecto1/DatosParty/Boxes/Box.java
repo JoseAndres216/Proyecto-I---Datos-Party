@@ -13,17 +13,19 @@ import javafx.scene.paint.Color;
 public abstract class Box extends Observable {
 
     protected boolean busy;
-    public int id;
+    public static int id = 0;
     protected Observer observer;
     protected String tag;
     public Color bodyColor;
-    public boolean isJoint = false;
     public boolean isIntersection = false;
 
     //settings for the graphic representation of box
     private int height = 50;
     private int width = 50;
 
+    public Box(){
+        id++;
+    }
     /**
      * Method for the observer pattern
      *

@@ -10,7 +10,7 @@ public class Player {
     private int stars;
     private int playernumber;
     private int minigamepoints;
-
+    private String nikname;
     //Configurations for the location of the player on table
     private Phase actualPhase; // actual phase of the player from A B C D to MainPhase.
     private MotherList<Box> actualList; // list to move trough
@@ -21,19 +21,22 @@ public class Player {
      * Constructor of the class player
      *
      * @param playerNumber integer number between 1 and 4, order given by rolling dices
-     * @param actualPhase  Phase instance, of the player, should be the Main Phase
-     * @param actualBox    Int number, giving the position in the phase, with a zero based index
+        @param nikname string for the name that the user selected.
      */
-    public Player(int playerNumber, Phase actualPhase,MotherList<Box> mainList, int actualBox) {
+    public Player(int playerNumber, String nikname) {
+        //Settings for game
         this.coins = 0;
         this.stars = 0;
-        this.playernumber = playerNumber;
         this.coins = 0;
         this.minigamepoints = 0;
-        this.actualPhase = actualPhase; //null means that player is in main table.
+        //Ubication on the table
         this.actualList = this.actualPhase.phaseList; //should be the main table list.
-        this.actualBox = actualBox;
-        this.mainTableList = mainList;
+        this.actualBox = 0;
+        this.mainTableList = Table.getInstance().mainPhase.phaseList;
+        this.actualPhase = Table.getInstance().mainPhase; //null means that player is in main table.
+        //Identification
+        this.nikname = nikname;
+        this.playernumber = playerNumber;
     }
 
     /**
@@ -101,6 +104,11 @@ public class Player {
         return posibles;
     }
 
+    @Override
+    public String toString() {
+       return "Player: " + nikname + ", ID: " + this.playernumber;
+
     }
+}
 
 
