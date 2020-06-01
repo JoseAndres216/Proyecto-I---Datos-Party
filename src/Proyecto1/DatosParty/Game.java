@@ -8,6 +8,10 @@ public class Game {
     private Table gameTable;
     private int cantidadRondas;
 
+    public SimpleLinkedList<Player> getPlayers() {
+        return players;
+    }
+
     private Game() {
         this.gameTable = Table.getInstance();
     }

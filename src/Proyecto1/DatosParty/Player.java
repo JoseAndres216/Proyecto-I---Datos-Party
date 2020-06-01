@@ -30,10 +30,10 @@ public class Player {
         this.coins = 0;
         this.minigamepoints = 0;
         //Ubication on the table
+        this.actualPhase = Table.getInstance().mainPhase; //null means that player is in main table.
+        this.mainTableList = Table.getInstance().mainPhase.phaseList;
         this.actualList = this.actualPhase.phaseList; //should be the main table list.
         this.actualBox = 0;
-        this.mainTableList = Table.getInstance().mainPhase.phaseList;
-        this.actualPhase = Table.getInstance().mainPhase; //null means that player is in main table.
         //Identification
         this.nikname = nikname;
         this.playernumber = playerNumber;

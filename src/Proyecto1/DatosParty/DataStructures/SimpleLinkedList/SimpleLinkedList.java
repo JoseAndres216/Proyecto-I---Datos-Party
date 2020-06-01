@@ -10,22 +10,27 @@ public class SimpleLinkedList <T> implements MotherList<T> {
     private SimpleNode<T> tail = null;
     private int len = 0;
 
-    public SimpleNode<T> getHead(){
+    public SimpleNode<T> getHead() {
         return this.head;
     }
-    public SimpleNode<T> getTail(){
+
+    public SimpleNode<T> getTail() {
         return this.tail;
+    }
+
+    public void emptyList() {
+        this.head = this.tail = null;
     }
 
     public int len() {
         return this.len;
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return this.head == null;
     }
 
-    public void insertLast(T data){
+    public void insertLast(T data) {
         SimpleNode<T> newNode = new SimpleNode<>(data);
         if(isEmpty()){
             this.head = this.tail = newNode;
