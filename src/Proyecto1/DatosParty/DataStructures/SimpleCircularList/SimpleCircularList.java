@@ -22,6 +22,12 @@ public class SimpleCircularList<T> implements MotherList<T> {
         return this.head == null;
     }
 
+    @Override
+    public FatherNode<T> getTail() {
+
+        return null;
+    }
+
     public void insertFirst(T data) {
         SimpleNode<T> simpleNode = new SimpleNode(data);
         if (isEmpty()) {

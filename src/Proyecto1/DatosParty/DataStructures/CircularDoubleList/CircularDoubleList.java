@@ -1,5 +1,6 @@
 package Proyecto1.DatosParty.DataStructures.CircularDoubleList;
 
+import Proyecto1.DatosParty.DataStructures.BaseModels.FatherNode;
 import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import Proyecto1.DatosParty.DataStructures.Nodes.DoubleNode;
 
@@ -18,6 +19,12 @@ public class CircularDoubleList<T> implements MotherList<T> {
 
     public boolean isEmpty() {
         return this.head == null;
+    }
+
+    @Override
+    public FatherNode<T> getTail() {
+
+        return null;
     }
 
 

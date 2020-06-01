@@ -11,13 +11,8 @@ import java.awt.*;
 public class Main extends Application {
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         launch(args);
-        Table tableroPrueba = new Table();
-        tableroPrueba.generateTable();
-        Player Eduardo = new Player(1, tableroPrueba.mainPhase,0);
-
-        System.out.println(Eduardo.calcRoute(20));//(se espera que retorne una lista con dos casiilas, una en la fase B y la otra en el tablero)
     }
 
     @Override

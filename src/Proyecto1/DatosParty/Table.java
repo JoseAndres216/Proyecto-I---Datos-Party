@@ -15,9 +15,40 @@ import java.util.concurrent.ThreadLocalRandom;
  * Class Table
  */
 public class Table {
+    private static Table instance = null;
     //Intialization of the Phases, (the main table will not be a phase)
     public Phase phaseA = new Phase(new SimpleLinkedList<Box>(),false);
     public Phase phaseB = new Phase(new SimpleLinkedList<Box>(),false);
+    private Table(){
+        this.generateTable();
+    }
+    public static synchronized Table getInstance(){
+
+        if(instance == null){
+            instance = new Table();
+        }
+        return instance;
+    }
+    public Phase getPhaseA() {
+        return phaseA;
+    }
+
+    public Phase getPhaseB() {
+        return phaseB;
+    }
+
+    public Phase getPhaseC() {
+        return phaseC;
+    }
+
+    public Phase getPhaseD() {
+        return phaseD;
+    }
+
+    public Phase getMainPhase() {
+        return mainPhase;
+    }
+
     public Phase phaseC = new Phase(new DoubleLinkedList<Box>(),false);
     private Phase phaseD = new Phase(new CircularDoubleList<Box>(),false);
 

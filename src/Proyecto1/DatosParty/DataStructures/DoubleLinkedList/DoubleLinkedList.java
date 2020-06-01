@@ -1,5 +1,6 @@
 package Proyecto1.DatosParty.DataStructures.DoubleLinkedList;
 
+import Proyecto1.DatosParty.DataStructures.BaseModels.FatherNode;
 import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import Proyecto1.DatosParty.DataStructures.Nodes.DoubleNode;
 
@@ -19,6 +20,11 @@ public class DoubleLinkedList<T> implements MotherList<T> {
 
     public boolean isEmpty() {
         return this.head == null;
+    }
+
+    @Override
+    public FatherNode<T> getTail() {
+        return this.tail ;
     }
 
     public void insertFirst(T data) {
