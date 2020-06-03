@@ -18,12 +18,27 @@ public class Player {
     public MotherList<Box> mainTableList;
 
     /**
+     * Method for modifying the stars of the player
+     * @param gain true if earns stars, false if looses
+     * @param amount amount of stars to earn.
+     */
+    public void modifyStars(boolean gain, int amount) {
+        if(gain){
+            this.stars += amount;
+        }
+        else{
+            this.stars-= amount;
+        }
+    }
+
+
+    /**
      * Constructor of the class player
      *
      * @param playerNumber integer number between 1 and 4, order given by rolling dices
-        @param nikname string for the name that the user selected.
+        @param nickname string for the name that the user selected.
      */
-    public Player(int playerNumber, String nikname) {
+    public Player(int playerNumber, String nickname) {
         //Settings for game
         this.coins = 0;
         this.stars = 0;
@@ -35,7 +50,7 @@ public class Player {
         this.actualList = this.actualPhase.phaseList; //should be the main table list.
         this.actualBox = 0;
         //Identification
-        this.nikname = nikname;
+        this.nikname = nickname;
         this.playernumber = playerNumber;
     }
 

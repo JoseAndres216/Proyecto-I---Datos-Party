@@ -1,8 +1,16 @@
 
+w
+java:S1104"UMake bodyColor a static final constant or non-public and provide accessors if needed.(€ùÊÄøÿÿÿÿ8Ú²™Ä¦.
+€
+java:S21775"^Rename this method or correct the type of the argument(s) to override the parent class method.(ÍõŞüÿÿÿÿ8å¢—ó¦.
+€
+java:S2177'"^Rename this method or correct the type of the argument(s) to override the parent class method.(âË¯õşÿÿÿÿ8å¢—ó¦.
+W
+java:S2209T"5Change this instance-reference to a static reference.(Àüûÿÿÿÿ8äÑ—ó¦.
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öØ¸×
-N
-java:S1068",Remove this unused "observer" private field.(ÒŞÀ×ıÿÿÿÿ8‰äÔ£.
-R
-java:S1874"0Remove this use of "Observer"; it is deprecated.(ÒŞÀ×ıÿÿÿÿ8‚òèÕ£.
-E
-java:S1068"(Remove this unused "busy" private field.(Â·8Úà©Ô£.
+p
+java:S1104"NMake id a static final constant or non-public and provide accessors if needed.(¨±Çôûÿÿÿÿ8òÑ‡á¦.
+J
+java:S1444"(Make this "public static id" field final(¨±Çôûÿÿÿÿ8äÑ—ó¦.
+|
+java:S1104"ZMake isIntersection a static final constant or non-public and provide accessors if needed.(ºèÅÍıÿÿÿÿ8å¢—ó¦.
