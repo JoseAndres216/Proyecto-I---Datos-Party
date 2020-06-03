@@ -30,7 +30,19 @@ public class Player {
             this.stars-= amount;
         }
     }
-
+    /**
+     * Method for modifying the coins of the player
+     * @param gain true if earns coins, false if looses
+     * @param amount amount of coins to earn.
+     */
+    public void modifyCoins(boolean gain, int amount){
+        if(gain){
+            this.coins += amount;
+        }
+        else{
+            this.coins-= amount;
+        }
+    }
 
     /**
      * Constructor of the class player
