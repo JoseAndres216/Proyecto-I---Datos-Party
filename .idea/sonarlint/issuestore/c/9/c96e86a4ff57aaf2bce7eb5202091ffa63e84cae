@@ -1,17 +1,8 @@
 
-U	java:S106"9Replace this use of System.out or System.err by a logger.(ÒΑΥ³8υή©¤.
-p
-java:S1128"SRemove this unused import 'Proyecto1.DatosParty.SimpleLinkedList.SimpleLinkedList'.(ƒ§³Ή8€―­©¤.
-y
-java:S1128"WRemove this unused import 'Proyecto1.DatosParty.CircularDoubleList.CircularDoubleList'.(Ιοόÿÿÿÿ8€―­©¤.
-]
-java:S1128";Remove this unused import 'Proyecto1.DatosParty.Boxes.Box'.(ƒΆυ§ύÿÿÿÿ8€―­©¤.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¦έκ¥ώÿÿÿÿ8€―­©¤.
-t
-java:S1128"WRemove this unused import 'Proyecto1.DatosParty.SimpleCircularList.SimpleCircularList'.(ΕΩΐΔ8ς»”Φ£.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(νν‘ƒώÿÿÿÿ8υή©¤.
-U	java:S106"9Replace this use of System.out or System.err by a logger.(ρΎή8υή©¤.
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ή»¦ÿÿÿÿÿ
-d
-java:S1128"GRemove this unused import 'Proyecto1.DatosParty.MotherList.MotherList'.(ή§•Ί8€―­©¤.
-T	java:S106"9Replace this use of System.out or System.err by a logger.(Ί¤ϊc8€―­©¤.
+
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ΩΨ¤ήύÿÿÿÿ8΄λάσ¦.
+M
+java:S1481"+Remove this unused "listaP" local variable.(τα¬£όÿÿÿÿ8΄λάσ¦.
+\
+java:S1854":Remove this useless assignment to local variable "listaP".(τα¬£όÿÿÿÿ8΄λάσ¦.

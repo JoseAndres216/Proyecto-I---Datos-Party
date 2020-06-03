@@ -13,6 +13,61 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/AppData/Local/Temp/tmp__Box.class">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Data-structures-and-algorithms-I/DataStructures_Algorithms_I/src/ActividadClase_2/DoublyLinkedList/DList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Data-structures-and-algorithms-I/DataStructures_Algorithms_I/src/ActividadClase_2/DoublyLinkedList/DNode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Data-structures-and-algorithms-I/DataStructures_Algorithms_I/src/ActividadClase_2/SortAlgorithms/BubbleSort/BubbleSort.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Data-structures-and-algorithms-I/DataStructures_Algorithms_I/src/com/cr/ac/tec/CE1103/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../DataStructures_Algorithms_I/src/ActividadClase_2/DoublyLinkedList/DList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../DataStructures_Algorithms_I/src/ActividadClase_2/DoublyLinkedList/DNode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../DataStructures_Algorithms_I/src/com/cr/ac/tec/CE1103/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ProyectoI-DatosParty.iml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/DataStructures/BaseModels/MotherList.class">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Table.class">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/Box.java">
           <value>
             <set />
@@ -29,6 +84,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/Box.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/GreenBox.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/IntersectionBox.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/Phase.java">
           <value>
             <set />
           </value>
@@ -53,12 +123,87 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/BaseModels/MotherList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/CircularDoubleList/CircularDoubleList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/DoubleLinkedList/DoubleLinkedList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/Nodes/SimpleNode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/SimpleCircularList/SimpleCircularList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/SimpleLinkedList/SimpleLinkedList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DoubleLinkedList/DoubleLinkedList.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DoubleLinkedList/DoubleNode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Duel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/EarnStars.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Event.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/GiftCoins.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Minigame.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Stars.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealCoins.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealStar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Teleport.java">
           <value>
             <set />
           </value>
@@ -88,12 +233,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/GreenBox.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Minigames/Minigame.java">
           <value>
             <set />
           </value>
@@ -138,12 +293,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Phase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Phases/Fase.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Phases/PhaseD.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java">
           <value>
             <set />
           </value>

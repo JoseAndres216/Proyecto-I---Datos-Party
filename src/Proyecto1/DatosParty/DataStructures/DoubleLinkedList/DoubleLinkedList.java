@@ -59,7 +59,7 @@ public class DoubleLinkedList<T> implements MotherList<T> {
     }
 
     public T accessNode(int i) {
-        if (((i) > (this.len - 1)) | i < 0) {
+        if (((i) > (this.len - 1)) || i < 0) {
             return null;
         } else {
             if (i == 0) {
@@ -67,13 +67,13 @@ public class DoubleLinkedList<T> implements MotherList<T> {
             } else if (i == (this.len - 1)) {
                 return this.tail.getData();
             }
-            DoubleNode temp = this.head;
+            DoubleNode<T> temp = this.head;
             int var = 0;
             while (var != i) {
                 var++;
                 temp = temp.getNext();
             }
-            return (T) temp.getData();
+            return temp.getData();
         }
     }
 
