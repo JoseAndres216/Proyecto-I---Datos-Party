@@ -20,12 +20,13 @@ public abstract class Box extends Observable {
     public boolean isIntersection = false;
 
     //settings for the graphic representation of box
-    private int height = 50;
-    private int width = 50;
+    private int height = 36;
+    private int width = 36;
 
-    public Box(){
+    public Box() {
         id++;
     }
+
     /**
      * Method for the observer pattern
      *
@@ -61,6 +62,7 @@ public abstract class Box extends Observable {
      * @param y      postion of the up left corner on y axis
      * @param canvas canvas for drawing the boxes
      */
+
     public void draw(int x, int y, Canvas canvas) {
 
         // Get the grapics context of the canvas
@@ -71,7 +73,6 @@ public abstract class Box extends Observable {
 
         //Draw the rectangle
         gc.strokeRect(x, y, this.height, this.width);
-
     }
 
     public void iteract(){

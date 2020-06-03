@@ -12,13 +12,17 @@ public class Phase {
     public boolean isTable;
     public boolean isPhaseD = false;
 
-    public Phase(MotherList list, boolean isTable){
+    public Phase(MotherList list, boolean isTable) {
         this.phaseList = list;
         this.isTable = isTable;
     }
 
     public Box getPhaseListElement(int i) throws Exception {
         return phaseList.accessNode(i);
+    }
+
+    public MotherList<Box> getPhaselist() {
+        return phaseList;
     }
 
     public int getExitPoint() {

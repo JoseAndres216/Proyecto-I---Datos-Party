@@ -2,7 +2,7 @@ package Proyecto1.DatosParty;
 
 
 import Proyecto1.DatosParty.Boxes.*;
-import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
+import Proyecto1.DatosParty.DataStructures.BaseModels.FatherNode;
 import Proyecto1.DatosParty.DataStructures.CircularDoubleList.CircularDoubleList;
 import Proyecto1.DatosParty.DataStructures.DoubleLinkedList.DoubleLinkedList;
 import Proyecto1.DatosParty.DataStructures.SimpleCircularList.SimpleCircularList;
@@ -124,8 +124,25 @@ public class Table {
     /**
      * @param canvas canvas for drawing the boxes
      */
-    public void drawPhase(Canvas canvas, MotherList list) {
-
+    public void drawPhase(Canvas canvas) {
+        int x = 420, y = 180;
+        this.mainPhase.getPhaselist().getHead().getData().draw(x, y, canvas);
+        FatherNode<Box> node = this.mainPhase.getPhaselist().getHead().getNext();
+        for (int i = 1; i <= 35; i++) {
+            if (i <= 9) {
+                x += 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 9 && i <= 18) {
+                y += 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 18 && i <= 27) {
+                x -= 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 27 && i <= 36) {
+                y -= 36;
+                node.getData().draw(x, y, canvas);
+            }
+        }
     }
 }
 

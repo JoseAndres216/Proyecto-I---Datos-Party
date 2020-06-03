@@ -22,6 +22,11 @@ public class CircularDoubleList<T> implements MotherList<T> {
     }
 
     @Override
+    public FatherNode<T> getHead() {
+        return this.head;
+    }
+
+    @Override
     public FatherNode<T> getTail() {
 
         return null;

@@ -23,8 +23,13 @@ public class DoubleLinkedList<T> implements MotherList<T> {
     }
 
     @Override
+    public FatherNode<T> getHead() {
+        return this.head;
+    }
+
+    @Override
     public FatherNode<T> getTail() {
-        return this.tail ;
+        return this.tail;
     }
 
     public void insertFirst(T data) {
