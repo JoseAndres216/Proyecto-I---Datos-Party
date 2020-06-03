@@ -77,8 +77,10 @@ public class Phase {
                         this.phaseList.insertLast(new WhiteBox());
                         whiteBoxes--;
                     }
+                    break;
             }
         }
+        System.out.println(this.phaseList + " " + this.getPhaselist().len());
     }
 
 }

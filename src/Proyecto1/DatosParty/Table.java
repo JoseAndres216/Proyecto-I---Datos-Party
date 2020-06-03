@@ -125,7 +125,8 @@ public class Table {
      * @param canvas canvas for drawing the boxes
      */
     public void drawPhase(Canvas canvas) {
-        int x = 420, y = 180;
+        //Generating main table
+        int x = 420, y = 140;
         this.mainPhase.getPhaselist().getHead().getData().draw(x, y, canvas);
         FatherNode<Box> node = this.mainPhase.getPhaselist().getHead().getNext();
         for (int i = 1; i <= 35; i++) {
@@ -142,6 +143,82 @@ public class Table {
                 y -= 36;
                 node.getData().draw(x, y, canvas);
             }
+            node = node.getNext();
+        }
+
+        //Generating of phase A
+        x = 492;
+        y = 140;
+        node = phaseA.getPhaselist().getHead();
+        for (int i = 36; i <= 45; i++) {
+            if (i <= 38) {
+                y -= 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 38 && i <= 43) {
+                x += 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 43 && i <= 45) {
+                y += 36;
+                node.getData().draw(x, y, canvas);
+            }
+            node = node.getNext();
+        }
+
+        //Generating of phase B
+        x = 744;
+        y = 212;
+        node = phaseB.getPhaselist().getHead();
+        for (int i = 46; i <= 55; i++) {
+            if (i <= 48) {
+                x += 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 48 && i <= 53) {
+                y += 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 53 && i <= 55) {
+                x -= 36;
+                node.getData().draw(x, y, canvas);
+            }
+            node = node.getNext();
+        }
+
+        //Generating of phase C
+        x = 672;
+        y = 464;
+        node = phaseC.getPhaselist().getHead();
+        for (int i = 56; i <= 65; i++) {
+            if (i <= 58) {
+                y += 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 58 && i <= 63) {
+                x -= 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 63 && i <= 65) {
+                y -= 36;
+                node.getData().draw(x, y, canvas);
+            }
+            node = node.getNext();
+        }
+
+        x = 528;
+        y = 248;
+        this.phaseD.getPhaselist().getHead().getData().draw(x, y, canvas);
+        node = this.phaseD.getPhaselist().getHead().getNext();
+        for (int i = 67; i <= 78; i++) {
+            if (i <= 69) {
+                x += 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 69 && i <= 72) {
+                y += 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 72 && i <= 75) {
+                x -= 36;
+                node.getData().draw(x, y, canvas);
+            } else if (i > 75 && i <= 77) {
+                y -= 36;
+                node.getData().draw(x, y, canvas);
+            }
+            node = node.getNext();
         }
     }
 }

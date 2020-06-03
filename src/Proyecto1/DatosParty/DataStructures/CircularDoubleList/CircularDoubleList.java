@@ -115,8 +115,8 @@ public class CircularDoubleList<T> implements MotherList<T> {
         return this.extension;
     }
 
-
-    public String print() {
+    @Override
+    public String toString() {
         if (this.head == null) {
             return "[]";
         }

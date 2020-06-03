@@ -4,8 +4,6 @@ import Proyecto1.DatosParty.Observer.Observable;
 import Proyecto1.DatosParty.Observer.Observer;
 import Proyecto1.DatosParty.Phase;
 import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Color;
 
 /**
  * This class is the base for all the other boxes
@@ -16,12 +14,11 @@ public abstract class Box extends Observable {
     public static int id = 0;
     protected Observer observer;
     protected String tag;
-    public Color bodyColor;
     public boolean isIntersection = false;
 
     //settings for the graphic representation of box
-    private int height = 36;
-    private int width = 36;
+    protected int height = 36;
+    protected int width = 36;
 
     public Box() {
         id++;
@@ -65,14 +62,6 @@ public abstract class Box extends Observable {
 
     public void draw(int x, int y, Canvas canvas) {
 
-        // Get the grapics context of the canvas
-        GraphicsContext gc = canvas.getGraphicsContext2D();
-
-        //set the color
-        gc.setFill(bodyColor);
-
-        //Draw the rectangle
-        gc.strokeRect(x, y, this.height, this.width);
     }
 
     public void iteract(){

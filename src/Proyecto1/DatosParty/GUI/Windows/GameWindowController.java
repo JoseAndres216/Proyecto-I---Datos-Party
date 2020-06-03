@@ -19,6 +19,7 @@ public class GameWindowController {
 
     public void drawPhases(Event event) throws Exception {
         Table.getInstance().drawPhase(canvas);
+        Table.getInstance().drawPhase(canvas);
     }
 
     public void pressedExitbutton(Event event) throws Exception {
