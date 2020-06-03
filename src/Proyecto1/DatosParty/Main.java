@@ -17,14 +17,14 @@ public class Main extends Application {
     public static void main(String[] args) throws Exception {
         launch(args);
         Table tablero = Table.getInstance();
-        MotherList<Box> listaP = tablero.mainPhase.phaseList;
+        MotherList<Box> listaP = tablero.getMainPhase().phaseList;
 
     }
 
     @Override
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("\\GUI\\MainMenu\\MainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("\\GUI\\Windows\\MainMenu.fxml"));
         stage.setAlwaysOnTop(false);
         stage.setTitle("Datos Party!");
         stage.setScene(new Scene(root));

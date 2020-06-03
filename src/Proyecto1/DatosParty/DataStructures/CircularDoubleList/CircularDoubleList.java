@@ -22,6 +22,11 @@ public class CircularDoubleList<T> implements MotherList<T> {
     }
 
     @Override
+    public FatherNode<T> getHead() {
+        return this.head;
+    }
+
+    @Override
     public FatherNode<T> getTail() {
 
         return null;
@@ -110,8 +115,8 @@ public class CircularDoubleList<T> implements MotherList<T> {
         return this.extension;
     }
 
-
-    public String print() {
+    @Override
+    public String toString() {
         if (this.head == null) {
             return "[]";
         }

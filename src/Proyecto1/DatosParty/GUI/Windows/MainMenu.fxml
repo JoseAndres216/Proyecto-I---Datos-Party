@@ -7,7 +7,7 @@
 <?import javafx.scene.text.*?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0"
       prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="Proyecto1.DatosParty.GUI.MainMenu.MainMenuController">
+      fx:controller="Proyecto1.DatosParty.GUI.Windows.MainMenuController">
     <children>
         <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="14.0" prefHeight="235.0"
                prefWidth="1133.0" text="DATOS PARTY 1" textAlignment="CENTER" textFill="#71c04f"

@@ -23,8 +23,13 @@ public class DoubleLinkedList<T> implements MotherList<T> {
     }
 
     @Override
+    public FatherNode<T> getHead() {
+        return this.head;
+    }
+
+    @Override
     public FatherNode<T> getTail() {
-        return this.tail ;
+        return this.tail;
     }
 
     public void insertFirst(T data) {
@@ -48,7 +53,7 @@ public class DoubleLinkedList<T> implements MotherList<T> {
         } else {
             this.tail.setNext(newElement);
             newElement.setPrev(this.tail);
-            this.tail = tail;
+            this.tail = newElement;
             this.len++;
         }
     }
@@ -92,20 +97,18 @@ public class DoubleLinkedList<T> implements MotherList<T> {
         return stringBuilder.toString();
     }
 
-    public String printReverse() {
+    @Override
+    public String toString() {
         if (this.head == null) {
-            return "Double list (reversed) of:  ";
+            return "[]";
         }
-        StringBuilder stringBuilder = new StringBuilder("Double list:  ");
-        DoubleNode<T> temp = this.tail;
-
-
+        StringBuilder stringBuilder = new StringBuilder("[ ");
+        DoubleNode<T> temp = this.head;
         while (temp != null) {
             stringBuilder.append(temp.getData().toString());
             stringBuilder.append(", ");
-            temp = temp.getPrev();
+            temp = temp.getNext();
         }
-
         stringBuilder.append(" ]");
         return stringBuilder.toString();
     }

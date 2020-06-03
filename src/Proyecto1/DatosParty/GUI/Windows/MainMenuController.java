@@ -1,10 +1,13 @@
-package Proyecto1.DatosParty.GUI.MainMenu;
+package Proyecto1.DatosParty.GUI.Windows;
 
 import Proyecto1.DatosParty.GUI.Help.HelpWindowStart;
 import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -34,6 +37,7 @@ public class MainMenuController {
     }
 
     public void pressedPlaybutton(Event event) throws Exception {
+
         Game.getInstance().getPlayers().emptyList();
         int i = 1;
         if (!entryPlayer1.getText().isEmpty()) {
@@ -53,6 +57,8 @@ public class MainMenuController {
             i++;
         }
 
-        System.out.println(Game.getInstance().getPlayers());
+        Parent gameWindow = FXMLLoader.load(this.getClass().getResource("GameWindow.fxml"));
+        Stage stage = (Stage) playButton.getScene().getWindow();
+        stage.setScene(new Scene(gameWindow));
     }
 }
