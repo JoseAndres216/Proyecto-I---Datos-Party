@@ -15,15 +15,47 @@ public class Player {
     private Phase actualPhase; // actual phase of the player from A B C D to MainPhase.
     private MotherList<Box> actualList; // list to move trough
     private int actualBox; //Index of the box (zero-based index of the phase) ej: player could be phase C, box 8
+    //Reference of the main table
     public MotherList<Box> mainTableList;
+
+    public void MoveTo(Phase newPhase, int actualBox){
+        this.actualPhase =  newPhase;
+        this.actualBox = actualBox;
+    }
+    /**
+     * Method for modifying the stars of the player
+     * @param gain true if earns stars, false if looses
+     * @param amount amount of stars to earn.
+     */
+    public void modifyStars(boolean gain, int amount) {
+        if(gain){
+            this.stars += amount;
+        }
+        else{
+            this.stars-= amount;
+        }
+    }
+    /**
+     * Method for modifying the coins of the player
+     * @param gain true if earns coins, false if looses
+     * @param amount amount of coins to earn.
+     */
+    public void modifyCoins(boolean gain, int amount){
+        if(gain){
+            this.coins += amount;
+        }
+        else{
+            this.coins-= amount;
+        }
+    }
 
     /**
      * Constructor of the class player
      *
      * @param playerNumber integer number between 1 and 4, order given by rolling dices
-        @param nikname string for the name that the user selected.
+        @param nickname string for the name that the user selected.
      */
-    public Player(int playerNumber, String nikname) {
+    public Player(int playerNumber, String nickname) {
         //Settings for game
         this.coins = 0;
         this.stars = 0;
@@ -35,7 +67,7 @@ public class Player {
         this.actualList = this.actualPhase.phaseList; //should be the main table list.
         this.actualBox = 0;
         //Identification
-        this.nikname = nikname;
+        this.nikname = nickname;
         this.playernumber = playerNumber;
     }
 

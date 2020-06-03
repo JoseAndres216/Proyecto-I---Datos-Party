@@ -15,6 +15,7 @@ public interface MotherList<T> {
     int len();
 
 
+    FatherNode<T> getHead();
 }
 
 

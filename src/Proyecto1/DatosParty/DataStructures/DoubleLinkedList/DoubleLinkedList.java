@@ -23,8 +23,13 @@ public class DoubleLinkedList<T> implements MotherList<T> {
     }
 
     @Override
+    public FatherNode<T> getHead() {
+        return this.head;
+    }
+
+    @Override
     public FatherNode<T> getTail() {
-        return this.tail ;
+        return this.tail;
     }
 
     public void insertFirst(T data) {
@@ -48,13 +53,13 @@ public class DoubleLinkedList<T> implements MotherList<T> {
         } else {
             this.tail.setNext(newElement);
             newElement.setPrev(this.tail);
-            this.tail = tail;
+            this.tail = newElement;
             this.len++;
         }
     }
 
     public T accessNode(int i) {
-        if (((i) > (this.len - 1)) | i < 0) {
+        if (((i) > (this.len - 1)) || i < 0) {
             return null;
         } else {
             if (i == 0) {
@@ -62,13 +67,13 @@ public class DoubleLinkedList<T> implements MotherList<T> {
             } else if (i == (this.len - 1)) {
                 return this.tail.getData();
             }
-            DoubleNode temp = this.head;
+            DoubleNode<T> temp = this.head;
             int var = 0;
             while (var != i) {
                 var++;
                 temp = temp.getNext();
             }
-            return (T) temp.getData();
+            return temp.getData();
         }
     }
 
@@ -92,20 +97,18 @@ public class DoubleLinkedList<T> implements MotherList<T> {
         return stringBuilder.toString();
     }
 
-    public String printReverse() {
+    @Override
+    public String toString() {
         if (this.head == null) {
-            return "Double list (reversed) of:  ";
+            return "[]";
         }
-        StringBuilder stringBuilder = new StringBuilder("Double list:  ");
-        DoubleNode<T> temp = this.tail;
-
-
+        StringBuilder stringBuilder = new StringBuilder("[ ");
+        DoubleNode<T> temp = this.head;
         while (temp != null) {
             stringBuilder.append(temp.getData().toString());
             stringBuilder.append(", ");
-            temp = temp.getPrev();
+            temp = temp.getNext();
         }
-
         stringBuilder.append(" ]");
         return stringBuilder.toString();
     }
