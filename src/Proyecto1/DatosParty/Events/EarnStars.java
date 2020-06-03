@@ -29,4 +29,9 @@ public class EarnStars extends Event {
 
         }
     }
+
+    @Override
+    public int compareTo(Event o) {
+        return 0;
+    }
 }

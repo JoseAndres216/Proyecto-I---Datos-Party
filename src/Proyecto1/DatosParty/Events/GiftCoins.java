@@ -51,5 +51,10 @@ public class GiftCoins extends Event {
                 System.out.println("something went wrong with GiftCoins event.");
         }
     }
+
+    @Override
+    public int compareTo(Event o) {
+        return 0;
     }
+}
 

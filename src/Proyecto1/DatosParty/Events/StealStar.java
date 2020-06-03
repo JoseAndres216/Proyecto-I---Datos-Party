@@ -20,4 +20,9 @@ public class StealStar extends Event{
         winnerOfCoins.modifyCoins(true, 1);
         losesCoins.modifyCoins(false,1);
     }
+
+    @Override
+    public int compareTo(Event o) {
+        return 0;
+    }
 }

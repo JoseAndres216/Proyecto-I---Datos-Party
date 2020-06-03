@@ -22,7 +22,7 @@ public abstract class Event implements Comparable<Event> {
     private int teleportEvent = 10;
     private int swapPlaces = 5;
 
-    private Event() {
+    public Event() {
         this.generateEventStack();
     }
 

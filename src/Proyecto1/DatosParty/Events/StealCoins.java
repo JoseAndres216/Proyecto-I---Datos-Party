@@ -33,4 +33,9 @@ public class StealCoins extends Event {
         winnerOfCoins.modifyCoins(true, coins);
         losesCoins.modifyCoins(false,coins);
     }
+
+    @Override
+    public int compareTo(Event o) {
+        return 0;
+    }
 }

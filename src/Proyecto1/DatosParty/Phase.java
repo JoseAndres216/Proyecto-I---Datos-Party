@@ -80,8 +80,6 @@ public class Phase {
                     break;
             }
         }
-        System.out.println(this.phaseList + " " + this.getPhaselist().len());
     }
-
 }
 

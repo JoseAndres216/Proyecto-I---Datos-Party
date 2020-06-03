@@ -16,4 +16,9 @@ public class Duel extends Event {
         Minigame duel = new RockPaperScissors();
         duel.interact(players);
     }
+
+    @Override
+    public int compareTo(Event o) {
+        return 0;
+    }
 }

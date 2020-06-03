@@ -49,4 +49,9 @@ public class Teleport extends Event   {
         int random = generateRandomBox(phase.phaseList.len());
         players.accessNode(0).MoveTo(phase,random);
     }
+
+    @Override
+    public int compareTo(Event o) {
+        return 0;
+    }
 }
