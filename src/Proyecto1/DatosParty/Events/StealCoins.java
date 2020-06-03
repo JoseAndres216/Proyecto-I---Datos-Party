@@ -8,12 +8,11 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class StealCoins extends Event {
 
-    private int coinsToSteal;
-    private int min = 2;
-    private int max = 10;
 
     private int generateRandomInt(){
-        return ThreadLocalRandom.current().nextInt(min, max+1);
+        int max = 10;
+        int min = 2;
+        return ThreadLocalRandom.current().nextInt(min, max +1);
     }
     /**
      * Method for stealing coins to a random player

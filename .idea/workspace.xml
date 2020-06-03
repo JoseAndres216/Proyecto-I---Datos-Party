@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ee66dd22-e32e-4710-af44-09944fffcbea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/DataStructures/DoubleLinkedList/DoubleLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/DataStructures/DoubleLinkedList/DoubleLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealCoins.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealCoins.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealStar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealStar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Teleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Teleport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +223,7 @@
       <workItem from="1590891384442" duration="1028000" />
       <workItem from="1590984397741" duration="7983000" />
       <workItem from="1591135334595" duration="2021000" />
-      <workItem from="1591154532609" duration="6101000" />
+      <workItem from="1591154532609" duration="7305000" />
     </task>
     <task id="LOCAL-00001" summary="Added SimpleList for implementation of game stages">
       <created>1590118352844</created>
@@ -320,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591163958269</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Implemented the steal coins event, and the method Player.modifyCoins.">
+      <created>1591164579336</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1591164579336</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +376,8 @@
     <MESSAGE value="Finished [PD-57] main table is generated with random boxes and intersections, done method for finding all possible boxes to go after rolling dices." />
     <MESSAGE value="Updates on the class Player, singleton on the Table class. Added Game class." />
     <MESSAGE value="Added all clases for the event stack, and implemented the earn 2-5 stars and lose one star events, on the Stars class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added all clases for the event stack, and implemented the earn 2-5 stars and lose one star events, on the Stars class." />
+    <MESSAGE value="Implemented the steal coins event, and the method Player.modifyCoins." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the steal coins event, and the method Player.modifyCoins." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -395,12 +406,12 @@
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-725" y="231" key="#xdebugger.evaluate/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590952299256" />
-    <state x="0" y="20" key="CommitChangelistDialog2" timestamp="1591163957305">
+    <state x="0" y="20" key="CommitChangelistDialog2" timestamp="1591164578697">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="231" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590894713094" />
     <state x="231" y="6" key="CommitChangelistDialog2/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590956145492" />
-    <state x="0" y="20" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1591163957305" />
+    <state x="0" y="20" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1591164578697" />
     <state x="147" y="76" key="DiffContextDialog" timestamp="1590989522898">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

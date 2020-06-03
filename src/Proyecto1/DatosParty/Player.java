@@ -15,8 +15,13 @@ public class Player {
     private Phase actualPhase; // actual phase of the player from A B C D to MainPhase.
     private MotherList<Box> actualList; // list to move trough
     private int actualBox; //Index of the box (zero-based index of the phase) ej: player could be phase C, box 8
+    //Reference of the main table
     public MotherList<Box> mainTableList;
 
+    public void MoveTo(Phase newPhase, int actualBox){
+        this.actualPhase =  newPhase;
+        this.actualBox = actualBox;
+    }
     /**
      * Method for modifying the stars of the player
      * @param gain true if earns stars, false if looses
