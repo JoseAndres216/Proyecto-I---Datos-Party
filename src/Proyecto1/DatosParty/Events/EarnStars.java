@@ -9,10 +9,10 @@ import java.io.IOException;
  * Class that implements the Earn 2 - 5 stars, and the Lose 1 stars
  * events.
  */
-public class Stars extends Event {
+public class EarnStars extends Event {
     private int amount;
 
-    public Stars(int amount){
+    public EarnStars(int amount) {
         this.amount = amount; //can be 2 or 5 or 1 if its lose 1 star.
     }
 
