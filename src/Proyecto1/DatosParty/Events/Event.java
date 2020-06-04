@@ -10,17 +10,17 @@ public abstract class Event implements Comparable<Event> {
 
     public abstract void interact(SimpleLinkedList<Player> players) throws IOException;
 
-    private Event instance = null;
-    private Stack<Event> events = new Stack<>();
+    private final Event instance = null;
+    private final Stack<Event> events = new Stack<>();
     //Configuration of events
-    private int duelEvent = 10;
-    private int stealCoins = 10;
-    private int giftCoins = 5;
-    private int loseAstar = 4;
-    private int earnTwoStars = 3;
-    private int earnFiveStars = 1;
-    private int teleportEvent = 10;
-    private int swapPlaces = 5;
+    private final int duelEvent = 10;
+    private final int stealCoins = 10;
+    private final int giftCoins = 5;
+    private final int lose1star = 4;
+    private final int earnTwoStars = 3;
+    private final int earnFiveStars = 1;
+    private final int teleportEvent = 10;
+    private final int swapPlaces = 5;
 
     public Event() {
         this.generateEventStack();

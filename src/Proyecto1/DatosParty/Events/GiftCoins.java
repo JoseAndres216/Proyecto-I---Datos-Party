@@ -41,12 +41,15 @@ public class GiftCoins extends Event {
                 afected.modifyCoins(false, coinsToWin);
                 players.accessNode(1).modifyCoins(true, coinsToWin / 2);
                 players.accessNode(1).modifyCoins(true, coinsToWin / 2);
+                break;
             case 4:
                 coinsToWin = this.randomCoins(false);
                 afected.modifyCoins(false, coinsToWin);
                 players.accessNode(1).modifyCoins(true, coinsToWin / 3);
                 players.accessNode(2).modifyCoins(true, coinsToWin / 3);
                 players.accessNode(3).modifyCoins(true, coinsToWin / 3);
+                break;
+
             default:
                 System.out.println("something went wrong with GiftCoins event.");
         }
