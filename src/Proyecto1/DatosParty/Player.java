@@ -72,7 +72,7 @@ public class Player {
 
         else{
             if(this.stars - amount <0){
-                throw  new IOException("Player " + this.toString() + " hasnt enought stars.");
+                throw  new IOException(this.nickname  + " hasnt enought stars.");
             }
             String update = " less stars.";
             this.stars-= amount;
@@ -85,18 +85,18 @@ public class Player {
      * @param amount amount of coins to earn.
      */
     public void modifyCoins(boolean gain, int amount) throws IOException {
-        String update = "more coins.";
+        String update = " more coins.";
         if(gain){
             this.coins += amount;
-            System.out.println("The player " + this.toString() + "has " + amount+ update);
+            System.out.println(this.nickname  + " has " + amount+ update);
         }
         else{
-            if(this.stars - amount <0){
-                throw  new IOException("Player " + this.toString() + " hasnt enought coins.");
+            if(this.coins - amount <0){
+                throw  new IOException(this.nickname + " hasnt enought coins.");
             }
-            update = "less coins.";
+            update = " less coins.";
             this.coins-= amount;
-            System.out.println("The player " + this.toString() + "has " + amount+ update);
+            System.out.println(this.nickname + " has " + amount+ update);
 
         }
     }
@@ -109,7 +109,7 @@ public class Player {
      */
     public Player(int playerNumber, String nickname) {
         //Settings for game
-        this.coins = 50;
+        this.coins = 10;
         this.stars = 3;
         this.minigamepoints = 0;
         //Ubication on the table

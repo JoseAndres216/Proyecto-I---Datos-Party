@@ -8,15 +8,15 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GiftCoins extends Event {
 
-    public int randomCoins(boolean pair) {
-        int randomN = ThreadLocalRandom.current().nextInt(5, 10);
+    public int randomCoins(boolean pair, int max) {
+        int randomN = ThreadLocalRandom.current().nextInt(2, max);
         if (pair) {
             while (randomN % 2 != 0) {
-                randomN = ThreadLocalRandom.current().nextInt(5, 10);
+                randomN = ThreadLocalRandom.current().nextInt(2, max);
             }
         } else {
             while (randomN % 3 != 0) {
-                randomN = ThreadLocalRandom.current().nextInt(5, 10);
+                randomN = ThreadLocalRandom.current().nextInt(2, max);
             }
 
         }
@@ -29,21 +29,22 @@ public class GiftCoins extends Event {
             throw new IOException("List of players must have 2-4 players");
         }
         Player afected = players.accessNode(0);
+        int n = afected.getCoins()+1;
         int coinsToWin;
         switch (players.len()) {
             case 2:
-                coinsToWin = this.randomCoins(true);
+                coinsToWin = this.randomCoins(true,n);
                 afected.modifyCoins(false, coinsToWin);
                 players.accessNode(1).modifyCoins(true, coinsToWin);
                 break;
             case 3:
-                coinsToWin = this.randomCoins(true);
+                coinsToWin = this.randomCoins(true,n);
                 afected.modifyCoins(false, coinsToWin);
                 players.accessNode(1).modifyCoins(true, coinsToWin / 2);
                 players.accessNode(1).modifyCoins(true, coinsToWin / 2);
                 break;
             case 4:
-                coinsToWin = this.randomCoins(false);
+                coinsToWin = this.randomCoins(false,n);
                 afected.modifyCoins(false, coinsToWin);
                 players.accessNode(1).modifyCoins(true, coinsToWin / 3);
                 players.accessNode(2).modifyCoins(true, coinsToWin / 3);

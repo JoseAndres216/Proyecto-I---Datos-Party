@@ -17,41 +17,41 @@ public class TestingEvents {
 
         SimpleLinkedList<Player> players2 =  new SimpleLinkedList<>();
         players2.insertLast(jugador1);
-        players2.insertLast(jugador4);
+        players2.insertLast(jugador2);
 
         SimpleLinkedList<Player> players3 = new SimpleLinkedList<>();
         players3.insertLast(jugador1);
-        players3.insertLast(jugador4);
+        players3.insertLast(jugador2);
         players3.insertLast(jugador3);
 
 
         SimpleLinkedList<Player> players4  = new SimpleLinkedList<>();
         players4.insertLast(jugador1);
-        players4.insertLast(jugador4);
-        players4.insertLast(jugador3);
         players4.insertLast(jugador2);
+        players4.insertLast(jugador3);
+        players4.insertLast(jugador4);
 
         SimpleLinkedList<Player> player1  = new SimpleLinkedList<>();
-        player1.insertLast(jugador2);
+        player1.insertLast(jugador1);
 
         SimpleLinkedList<Player> empty = new SimpleLinkedList<>();
 
         //  events
+        Event gift = new GiftCoins();
 
-
-        System.out.println("*****Two players*****");
-
+        //System.out.println("*****Two players*****");
+        //gift.interact(players2);
 
         System.out.println("*****Three players*****");
+        //gift.interact(players3);
 
-
-        System.out.println("*****Four players" + "*****");
-
+        System.out.println("*****Four players *****");
+        //gift.interact(players4);
 
         System.out.println("*****One player*****");
-
+        //gift.interact(player1);
 
         System.out.println("*****Empty players*****");
-
+        gift.interact(empty);
     }
 }
