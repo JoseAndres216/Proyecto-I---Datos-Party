@@ -54,8 +54,14 @@ public class Player {
     public MotherList<Box> mainTableList;
 
     public void MoveTo(Phase newPhase, int actualBox){
+        System.out.println(this.nickname + " changed position ");
+        System.out.println("Actual: (" + this.actualPhase +", " + this.actualBox+ ")");
+        System.out.println("New: (" + newPhase +", " + actualBox+ ")");
+
         this.actualPhase =  newPhase;
         this.actualBox = actualBox;
+
+
     }
     /**
      * Method for modifying the stars of the player
@@ -110,7 +116,7 @@ public class Player {
     public Player(int playerNumber, String nickname) {
         //Settings for game
         this.coins = 10;
-        this.stars = 3;
+        this.stars = 1;
         this.minigamepoints = 0;
         //Ubication on the table
         this.actualPhase = Table.getInstance().mainPhase; //null means that player is in main table.

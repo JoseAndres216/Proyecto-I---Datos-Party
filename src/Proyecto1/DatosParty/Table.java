@@ -17,12 +17,12 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Table {
     private static Table instance = null;
     //Intialization of the Phases, (the main table will not be a phase)
-    public Phase phaseA = new Phase(new SimpleLinkedList<Box>(),false);
-    public Phase phaseB = new Phase(new SimpleLinkedList<Box>(),false);
-    public Phase phaseC = new Phase(new DoubleLinkedList<Box>(),false);
-    public Phase phaseD = new Phase(new CircularDoubleList<Box>(),true);
+    public Phase phaseA = new Phase(new SimpleLinkedList<Box>(),false, "Phase A");
+    public Phase phaseB = new Phase(new SimpleLinkedList<Box>(),false, "Phase B");
+    public Phase phaseC = new Phase(new DoubleLinkedList<Box>(),false, "Phase C");
+    public Phase phaseD = new Phase(new CircularDoubleList<Box>(),true, "Phase D");
     //Intialization of the main table.
-    public Phase mainPhase = new Phase(new SimpleCircularList(),true);
+    public Phase mainPhase = new Phase(new SimpleCircularList(),true, "Main");
     private Table(){
         this.generateTable();
     }

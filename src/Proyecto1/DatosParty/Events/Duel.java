@@ -13,8 +13,9 @@ public class Duel extends Event {
         if (players.len() != 2) {
             throw new IOException("There must be only two players for a PvP");
         }
+        System.out.println("Duel started");
         Minigame duel = new RockPaperScissors();
-        duel.interact(players);
+        duel.play(players);
     }
 
     @Override

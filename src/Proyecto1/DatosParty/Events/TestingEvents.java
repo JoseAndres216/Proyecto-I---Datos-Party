@@ -10,8 +10,8 @@ public class TestingEvents {
     public static void main(String[] args) throws IOException {
 
 
-        Player jugador1 = new Player(1,"Jugador 1");
-        Player jugador2 = new Player(2,"Jugador 2");
+        Player jugador1 = new Player(1,"Eduardo");
+        Player jugador2 = new Player(2,"Messi");
         Player jugador3 = new Player(3,"Jugador 3");
         Player jugador4 = new Player(4,"Jugador 4");
 
@@ -37,21 +37,24 @@ public class TestingEvents {
         SimpleLinkedList<Player> empty = new SimpleLinkedList<>();
 
         //  events
-        Event gift = new GiftCoins();
+        Event event = new SwapPlayers();
+        Event event2 = new Teleport();
 
-        //System.out.println("*****Two players*****");
-        //gift.interact(players2);
 
-        System.out.println("*****Three players*****");
-        //gift.interact(players3);
+        System.out.println("*****Two players*****");
+        event2.interact(player1);
+        event.interact(players2);
 
-        System.out.println("*****Four players *****");
-        //gift.interact(players4);
+        //System.out.println("*****Three players*****");
+        //event.interact(players3);
 
-        System.out.println("*****One player*****");
-        //gift.interact(player1);
+        //System.out.println("*****Four players *****");
+        //event.interact(players4);
 
-        System.out.println("*****Empty players*****");
-        gift.interact(empty);
+        //System.out.println("*****One player*****");
+        //event.interact(player1);
+
+       // System.out.println("*****Empty players*****");
+        //event.interact(empty);
     }
 }

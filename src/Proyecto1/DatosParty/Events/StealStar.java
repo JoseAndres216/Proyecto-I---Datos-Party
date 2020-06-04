@@ -17,8 +17,8 @@ public class StealStar extends Event{
         Player winnerOfCoins = players.accessNode(0);
         Player losesCoins = players.accessNode(1);
 
-        winnerOfCoins.modifyCoins(true, 1);
-        losesCoins.modifyCoins(false,1);
+        winnerOfCoins.modifyStars(true, 1);
+        losesCoins.modifyStars(false,1);
     }
 
     @Override
