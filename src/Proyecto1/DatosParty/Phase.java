@@ -11,10 +11,12 @@ public class Phase {
     public int exitPoint;
     public boolean isTable;
     public boolean isPhaseD = false;
+    private String tag;
 
-    public Phase(MotherList list, boolean isTable) {
+    public Phase(MotherList list, boolean isTable, String tag) {
         this.phaseList = list;
         this.isTable = isTable;
+        this.tag = tag;
     }
 
     public Box getPhaseListElement(int i) throws Exception {
@@ -80,6 +82,9 @@ public class Phase {
                     break;
             }
         }
+    }
+    public String toString(){
+        return this.tag;
     }
 }
 

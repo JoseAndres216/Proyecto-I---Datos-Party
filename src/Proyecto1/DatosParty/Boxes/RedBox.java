@@ -11,6 +11,7 @@ public class RedBox extends Box {
     }
 
     public RedBox() {
+
     }
 
     public void draw(int x, int y, Canvas canvas) {

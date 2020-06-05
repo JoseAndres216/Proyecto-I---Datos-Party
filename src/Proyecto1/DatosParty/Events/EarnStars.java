@@ -10,10 +10,16 @@ import java.io.IOException;
  * events.
  */
 public class EarnStars extends Event {
-    private int amount;
+    private final int amount;
 
+
+    /**
+     * Constructor of class
+     * @param amount amount of stars to win
+     */
     public EarnStars(int amount) {
         this.amount = amount; //can be 2 or 5 or 1 if its lose 1 star.
+        this.tag = "Earn " + amount + " stars.";
     }
 
 
@@ -22,14 +28,11 @@ public class EarnStars extends Event {
         int i = players.len();
         int counter = 0;
 
-        while (counter != (i-1)){
+        while (counter < (i)){
             players.accessNode(counter).modifyStars(true, this.amount);
-            System.out.println("Player "+ players.accessNode(counter).toString() +" earned: "+ this.amount + " stars.");
-            counter++;
-
+             counter++;
         }
     }
-
     @Override
     public int compareTo(Event o) {
         return 0;

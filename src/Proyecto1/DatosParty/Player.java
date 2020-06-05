@@ -4,35 +4,98 @@ import Proyecto1.DatosParty.Boxes.Box;
 import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 
+import java.io.IOException;
+
 public class Player {
     //Values of the player.
     private int coins;
     private int stars;
-    private int playernumber;
-    private int minigamepoints;
-    private String nikname;
+    private final int playernumber;
+    private final int minigamepoints;
+    private final String nickname;
     //Configurations for the location of the player on table
     private Phase actualPhase; // actual phase of the player from A B C D to MainPhase.
-    private MotherList<Box> actualList; // list to move trough
+    private final MotherList<Box> actualList; // list to move trough
     private int actualBox; //Index of the box (zero-based index of the phase) ej: player could be phase C, box 8
+
+    public int getCoins() {
+        return coins;
+    }
+
+    public int getStars() {
+        return stars;
+    }
+
+    public int getPlayernumber() {
+        return playernumber;
+    }
+
+    public int getMinigamepoints() {
+        return minigamepoints;
+    }
+
+    public Phase getActualPhase() {
+        return actualPhase;
+    }
+
+    public MotherList<Box> getActualList() {
+        return actualList;
+    }
+
+    public int getActualBox() {
+        return actualBox;
+    }
+
+    public MotherList<Box> getMainTableList() {
+        return mainTableList;
+    }
+
     //Reference of the main table
     public MotherList<Box> mainTableList;
 
-    public void MoveTo(Phase newPhase, int actualBox){
+    public void MoveTo(Phase newPhase, int actualBox) throws Exception {
+        System.out.println(this.nickname + " changed position ");
+        System.out.println("Actual: (" + this.actualPhase +", " + this.actualBox+ ")");
+        System.out.println("New: (" + newPhase +", " + actualBox+ ")");
+
         this.actualPhase =  newPhase;
         this.actualBox = actualBox;
+        this.actualPhase.getPhaselist().accessNode(this.actualBox).placePlayer(this);
+
     }
+
+    /**
+     * mediante una verificacion >< determina la fase segun el numero de id, basado en el excel.
+     *
+     * @param box
+     */
+    public void MoveTo(int box){
+
+
+
+    }
+
+
     /**
      * Method for modifying the stars of the player
      * @param gain true if earns stars, false if looses
      * @param amount amount of stars to earn.
      */
-    public void modifyStars(boolean gain, int amount) {
+    public void modifyStars(boolean gain, int amount) throws IOException {
+
         if(gain){
+            String update = " more stars.";
+            System.out.println(this.nickname + " has: " + amount+ update);
             this.stars += amount;
         }
+
         else{
+            if(this.stars - amount <0){
+                throw  new IOException(this.nickname  + " hasnt enought stars.");
+            }
+            String update = " less stars.";
             this.stars-= amount;
+            System.out.println(this.nickname + " has: " + amount+ update);
         }
     }
     /**
@@ -40,12 +103,20 @@ public class Player {
      * @param gain true if earns coins, false if looses
      * @param amount amount of coins to earn.
      */
-    public void modifyCoins(boolean gain, int amount){
+    public void modifyCoins(boolean gain, int amount) throws IOException {
+        String update = " more coins.";
         if(gain){
             this.coins += amount;
+            System.out.println(this.nickname  + " has " + amount+ update);
         }
         else{
+            if(this.coins - amount <0){
+                throw  new IOException(this.nickname + " hasnt enought coins.");
+            }
+            update = " less coins.";
             this.coins-= amount;
+            System.out.println(this.nickname + " has " + amount+ update);
+
         }
     }
 
@@ -57,9 +128,8 @@ public class Player {
      */
     public Player(int playerNumber, String nickname) {
         //Settings for game
-        this.coins = 0;
-        this.stars = 0;
-        this.coins = 0;
+        this.coins = 10;
+        this.stars = 1;
         this.minigamepoints = 0;
         //Ubication on the table
         this.actualPhase = Table.getInstance().mainPhase; //null means that player is in main table.
@@ -67,7 +137,7 @@ public class Player {
         this.actualList = this.actualPhase.phaseList; //should be the main table list.
         this.actualBox = 0;
         //Identification
-        this.nikname = nickname;
+        this.nickname = nickname;
         this.playernumber = playerNumber;
     }
 
@@ -105,7 +175,7 @@ public class Player {
         return posibles;
      }
 
-    public SimpleLinkedList calcPossibleMovesInMain(int posicionesDisponibles, int startPoint) throws Exception {
+    public SimpleLinkedList<Box> calcPossibleMovesInMain(int posicionesDisponibles, int startPoint) throws Exception {
             SimpleLinkedList<Box> posibles = new SimpleLinkedList<>();
             int i = startPoint;
             int finishPoint = startPoint + posicionesDisponibles;
@@ -119,28 +189,32 @@ public class Player {
                     if ((this.mainTableList.accessNode(i).getPhase().phaseList.len() - (posicionesDisponibles - i)) >= 0) {
                         //se accesa el elemento correspondiente para agregar de la fase dentro de la interseccion:
                         posibles.insertLast(this.mainTableList.accessNode((posicionesDisponibles+startPoint - i)-2));
-
-                        System.out.println("Added box from a phase on index: " + i + " position: " + ((posicionesDisponibles+startPoint - i)-2) +
-                                "\n Remaining moves: " + (posicionesDisponibles+startPoint-i));
                     }
-                } else {
-                    System.out.println("Box skipped on index " + i + " in main table" +
-                            "\n Remaining moves: " + (posicionesDisponibles+startPoint-i));
                 }
+
                 i++;
             }
             posibles.insertLast(this.mainTableList.accessNode(i)); // inserta el elemento en el que la posicion llega a 0 en el mainTable
-            System.out.println("Added box from the main table on index: " + i
-                    + "\n Remaining moves: " + (posicionesDisponibles-i));
-
         return posibles;
     }
 
-    @Override
-    public String toString() {
-       return "Player: " + nikname + ", ID: " + this.playernumber;
+    /**
+     * Se lanzan los dados, y se resaltan las casillas resultantes
+     * y se envia la lista al controller de la ventana que se usa para elegir
+     * una casilla
+     * @param result
+     * @throws Exception
+     */
+    public void RollDices(int result) throws Exception {
+        SimpleLinkedList<Box> posibles = this.calcPossibleMoves(result);
 
     }
+    @Override
+    public String toString() {
+       return "Player: " + nickname + ", ID: " + this.playernumber;
+
+    }
+
 }
 
 

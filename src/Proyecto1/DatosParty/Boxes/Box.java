@@ -3,6 +3,7 @@ package Proyecto1.DatosParty.Boxes;
 import Proyecto1.DatosParty.Observer.Observable;
 import Proyecto1.DatosParty.Observer.Observer;
 import Proyecto1.DatosParty.Phase;
+import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
 
 /**
@@ -61,6 +62,10 @@ public abstract class Box extends Observable {
      */
 
     public void draw(int x, int y, Canvas canvas) {
+
+    }
+    public void placePlayer(Player player){
+
 
     }
 
