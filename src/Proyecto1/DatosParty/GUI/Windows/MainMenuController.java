@@ -59,7 +59,7 @@ public class MainMenuController {
             i++;
         }
 
-        if(Game.getInstance().getPlayers().len()>2){
+        if(Game.getInstance().getPlayers().len()>=2){
             Parent gameWindow = FXMLLoader.load(this.getClass().getResource("GameWindow.fxml"));
             Stage stage = (Stage) playButton.getScene().getWindow();
             stage.setScene(new Scene(gameWindow));

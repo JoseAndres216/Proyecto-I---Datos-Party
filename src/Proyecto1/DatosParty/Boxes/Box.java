@@ -17,6 +17,25 @@ public abstract class Box extends Observable {
     protected Observer observer;
     protected String tag;
     public boolean isIntersection = false;
+    protected int x;
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    protected int y;
 
     //settings for the graphic representation of box
     protected int height = 36;

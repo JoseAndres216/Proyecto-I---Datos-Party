@@ -3,6 +3,9 @@ package Proyecto1.DatosParty;
 import Proyecto1.DatosParty.Boxes.Box;
 import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 import java.io.IOException;
 
@@ -14,9 +17,9 @@ public class Player {
     private final int minigamepoints;
     private final String nickname;
     //Configurations for the location of the player on table
-    private Phase actualPhase; // actual phase of the player from A B C D to MainPhase.
-    private final MotherList<Box> actualList; // list to move trough
-    private int actualBox; //Index of the box (zero-based index of the phase) ej: player could be phase C, box 8
+    protected Phase actualPhase; // actual phase of the player from A B C D to MainPhase.
+    private MotherList<Box> actualList; // list to move trough
+    protected int actualBox; //Index of the box (zero-based index of the phase) ej: player could be phase C, box 8
 
     public int getCoins() {
         return coins;
@@ -53,6 +56,27 @@ public class Player {
     //Reference of the main table
     public MotherList<Box> mainTableList;
 
+    /**
+     * Constructor of the class player
+     *
+     * @param playerNumber integer number between 1 and 4, order given by rolling dices
+     @param nickname string for the name that the user selected.
+     */
+    public Player(int playerNumber, String nickname) {
+        //Settings for game
+        this.coins = 10;
+        this.stars = 1;
+        this.minigamepoints = 0;
+        //Ubication on the table
+        this.actualPhase = Table.getInstance().mainPhase; //null means that player is in main table.
+        this.mainTableList = Table.getInstance().mainPhase.phaseList;
+        this.actualList = this.actualPhase.phaseList; //should be the main table list.
+        this.actualBox = 0;
+        //Identification
+        this.nickname = nickname;
+        this.playernumber = playerNumber;
+    }
+
     public void MoveTo(Phase newPhase, int actualBox) throws Exception {
         System.out.println(this.nickname + " changed position ");
         System.out.println("Actual: (" + this.actualPhase +", " + this.actualBox+ ")");
@@ -69,19 +93,27 @@ public class Player {
      *
      * @param box
      */
-    public void MoveTo(int boxExcelid){
+    public void MoveTo(int boxExcelid) throws Exception {
         Phase phase = null;
+        int index;
         if(boxExcelid<=35){
             phase = Table.getInstance().mainPhase;
+            index=boxExcelid;
         }else if(boxExcelid>=36 && boxExcelid<=45){
             phase = Table.getInstance().phaseA;
+            index = boxExcelid - 36;
         }else if(boxExcelid>=46 && boxExcelid<=55) {
             phase = Table.getInstance().phaseB;
+            index = boxExcelid - 46;
         }else if(boxExcelid>=56 && boxExcelid<=65) {
             phase = Table.getInstance().phaseC;
+            index = boxExcelid - 56;
         }else {
             phase = Table.getInstance().phaseD;
+            index = boxExcelid - 66;
         }
+
+        MoveTo(phase, index);
     }
 
 
@@ -127,27 +159,6 @@ public class Player {
             System.out.println(this.nickname + " has " + amount+ update);
 
         }
-    }
-
-    /**
-     * Constructor of the class player
-     *
-     * @param playerNumber integer number between 1 and 4, order given by rolling dices
-        @param nickname string for the name that the user selected.
-     */
-    public Player(int playerNumber, String nickname) {
-        //Settings for game
-        this.coins = 10;
-        this.stars = 1;
-        this.minigamepoints = 0;
-        //Ubication on the table
-        this.actualPhase = Table.getInstance().mainPhase; //null means that player is in main table.
-        this.mainTableList = Table.getInstance().mainPhase.phaseList;
-        this.actualList = this.actualPhase.phaseList; //should be the main table list.
-        this.actualBox = 0;
-        //Identification
-        this.nickname = nickname;
-        this.playernumber = playerNumber;
     }
 
     /**
@@ -214,14 +225,28 @@ public class Player {
      * @param result
      * @throws Exception
      */
-    public void RollDices(int result) throws Exception {
-        SimpleLinkedList<Box> posibles = this.calcPossibleMoves(result);
-
+    public void RollDices() throws Exception {
+        SimpleLinkedList<Box> possibles = this.calcPossibleMoves(12);
+        System.out.println(possibles.toString());
+        MoveTo(possibles.getHead().getData().getExcelId());
     }
     @Override
     public String toString() {
        return "Player: " + nickname + ", ID: " + this.playernumber;
 
+    }
+
+    public void drawPlayer(Canvas canvas) throws Exception {
+
+        // Get the grapics context of the canvas
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+
+        //set the color
+        gc.setFill(Color.BLACK);
+        gc.setStroke(Color.BLACK);
+
+        //Draw the figure
+        gc.fillOval((double) this.actualPhase.getPhaselist().accessNode(this.getActualBox()).getX(), (double) this.actualPhase.getPhaselist().accessNode(this.getActualBox()).getY(), 10, 10);
     }
 
 }
