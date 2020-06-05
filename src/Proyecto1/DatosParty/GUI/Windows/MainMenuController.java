@@ -8,7 +8,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -57,8 +59,18 @@ public class MainMenuController {
             i++;
         }
 
-        Parent gameWindow = FXMLLoader.load(this.getClass().getResource("GameWindow.fxml"));
-        Stage stage = (Stage) playButton.getScene().getWindow();
-        stage.setScene(new Scene(gameWindow));
+        if(Game.getInstance().getPlayers().len()>2){
+            Parent gameWindow = FXMLLoader.load(this.getClass().getResource("GameWindow.fxml"));
+            Stage stage = (Stage) playButton.getScene().getWindow();
+            stage.setScene(new Scene(gameWindow));
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Hey!");
+            alert.setHeaderText("Stop, Friendship Police Department!\n\nThis game is developed to be played\nwith friends, please install any social\nnetwork, get some friends and come\nback, OK?");
+            alert.showAndWait().ifPresent(reply -> {
+                if (reply == ButtonType.OK) {
+                }
+            });
+        }
     }
 }
