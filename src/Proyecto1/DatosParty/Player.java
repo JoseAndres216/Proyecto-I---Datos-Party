@@ -69,10 +69,19 @@ public class Player {
      *
      * @param box
      */
-    public void MoveTo(int box){
-
-
-
+    public void MoveTo(int boxExcelid){
+        Phase phase = null;
+        if(boxExcelid<=35){
+            phase = Table.getInstance().mainPhase;
+        }else if(boxExcelid>=36 && boxExcelid<=45){
+            phase = Table.getInstance().phaseA;
+        }else if(boxExcelid>=46 && boxExcelid<=55) {
+            phase = Table.getInstance().phaseB;
+        }else if(boxExcelid>=56 && boxExcelid<=65) {
+            phase = Table.getInstance().phaseC;
+        }else {
+            phase = Table.getInstance().phaseD;
+        }
     }
 
 

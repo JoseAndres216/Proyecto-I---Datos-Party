@@ -12,7 +12,8 @@ import javafx.scene.canvas.Canvas;
 public abstract class Box extends Observable {
 
     protected boolean busy;
-    public static int id = 0;
+    public static int id;
+    protected int excelId;
     protected Observer observer;
     protected String tag;
     public boolean isIntersection = false;
@@ -21,8 +22,12 @@ public abstract class Box extends Observable {
     protected int height = 36;
     protected int width = 36;
 
-    public Box() {
-        id++;
+    public Box(int id){
+        this.id = id;
+    }
+
+    public Box(){
+
     }
 
     /**
@@ -38,6 +43,10 @@ public abstract class Box extends Observable {
     public void setState(boolean newState) {
         this.busy = newState;
     }
+
+    public int getExcelId() { return excelId; }
+
+    public void setExcelId(int excelId) { this.excelId = excelId; }
 
     /**
      * Method for attaching a observer to the box

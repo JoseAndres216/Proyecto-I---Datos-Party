@@ -21,8 +21,8 @@ public class GameWindowController {
     Button startButton;
 
     public void drawPhases(Event event) throws Exception {
-        Table.getInstance().drawPhase(canvas);
-        Table.getInstance().drawPhase(canvas);
+        Table.getInstance().drawTable(canvas);
+        Table.getInstance().drawTable(canvas);
     }
 
     public void pressedExitbutton(Event event) throws Exception {
