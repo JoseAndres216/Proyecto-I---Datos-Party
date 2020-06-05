@@ -7,7 +7,19 @@ import Proyecto1.DatosParty.Player;
 
 import java.io.IOException;
 
+/**
+ Class duel, triggers a minigame for two players.
+ */
 public class Duel extends Event {
+    public Duel() {
+        this.tag = "Pvp";
+    }
+
+    /**
+     * Method for starting the event
+     * @param players list of two players
+     * @throws IOException list must have exactly two players.
+     */
     @Override
     public void interact(SimpleLinkedList<Player> players) throws IOException {
         if (players.len() != 2) {

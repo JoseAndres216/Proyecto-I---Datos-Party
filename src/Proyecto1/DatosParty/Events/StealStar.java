@@ -7,6 +7,15 @@ import java.io.IOException;
 
 public class StealStar extends Event{
 
+    public StealStar() {
+        this.tag = "Steal star";
+    }
+
+    /**
+     * Method to start the event
+     * @param players list of players
+     * @throws IOException list must have 2 players
+     */
     @Override
     public void interact(SimpleLinkedList<Player> players) throws IOException {
 

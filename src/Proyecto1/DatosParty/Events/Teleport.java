@@ -16,6 +16,10 @@ public class Teleport extends Event   {
         return ThreadLocalRandom.current().nextInt(0, max+1);
     }
 
+    /**
+     * Method for selecting a random Phase, from the class Table.
+     * @return Phase class.
+     */
     public Phase phasePicker(){
         Phase generated = null;
         int randomInt =  ThreadLocalRandom.current().nextInt(0, 5);
@@ -40,6 +44,12 @@ public class Teleport extends Event   {
         }
         return generated;
     }
+
+    /**
+     * Method for starting the event.
+     * @param players List of players
+     * @throws IOException must only have one player.
+     */
     @Override
     public void interact(SimpleLinkedList<Player> players) throws IOException {
         if(players.len() != 1){
@@ -48,6 +58,10 @@ public class Teleport extends Event   {
         Phase phase = this.phasePicker();
         int random = generateRandomBox(phase.phaseList.len());
         players.accessNode(0).MoveTo(phase,random);
+    }
+
+    public Teleport() {
+        this.tag = "Teleport";
     }
 
     @Override

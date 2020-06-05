@@ -9,6 +9,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class StealCoins extends Event {
 
 
+    public StealCoins() {
+        this.tag = "Steal coins";
+    }
+
     private int generateRandomInt(){
         int max = 10;
         int min = 2;

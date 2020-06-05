@@ -8,7 +8,13 @@ import Proyecto1.DatosParty.Table;
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Class for the swap players minigame
+ */
 public class SwapPlayers extends Event{
+    public SwapPlayers() {
+        this.tag = "Swap players";
+    }
 
     public Phase phasePicker(){
         Phase generated = null;
@@ -34,6 +40,12 @@ public class SwapPlayers extends Event{
         }
         return generated;
     }
+
+    /**
+     * Method to start the event.
+     * @param players list of players
+     * @throws IOException List must have two players.
+     */
     @Override
     public void interact(SimpleLinkedList<Player> players) throws IOException {
         if(players.len() != 2){

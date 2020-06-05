@@ -6,7 +6,13 @@ import Proyecto1.DatosParty.Player;
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Class for the gift coins event
+ */
 public class GiftCoins extends Event {
+    public GiftCoins() {
+        this.tag = "Gift coins";
+    }
 
     public int randomCoins(boolean pair, int max) {
         int randomN = ThreadLocalRandom.current().nextInt(2, max);
@@ -23,6 +29,11 @@ public class GiftCoins extends Event {
         return randomN;
     }
 
+    /**
+     * Method to start the minigame
+     * @param players list of players
+     * @throws IOException list must have 2-3-4 players
+     */
     @Override
     public void interact(SimpleLinkedList<Player> players) throws IOException {
         if ((players.len() < 2) || (players.len() > 4)) {
