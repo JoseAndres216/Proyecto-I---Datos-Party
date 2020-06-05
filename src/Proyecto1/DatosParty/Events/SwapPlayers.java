@@ -61,8 +61,7 @@ public class SwapPlayers extends Event{
         Phase phaseP2 = player2.getActualPhase();
         int   boxP2   =   player2.getActualBox();
 
-        player1.MoveTo(phaseP2,boxP2);
-        player2.MoveTo(phaseP1,boxP1);
+
 
     }
 

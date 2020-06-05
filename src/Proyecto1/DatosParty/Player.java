@@ -53,16 +53,29 @@ public class Player {
     //Reference of the main table
     public MotherList<Box> mainTableList;
 
-    public void MoveTo(Phase newPhase, int actualBox){
+    public void MoveTo(Phase newPhase, int actualBox) throws Exception {
         System.out.println(this.nickname + " changed position ");
         System.out.println("Actual: (" + this.actualPhase +", " + this.actualBox+ ")");
         System.out.println("New: (" + newPhase +", " + actualBox+ ")");
 
         this.actualPhase =  newPhase;
         this.actualBox = actualBox;
+        this.actualPhase.getPhaselist().accessNode(this.actualBox).placePlayer(this);
+
+    }
+
+    /**
+     * mediante una verificacion >< determina la fase segun el numero de id, basado en el excel.
+     *
+     * @param box
+     */
+    public void MoveTo(int box){
+
 
 
     }
+
+
     /**
      * Method for modifying the stars of the player
      * @param gain true if earns stars, false if looses
@@ -185,11 +198,23 @@ public class Player {
         return posibles;
     }
 
+    /**
+     * Se lanzan los dados, y se resaltan las casillas resultantes
+     * y se envia la lista al controller de la ventana que se usa para elegir
+     * una casilla
+     * @param result
+     * @throws Exception
+     */
+    public void RollDices(int result) throws Exception {
+        SimpleLinkedList<Box> posibles = this.calcPossibleMoves(result);
+
+    }
     @Override
     public String toString() {
        return "Player: " + nickname + ", ID: " + this.playernumber;
 
     }
+
 }
 
 

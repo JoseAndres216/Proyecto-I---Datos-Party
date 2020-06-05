@@ -4,7 +4,6 @@ import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import Proyecto1.DatosParty.DataStructures.Stack.Stack;
 import Proyecto1.DatosParty.Player;
 
-import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Event implements Comparable<Event> {
@@ -103,7 +102,7 @@ public abstract class Event implements Comparable<Event> {
 
     //Configuration of events
 
-    public abstract void interact(SimpleLinkedList<Player> players) throws IOException;
+    public abstract void interact(SimpleLinkedList<Player> players) throws Exception;
 
     @Override
     public String toString() {

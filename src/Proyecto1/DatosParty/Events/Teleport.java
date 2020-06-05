@@ -51,7 +51,7 @@ public class Teleport extends Event   {
      * @throws IOException must only have one player.
      */
     @Override
-    public void interact(SimpleLinkedList<Player> players) throws IOException {
+    public void interact(SimpleLinkedList<Player> players) throws Exception {
         if(players.len() != 1){
             throw new IOException("The list must only contain 1 player.");
         }
