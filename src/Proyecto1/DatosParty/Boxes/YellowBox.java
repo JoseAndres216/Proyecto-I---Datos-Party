@@ -20,7 +20,6 @@ public class YellowBox extends Box {
 
         //set the color
         gc.setFill(Color.YELLOW);
-
         gc.setStroke(Color.BLACK);
 
         //Draw the rectangle

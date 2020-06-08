@@ -1,7 +1,5 @@
 package Proyecto1.DatosParty;
 
-import Proyecto1.DatosParty.Boxes.Box;
-import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,8 +14,6 @@ public class Main extends Application {
 
     public static void main(String[] args) throws Exception {
         launch(args);
-        Table tablero = Table.getInstance();
-        MotherList<Box> listaP = tablero.getMainPhase().phaseList;
 
     }
 

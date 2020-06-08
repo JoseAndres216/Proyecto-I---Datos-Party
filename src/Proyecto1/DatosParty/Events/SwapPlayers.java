@@ -8,18 +8,14 @@ import Proyecto1.DatosParty.Table;
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Teleport extends Event   {
-
-
-
-    public int generateRandomBox(int max){
-        return ThreadLocalRandom.current().nextInt(0, max+1);
+/**
+ * Class for the swap players minigame
+ */
+public class SwapPlayers extends Event{
+    public SwapPlayers() {
+        this.tag = "Swap players";
     }
 
-    /**
-     * Method for selecting a random Phase, from the class Table.
-     * @return Phase class.
-     */
     public Phase phasePicker(){
         Phase generated = null;
         int randomInt =  ThreadLocalRandom.current().nextInt(0, 5);
@@ -46,22 +42,27 @@ public class Teleport extends Event   {
     }
 
     /**
-     * Method for starting the event.
-     * @param players List of players
-     * @throws IOException must only have one player.
+     * Method to start the event.
+     * @param players list of players
+     * @throws IOException List must have two players.
      */
     @Override
-    public void interact(SimpleLinkedList<Player> players) throws Exception {
-        if(players.len() != 1){
+    public void interact(SimpleLinkedList<Player> players) throws IOException {
+        if(players.len() != 2){
             throw new IOException("The list must only contain 1 player.");
         }
-        Phase phase = this.phasePicker();
-        int random = generateRandomBox(phase.phaseList.len());
-        players.accessNode(0).MoveTo(phase,random);
-    }
+        Player player1 = players.accessNode(0);
+        Player player2 = players.accessNode(1);
 
-    public Teleport() {
-        this.tag = "Teleport";
+
+        Phase phaseP1 = player1.getActualPhase();
+        int   boxP1   = player1.getActualBox();
+
+        Phase phaseP2 = player2.getActualPhase();
+        int   boxP2   =   player2.getActualBox();
+
+
+
     }
 
     @Override

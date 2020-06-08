@@ -17,12 +17,12 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Table {
     private static Table instance = null;
     //Intialization of the Phases, (the main table will not be a phase)
-    public Phase phaseA = new Phase(new SimpleLinkedList<Box>(),false);
-    public Phase phaseB = new Phase(new SimpleLinkedList<Box>(),false);
-    public Phase phaseC = new Phase(new DoubleLinkedList<Box>(),false);
-    public Phase phaseD = new Phase(new CircularDoubleList<Box>(),true);
+    public Phase phaseA = new Phase(new SimpleLinkedList<Box>(),false, "Phase A");
+    public Phase phaseB = new Phase(new SimpleLinkedList<Box>(),false, "Phase B");
+    public Phase phaseC = new Phase(new DoubleLinkedList<Box>(),false, "Phase C");
+    public Phase phaseD = new Phase(new CircularDoubleList<Box>(),true, "Phase D");
     //Intialization of the main table.
-    public Phase mainPhase = new Phase(new SimpleCircularList(),true);
+    public Phase mainPhase = new Phase(new SimpleCircularList(),true, "Main");
     private Table(){
         this.generateTable();
     }
@@ -124,25 +124,28 @@ public class Table {
     /**
      * @param canvas canvas for drawing the boxes
      */
-    public void drawPhase(Canvas canvas) {
+    public void drawTable(Canvas canvas) throws Exception {
         //Generating main table
         int x = 420, y = 140;
         this.mainPhase.getPhaselist().getHead().getData().draw(x, y, canvas);
+        this.mainPhase.getPhaselist().getHead().getData().setX(x);
+        this.mainPhase.getPhaselist().getHead().getData().setY(y);
+        this.mainPhase.getPhaselist().getHead().getData().setExcelId(0);
         FatherNode<Box> node = this.mainPhase.getPhaselist().getHead().getNext();
         for (int i = 1; i <= 35; i++) {
             if (i <= 9) {
                 x += 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 9 && i <= 18) {
                 y += 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 18 && i <= 27) {
                 x -= 36;
-                node.getData().draw(x, y, canvas);
-            } else if (i > 27 && i <= 36) {
+            } else if (i > 27 && i <= 35) {
                 y -= 36;
-                node.getData().draw(x, y, canvas);
             }
+            node.getData().draw(x, y, canvas);
+            node.getData().setX(x);
+            node.getData().setY(y);
+            node.getData().setExcelId(i);
             node = node.getNext();
         }
 
@@ -153,14 +156,15 @@ public class Table {
         for (int i = 36; i <= 45; i++) {
             if (i <= 38) {
                 y -= 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 38 && i <= 43) {
                 x += 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 43 && i <= 45) {
                 y += 36;
-                node.getData().draw(x, y, canvas);
             }
+            node.getData().draw(x, y, canvas);
+            node.getData().setX(x);
+            node.getData().setY(y);
+            node.getData().setExcelId(i);
             node = node.getNext();
         }
 
@@ -171,14 +175,15 @@ public class Table {
         for (int i = 46; i <= 55; i++) {
             if (i <= 48) {
                 x += 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 48 && i <= 53) {
                 y += 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 53 && i <= 55) {
                 x -= 36;
-                node.getData().draw(x, y, canvas);
             }
+            node.getData().draw(x, y, canvas);
+            node.getData().setX(x);
+            node.getData().setY(y);
+            node.getData().setExcelId(i);
             node = node.getNext();
         }
 
@@ -189,36 +194,46 @@ public class Table {
         for (int i = 56; i <= 65; i++) {
             if (i <= 58) {
                 y += 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 58 && i <= 63) {
                 x -= 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 63 && i <= 65) {
                 y -= 36;
-                node.getData().draw(x, y, canvas);
             }
+            node.getData().draw(x, y, canvas);
+            node.getData().setX(x);
+            node.getData().setY(y);
+            node.getData().setExcelId(i);
             node = node.getNext();
         }
 
         x = 528;
         y = 248;
         this.phaseD.getPhaselist().getHead().getData().draw(x, y, canvas);
+        this.phaseD.getPhaselist().getHead().getData().setExcelId(66);
+        this.phaseD.getPhaselist().getHead().getData().setX(x);
+        this.phaseD.getPhaselist().getHead().getData().setY(y);
         node = this.phaseD.getPhaselist().getHead().getNext();
-        for (int i = 67; i <= 78; i++) {
+        for (int i = 67; i <= 77; i++) {
             if (i <= 69) {
                 x += 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 69 && i <= 72) {
                 y += 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 72 && i <= 75) {
                 x -= 36;
-                node.getData().draw(x, y, canvas);
             } else if (i > 75 && i <= 77) {
                 y -= 36;
-                node.getData().draw(x, y, canvas);
             }
+            node.getData().draw(x, y, canvas);
+            node.getData().setX(x);
+            node.getData().setY(y);
+            node.getData().setExcelId(i);
             node = node.getNext();
+        }
+    }
+
+    public void drawPlayers(Canvas canvas, SimpleLinkedList<Player> players) throws Exception {
+        for (int i = 0; i < players.len(); i++) {
+            players.accessNode(i).drawPlayer(canvas);
         }
     }
 }

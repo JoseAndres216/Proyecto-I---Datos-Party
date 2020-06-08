@@ -3,6 +3,7 @@ package Proyecto1.DatosParty.Boxes;
 import Proyecto1.DatosParty.Observer.Observable;
 import Proyecto1.DatosParty.Observer.Observer;
 import Proyecto1.DatosParty.Phase;
+import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
 
 /**
@@ -11,17 +12,41 @@ import javafx.scene.canvas.Canvas;
 public abstract class Box extends Observable {
 
     protected boolean busy;
-    public static int id = 0;
+    public static int id;
+    protected int excelId;
     protected Observer observer;
     protected String tag;
     public boolean isIntersection = false;
+    protected int x;
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    protected int y;
 
     //settings for the graphic representation of box
     protected int height = 36;
     protected int width = 36;
 
-    public Box() {
-        id++;
+    public Box(int id){
+        this.id = id;
+    }
+
+    public Box(){
+
     }
 
     /**
@@ -37,6 +62,10 @@ public abstract class Box extends Observable {
     public void setState(boolean newState) {
         this.busy = newState;
     }
+
+    public int getExcelId() { return excelId; }
+
+    public void setExcelId(int excelId) { this.excelId = excelId; }
 
     /**
      * Method for attaching a observer to the box
@@ -61,6 +90,10 @@ public abstract class Box extends Observable {
      */
 
     public void draw(int x, int y, Canvas canvas) {
+
+    }
+    public void placePlayer(Player player){
+
 
     }
 
