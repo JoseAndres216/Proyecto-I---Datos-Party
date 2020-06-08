@@ -6,7 +6,7 @@ import Proyecto1.DatosParty.Player;
 
 import java.io.IOException;
 
-public class RockPaperScissors extends Minigame {
+public class RockPaperScissorsController extends Minigame {
     @Override
     public void play(SimpleLinkedList<Player> players) throws IOException {
         System.out.println(players.accessNode(0)+ " and "  + players.accessNode(1)+"\n" +
