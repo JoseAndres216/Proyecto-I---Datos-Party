@@ -13,13 +13,14 @@ public class YellowBox extends Box {
      */
     public YellowBox(int id) {
         Box.id = id;
+        this.tag = "yellow";
     }
 
-    /**
+     public YellowBox() {this.tag = "yellow";}
+     /**
      * Constructor 2 of the class: For just instantiating the class.
      */
-    public YellowBox() {
-    }
+
 
     /**
      * Method for drawing the box on the canvas.
@@ -42,12 +43,16 @@ public class YellowBox extends Box {
         gc.fillRect(x, y, this.height, this.width);
     }
 
+
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.
      * @return the color of the box.
      */
     @Override
     public String toString() {
-        return "Amarillo";
+        return "YellowBox{" +
+                "excelId=" + excelId +
+
+                '}';
     }
 }

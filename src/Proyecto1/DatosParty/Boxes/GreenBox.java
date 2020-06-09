@@ -15,13 +15,16 @@ public class GreenBox extends Box {
      */
     public GreenBox(int id) {
         Box.id = id;
+        this.tag = "green";
     }
 
+    public GreenBox() {
+        this.tag = "white";
+    }
     /**
      * Constructor 2 of the class: For just instantiating the class.
      */
-    public GreenBox() {
-    }
+
 
     /**
      * Method for drawing the box on the canvas.
@@ -43,13 +46,17 @@ public class GreenBox extends Box {
         gc.fillRect(x, y, this.height, this.width);
     }
 
+
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.
      * @return the color of the box.
      */
     @Override
     public String toString() {
-        return "Verde";
+        return "GreenBox{" +
+                "excelId=" + excelId +
+
+                '}';
     }
 }
 

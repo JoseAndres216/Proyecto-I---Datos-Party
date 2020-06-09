@@ -2,6 +2,7 @@ package Proyecto1.DatosParty.GUI.Windows;
 
 import Proyecto1.DatosParty.Boxes.Box;
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
+import Proyecto1.DatosParty.GUI.Inputs.InputManager;
 import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 import Proyecto1.DatosParty.Table;
@@ -9,6 +10,7 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class GameWindowController {
     @FXML
@@ -27,9 +29,9 @@ public class GameWindowController {
     }
 
     public void pressedExitbutton(Event event) throws Exception {
-        Game.getInstance().getPlayers().accessNode(0).RollDices();
-        //Stage stage = (Stage) this.exitButton.getScene().getWindow();
-        //stage.close();
+        InputManager im = InputManager.getInstance();
+        im.start(new Stage());
+
     }
 
     /**

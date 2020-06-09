@@ -8,10 +8,6 @@ public class Game {
     private Table gameTable;
     private int cantidadRondas;
 
-    public void setPlayers(SimpleLinkedList<Player> players) {
-        this.players = players;
-    }
-
     public SimpleLinkedList<Player> getPlayers() {
         return players;
     }

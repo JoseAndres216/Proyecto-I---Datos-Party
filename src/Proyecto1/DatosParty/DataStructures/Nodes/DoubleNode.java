@@ -36,7 +36,6 @@ public class DoubleNode<T> implements FatherNode<T> {
     }
 
     public T getData() {
-
         return data;
     }
 

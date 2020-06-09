@@ -41,13 +41,21 @@ public abstract class Box extends Observable {
 
     public Phase getPhase() { return null; }
 
-    public int getIdNumber(){return this.id;}
+     @Override
+    public String toString() {
+        return "Box{" +
+                "excelId=" + excelId +
+                "Color=" + this.tag +
+                '}';
+    }
+
+     public int getIdNumber(){return this.id;}
 
     /**
      * Constructor 1 of the class: for creating an instantiation of the class whit it's respective ID.
      * @param id
      */
-    public Box(int id){
+     public Box(int id){
         this.id = id;
     }
 

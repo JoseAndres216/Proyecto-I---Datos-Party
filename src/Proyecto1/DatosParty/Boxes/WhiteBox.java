@@ -14,13 +14,14 @@ public class WhiteBox extends Box {
      */
     public WhiteBox(int id) {
         Box.id = id;
+        this.tag = "white";
     }
 
-    /**
+     public WhiteBox() {this.tag = "white";}
+     /**
      * Constructor 2 of the class: For just instantiating the class.
      */
-    public WhiteBox() {
-    }
+
 
     /**
      * Method for drawing the box on the canvas.
@@ -50,6 +51,9 @@ public class WhiteBox extends Box {
      */
     @Override
     public String toString() {
-        return "Blanco";
+        return "WhiteBox{" +
+                "excelId=" + excelId +
+
+                '}';
     }
 }

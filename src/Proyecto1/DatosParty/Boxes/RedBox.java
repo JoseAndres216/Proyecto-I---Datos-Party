@@ -13,15 +13,17 @@ public class RedBox extends Box {
      * @param id
      */
     public RedBox(int id) {
-        Box.id = id;
+        Box.id = id;this.tag = "red";
+
     }
 
-    /**
+     public RedBox() {
+         this.tag = "red";
+     }
+     /**
      * Constructor 2 of the class: For just instantiating the class.
      */
-    public RedBox() {
 
-    }
 
     /**
      * Method for drawing the box on the canvas.
@@ -45,12 +47,16 @@ public class RedBox extends Box {
         gc.fillRect(x, y, this.height, this.width);
     }
 
+
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.
      * @return the color of the box.
      */
     @Override
     public String toString() {
-        return "Rojo";
+        return "RedBox{" +
+                "excelId=" + excelId +
+
+                '}';
     }
 }

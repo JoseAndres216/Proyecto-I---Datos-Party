@@ -31,11 +31,6 @@ public class IntersectionBox extends Box {
      * @param phase
      * @param id
      */
-    public IntersectionBox(Phase phase, int id) {
-        this.phase = phase;
-        this.isIntersection = true;
-        Box.id = id;
-    }
 
     /**
      * Constructor 2 of the class: For just instantiating the class.
@@ -65,12 +60,26 @@ public class IntersectionBox extends Box {
         gc.fillRect(x, y, this.height, this.width);
     }
 
+
+    public IntersectionBox(Phase phase, int id) {
+        this.phase = phase;
+        this.isIntersection = true;
+        Box.id = id;
+        this.tag = "white";
+    }
+
+
+
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.
      * @return the color of the box.
      */
     @Override
     public String toString() {
-        return "Blanco";
+        return "IntersectionBox{" +
+                "excelId=" + excelId +
+
+                '}';
     }
+
 }
