@@ -6,16 +6,27 @@ package Proyecto1.DatosParty.DataStructures.BaseModels;
  * @param <T>
  */
 public interface MotherList<T> {
-    boolean isEmpty();
+
+    int len();
+
+    //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
+
+    /**
+     * Setters and getters of the class
+     */
+    FatherNode<T> getHead();
     FatherNode<T> getTail();
+
+
+    boolean isEmpty();
+
     void insertLast(T data);
 
     T accessNode(int i) throws Exception;
 
-    int len();
 
 
-    FatherNode<T> getHead();
+
 }
 
 

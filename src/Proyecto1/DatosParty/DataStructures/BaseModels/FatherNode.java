@@ -1,13 +1,18 @@
 package Proyecto1.DatosParty.DataStructures.BaseModels;
 
-public abstract interface FatherNode<T> {
+public interface FatherNode<T> {
 
-    public void setData(T newData);
+    //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
-    public void setNext(FatherNode next);
+    /**
+     * Setters and getters of the class
+     */
+    void setData(T newData);
 
-    public T getData();
+    void setNext(FatherNode next);
 
-    public FatherNode<T> getNext();
+    T getData();
+
+    FatherNode<T> getNext();
 
 }

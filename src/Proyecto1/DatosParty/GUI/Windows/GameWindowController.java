@@ -60,4 +60,13 @@ public class GameWindowController {
 
     }
 
+    /*
+    public void changeTominigame() throws IOException {
+        Parent gameWindow = FXMLLoader.load(this.getClass().getResource("MinigameWindow.fxml"));
+        Stage stage = (Stage) canvas.getScene().getWindow();
+        stage.setScene(new Scene(gameWindow));
+    }
+
+     */
+
 }
