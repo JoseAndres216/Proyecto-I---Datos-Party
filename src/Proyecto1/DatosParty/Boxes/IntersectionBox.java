@@ -8,11 +8,48 @@ import javafx.scene.paint.Color;
 
 public class IntersectionBox extends Box {
 
+    //  //  //  //  //  //  //  //  //  //              ATRIBUTES                //  //  //  //  //  //  //  //  //  //
+
     public Phase phase;
 
+    //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
+
+    /**
+     * Setters and getters of the class.
+     */
+    public MotherList<Box> getList() {
+        return this.phase.phaseList;
+    }
+
+    @Override
+    public Phase getPhase() {
+        return this.phase;
+    }
+
+    /**
+     * Constructor 1 of the class: for creating an instantiation of the class whit it's respective ID and phase.
+     * @param phase
+     * @param id
+     */
+    public IntersectionBox(Phase phase, int id) {
+        this.phase = phase;
+        this.isIntersection = true;
+        Box.id = id;
+    }
+
+    /**
+     * Constructor 2 of the class: For just instantiating the class.
+     */
     public IntersectionBox() {
     }
 
+    /**
+     * Method for drawing the box on the canvas.
+     *
+     * @param x      postion of the up left corner on x axis
+     * @param y      postion of the up left corner on y axis
+     * @param canvas canvas for drawing the boxes
+     */
     public void draw(int x, int y, Canvas canvas) {
 
         // Get the grapics context of the canvas
@@ -28,22 +65,10 @@ public class IntersectionBox extends Box {
         gc.fillRect(x, y, this.height, this.width);
     }
 
-
-    public IntersectionBox(Phase phase, int id) {
-        this.phase = phase;
-        this.isIntersection = true;
-        Box.id = id;
-    }
-
-    public MotherList<Box> getList() {
-        return this.phase.phaseList;
-    }
-
-    @Override
-    public Phase getPhase() {
-        return this.phase;
-    }
-
+    /**
+     * Method for printing the box in the run panel in order to check the correct behavior of the table.
+     * @return the color of the box.
+     */
     @Override
     public String toString() {
         return "Blanco";
