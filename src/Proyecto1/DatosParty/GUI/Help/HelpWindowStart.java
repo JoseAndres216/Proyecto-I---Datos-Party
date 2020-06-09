@@ -35,13 +35,18 @@ public class HelpWindowStart extends Application {
             instance = new HelpWindowStart();
 
         }
+
         return instance;
+
     }
 
     public void start(Stage stage) throws Exception {
         if (this.open) {
+
             return;
+
         }
+
         this.open = true;
         Parent root = FXMLLoader.load(getClass().getResource("HelpWindow.fxml"));
         stage.setAlwaysOnTop(true);
@@ -49,7 +54,6 @@ public class HelpWindowStart extends Application {
         stage.setScene(new Scene(root, 800, 600));
         stage.resizableProperty().setValue(false);
         stage.initStyle(StageStyle.UNDECORATED);
-
         stage.show();
 
     }
