@@ -20,13 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee66dd22-e32e-4710-af44-09944fffcbea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Resources/images/Paper.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Resources/images/Rock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Resources/images/Scissors.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Minigames/RockPaperScissors.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/DataStructures/DoubleLinkedList/DoubleLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/DataStructures/DoubleLinkedList/DoubleLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealCoins.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealCoins.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealStar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/StealStar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Teleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Teleport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Duel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Duel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Minigames/Minigame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Minigames/Minigame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Minigames/RockPaperScissors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Minigames/RockPaperScissorsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -66,14 +68,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/Box.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Main.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Phase.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Observer/Observer.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/IntersectionBox.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/Stack/Stack.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Main.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Phase.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/IntersectionBox.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/Box.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Observer/Observer.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="JQLSearcherProjectManager">
     <searchers />
@@ -93,32 +95,39 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Minigames/RockPaperScissors.class" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ProyectoI-DatosParty\src\Proyecto1\DatosParty\GUI\Resources\images" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Proyecto1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\eduar\Desktop\ProyectoI-DatosParty\out\production\ProyectoI-DatosParty\Proyecto1\DatosParty\GUI\Resources\images" />
+      <recent name="C:\Users\eduar\Desktop\ProyectoI-DatosParty\out\production\ProyectoI-DatosParty\Proyecto1\DatosParty\GUI" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Proyecto1.DatosParty" />
       <recent name="Proyecto1.cr.ac.tec.CE1103.Proyecto1" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\eduar\Desktop\ProyectoI-DatosParty\out\production\ProyectoI-DatosParty\Proyecto1\DatosParty\GUI\Resources\images" />
-      <recent name="C:\Users\eduar\Desktop\ProyectoI-DatosParty\out\production\ProyectoI-DatosParty\Proyecto1\DatosParty\GUI" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ProyectoI-DatosParty\src\Proyecto1\DatosParty\GUI\Resources\images" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
@@ -224,6 +233,9 @@
       <workItem from="1590984397741" duration="7983000" />
       <workItem from="1591135334595" duration="2021000" />
       <workItem from="1591154532609" duration="7305000" />
+      <workItem from="1591234711637" duration="87000" />
+      <workItem from="1591598454210" duration="2912000" />
+      <workItem from="1591601392404" duration="2483000" />
     </task>
     <task id="LOCAL-00001" summary="Added SimpleList for implementation of game stages">
       <created>1590118352844</created>
@@ -334,7 +346,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -351,13 +363,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -402,6 +413,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="247" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1591163835564" />
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591600873936">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591600873936" />
     <state x="-725" y="231" key="#xdebugger.evaluate" timestamp="1590952299256">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
@@ -412,12 +427,17 @@
     <state x="231" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590894713094" />
     <state x="231" y="6" key="CommitChangelistDialog2/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590956145492" />
     <state x="0" y="20" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1591164578697" />
-    <state x="147" y="76" key="DiffContextDialog" timestamp="1590989522898">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="184" y="98" width="1536" height="892" key="DiffContextDialog" timestamp="1591602465180">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="147" y="76" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1590989522898" />
+    <state x="184" y="98" width="1536" height="892" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591602465180" />
+    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1591601670759">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
     <state x="740" y="-806" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590214274619" />
     <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590705528050" />
+    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591601670759" />
     <state width="1493" height="211" key="GridCell.Tab.0.bottom" timestamp="1591154662061">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -478,6 +498,10 @@
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590707846089" />
     <state width="944" height="986" key="GridCell.Tab.1.right/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590955248524" />
     <state width="723" height="264" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1590994514333" />
+    <state x="184" y="90" key="MergeDialog" timestamp="1591602995761">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="184" y="90" key="MergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591602995761" />
     <state x="506" y="128" key="RollbackChangesDialog" timestamp="1590960411994">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
