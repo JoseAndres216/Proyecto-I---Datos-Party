@@ -74,13 +74,22 @@ public class InputManager extends Application {
         switch (list.len()){
             case 1:
                 Button move = new Button(list.accessNode(0).toString());
+                move.setOnAction((event) -> {    // lambda expression
+                    try {
+                        player.MoveTo(list.accessNode(0).getExcelId());
+
+                     } catch (Exception e) {
+                        System.out.println(e);
+                    }
+
+                });
                 root.getChildren().add(move);
                 break;
             case 2:
-                Button move1 = new Button(list.accessNode(0).toString());
-                Button move2 = new Button(list.accessNode(1).toString());
+                Button m1 = new Button(list.accessNode(0).toString());
+                Button m2 = new Button(list.accessNode(1).toString());
 
-                move1.setOnAction((event) -> {    // lambda expression
+                m1.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(0).getExcelId());
                     } catch (Exception e) {
@@ -88,7 +97,7 @@ public class InputManager extends Application {
                     }
 
                 });
-                move2.setOnAction((event) -> {    // lambda expression
+                m2.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(1).getExcelId());
                     } catch (Exception e) {
@@ -96,12 +105,41 @@ public class InputManager extends Application {
                     }
 
                 });
-                root.getChildren().add(move1);
-                root.getChildren().add(move2);
+                root.getChildren().add(m1);
+                root.getChildren().add(m2);
                 break;
             case 3:
-                Button move3 = new Button(list.accessNode(2).toString());
-                root.getChildren().add(move3);
+                Button m21 = new Button(list.accessNode(0).toString());
+                Button m22 = new Button(list.accessNode(1).toString());
+                Button m23 = new Button(list.accessNode(2).toString());
+
+                m21.setOnAction((event) -> {    // lambda expression
+                    try {
+                        player.MoveTo(list.accessNode(0).getExcelId());
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+
+                });
+                m22.setOnAction((event) -> {    // lambda expression
+                    try {
+                        player.MoveTo(list.accessNode(1).getExcelId());
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+
+                });
+                m23.setOnAction((event) -> {    // lambda expression
+                    try {
+                        player.MoveTo(list.accessNode(2).getExcelId());
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+
+                });
+
+                root.getChildren().add(m21);
+                root.getChildren().add(m22);
                 break;
             case 0 :
                 System.out.println("The list is 0 len");
