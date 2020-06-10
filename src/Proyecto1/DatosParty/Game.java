@@ -50,4 +50,15 @@ public class Game {
             }
         }
     }
+
+    public SimpleLinkedList<Player> listWithnoPlayer(Player player) throws IOException {
+        SimpleLinkedList<Player> list = Game.getInstance().getPlayers();
+        SimpleLinkedList<Player> newList = new SimpleLinkedList();
+        for (int i = 0; i < list.len(); i++) {
+            if(list.accessNode(i)!=player){
+                newList.insertLast(player);
+            }
+        }
+        return newList;
+    }
 }
