@@ -1,6 +1,6 @@
 package Proyecto1.DatosParty.Events;
 
-import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
+import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 
 import java.io.IOException;
@@ -13,21 +13,18 @@ public class StealStar extends Event{
 
     /**
      * Method to start the event
-     * @param players list of players
+     *
+     * @param player list of players
      * @throws IOException list must have 2 players
      */
     @Override
-    public void interact(SimpleLinkedList<Player> players) throws IOException {
+    public void interact(Player starWinner) {
 
-        if(players.len() > 2){
-            throw new IOException("The list can't have more than two players");
-        }
 
-        Player winnerOfCoins = players.accessNode(0);
-        Player losesCoins = players.accessNode(1);
+        Player losesCoins = Game.getRandomPlayer(starWinner); //obtener jugador random de la clase Game
 
-        winnerOfCoins.modifyStars(true, 1);
-        losesCoins.modifyStars(false,1);
+        starWinner.modifyStars(true, 1);
+        losesCoins.modifyStars(false, 1);
     }
 
     @Override

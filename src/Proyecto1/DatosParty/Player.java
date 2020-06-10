@@ -7,20 +7,21 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-import java.io.IOException;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Player {
-    private final int playernumber;
-    private int minigamepoints;
     public final String nickname;
+    private final int playernumber;
     //Reference of the main table
     public MotherList<Box> actualList;
     //Configurations for the location of the player on table
     protected Phase actualPhase; // actual phase of the player from A B C D to MainPhase.
     protected int actualBox; //Index of the box (zero-based index of the phase) ej: player could be phase C, box 8
+    private int minigamepoints;
     //Values of the player.
     private int coins;
     private int stars;
+    private Color color;
     private MotherList<Box> mainListReference; // list to move trough
 
     /**
@@ -31,8 +32,8 @@ public class Player {
      */
     public Player(int playerNumber, String nickname) {
         //Settings for game
-        this.coins = 10;
-        this.stars = 1;
+        this.coins = 1000;
+        this.stars = 1000;
         this.minigamepoints = 0;
         //Ubication on the table
         this.actualPhase = Table.getInstance().mainPhase; //null means that player is in main table.
@@ -42,6 +43,21 @@ public class Player {
         //Identification
         this.nickname = nickname;
         this.playernumber = playerNumber;
+
+        switch (playerNumber) {
+            case 1:
+                color = Color.DARKBLUE;
+                break;
+            case 2:
+                color = Color.DARKGREY;
+                break;
+            case 3:
+                color = Color.DARKRED;
+                break;
+            case 4:
+                color = Color.DARKGREEN;
+
+        }
     }
 
     public int getCoins() {
@@ -56,11 +72,12 @@ public class Player {
         return playernumber;
     }
 
-    public void setMinigamepoints(int points){
-        this.minigamepoints = points;
-    }
     public int getMinigamepoints() {
         return minigamepoints;
+    }
+
+    public void setMinigamepoints(int points) {
+        this.minigamepoints = points;
     }
 
     public Phase getActualPhase() {
@@ -79,14 +96,20 @@ public class Player {
         return actualList;
     }
 
-    public void MoveTo(Phase newPhase, int actualBox) throws Exception {
-        System.out.println(this.nickname + " changed position ");
-        System.out.println("Actual: (" + this.actualPhase + ", " + this.actualBox + ")");
-        System.out.println("New: (" + newPhase + ", " + actualBox + ")");
+    public void MoveTo(Phase newPhase, int actualBox) {
 
         this.actualPhase = newPhase;
         this.actualBox = actualBox;
-        this.actualPhase.getPhaselist().accessNode(this.actualBox).placePlayer(this);
+
+        this.actualPhase.getPhaselist().accessNode(this.actualBox).placePlayer(this);//FOR GRAPHIC REPRESENTATION
+        this.actualPhase.getPhaselist().accessNode(this.actualBox).iteract(this);//FOR ITERACTIONS WITH THE BOX
+
+        try {
+            Table.getInstance().drawTable();
+            Table.getInstance().drawPlayers();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -95,7 +118,7 @@ public class Player {
      *
      * @param box
      */
-    public void MoveTo(int boxExcelid) throws Exception {
+    public void MoveTo(int boxExcelid) {
         Phase phase = null;
         int index;
         if (boxExcelid <= 35) {
@@ -125,7 +148,7 @@ public class Player {
      * @param gain   true if earns stars, false if looses
      * @param amount amount of stars to earn.
      */
-    public void modifyStars(boolean gain, int amount) throws IOException {
+    public void modifyStars(boolean gain, int amount) {
 
         if (gain) {
             String update = " more stars.";
@@ -133,7 +156,7 @@ public class Player {
             this.stars += amount;
         } else {
             if (this.stars - amount < 0) {
-                throw new IOException(this.nickname + " hasnt enought stars.");
+                System.out.println(this.nickname + " hasnt enought stars.");
             }
             String update = " less stars.";
             this.stars -= amount;
@@ -147,15 +170,19 @@ public class Player {
      * @param gain   true if earns coins, false if looses
      * @param amount amount of coins to earn.
      */
-    public void modifyCoins(boolean gain, int amount) throws IOException {
+    public void modifyCoins(boolean gain, int amount) {
         String update = " more coins.";
         if (gain) {
             this.coins += amount;
+            System.out.println(this.nickname + " earned: " + amount + update);
         } else {
             if (this.coins - amount < 0) {
-                throw new IOException(this.nickname + " hasnt enought coins.");
+                System.out.println("Player cant lose that coins " + this.nickname);
+                return;
             }
             update = " less coins.";
+            System.out.println(this.nickname + " losed: " + amount + update);
+
             this.coins -= amount;
         }
     }
@@ -190,25 +217,22 @@ public class Player {
                         posibles.insertLast(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1));
                     }
                 }
-            }
-
-            else {
-                int cantidadPorDelante = (faseRecorrida.phaseList.len()-1) - actualBox;
-                if(cantidadPorDelante >= posicionesDisponibles){
-                    posibles.insertLast(faseRecorrida.getPhaseListElement(actualBox+posicionesDisponibles));
+            } else {
+                int cantidadPorDelante = (faseRecorrida.phaseList.len() - 1) - actualBox;
+                if (cantidadPorDelante >= posicionesDisponibles) {
+                    posibles.insertLast(faseRecorrida.getPhaseListElement(actualBox + posicionesDisponibles));
                     break;
-                }
-                else{
+                } else {
                     i = this.actualPhase.exitPoint;
                     faseRecorrida = Table.getInstance().getMainPhase();
-                    posicionesDisponibles = (posicionesDisponibles-(cantidadPorDelante+1));
+                    posicionesDisponibles = (posicionesDisponibles - (cantidadPorDelante + 1));
                 }
             }
             i++;
             posicionesDisponibles--;
         }
 
-        if(faseRecorrida.isTable) {
+        if (faseRecorrida.isTable) {
             posibles.insertLast(faseRecorrida.getPhaselist().accessNode(i + 1)); // inserta el elemento en el que la posicion llega a 0 en el mainTable
         }
         return posibles;
@@ -220,11 +244,11 @@ public class Player {
      * una casilla
      *
      * @param result
-     * @throws Exception
      * @return
+     * @throws Exception
      */
     public SimpleLinkedList<Box> RollDices() throws Exception {
-        SimpleLinkedList<Box> possibles = this.calcPossibleMoves(12);
+        SimpleLinkedList<Box> possibles = this.calcPossibleMoves(ThreadLocalRandom.current().nextInt(13));
         System.out.println(possibles.toString());
         return possibles;
     }
@@ -243,11 +267,11 @@ public class Player {
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         //set the color
-        gc.setFill(Color.BLACK);
+        gc.setFill(this.color);
         gc.setStroke(Color.BLACK);
 
         //Draw the figure
-        gc.fillOval((double) this.actualPhase.getPhaselist().accessNode(this.getActualBox()).getX(), (double) this.actualPhase.getPhaselist().accessNode(this.getActualBox()).getY(), 10, 10);
+        gc.fillOval((double) this.actualPhase.getPhaselist().accessNode(this.getActualBox()).getX(), (double) this.actualPhase.getPhaselist().accessNode(this.getActualBox()).getY(), 20, 20);
     }
 
 }

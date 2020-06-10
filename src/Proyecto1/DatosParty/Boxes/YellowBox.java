@@ -1,4 +1,7 @@
 package Proyecto1.DatosParty.Boxes;
+import Proyecto1.DatosParty.DataStructures.Stack.Stack;
+import Proyecto1.DatosParty.Events.Event;
+import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
@@ -43,9 +46,18 @@ public class YellowBox extends Box {
         gc.fillRect(x, y, this.height, this.width);
     }
 
+    @Override
+    public void iteract(Player player) {
+        Stack<Event> events = Event.getEventStack();
+        System.out.println("The box " + this.excelId + " has the event: " + events.peek());
+        events.peek().interact(player);
+        events.pop();
+    }
+
 
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.
+     *
      * @return the color of the box.
      */
     @Override

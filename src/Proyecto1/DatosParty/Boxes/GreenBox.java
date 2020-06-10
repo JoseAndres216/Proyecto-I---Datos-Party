@@ -1,6 +1,7 @@
 package Proyecto1.DatosParty.Boxes;
 
 
+import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
@@ -46,9 +47,16 @@ public class GreenBox extends Box {
         gc.fillRect(x, y, this.height, this.width);
     }
 
+    @Override
+    public void iteract(Player player) {
+        player.modifyCoins(true, 10);
+
+    }
+
 
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.
+     *
      * @return the color of the box.
      */
     @Override

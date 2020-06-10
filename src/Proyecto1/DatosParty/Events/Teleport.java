@@ -1,6 +1,5 @@
 package Proyecto1.DatosParty.Events;
 
-import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import Proyecto1.DatosParty.Phase;
 import Proyecto1.DatosParty.Player;
 import Proyecto1.DatosParty.Table;
@@ -47,17 +46,16 @@ public class Teleport extends Event   {
 
     /**
      * Method for starting the event.
-     * @param players List of players
+     *
+     * @param player List of players
      * @throws IOException must only have one player.
      */
     @Override
-    public void interact(SimpleLinkedList<Player> players) throws Exception {
-        if(players.len() != 1){
-            throw new IOException("The list must only contain 1 player.");
-        }
+    public void interact(Player player) {
+
         Phase phase = this.phasePicker();
         int random = generateRandomBox(phase.phaseList.len());
-        players.accessNode(0).MoveTo(phase,random);
+        player.MoveTo(phase, random);
     }
 
     public Teleport() {
