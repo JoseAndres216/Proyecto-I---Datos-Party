@@ -6,11 +6,13 @@ import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 
 public class CardsController extends Minigame{
-    int player = 0;
+    private int player = 0;
     private SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
     private Player card1, card2, card3, card4;
     private int numCard1, numCard2, numCard3, numCard4;
@@ -19,6 +21,16 @@ public class CardsController extends Minigame{
     @FXML Button btnChoose2;
     @FXML Button btnChoose3;
     @FXML Button btnChoose4;
+
+    @FXML Label lblCard1;
+    @FXML Label lblCard2;
+    @FXML Label lblCard3;
+    @FXML Label lblCard4;
+
+    @FXML ImageView imgCard1;
+    @FXML ImageView imgCard2;
+    @FXML ImageView imgCard3;
+    @FXML ImageView imgCard4;
 
     @Override
     public void play(SimpleLinkedList<Player> players) throws IOException {
@@ -125,7 +137,19 @@ public class CardsController extends Minigame{
             btnChoose2.setDisable(true);
             btnChoose3.setDisable(true);
             btnChoose4.setDisable(true);
+
             mixCards();
+
+            lblCard1.setText(""+numCard1);
+            lblCard2.setText(""+numCard2);
+            lblCard3.setText(""+numCard3);
+            lblCard4.setText(""+numCard4);
+
+            imgCard1.setX(2000);
+            imgCard2.setX(2000);
+            imgCard3.setX(2000);
+            imgCard4.setX(2000);
+
             finishGame();
         }
     }

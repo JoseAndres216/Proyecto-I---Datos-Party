@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.awt.*;
 
@@ -24,6 +25,7 @@ public class Main extends Application {
         stage.setTitle("Datos Party!");
         stage.setScene(new Scene(root));
         stage.resizableProperty().setValue(false);
+        stage.initStyle(StageStyle.UNDECORATED);
 
         stage.setFullScreen(false);
         stage.show();

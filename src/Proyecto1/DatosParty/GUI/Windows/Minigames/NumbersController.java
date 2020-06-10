@@ -591,4 +591,9 @@ public class NumbersController extends Minigame {
     public int compareTo(Event o) {
         return 0;
     }
+
+    @Override
+    public void interact(Player player) {
+
+    }
 }

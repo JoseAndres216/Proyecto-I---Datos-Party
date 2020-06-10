@@ -58,11 +58,11 @@ public class Game {
 
     public void giveMoney() throws IOException {
         for (int i = 0; i <= players.len()-1; i++) {
-            if(players.accessNode(i).getMinigamepoints()==3){
+            if(players.accessNode(i).getMinigamepoints()==4){
                 players.accessNode(i).modifyCoins(true, 5);
-            }else if(players.accessNode(i).getMinigamepoints()==2){
+            }else if(players.accessNode(i).getMinigamepoints()==3){
                 players.accessNode(i).modifyCoins(true,3);
-            }else if(players.accessNode(i).getMinigamepoints()==1){
+            }else if(players.accessNode(i).getMinigamepoints()==2){
                 players.accessNode(i).modifyCoins(true,2);
             }else{
                 players.accessNode(i).modifyCoins(true,0);
@@ -70,14 +70,16 @@ public class Game {
         }
     }
 
+    /*
     public SimpleLinkedList<Player> listWithnoPlayer(Player player) throws IOException {
         SimpleLinkedList<Player> list = Game.getInstance().getPlayers();
         SimpleLinkedList<Player> newList = new SimpleLinkedList();
         for (int i = 0; i < list.len(); i++) {
             if(list.accessNode(i)!=player){
-                newList.insertLast(player);
+                newList.insertLast(list.accessNode(i));
             }
         }
         return newList;
     }
+     */
 }
