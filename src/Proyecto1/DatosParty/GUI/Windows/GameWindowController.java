@@ -3,7 +3,6 @@ package Proyecto1.DatosParty.GUI.Windows;
 import Proyecto1.DatosParty.Boxes.Box;
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import Proyecto1.DatosParty.GUI.Inputs.InputManager;
-import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 import Proyecto1.DatosParty.Table;
 import javafx.event.Event;
@@ -23,14 +22,17 @@ public class GameWindowController {
     Button startButton;
 
     public void drawPhases(Event event) throws Exception {
-        Table.getInstance().drawTable(canvas);
-        Table.getInstance().drawTable(canvas);
-        Table.getInstance().drawPlayers(canvas, Game.getInstance().getPlayers());
+        Table.getInstance().setCanvas(canvas);
+        Table.getInstance().drawTable();
+        Table.getInstance().drawTable();
+        Table.getInstance().drawPlayers();
+
+        InputManager im = InputManager.getInstance();
+        im.start(new Stage());
     }
 
     public void pressedExitbutton(Event event) throws Exception {
-        InputManager im = InputManager.getInstance();
-        im.start(new Stage());
+
 
     }
 

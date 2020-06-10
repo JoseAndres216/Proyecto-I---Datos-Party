@@ -143,7 +143,7 @@ public class CardsController extends Minigame{
             card3.setMinigamepoints(numCard3);
         }
 
-        if(card4!=null){
+        if (card4 != null) {
             card4.setMinigamepoints(numCard4);
         }
         Game.getInstance().giveMoney();
@@ -152,5 +152,10 @@ public class CardsController extends Minigame{
     @Override
     public int compareTo(Event o) {
         return 0;
+    }
+
+    @Override
+    public void interact(Player player) {
+
     }
 }

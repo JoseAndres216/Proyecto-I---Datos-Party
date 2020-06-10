@@ -1,6 +1,7 @@
 package Proyecto1.DatosParty.Events;
 
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
+import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Class for the gift coins event
  */
 public class GiftCoins extends Event {
+
     public GiftCoins() {
         this.tag = "Gift coins";
     }
@@ -31,35 +33,37 @@ public class GiftCoins extends Event {
 
     /**
      * Method to start the minigame
-     * @param players list of players
+     *
+     * @param player list of players
      * @throws IOException list must have 2-3-4 players
      */
     @Override
-    public void interact(SimpleLinkedList<Player> players) throws IOException {
-        if ((players.len() < 2) || (players.len() > 4)) {
-            throw new IOException("List of players must have 2-4 players");
-        }
-        Player afected = players.accessNode(0);
-        int n = afected.getCoins()+1;
+    public void interact(Player afected) {
+
+        SimpleLinkedList<Player> players = Game.listWithnoPlayer(afected);
+        System.out.println(players);
+
+
+        int n = afected.getCoins() + 1;
         int coinsToWin;
         switch (players.len()) {
+            case 1:
+                coinsToWin = this.randomCoins(true, n);
+                afected.modifyCoins(false, coinsToWin);
+                players.accessNode(0).modifyCoins(true, coinsToWin);
+                break;
             case 2:
                 coinsToWin = this.randomCoins(true,n);
                 afected.modifyCoins(false, coinsToWin);
-                players.accessNode(1).modifyCoins(true, coinsToWin);
+                players.accessNode(0).modifyCoins(true, coinsToWin / 2);
+                players.accessNode(1).modifyCoins(true, coinsToWin / 2);
                 break;
             case 3:
-                coinsToWin = this.randomCoins(true,n);
-                afected.modifyCoins(false, coinsToWin);
-                players.accessNode(1).modifyCoins(true, coinsToWin / 2);
-                players.accessNode(1).modifyCoins(true, coinsToWin / 2);
-                break;
-            case 4:
                 coinsToWin = this.randomCoins(false,n);
                 afected.modifyCoins(false, coinsToWin);
+                players.accessNode(0).modifyCoins(true, coinsToWin / 3);
                 players.accessNode(1).modifyCoins(true, coinsToWin / 3);
                 players.accessNode(2).modifyCoins(true, coinsToWin / 3);
-                players.accessNode(3).modifyCoins(true, coinsToWin / 3);
                 break;
 
             default:

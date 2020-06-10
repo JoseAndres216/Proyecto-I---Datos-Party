@@ -10,6 +10,25 @@ public class Game {
     private Table gameTable;
     private int cantidadRondas;
 
+
+    public static SimpleLinkedList<Player> listWithnoPlayer(Player player) {
+        SimpleLinkedList<Player> list = Game.getInstance().getPlayers();
+        SimpleLinkedList<Player> newList = new SimpleLinkedList();
+        for (int i = 0; i < list.len(); i++) {
+            if (list.accessNode(i) != player) {
+                newList.insertLast(list.accessNode(i));
+            }
+        }
+        return newList;
+    }
+
+    public static Player getRandomPlayer(Player player) {
+        int random = player.getPlayernumber();
+        Player randomPlayer = Game.getInstance().getPlayers().accessNode(0);
+
+        return randomPlayer;
+    }
+
     public SimpleLinkedList<Player> getPlayers() {
         return players;
     }

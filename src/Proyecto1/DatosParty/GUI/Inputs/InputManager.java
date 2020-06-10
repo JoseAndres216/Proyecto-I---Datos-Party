@@ -5,6 +5,7 @@ import Proyecto1.DatosParty.Boxes.Box;
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
+import Proyecto1.DatosParty.Table;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -13,16 +14,17 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class InputManager extends Application {
+    private static InputManager instance = null;
+    private int playerIndex = 0;
     private VBox root = new VBox();
     private Scene scene = new Scene(root);
 
-    private static InputManager instance = null;
-
-    private InputManager(){
+    private InputManager() {
 
     }
-    public static synchronized InputManager getInstance(){
-        if(instance == null){
+
+    public static synchronized InputManager getInstance() {
+        if (instance == null) {
             instance = new InputManager();
         }
         return instance;
@@ -39,8 +41,8 @@ public class InputManager extends Application {
         stage.setMinHeight(300);
         stage.setMinWidth(400);
         SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
-        System.out.println(players);
-        this.rollDicesView(Game.getInstance().getPlayers().accessNode(0));
+
+        this.rollDicesView();
         // Add the scene to the Stage
         stage.setScene(scene);
         // Set the title of the Stage
@@ -51,14 +53,24 @@ public class InputManager extends Application {
 
     }
 
-    public void rollDicesView(Player player ){
+    public void rollDicesView() throws Exception {
+        Table.getInstance().drawTable();
+        Table.getInstance().drawTable();
+        Table.getInstance().drawPlayers();
+        this.getNextIndex();
+        Player player = Game.getInstance().getPlayers().accessNode(playerIndex);
+        //Create the Text and the players name.
 
-      //Create the Text and the players name.
-        Text text = new Text("Hello "+player.nickname+", press the button to roll the dices...:)");
+        Text text = new Text("Hello " + player.nickname + ", press the button to roll the dices...:)");
+
         Button rollDicesButton = new Button("Let it roll.");
+
+        this.root.getChildren().addAll(text, rollDicesButton);
+
         rollDicesButton.setOnAction((event) -> {    // lambda expression
-            this.root.getChildren().remove(rollDicesButton);
+
             try {
+                this.root.getChildren().clear();
                 this.selectRoadPathView(player);
             } catch (Exception e) {
                 System.out.println(e);
@@ -66,19 +78,22 @@ public class InputManager extends Application {
 
         });
         // Add the Text and the button to the VBox
-        root.getChildren().addAll(text, rollDicesButton);
+
+
     }
+
     public void selectRoadPathView(Player player) throws Exception {
         SimpleLinkedList<Box> list = player.RollDices();
-        System.out.println(list);
-        switch (list.len()){
+        switch (list.len()) {
             case 1:
                 Button move = new Button(list.accessNode(0).toString());
                 move.setOnAction((event) -> {    // lambda expression
                     try {
-                        player.MoveTo(list.accessNode(0).getExcelId());
+                        root.getChildren().removeAll(move);
+                        this.rollDicesView();
 
-                     } catch (Exception e) {
+                        player.MoveTo(list.accessNode(0).getExcelId());
+                    } catch (Exception e) {
                         System.out.println(e);
                     }
 
@@ -92,6 +107,8 @@ public class InputManager extends Application {
                 m1.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(0).getExcelId());
+                        root.getChildren().removeAll(m1, m2);
+                        this.rollDicesView();
                     } catch (Exception e) {
                         System.out.println(e);
                     }
@@ -100,6 +117,8 @@ public class InputManager extends Application {
                 m2.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(1).getExcelId());
+                        root.getChildren().removeAll(m1, m2);
+                        this.rollDicesView();
                     } catch (Exception e) {
                         System.out.println(e);
                     }
@@ -116,6 +135,7 @@ public class InputManager extends Application {
                 m21.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(0).getExcelId());
+                        root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
                         System.out.println(e);
                     }
@@ -124,6 +144,7 @@ public class InputManager extends Application {
                 m22.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(1).getExcelId());
+                        root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
                         System.out.println(e);
                     }
@@ -132,6 +153,7 @@ public class InputManager extends Application {
                 m23.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(2).getExcelId());
+                        root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
                         System.out.println(e);
                     }
@@ -141,13 +163,23 @@ public class InputManager extends Application {
                 root.getChildren().add(m21);
                 root.getChildren().add(m22);
                 break;
-            case 0 :
+            case 0:
                 System.out.println("The list is 0 len");
                 break;
             default:
                 throw new IllegalArgumentException("The possibles are more than 3.");
         }
     }
+
+    public void getNextIndex() {
+        if ((this.playerIndex + 1) < Game.getInstance().getPlayers().len()) {
+            playerIndex++;
+        } else {
+            playerIndex = 0;
+        }
+
+    }
+
 }
 
 

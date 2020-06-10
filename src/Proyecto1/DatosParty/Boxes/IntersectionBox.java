@@ -2,6 +2,7 @@ package Proyecto1.DatosParty.Boxes;
 
 import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import Proyecto1.DatosParty.Phase;
+import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
@@ -58,6 +59,11 @@ public class IntersectionBox extends Box {
         //Draw the rectangle
         gc.strokeRect(x, y, this.height, this.width);
         gc.fillRect(x, y, this.height, this.width);
+    }
+
+    @Override
+    public void iteract(Player player) {
+
     }
 
 

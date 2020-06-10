@@ -118,7 +118,7 @@ public abstract class Box extends Observable {
     }
 
 
-    public void iteract(){
+    public abstract void iteract(Player player);
 
-    }
+
 }

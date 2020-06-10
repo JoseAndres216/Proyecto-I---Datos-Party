@@ -3,8 +3,6 @@ package Proyecto1.DatosParty.DataStructures.SimpleLinkedList;
 import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import Proyecto1.DatosParty.DataStructures.Nodes.SimpleNode;
 
-import java.io.IOException;
-
 public class SimpleLinkedList <T> implements MotherList<T> {
     private SimpleNode<T> head = null;
     private SimpleNode<T> tail = null;
@@ -42,16 +40,16 @@ public class SimpleLinkedList <T> implements MotherList<T> {
     }
 
     @Override
-    public T accessNode(int i) throws IOException {
-        if(i > (len-1)){
-            throw  new IOException("Index out of range");
-        }
-        else if(i ==(len-1)){
+    public T accessNode(int i) {
+        if (i > (len - 1)) {
+            System.out.println("index out of range");
+            return null;
+        } else if (i == (len - 1)) {
             return this.tail.getData();
         }
         SimpleNode<T> temp = this.head;
         int counter = 0;
-        while(counter < i){
+        while (counter < i) {
             temp = temp.getNext();
             counter++;
         }

@@ -8,10 +8,7 @@ import java.io.IOException;
 
 public  abstract class Minigame extends Event {
 
-    @Override
-    public void interact(SimpleLinkedList<Player> players) {
-
-    }
 
     public abstract void play(SimpleLinkedList<Player> players) throws IOException;
+
 }
