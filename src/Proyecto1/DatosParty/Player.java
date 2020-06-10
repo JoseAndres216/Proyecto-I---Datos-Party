@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class Player {
     private final int playernumber;
-    private final int minigamepoints;
+    private int minigamepoints;
     public final String nickname;
     //Reference of the main table
     public MotherList<Box> actualList;
@@ -56,6 +56,9 @@ public class Player {
         return playernumber;
     }
 
+    public void setMinigamepoints(int points){
+        this.minigamepoints = points;
+    }
     public int getMinigamepoints() {
         return minigamepoints;
     }
@@ -148,15 +151,12 @@ public class Player {
         String update = " more coins.";
         if (gain) {
             this.coins += amount;
-            System.out.println(this.nickname + " has " + amount + update);
         } else {
             if (this.coins - amount < 0) {
                 throw new IOException(this.nickname + " hasnt enought coins.");
             }
             update = " less coins.";
             this.coins -= amount;
-            System.out.println(this.nickname + " has " + amount + update);
-
         }
     }
 
