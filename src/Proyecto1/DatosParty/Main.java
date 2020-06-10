@@ -26,10 +26,12 @@ public class Main extends Application {
         stage.setScene(new Scene(root));
         stage.resizableProperty().setValue(false);
         stage.initStyle(StageStyle.UNDECORATED);
+
         stage.setFullScreen(false);
         stage.show();
 
     }
+
 }
 
 

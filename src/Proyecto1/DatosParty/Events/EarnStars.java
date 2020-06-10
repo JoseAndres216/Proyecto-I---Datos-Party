@@ -1,9 +1,6 @@
 package Proyecto1.DatosParty.Events;
 
-import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import Proyecto1.DatosParty.Player;
-
-import java.io.IOException;
 
 /**
  * Class that implements the Earn 2 - 5 stars, and the Lose 1 stars
@@ -15,6 +12,7 @@ public class EarnStars extends Event {
 
     /**
      * Constructor of class
+     *
      * @param amount amount of stars to win
      */
     public EarnStars(int amount) {
@@ -24,15 +22,15 @@ public class EarnStars extends Event {
 
 
     @Override
-    public void interact(SimpleLinkedList<Player> players) throws IOException {
-        int i = players.len();
+    public void interact(Player player) {
         int counter = 0;
 
-        while (counter < (i)){
-            players.accessNode(counter).modifyStars(true, this.amount);
-             counter++;
-        }
+        player.modifyStars(true, this.amount);
+
+        counter++;
+
     }
+
     @Override
     public int compareTo(Event o) {
         return 0;

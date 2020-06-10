@@ -206,8 +206,13 @@ public class SimpleCircularList<T> implements MotherList<T> {
         return stringBuilder.toString();
     }
 
-    public FatherNode getHead() {
+    public FatherNode<T> getHead() {
         return this.head;
+    }
+
+    public void emptyList() {
+        this.head = null;
+        this.extension = 0;
     }
 }
 

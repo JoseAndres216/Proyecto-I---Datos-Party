@@ -1,6 +1,5 @@
 package Proyecto1.DatosParty.Events;
 
-import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import Proyecto1.DatosParty.DataStructures.Stack.Stack;
 import Proyecto1.DatosParty.Player;
 
@@ -8,14 +7,16 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Event implements Comparable<Event> {
 
+    private static Stack<Event> events = new Stack<>();
     public String tag;
 
     /**
      * Event stack generator, the configuration, for how many events are added, its inside.
+     *
      * @return stack with random placed events.
      */
-    public static Stack<Event> generateEventStack() {
-        Stack<Event> events = new Stack<>();
+    public static Stack<Event> getEventStack() {
+
 
         int duelEvent = 10;
         int stealCoins = 10;
@@ -45,8 +46,6 @@ public abstract class Event implements Comparable<Event> {
                         break;
                     case 2:
                         if (giftCoins != 0) {
-
-
                             events.push(new GiftCoins());
                             giftCoins--;
                         }
@@ -97,12 +96,13 @@ public abstract class Event implements Comparable<Event> {
             }
 
         }
-     return events;
+        System.out.println(events);
+        return events;
     }
 
     //Configuration of events
 
-    public abstract void interact(SimpleLinkedList<Player> players) throws Exception;
+    public abstract void interact(Player player);
 
     @Override
     public String toString() {

@@ -22,7 +22,7 @@ public interface MotherList<T> {
 
     void insertLast(T data);
 
-    T accessNode(int i) throws Exception;
+    T accessNode(int i);
 
 
 

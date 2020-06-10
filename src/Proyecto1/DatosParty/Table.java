@@ -17,19 +17,27 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Table {
     private static Table instance = null;
     //Intialization of the Phases, (the main table will not be a phase)
-    public Phase phaseA = new Phase(new SimpleLinkedList<Box>(),false, "Phase A");
-    public Phase phaseB = new Phase(new SimpleLinkedList<Box>(),false, "Phase B");
-    public Phase phaseC = new Phase(new DoubleLinkedList<Box>(),false, "Phase C");
-    public Phase phaseD = new Phase(new CircularDoubleList<Box>(),true, "Phase D");
+    public Phase phaseA = new Phase(new SimpleLinkedList<Box>(), false, "Phase A");
+    public Phase phaseB = new Phase(new SimpleLinkedList<Box>(), false, "Phase B");
+    public Phase phaseC = new Phase(new DoubleLinkedList<Box>(), false, "Phase C");
+    public Phase phaseD = new Phase(new CircularDoubleList<Box>(), true, "Phase D");
+
+    private Canvas canvas;
+
+    public void setCanvas(Canvas canvas) {
+        this.canvas = canvas;
+    }
+
     //Intialization of the main table.
-    public Phase mainPhase = new Phase(new SimpleCircularList(),true, "Main");
-    private Table(){
+    public Phase mainPhase = new Phase(new SimpleCircularList(), true, "Main");
+
+    private Table() {
         this.generateTable();
     }
 
-    public static synchronized Table getInstance(){
+    public static synchronized Table getInstance() {
 
-        if(instance == null){
+        if (instance == null) {
             instance = new Table();
         }
         return instance;
@@ -124,7 +132,7 @@ public class Table {
     /**
      * @param canvas canvas for drawing the boxes
      */
-    public void drawTable(Canvas canvas) throws Exception {
+    public void drawTable() throws Exception {
         //Generating main table
         int x = 420, y = 140;
         this.mainPhase.getPhaselist().getHead().getData().draw(x, y, canvas);
@@ -231,7 +239,8 @@ public class Table {
         }
     }
 
-    public void drawPlayers(Canvas canvas, SimpleLinkedList<Player> players) throws Exception {
+    public void drawPlayers() throws Exception {
+        SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
         for (int i = 0; i < players.len(); i++) {
             players.accessNode(i).drawPlayer(canvas);
         }
