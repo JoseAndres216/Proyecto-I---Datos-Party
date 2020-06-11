@@ -125,8 +125,8 @@ public class Table {
         this.phaseA.config(3,3,1,  3,  7);//exit point esta basado en el modelo del excel
         this.phaseB.config(0,0,10, 0,  16);//exit point esta basado en el modelo del excel
         this.phaseC.config(3,3,3,  1,  25);//exit point esta basado en el modelo del excel
-        this.phaseD.config(0,0,12, 0,  -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
-
+        this.phaseD.config(0, 0, 12, 0, -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
+        this.phaseD.setIsPhaseD(true);
     }
 
     /**

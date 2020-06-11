@@ -53,6 +53,11 @@ public class GreenBox extends Box {
 
     }
 
+    @Override
+    public String getMessage(Player player) {
+        return " wins 10 coins.";
+    }
+
 
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.

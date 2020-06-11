@@ -66,7 +66,7 @@ public class SimpleCircularList<T> implements MotherList<T> {
     @Override
     public T accessNode(int i) {
         if (i < 0 || i > this.extension) {
-            System.out.println("The node doesn't exists");
+            throw new IllegalArgumentException("Index out of range, index given: " + i + "elements: " + this.extension);
         }
 
 

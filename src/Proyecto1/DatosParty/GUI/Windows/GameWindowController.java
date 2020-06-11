@@ -2,13 +2,14 @@ package Proyecto1.DatosParty.GUI.Windows;
 
 import Proyecto1.DatosParty.Boxes.Box;
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
-import Proyecto1.DatosParty.GUI.Inputs.InputManager;
+import Proyecto1.DatosParty.GUI.Inputs.IOManager;
 import Proyecto1.DatosParty.Player;
 import Proyecto1.DatosParty.Table;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class GameWindowController {
@@ -21,14 +22,22 @@ public class GameWindowController {
     @FXML
     Button startButton;
 
+    @FXML
+    Label eventDisplayer;
+
     public void drawPhases(Event event) throws Exception {
         Table.getInstance().setCanvas(canvas);
         Table.getInstance().drawTable();
         Table.getInstance().drawTable();
         Table.getInstance().drawPlayers();
 
-        InputManager im = InputManager.getInstance();
-        im.start(new Stage());
+        if (IOManager.getInstance().isStarted()) {
+            System.out.println("No se puede abrir el im dos veces, ya fool");
+
+        } else {
+            IOManager.getInstance().setEventDisplay(this.eventDisplayer);
+            IOManager.getInstance().start(new Stage());
+        }
     }
 
     public void pressedExitbutton(Event event) throws Exception {

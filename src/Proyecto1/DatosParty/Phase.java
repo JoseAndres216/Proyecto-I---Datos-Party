@@ -13,6 +13,14 @@ public class Phase {
     public boolean isPhaseD = false;
     private String tag;
 
+    public boolean isPhaseD() {
+        return isPhaseD;
+    }
+
+    public void setIsPhaseD(boolean phaseD) {
+        isPhaseD = phaseD;
+    }
+
     public Phase(MotherList list, boolean isTable, String tag) {
         this.phaseList = list;
         this.isTable = isTable;

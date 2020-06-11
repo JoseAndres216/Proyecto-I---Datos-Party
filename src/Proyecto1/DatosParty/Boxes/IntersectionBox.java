@@ -74,10 +74,15 @@ public class IntersectionBox extends Box {
         this.tag = "white";
     }
 
+    @Override
+    public String getMessage(Player player) {
+        return " moves to an empty box.";
+    }
 
 
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.
+     *
      * @return the color of the box.
      */
     @Override

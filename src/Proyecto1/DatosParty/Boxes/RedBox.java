@@ -53,6 +53,10 @@ public class RedBox extends Box {
         player.modifyCoins(false, 10);
     }
 
+    @Override
+    public String getMessage(Player player) {
+        return " loses 10 coins.";
+    }
 
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.

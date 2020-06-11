@@ -7,6 +7,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class YellowBox extends Box {
+    private String message;
 
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
@@ -52,6 +53,11 @@ public class YellowBox extends Box {
         System.out.println("The box " + this.excelId + " has the event: " + events.peek());
         events.peek().interact(player);
         events.pop();
+    }
+
+    @Override
+    public String getMessage(Player player) {
+        return Event.getEventStack().peek().toString();
     }
 
 
