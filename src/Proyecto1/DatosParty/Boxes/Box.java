@@ -15,7 +15,7 @@ public abstract class Box extends Observable {
 
     //  //  //  //  //  //  //  //  //  //              ATRIBUTES                //  //  //  //  //  //  //  //  //  //
 
-    protected boolean busy;
+    protected boolean busy = false;
     public static int id;
     protected int excelId;
     protected Observer observer;
@@ -122,11 +122,11 @@ public abstract class Box extends Observable {
      * @param player    player that's going to be placed on the box.
      */
     public void placePlayer(Player player) {
-        if (this.busy == false) {
+        if (this.actualPlayer == null) {
             this.actualPlayer = player;
             this.busy = true;
         } else {
-            System.out.println("Start a minigame between:" + "\n" + player.nickname + "\n" + this.actualPlayer.nickname);
+            System.out.println("Start a minigame between:" + "\n" + player.nickname + " and " + this.actualPlayer.nickname);
 
         }
     }

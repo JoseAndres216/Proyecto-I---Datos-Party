@@ -117,7 +117,7 @@ public class IOManager extends Application {
                         root.getChildren().clear();
                         this.eventDisplay.setText(String.format("%s moves %dspaces and%s", player.nickname, list.len(), list.accessNode(0).getMessage(player)));
                         player.MoveTo(list.accessNode(0).getExcelId());
-                        list.accessNode(0).placePlayer(player);
+                        //list.accessNode(0).placePlayer(player);
                         this.getNextIndex();
                         this.rollDicesView();
                     } catch (Exception e) {
@@ -137,7 +137,7 @@ public class IOManager extends Application {
                         this.eventDisplay.setText(player.nickname + " moves " + list.len() + "spaces and" +
                                 list.accessNode(0).getMessage(player));
                         player.MoveTo(list.accessNode(0).getExcelId());
-                        list.accessNode(0).placePlayer(player);
+                        //list.accessNode(0).placePlayer(player);
                         root.getChildren().clear();
                         this.getNextIndex();
                         this.rollDicesView();
@@ -151,7 +151,7 @@ public class IOManager extends Application {
                         this.eventDisplay.setText(player.nickname + " moves " + list.len() + "spaces and" +
                                 list.accessNode(1).getMessage(player));
                         player.MoveTo(list.accessNode(1).getExcelId());
-                        list.accessNode(1).placePlayer(player);
+                        // list.accessNode(1).placePlayer(player);
                         root.getChildren().removeAll(m1, m2);
                         root.getChildren().clear();
                         this.getNextIndex();
@@ -174,7 +174,7 @@ public class IOManager extends Application {
                 m21.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(0).getExcelId());
-                        list.accessNode(0).placePlayer(player);
+                        //list.accessNode(0).placePlayer(player);
                         root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
                         System.out.println(e);
@@ -184,7 +184,7 @@ public class IOManager extends Application {
                 m22.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(1).getExcelId());
-                        list.accessNode(1).placePlayer(player);
+                        //list.accessNode(1).placePlayer(player);
                         root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
                         System.out.println(e);
@@ -194,7 +194,7 @@ public class IOManager extends Application {
                 m23.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(2).getExcelId());
-                        list.accessNode(2).placePlayer(player);
+                        //list.accessNode(2).placePlayer(player);
                         root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
                         System.out.println(e);
