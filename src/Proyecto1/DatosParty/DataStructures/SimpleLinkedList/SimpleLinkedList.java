@@ -64,7 +64,6 @@ public class SimpleLinkedList <T> implements MotherList<T> {
         temp.setNext(null);
     }
 
-
     @Override
     public String toString() {
         if (this.head == null) {
