@@ -28,20 +28,6 @@ public class SimpleCircularList<T> implements MotherList<T> {
         return null;
     }
 
-    public void insertFirst(T data) {
-        SimpleNode<T> simpleNode = new SimpleNode(data);
-        if (isEmpty()) {
-            this.head = simpleNode;
-            simpleNode.setNext(this.head);
-            this.extension++;
-        } else {
-            SimpleNode<T> temp = this.head;
-            this.head = simpleNode;
-            simpleNode.setNext(temp);
-            this.extension++;
-        }
-    }
-
     public void insertLast(T data) {
         SimpleNode<T> simpleNode = new SimpleNode(data);
         if (isEmpty()) {
@@ -66,7 +52,7 @@ public class SimpleCircularList<T> implements MotherList<T> {
     @Override
     public T accessNode(int i) {
         if (i < 0 || i > this.extension) {
-            System.out.println("The node doesn't exists");
+            throw new IllegalArgumentException("Index out of range, index given: " + i + "elements: " + this.extension);
         }
 
 
@@ -79,113 +65,8 @@ public class SimpleCircularList<T> implements MotherList<T> {
             return temp.getData();
         }
 
-
     public int len() {
         return this.extension;
-    }
-
-    public boolean isNode(T data) {
-        SimpleNode<T> temp = this.head;
-        int nodesLeft = this.extension;
-        while (nodesLeft != 0) {
-            if (temp.getData() == data) {
-                return true;
-            } else {
-                temp = temp.getNext();
-                nodesLeft--;
-            }
-        }
-        System.out.println("Couldn't find the node");
-        return false;
-    }
-
-    public int searchPosition(T data) {
-        SimpleNode<T> temp = this.head;
-        int position = 1;
-        if (temp.getData().equals(data)) {
-            return position;
-        } else {
-            temp = temp.getNext();
-            position++;
-        }
-        while (temp != this.head) {
-            if (temp.getData().equals(data)) {
-                return position;
-            } else {
-                temp = temp.getNext();
-                position++;
-            }
-        }
-        return -1;
-    }
-
-    public void editNode(int position, T newData) {
-        if (position <= 0 || position > this.extension) {
-            System.out.println("The node doesn't exists");
-        } else {
-            SimpleNode<T> temp = this.head;
-            int counter = 1;
-            while (counter != position) {
-                temp = temp.getNext();
-                counter++;
-            }
-            temp.setData(newData);
-        }
-    }
-
-    public void editNodebyData(T previousData, T newData) {
-        editNode(searchPosition(previousData), newData);
-    }
-
-    public void deleteFirstnode() {
-        SimpleNode<T> temp = this.head;
-        while (temp.getNext() != this.head) {
-            temp = temp.getNext();
-        }
-        temp.setNext(temp.getNext().getNext());
-        this.head = temp.getNext();
-
-    }
-
-    public void deleteLastnode() {
-        SimpleNode<T> temp = this.head;
-        while (temp.getNext().getNext() != this.head) {
-            temp = temp.getNext();
-        }
-        temp.setNext(this.head);
-    }
-
-    public void deleteNodebyData(T data) {
-        int position = searchPosition(data);
-        if (position == -1) {
-            System.out.println("Couldn't find the node");
-        } else if (position == 1) {
-            deleteFirstnode();
-        } else if (position == this.extension) {
-            deleteLastnode();
-        } else {
-            SimpleNode<T> temp = this.head;
-            int counter = 1;
-            while ((counter + 1) != position) {
-                temp = temp.getNext();
-                counter++;
-            }
-            temp.setNext(temp.getNext().getNext());
-        }
-    }
-
-    public T retrnNodedata(int index) {
-        if (index < 0 || index >= this.extension) {
-            System.out.println("Node out of range.");
-            return null;
-        } else {
-            SimpleNode<T> temp = this.head;
-            while (index != 0) {
-                temp = temp.getNext();
-                index--;
-            }
-            return temp.getData();
-        }
     }
 
     @Override
@@ -210,9 +91,5 @@ public class SimpleCircularList<T> implements MotherList<T> {
         return this.head;
     }
 
-    public void emptyList() {
-        this.head = null;
-        this.extension = 0;
-    }
 }
 

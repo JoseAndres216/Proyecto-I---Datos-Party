@@ -25,7 +25,8 @@ public abstract class Event implements Comparable<Event> {
         int earnTwoStars = 3;
         int earnFiveStars = 1;
         int teleportEvent = 10;
-        int swapPlaces = 5;
+        int swapPlaces = 0;
+
         if (events.isEmpty()) {
             while (duelEvent != 0 || stealCoins != 0 || giftCoins != 0 || lose1star != 0 || earnTwoStars != 0 || earnFiveStars != 0 || teleportEvent != 0 || swapPlaces != 0) {
                 int randomInt = ThreadLocalRandom.current().nextInt(0, 8);
@@ -96,7 +97,6 @@ public abstract class Event implements Comparable<Event> {
             }
 
         }
-        System.out.println(events);
         return events;
     }
 

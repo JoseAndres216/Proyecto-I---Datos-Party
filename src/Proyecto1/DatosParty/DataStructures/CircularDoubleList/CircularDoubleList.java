@@ -96,10 +96,9 @@ public class CircularDoubleList<T> implements MotherList<T> {
         this.head.setPrev(temp);
     }
 
-    public T accessNode(int index) {
+    public T accessNode(int index) throws IllegalArgumentException {
         if (index < 0 || index >= this.extension) {
-            System.out.println("Node out of range.");
-            return null;
+            throw new IllegalArgumentException("Index out of range, given: " + index + " max: " + (this.len() - 1));
         } else {
             DoubleNode<T> temp = this.head;
             while (index != 0) {

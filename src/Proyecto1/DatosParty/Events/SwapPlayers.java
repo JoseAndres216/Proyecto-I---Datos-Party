@@ -23,14 +23,14 @@ public class SwapPlayers extends Event{
         Player player2 = Game.getRandomPlayer(player1);
 
         Phase phaseP1 = player1.getActualPhase();
-        int boxP1 = player1.getActualBox();
+        int boxP1 = player1.getActualBoxIndex();
 
         Phase phaseP2 = player2.getActualPhase();
-        int boxP2 = player2.getActualBox();
+        int boxP2 = player2.getActualBoxIndex();
 
         //swap
-        player1.MoveTo(phaseP2, boxP2);
         player2.MoveTo(phaseP1, boxP1);
+        player1.MoveTo(phaseP2, boxP2);
 
     }
 

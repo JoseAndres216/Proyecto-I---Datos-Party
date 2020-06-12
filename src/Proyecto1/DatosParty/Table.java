@@ -20,9 +20,10 @@ public class Table {
     public Phase phaseA = new Phase(new SimpleLinkedList<Box>(), false, "Phase A");
     public Phase phaseB = new Phase(new SimpleLinkedList<Box>(), false, "Phase B");
     public Phase phaseC = new Phase(new DoubleLinkedList<Box>(), false, "Phase C");
-    public Phase phaseD = new Phase(new CircularDoubleList<Box>(), true, "Phase D");
+    public Phase phaseD = new Phase(new CircularDoubleList<Box>(), false, "Phase D");
 
     private Canvas canvas;
+    private boolean isStar = false;
 
     public void setCanvas(Canvas canvas) {
         this.canvas = canvas;
@@ -67,72 +68,13 @@ public class Table {
 
 
     /**
-     * Method for generating a random box, for creating the main table.
-     *
-     * @return
-     */
-    public Box getRandomBox(int counterCasillasPrincipal) {
-        int randomNum = ThreadLocalRandom.current().nextInt(0, 4);
-        Box randomBox;
-        switch (randomNum) {
-            case 0:
-                randomBox = new GreenBox(counterCasillasPrincipal);
-                break;
-            case 1:
-                randomBox = new YellowBox(counterCasillasPrincipal);
-                break;
-            case 2:
-                randomBox = new RedBox(counterCasillasPrincipal);
-                break;
-            case 3:
-                randomBox = new WhiteBox(counterCasillasPrincipal);
-                break;
-            default:
-                System.out.println("Algo paso al generar la casilla, el random era: " + randomNum);
-                randomBox = new WhiteBox(counterCasillasPrincipal);
-        }
-        return randomBox;
-    }
-
-    //Method for puttin together the phases and the main table.
-    public void generateTable() {
-
-        //Generate the main table, made of 36 boxes with intersections that connect phases
-        //and random generated boxes on the other parts of the table.
-        for (int i = 0; i < 36; i++) {
-            int counterCasillasPrincipal = 0;
-            switch (i) {
-                case 2:
-                    this.mainPhase.phaseList.insertLast(new IntersectionBox(phaseA,counterCasillasPrincipal));
-                     break;
-
-                case 11:
-                    this.mainPhase.phaseList.insertLast(new IntersectionBox(phaseB,counterCasillasPrincipal));
-                      break;
-
-                case 20:
-                    this.mainPhase.phaseList.insertLast(new IntersectionBox(phaseC,counterCasillasPrincipal));
-                      break;
-
-
-                default:
-                    this.mainPhase.phaseList.insertLast(this.getRandomBox(counterCasillasPrincipal));
-                     break;
-            }
-            counterCasillasPrincipal++;
-        }
-        //Setting the phases with the lists
-        this.phaseA.config(3,3,1,  3,  7);//exit point esta basado en el modelo del excel
-        this.phaseB.config(0,0,10, 0,  16);//exit point esta basado en el modelo del excel
-        this.phaseC.config(3,3,3,  1,  25);//exit point esta basado en el modelo del excel
-        this.phaseD.config(0,0,12, 0,  -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
-
-    }
-
-    /**
      * @param canvas canvas for drawing the boxes
      */
     public void drawTable() throws Exception {
+        if(isStar==false){
+            Game.getInstance().generateStar();
+            isStar=true;
+        }
         //Generating main table
         int x = 420, y = 140;
         this.mainPhase.getPhaselist().getHead().getData().draw(x, y, canvas);
@@ -150,10 +92,10 @@ public class Table {
             } else if (i > 27 && i <= 35) {
                 y -= 36;
             }
+            node.getData().setExcelId(i);
             node.getData().draw(x, y, canvas);
             node.getData().setX(x);
             node.getData().setY(y);
-            node.getData().setExcelId(i);
             node = node.getNext();
         }
 
@@ -244,6 +186,69 @@ public class Table {
         for (int i = 0; i < players.len(); i++) {
             players.accessNode(i).drawPlayer(canvas);
         }
+    }
+
+    /**
+     * Method for generating a random box, for creating the main table.
+     *
+     * @return
+     */
+    public Box getRandomBox(int counterCasillasPrincipal) {
+        int randomNum = ThreadLocalRandom.current().nextInt(0, 4);
+        Box randomBox;
+        switch (randomNum) {
+            case 0:
+                randomBox = new GreenBox(counterCasillasPrincipal);
+                break;
+            case 1:
+                randomBox = new YellowBox(counterCasillasPrincipal);
+                break;
+            case 2:
+                randomBox = new RedBox(counterCasillasPrincipal);
+                break;
+            case 3:
+                randomBox = new WhiteBox(counterCasillasPrincipal);
+                break;
+            default:
+                System.out.println("Algo paso al generar la casilla, el random era: " + randomNum);
+                randomBox = new WhiteBox(counterCasillasPrincipal);
+        }
+        return randomBox;
+    }
+
+    //Method for puttin together the phases and the main table.
+    public void generateTable() {
+
+        //Generate the main table, made of 36 boxes with intersections that connect phases
+        //and random generated boxes on the other parts of the table.
+        for (int i = 0; i < 36; i++) {
+            int counterCasillasPrincipal = 0;
+            switch (i) {
+                case 2:
+                    this.mainPhase.phaseList.insertLast(new IntersectionBox(phaseA,counterCasillasPrincipal));
+                    break;
+
+                case 11:
+                    this.mainPhase.phaseList.insertLast(new IntersectionBox(phaseB,counterCasillasPrincipal));
+                    break;
+
+                case 20:
+                    this.mainPhase.phaseList.insertLast(new IntersectionBox(phaseC,counterCasillasPrincipal));
+                    break;
+
+
+                default:
+                    this.mainPhase.phaseList.insertLast(this.getRandomBox(counterCasillasPrincipal));
+                    break;
+            }
+            counterCasillasPrincipal++;
+        }
+        //Setting the phases with the lists
+        this.phaseA.config(3,3,1,  3,  7);//exit point esta basado en el modelo del excel
+        this.phaseB.config(0,0,10, 0,  16);//exit point esta basado en el modelo del excel
+        this.phaseC.config(3,3,3,  1,  25);//exit point esta basado en el modelo del excel
+        this.phaseD.config(0, 0, 12, 0, -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
+        this.phaseD.setIsPhaseD(true);
     }
 }
 

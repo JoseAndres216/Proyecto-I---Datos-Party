@@ -19,16 +19,73 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee66dd22-e32e-4710-af44-09944fffcbea" name="Default Changelist" comment="Safe commit">
+    <list default="true" id="ee66dd22-e32e-4710-af44-09944fffcbea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/META-INF/ProyectoI-DatosParty.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Inputs/IOManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Earth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/FinishLine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Hand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Mars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Moon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Palm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Palm2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Rocket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Satellite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/ShootingStar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Stick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Cards.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/CardsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Formula.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/FormulaController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/LuckyStick.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/LuckyStickController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Numbers.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/NumbersController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissors.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissorsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Rockets.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RocketsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Vowels.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/VowelsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Minigames/RockPaperScissors.class~Updated upstream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/EventTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/SwapPlayersTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/ProyectoI-DatosParty/Proyecto1/DatosParty/PlayerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Proyecto1/DatosParty/Events/EventTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Proyecto1/DatosParty/Events/SwapPlayersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/13f2d9a4bcbeffc49fe6b75da60f083c9a6aae35" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/13f2d9a4bcbeffc49fe6b75da60f083c9a6aae35" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/66673294848dccbae9517a9ce1c2cef3eb54e207" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/66673294848dccbae9517a9ce1c2cef3eb54e207" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8bb7339aa178a0b666ea6e1e4de5d9c8f52bf87b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8bb7339aa178a0b666ea6e1e4de5d9c8f52bf87b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c96e86a4ff57aaf2bce7eb5202091ffa63e84cae" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c96e86a4ff57aaf2bce7eb5202091ffa63e84cae" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/MainMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoI-DatosParty.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoI-DatosParty.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Duel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Duel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Event.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Teleport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Teleport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/GameWindowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/GameWindowController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Minigames/Minigame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Minigames/RockPaperScissors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissors.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissors.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissorsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Duel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Duel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Teleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Teleport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/GameWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/GameWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/CardsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/CardsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/FormulaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/FormulaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/LuckyStickController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/LuckyStickController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/NumbersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/NumbersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RocketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RocketsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/VowelsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/VowelsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,33 +93,51 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="209" />
+    <option name="myElementSize" value="216" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
         <option value="FxmlFile" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Jose Andres &lt;joseandres216@gmail.com&gt;" />
         <option value="Eduardo Zumbado Granados &lt;42503164+eduardo2108@users.noreply.github.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/Stack/Stack.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Main.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Phase.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/IntersectionBox.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/Box.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Observer/Observer.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Main.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Phase.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Boxes/IntersectionBox.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Observer/Observer.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/Stack/Stack.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="JQLSearcherProjectManager">
     <searchers />
@@ -89,7 +164,9 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Minigames/RockPaperScissors.class" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -99,51 +176,29 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="Proyecto1" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\eduar\Desktop\ProyectoI-DatosParty\out\production\ProyectoI-DatosParty\Proyecto1\DatosParty\GUI\Resources\images" />
-      <recent name="C:\Users\eduar\Desktop\ProyectoI-DatosParty\out\production\ProyectoI-DatosParty\Proyecto1\DatosParty\GUI" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Proyecto1.DatosParty" />
       <recent name="Proyecto1.cr.ac.tec.CE1103.Proyecto1" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Proyecto1.DatosParty.Events" />
+      <recent name="Proyecto1.DatosParty" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Proyecto1.DatosParty.GUI.Windows" />
+      <recent name="Proyecto1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ProyectoI-DatosParty\src\Proyecto1\DatosParty\GUI\Resources\images" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="DiceSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.GUI.Dice.DiceSimulator" />
-      <module name="ProyectoI-DatosParty" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Proyecto1.DatosParty.GUI.Dice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HelpWindowStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.GUI.Help.HelpWindowStart" />
-      <module name="ProyectoI-DatosParty" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Proyecto1.DatosParty.GUI.Help.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.Main" />
       <module name="ProyectoI-DatosParty" />
@@ -153,16 +208,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.cr.ac.tec.CE1103.Proyecto1.Main" />
-      <module name="ProyectoI-DatosParty" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -193,12 +238,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EventTest.getEventStack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoI-DatosParty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Proyecto1.DatosParty.Events.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Proyecto1.DatosParty.Events" />
+      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.Events.EventTest" />
+      <option name="METHOD_NAME" value="getEventStack" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.OnlyOnePossible" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoI-DatosParty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Proyecto1.DatosParty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Proyecto1.DatosParty" />
+      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.PlayerTest" />
+      <option name="METHOD_NAME" value="OnlyOnePossible" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwapPlayersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoI-DatosParty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Proyecto1.DatosParty.Events.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Proyecto1.DatosParty.Events" />
+      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.Events.SwapPlayersTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwapPlayersTest.interact" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoI-DatosParty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Proyecto1.DatosParty.Events.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Proyecto1.DatosParty.Events" />
+      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.Events.SwapPlayersTest" />
+      <option name="METHOD_NAME" value="interact" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.DiceSimulator" />
-        <item itemvalue="Application.HelpWindowStart" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SwapPlayersTest.interact" />
+        <item itemvalue="JUnit.SwapPlayersTest" />
+        <item itemvalue="JUnit.EventTest.getEventStack" />
+        <item itemvalue="JUnit.PlayerTest.OnlyOnePossible" />
       </list>
     </recent_temporary>
   </component>
@@ -222,9 +331,7 @@
       <workItem from="1591154532609" duration="7305000" />
       <workItem from="1591234711637" duration="87000" />
       <workItem from="1591598454210" duration="2912000" />
-      <workItem from="1591601392404" duration="2689000" />
-      <workItem from="1591832880027" duration="23966000" />
-      <workItem from="1591932481386" duration="930000" />
+      <workItem from="1591601392404" duration="2483000" />
     </task>
     <task id="LOCAL-00001" summary="Added SimpleList for implementation of game stages">
       <created>1590118352844</created>
@@ -331,21 +438,56 @@
       <option name="project" value="LOCAL" />
       <updated>1591164579336</updated>
     </task>
-    <task id="LOCAL-00016" summary="Safe commit">
-      <created>1591604046284</created>
+    <task id="LOCAL-00016" summary="Created the input manager window, for finding the possible ways in the table, from the gui">
+      <created>1591739883046</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1591604046284</updated>
+      <updated>1591739883046</updated>
     </task>
-    <task id="LOCAL-00017" summary="Safe commit">
-      <created>1591832754351</created>
+    <task id="LOCAL-00017" summary="lol">
+      <created>1591743714983</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1591832754352</updated>
+      <updated>1591743714983</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Can choose where to move from the result of the DiceSimulator">
+      <created>1591750794164</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1591750794164</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Functional moving through the table. :)">
+      <created>1591773591971</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1591773591971</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Solved bug when moving through the end of a circular list.">
+      <created>1591854785487</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1591854785487</updated>
+    </task>
+    <task id="LOCAL-00021" summary="ready the implementation of mechanism for controlling the facing of two players on the same box">
+      <created>1591855179904</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1591855179904</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Fixed bug that generated exception when moving one space on a phase, and ready one way moving on phase D.">
+      <created>1591946110330</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1591946110330</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,14 +508,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added SimpleList for implementation of game stages" />
@@ -391,28 +535,41 @@
     <MESSAGE value="Updates on the class Player, singleton on the Table class. Added Game class." />
     <MESSAGE value="Added all clases for the event stack, and implemented the earn 2-5 stars and lose one star events, on the Stars class." />
     <MESSAGE value="Implemented the steal coins event, and the method Player.modifyCoins." />
-    <MESSAGE value="Safe commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Safe commit" />
+    <MESSAGE value="Created the input manager window, for finding the possible ways in the table, from the gui" />
+    <MESSAGE value="lol" />
+    <MESSAGE value="Can choose where to move from the result of the DiceSimulator" />
+    <MESSAGE value="Functional moving through the table. :)" />
+    <MESSAGE value="Solved bug when moving through the end of a circular list." />
+    <MESSAGE value="ready the implementation of mechanism for controlling the facing of two players on the same box" />
+    <MESSAGE value="Fixed bug that generated exception when moving one space on a phase, and ready one way moving on phase D." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug that generated exception when moving one space on a phase, and ready one way moving on phase D." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="76" width="814" height="728" key="#Intentions" timestamp="1590979207228">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" width="814" height="728" key="#Intentions/0.0.1536.834@0.0.1536.834" timestamp="1590979207228" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1591162510241">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1591982570305">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1591162510241" />
-    <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1590120723171" />
-    <state x="618" y="305" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1590887499196">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1591982570305" />
+    <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1591761536365" />
+    <state x="618" y="305" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1591980978665">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1590705583744" />
-    <state x="618" y="305" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.834@0.0.1536.834" timestamp="1590887499196" />
-    <state x="566" y="318" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1590120724701">
+    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1591751511073" />
+    <state x="618" y="305" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.834@0.0.1536.834" timestamp="1591980978665" />
+    <state x="566" y="301" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591997331346">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="566" y="297" width="403" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1591763733112" />
+    <state x="566" y="301" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1591997331346" />
+    <state x="566" y="318" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1591761539101">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="566" y="318" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1591761539101" />
     <state x="247" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591163835564">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -425,150 +582,168 @@
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-725" y="231" key="#xdebugger.evaluate/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590952299256" />
-    <state x="0" y="20" key="CommitChangelistDialog2" timestamp="1591164578697">
+    <state x="0" y="20" key="CommitChangelistDialog2" timestamp="1591946109259">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="231" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590894713094" />
+    <state x="0" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591941210630" />
     <state x="231" y="6" key="CommitChangelistDialog2/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590956145492" />
-    <state x="0" y="20" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1591164578697" />
-    <state x="184" y="98" width="1536" height="892" key="DiffContextDialog" timestamp="1591602465180">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="0" y="20" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1591946109259" />
+    <state x="147" y="76" width="1228" height="695" key="DiffContextDialog" timestamp="1591752412052">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="147" y="76" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1590989522898" />
+    <state x="147" y="76" width="1228" height="695" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1591752412052" />
     <state x="184" y="98" width="1536" height="892" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591602465180" />
-    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1591601670759">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1591999361451">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="740" y="-806" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590214274619" />
     <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590705528050" />
+    <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1591999361451" />
     <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591601670759" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1591859628537">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="356" key="GridCell.Tab.0.bottom" timestamp="1592002807367">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404924" />
-    <state width="746" height="99" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590738618942" />
+    <state width="1493" height="91" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.bottom/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788713" />
-    <state width="1493" height="211" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591154662061" />
+    <state width="1493" height="356" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592002807367" />
     <state width="1877" height="492" key="GridCell.Tab.0.bottom/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1591859628537" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1591859628537">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="356" key="GridCell.Tab.0.center" timestamp="1592002807367">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
-    <state width="746" height="99" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590738618942" />
+    <state width="1493" height="91" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.center/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788712" />
-    <state width="1493" height="211" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591154662060" />
+    <state width="1493" height="356" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592002807367" />
     <state width="1877" height="492" key="GridCell.Tab.0.center/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1591859628537" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1591859628537">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="356" key="GridCell.Tab.0.left" timestamp="1592002807366">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
-    <state width="746" height="99" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590738618942" />
+    <state width="1493" height="91" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.left/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788712" />
-    <state width="1493" height="211" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591154662060" />
+    <state width="1493" height="356" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592002807366" />
     <state width="1877" height="492" key="GridCell.Tab.0.left/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1591859628537" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1591859628537">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="356" key="GridCell.Tab.0.right" timestamp="1592002807367">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
-    <state width="746" height="99" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590738618942" />
+    <state width="1493" height="91" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.right/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788713" />
-    <state width="1493" height="211" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591154662060" />
+    <state width="1493" height="356" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592002807367" />
     <state width="1877" height="492" key="GridCell.Tab.0.right/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1591859628537" />
-    <state width="723" height="264" key="GridCell.Tab.1.bottom" timestamp="1590994514333">
+    <state width="1493" height="318" key="GridCell.Tab.1.bottom" timestamp="1591987279584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590707846089" />
+    <state width="1493" height="40" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591939753774" />
     <state width="944" height="986" key="GridCell.Tab.1.bottom/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590955248524" />
-    <state width="723" height="264" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1590994514333" />
-    <state width="723" height="264" key="GridCell.Tab.1.center" timestamp="1590994514333">
+    <state width="1493" height="318" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591987279584" />
+    <state width="1493" height="318" key="GridCell.Tab.1.center" timestamp="1591987279584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590707846089" />
+    <state width="1493" height="40" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591939753774" />
     <state width="944" height="986" key="GridCell.Tab.1.center/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590955248524" />
-    <state width="723" height="264" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1590994514333" />
-    <state width="723" height="264" key="GridCell.Tab.1.left" timestamp="1590994514333">
+    <state width="1493" height="318" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1591987279584" />
+    <state width="1493" height="318" key="GridCell.Tab.1.left" timestamp="1591987279584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590707846089" />
+    <state width="1493" height="40" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591939753774" />
     <state width="944" height="986" key="GridCell.Tab.1.left/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590955248524" />
-    <state width="723" height="264" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1590994514333" />
-    <state width="723" height="264" key="GridCell.Tab.1.right" timestamp="1590994514333">
+    <state width="1493" height="318" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1591987279584" />
+    <state width="1493" height="318" key="GridCell.Tab.1.right" timestamp="1591987279584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590707846089" />
+    <state width="1493" height="40" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591939753774" />
     <state width="944" height="986" key="GridCell.Tab.1.right/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590955248524" />
-    <state width="723" height="264" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1590994514333" />
-    <state x="184" y="90" key="MergeDialog" timestamp="1591832785954">
+    <state width="1493" height="318" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1591987279584" />
+    <state x="184" y="90" key="MergeDialog" timestamp="1591602995761">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="184" y="90" key="MergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591832785954" />
-    <state x="841" y="406" width="389" height="267" key="MultipleFileMergeDialog" timestamp="1591832793294">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="841" y="406" width="389" height="267" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591832793294" />
-    <state x="506" y="128" key="RollbackChangesDialog" timestamp="1590960411994">
+    <state x="184" y="90" key="MergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591602995761" />
+    <state x="506" y="128" key="RollbackChangesDialog" timestamp="1591899211777">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="506" y="128" key="RollbackChangesDialog/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960411994" />
-    <state x="146" y="0" key="SettingsEditor" timestamp="1590907316319">
+    <state x="506" y="128" key="RollbackChangesDialog/0.0.1536.834@0.0.1536.834" timestamp="1591899211777" />
+    <state x="146" y="0" key="SettingsEditor" timestamp="1591980433818">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="183" y="-1080" key="SettingsEditor/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590300152289" />
     <state x="146" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590713767709" />
     <state x="183" y="-1080" key="SettingsEditor/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376881091" />
-    <state x="146" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1590907316319" />
-    <state x="326" y="104" key="Vcs.Push.Dialog.v2" timestamp="1591603956732">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="146" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1591980433818" />
+    <state x="261" y="80" key="Vcs.Push.Dialog.v2" timestamp="1591743716864">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="326" y="-980" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590300622519" />
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590712211341" />
+    <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591794289993" />
     <state x="326" y="-979" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376825667" />
-    <state x="261" y="80" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1590991806631" />
+    <state x="261" y="80" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1591743716864" />
     <state x="326" y="-976" key="Vcs.Push.Dialog.v2/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300769663" />
-    <state x="326" y="104" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1591603956732" />
     <state width="775" height="424" key="XDebugger.FullValuePopup" timestamp="1590952884081">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="775" height="424" key="XDebugger.FullValuePopup/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590952884081" />
+    <state x="35" y="43" width="1350" height="648" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1591754249993">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="35" y="43" width="1350" height="648" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1591754249993" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1590118204939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1590118204939" />
-    <state x="468" y="205" key="git4idea.merge.GitPullDialog" timestamp="1591832929237">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="533" y="136" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1591982356204">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="533" y="136" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.834@0.0.1536.834" timestamp="1591982356204" />
+    <state x="499" y="183" key="extract.method.dialog" timestamp="1591765612471">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="183" key="extract.method.dialog/0.0.1536.834@0.0.1536.834" timestamp="1591765612471" />
+    <state x="374" y="158" key="git4idea.merge.GitPullDialog" timestamp="1591980986220">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="468" y="-883" key="git4idea.merge.GitPullDialog/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590298437188" />
     <state x="374" y="156" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1590738610898" />
     <state x="468" y="-881" key="git4idea.merge.GitPullDialog/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376761112" />
-    <state x="374" y="158" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1590906180658" />
-    <state x="468" y="205" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591832929237" />
+    <state x="374" y="158" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1591980986220" />
     <state x="209" y="38" key="new project wizard" timestamp="1591135485511">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="209" y="38" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1591135485511" />
-    <state x="425" y="189" key="run.anything.popup" timestamp="1590981558103">
+    <state x="475" y="36" key="refactoring.ChangeSignatureDialog" timestamp="1591754920653">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="475" y="36" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1591754920653" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1591894206994">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1590715241116" />
-    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1590981558103" />
-    <state x="539" y="190" width="840" height="890" key="search.everywhere.popup" timestamp="1591844288667">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1591894206994" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1591980428863">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590121749613" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1591937382658" />
     <state x="539" y="-895" width="840" height="864" key="search.everywhere.popup/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376804466" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1591162835872" />
-    <state x="539" y="190" width="840" height="890" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1591844288667" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1591980428863" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ProyectoI_DatosParty$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1590917675308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ProyectoI_DatosParty$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1591898019392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Proyecto1.DatosParty.*</FILTER>
     </SUITE>
   </component>

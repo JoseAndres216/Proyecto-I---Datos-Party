@@ -2,6 +2,7 @@
 
 package Proyecto1.DatosParty.Boxes;
 
+import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Observer.Observable;
 import Proyecto1.DatosParty.Observer.Observer;
 import Proyecto1.DatosParty.Phase;
@@ -15,7 +16,7 @@ public abstract class Box extends Observable {
 
     //  //  //  //  //  //  //  //  //  //              ATRIBUTES                //  //  //  //  //  //  //  //  //  //
 
-    protected boolean busy;
+    protected boolean busy = false;
     public static int id;
     protected int excelId;
     protected Observer observer;
@@ -25,17 +26,27 @@ public abstract class Box extends Observable {
     protected int y;
     protected int height = 36;
     protected int width = 36;
-
+    protected boolean hasStar;
+    private Player actualPlayer = null;
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
     /**
      * Setters and getters of the class.
      */
-    public int getX() { return x; }
+    public void setHasStar(boolean hasStar) {
+        this.hasStar = hasStar;
+    }
+    public int getX() {
+        return x;
+    }
 
-    public void setX(int x) { this.x = x; }
+    public void setX(int x) {
+        this.x = x;
+    }
 
-    public int getY() { return y; }
+    public int getY() {
+        return y;
+    }
 
     public void setY(int y) { this.y = y; }
 
@@ -94,8 +105,9 @@ public abstract class Box extends Observable {
         this.observer = observer;
     }
 
-    public void notifyObserver() {
-        this.observer.update();
+    public void notifyObserver(Player player1, Player player2) {
+
+
     }
 
     /**
@@ -113,12 +125,40 @@ public abstract class Box extends Observable {
      * Method for positioning the player on the position of a respective box.
      * @param player    player that's going to be placed on the box.
      */
-    public void placePlayer(Player player){
-
+    public void placePlayer(Player player) {
+        if (this.actualPlayer == null) {
+            this.actualPlayer = player;
+            this.busy = true;
+        } else {
+            System.out.println("Start a minigame between:" + "\n" + player.nickname + " and " + this.actualPlayer.nickname);
+            /*
+             */
+        }
     }
 
+    public void removePlayer() {
+        this.actualPlayer = null;
+        this.busy = false;
+    }
 
-    public abstract void iteract(Player player);
+    public void iteract(Player player){
+        if(this.hasStar){
+            if(player.getCoins()>=5){
+                player.modifyCoins(false, 5);
+                player.modifyStars(true, 1);
+                this.hasStar = false;
+                Game.getInstance().generateStar();
+            }
+        }
+    }
 
+    public abstract String getMessage(Player player);
 
+    public String getTag() {
+        return this.tag;
+    }
+
+    void spawnStar() {
+        this.hasStar = true;
+    }
 }
