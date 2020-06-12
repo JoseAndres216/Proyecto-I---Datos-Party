@@ -96,7 +96,6 @@ public abstract class Event implements Comparable<Event> {
             }
 
         }
-        System.out.println(events);
         return events;
     }
 

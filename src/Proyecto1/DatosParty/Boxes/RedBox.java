@@ -46,6 +46,11 @@ public class RedBox extends Box {
         //Draw the rectangle
         gc.strokeRect(x, y, this.height, this.width);
         gc.fillRect(x, y, this.height, this.width);
+
+        StringBuilder id = new StringBuilder();
+        id.append(this.excelId);
+        gc.setFill(Color.BLACK);
+        gc.fillText((id.toString()), 10, 150);
     }
 
     @Override

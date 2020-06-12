@@ -10,7 +10,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -29,7 +29,8 @@ public class IOManager extends Application {
     private String family = "Tw Cen MT Condensed Extra Bold";
     private Font font = Font.font(family, size);
 
-    private Label eventDisplay;
+    private ListView eventDisplay;
+
 
     private IOManager() {
 
@@ -40,10 +41,6 @@ public class IOManager extends Application {
             instance = new IOManager();
         }
         return instance;
-    }
-
-    public void setEventDisplay(Label eventDisplay) {
-        this.eventDisplay = eventDisplay;
     }
 
     public boolean isStarted() {
@@ -63,7 +60,7 @@ public class IOManager extends Application {
         stage.setMinWidth(400);
         root.setSpacing(50);
         root.setAlignment(Pos.BASELINE_CENTER);
-
+        eventDisplay = Game.getInstance().getEventDisplay();
         this.rollDicesView();
         // Add the scene to the Stage
         stage.setScene(scene);
@@ -96,8 +93,9 @@ public class IOManager extends Application {
             try {
                 this.root.getChildren().remove(rollDicesButton);
                 this.selectBoxView(player);
+
             } catch (Exception e) {
-                System.out.println(e);
+                e.printStackTrace();
             }
 
         });
@@ -115,13 +113,14 @@ public class IOManager extends Application {
                 move.setOnAction((event) -> {    // lambda expression
                     try {
                         root.getChildren().clear();
-                        this.eventDisplay.setText(String.format("%s moves %dspaces and%s", player.nickname, list.len(), list.accessNode(0).getMessage(player)));
+                        this.eventDisplay.getItems().add(String.format("%s moves %dspaces and%s", player.nickname, list.len(), list.accessNode(0).getMessage(player)));
+
                         player.MoveTo(list.accessNode(0).getExcelId());
-                        //list.accessNode(0).placePlayer(player);
                         this.getNextIndex();
                         this.rollDicesView();
+
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
@@ -134,30 +133,26 @@ public class IOManager extends Application {
                 m2.setFont(font);
                 m1.setOnAction((event) -> {    // lambda expression
                     try {
-                        this.eventDisplay.setText(player.nickname + " moves " + list.len() + "spaces and" +
-                                list.accessNode(0).getMessage(player));
+                        this.eventDisplay.getItems().add(player.nickname + list.accessNode(0).getMessage(player));
                         player.MoveTo(list.accessNode(0).getExcelId());
-                        //list.accessNode(0).placePlayer(player);
                         root.getChildren().clear();
                         this.getNextIndex();
                         this.rollDicesView();
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
                 m2.setOnAction((event) -> {    // lambda expression
                     try {
-                        this.eventDisplay.setText(player.nickname + " moves " + list.len() + "spaces and" +
-                                list.accessNode(1).getMessage(player));
+                        this.eventDisplay.getItems().add(player.nickname + list.accessNode(1).getMessage(player));
                         player.MoveTo(list.accessNode(1).getExcelId());
-                        // list.accessNode(1).placePlayer(player);
                         root.getChildren().removeAll(m1, m2);
                         root.getChildren().clear();
                         this.getNextIndex();
                         this.rollDicesView();
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
@@ -174,10 +169,9 @@ public class IOManager extends Application {
                 m21.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(0).getExcelId());
-                        //list.accessNode(0).placePlayer(player);
                         root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
@@ -187,7 +181,7 @@ public class IOManager extends Application {
                         //list.accessNode(1).placePlayer(player);
                         root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
@@ -197,7 +191,7 @@ public class IOManager extends Application {
                         //list.accessNode(2).placePlayer(player);
                         root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
@@ -206,8 +200,7 @@ public class IOManager extends Application {
                 root.getChildren().add(m22);
                 break;
             case 0:
-                System.out.println("The list is 0 len");
-                break;
+                throw new IllegalArgumentException("Empty possible moves");
             default:
                 throw new IllegalArgumentException("The possibles are more than 3.");
         }

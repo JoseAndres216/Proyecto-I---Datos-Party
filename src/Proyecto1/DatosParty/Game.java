@@ -1,6 +1,7 @@
 package Proyecto1.DatosParty;
 
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
+import javafx.scene.control.ListView;
 
 import java.io.IOException;
 
@@ -9,7 +10,11 @@ public class Game {
     private SimpleLinkedList<Player> players = new SimpleLinkedList<>();
     private Table gameTable;
     private int cantidadRondas;
+    private ListView eventDisplay;
 
+    public void setEventDisplay(ListView eventDisplay) {
+        this.eventDisplay = eventDisplay;
+    }
 
     public static SimpleLinkedList<Player> listWithnoPlayer(Player player) {
         SimpleLinkedList<Player> list = Game.getInstance().getPlayers();
@@ -60,13 +65,21 @@ public class Game {
         for (int i = 0; i <= players.len()-1; i++) {
             if(players.accessNode(i).getMinigamepoints()==4){
                 players.accessNode(i).modifyCoins(true, 5);
-            }else if(players.accessNode(i).getMinigamepoints()==3){
-                players.accessNode(i).modifyCoins(true,3);
-            }else if(players.accessNode(i).getMinigamepoints()==2){
-                players.accessNode(i).modifyCoins(true,2);
-            }else{
-                players.accessNode(i).modifyCoins(true,0);
+            } else if (players.accessNode(i).getMinigamepoints() == 3) {
+                players.accessNode(i).modifyCoins(true, 3);
+            } else if (players.accessNode(i).getMinigamepoints() == 2) {
+                players.accessNode(i).modifyCoins(true, 2);
+            } else {
+                players.accessNode(i).modifyCoins(true, 0);
             }
+        }
+    }
+
+    public ListView getEventDisplay() {
+        if (this.eventDisplay != null) {
+            return this.eventDisplay;
+        } else {
+            throw new IllegalStateException("The instance of event Display still null");
         }
     }
 

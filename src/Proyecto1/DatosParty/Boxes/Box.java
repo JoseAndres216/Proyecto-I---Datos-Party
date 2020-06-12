@@ -127,10 +127,15 @@ public abstract class Box extends Observable {
             this.busy = true;
         } else {
             System.out.println("Start a minigame between:" + "\n" + player.nickname + " and " + this.actualPlayer.nickname);
-
+            /*
+             */
         }
     }
 
+    public void removePlayer() {
+        this.actualPlayer = null;
+        this.busy = false;
+    }
 
     public abstract void iteract(Player player);
 

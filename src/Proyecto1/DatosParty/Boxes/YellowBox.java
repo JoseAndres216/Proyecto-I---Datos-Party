@@ -20,12 +20,6 @@ public class YellowBox extends Box {
         this.tag = "yellow";
     }
 
-     public YellowBox() {this.tag = "yellow";}
-     /**
-     * Constructor 2 of the class: For just instantiating the class.
-     */
-
-
     /**
      * Method for drawing the box on the canvas.
      *
@@ -46,6 +40,15 @@ public class YellowBox extends Box {
         gc.strokeRect(x, y, this.height, this.width);
         gc.fillRect(x, y, this.height, this.width);
     }
+
+    public YellowBox() {
+        this.tag = "yellow";
+    }
+
+    /**
+     * Constructor 2 of the class: For just instantiating the class.
+     */
+
 
     @Override
     public void iteract(Player player) {

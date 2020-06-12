@@ -20,7 +20,7 @@ public class Table {
     public Phase phaseA = new Phase(new SimpleLinkedList<Box>(), false, "Phase A");
     public Phase phaseB = new Phase(new SimpleLinkedList<Box>(), false, "Phase B");
     public Phase phaseC = new Phase(new DoubleLinkedList<Box>(), false, "Phase C");
-    public Phase phaseD = new Phase(new CircularDoubleList<Box>(), true, "Phase D");
+    public Phase phaseD = new Phase(new CircularDoubleList<Box>(), false, "Phase D");
 
     private Canvas canvas;
 
@@ -150,10 +150,10 @@ public class Table {
             } else if (i > 27 && i <= 35) {
                 y -= 36;
             }
+            node.getData().setExcelId(i);
             node.getData().draw(x, y, canvas);
             node.getData().setX(x);
             node.getData().setY(y);
-            node.getData().setExcelId(i);
             node = node.getNext();
         }
 
