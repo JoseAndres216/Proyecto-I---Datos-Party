@@ -1,8 +1,11 @@
 package Proyecto1.DatosParty;
 
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
+import Proyecto1.DatosParty.GUI.Inputs.IOManager;
 import Proyecto1.DatosParty.GUI.Windows.Minigames.*;
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
@@ -13,10 +16,11 @@ public class Game extends Application {
     private static Game instance = null;
     private SimpleLinkedList<Player> players = new SimpleLinkedList<>();
     private Table gameTable;
-    private int cantidadRondas;
-    private ListView eventDisplay;
+    private int cantidadRondas = 5;
+    private int playedRounds = 0;
+    private Label eventDisplay;
 
-    public void setEventDisplay(ListView eventDisplay) {
+    public void setEventDisplay(Label eventDisplay) {
         this.eventDisplay = eventDisplay;
     }
 
@@ -84,7 +88,7 @@ public class Game extends Application {
         }
     }
 
-    public ListView getEventDisplay() {
+    public Label getEventDisplay() {
         if (this.eventDisplay != null) {
             return this.eventDisplay;
         } else {
@@ -114,7 +118,16 @@ public class Game extends Application {
 
         phase.getPhaselist().accessNode(boxId).setHasStar(true);
     }
-    public void startMinigame() throws Exception {
+    public void nextRound() throws Throwable {
+        if(this.playedRounds == this.cantidadRondas){
+            System.out.println("Finished game");
+            Stage escena = (Stage)(this.getEventDisplay().getScene().getWindow());
+            escena.close();
+            IOManager.getInstance().close();
+            return;
+        }
+        this.playedRounds++;
+
         this.start(new Stage());
     }
     @Override

@@ -9,6 +9,7 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
@@ -23,7 +24,7 @@ public class GameWindowController {
     Button startButton;
 
     @FXML
-    ListView eventDisplayer;
+    Label eventDisplayer;
 
 
     public void drawPhases(Event event) throws Exception {
@@ -44,7 +45,7 @@ public class GameWindowController {
         }
     }
 
-    public void pressedExitbutton(Event event) throws Exception {
-        Game.getInstance().startMinigame();
+    public void pressedExitbutton(Event event) throws Throwable {
+        Game.getInstance().nextRound();
     }
 }

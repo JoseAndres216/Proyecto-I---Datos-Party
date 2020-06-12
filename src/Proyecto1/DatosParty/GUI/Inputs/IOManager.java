@@ -10,6 +10,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -29,9 +30,12 @@ public class IOManager extends Application {
     private String family = "Tw Cen MT Condensed Extra Bold";
     private Font font = Font.font(family, size);
 
-    private ListView eventDisplay;
+    private Label eventDisplay;
 
-
+    public void close(){
+        Stage stage = (Stage)(this.eventDisplay.getScene().getWindow());
+        stage.close();
+    }
     private IOManager() {
 
     }
@@ -113,7 +117,7 @@ public class IOManager extends Application {
                 move.setOnAction((event) -> {    // lambda expression
                     try {
                         root.getChildren().clear();
-                        this.eventDisplay.getItems().add(String.format("%s moves %dspaces and%s", player.nickname, list.len(), list.accessNode(0).getMessage(player)));
+                        this.eventDisplay.setText(String.format("%s moves %dspaces and%s", player.nickname, list.len(), list.accessNode(0).getMessage(player)));
 
                         player.MoveTo(list.accessNode(0).getExcelId());
                         this.getNextIndex();
@@ -121,6 +125,8 @@ public class IOManager extends Application {
 
                     } catch (Exception e) {
                         e.printStackTrace();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
                     }
 
                 });
@@ -133,19 +139,21 @@ public class IOManager extends Application {
                 m2.setFont(font);
                 m1.setOnAction((event) -> {    // lambda expression
                     try {
-                        this.eventDisplay.getItems().add(player.nickname + list.accessNode(0).getMessage(player));
+                        this.eventDisplay.setText(player.nickname + list.accessNode(0).getMessage(player));
                         player.MoveTo(list.accessNode(0).getExcelId());
                         root.getChildren().clear();
                         this.getNextIndex();
                         this.rollDicesView();
                     } catch (Exception e) {
                         e.printStackTrace();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
                     }
 
                 });
                 m2.setOnAction((event) -> {    // lambda expression
                     try {
-                        this.eventDisplay.getItems().add(player.nickname + list.accessNode(1).getMessage(player));
+                        this.eventDisplay.setText(player.nickname + list.accessNode(1).getMessage(player));
                         player.MoveTo(list.accessNode(1).getExcelId());
                         root.getChildren().removeAll(m1, m2);
                         root.getChildren().clear();
@@ -153,63 +161,26 @@ public class IOManager extends Application {
                         this.rollDicesView();
                     } catch (Exception e) {
                         e.printStackTrace();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
                     }
 
                 });
                 root.getChildren().add(m1);
                 root.getChildren().add(m2);
                 break;
-            case 3:
-                Button m21 = new Button(list.accessNode(0).getTag().toUpperCase());
-                Button m22 = new Button(list.accessNode(1).getTag().toUpperCase());
-                Button m23 = new Button(list.accessNode(2).getTag().toUpperCase());
-                m21.setFont(font);
-                m22.setFont(font);
-                m23.setFont(font);
-                m21.setOnAction((event) -> {    // lambda expression
-                    try {
-                        player.MoveTo(list.accessNode(0).getExcelId());
-                        root.getChildren().removeAll(m21, m22, m23);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                });
-                m22.setOnAction((event) -> {    // lambda expression
-                    try {
-                        player.MoveTo(list.accessNode(1).getExcelId());
-                        //list.accessNode(1).placePlayer(player);
-                        root.getChildren().removeAll(m21, m22, m23);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                });
-                m23.setOnAction((event) -> {    // lambda expression
-                    try {
-                        player.MoveTo(list.accessNode(2).getExcelId());
-                        //list.accessNode(2).placePlayer(player);
-                        root.getChildren().removeAll(m21, m22, m23);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                });
-
-                root.getChildren().add(m21);
-                root.getChildren().add(m22);
-                break;
             case 0:
                 throw new IllegalArgumentException("Empty possible moves");
             default:
-                throw new IllegalArgumentException("The possibles are more than 3.");
+                throw new IllegalArgumentException("The possibles are more than 2.");
         }
     }
 
-    public void getNextIndex() {
+    public void getNextIndex() throws Throwable {
         if ((this.playerIndex + 1) < Game.getInstance().getPlayers().len()) {
             playerIndex++;
         } else {
+            Game.getInstance().nextRound();
             playerIndex = 0;
         }
 

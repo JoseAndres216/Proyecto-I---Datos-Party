@@ -5,6 +5,7 @@ import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.paint.Color;
 
@@ -24,7 +25,7 @@ public class Player {
     private int coins;
     private int stars;
     private MotherList<Box> mainListReference; // list to move trough
-    private ListView eventDisplay;
+    private Label eventDisplay;
 
 
     /**
@@ -158,16 +159,16 @@ public class Player {
 
         if (gain) {
             String update = " more stars.";
-            this.eventDisplay.getItems().add(this.nickname + " has: " + amount + update);
+            this.eventDisplay.setText(this.nickname + " has: " + amount + update);
 
             this.stars += amount;
         } else {
             if (this.stars - amount < 0) {
-                this.eventDisplay.getItems().add(this.nickname + " hasnt enought stars.");
+                this.eventDisplay.setText(this.nickname + " hasnt enought stars.");
             }
             String update = " less stars.";
             this.stars -= amount;
-            this.eventDisplay.getItems().add(this.nickname + " has: " + amount + update);
+            this.eventDisplay.setText(this.nickname + " has: " + amount + update);
         }
     }
 
@@ -181,14 +182,14 @@ public class Player {
         String update = " more coins.";
         if (gain) {
             this.coins += amount;
-            this.eventDisplay.getItems().add(this.nickname + " earned: " + amount + update);
+            this.eventDisplay.setText(this.nickname + " earned: " + amount + update);
         } else {
             if (this.coins - amount < 0) {
-                this.eventDisplay.getItems().add("Player cant lose that coins " + this.nickname);
+                this.eventDisplay.setText("Player cant lose that coins " + this.nickname);
                 return;
             }
             update = " less coins.";
-            this.eventDisplay.getItems().add(this.nickname + " losed: " + amount + update);
+            this.eventDisplay.setText(this.nickname + " losed: " + amount + update);
 
             this.coins -= amount;
         }
@@ -271,7 +272,7 @@ public class Player {
         return posibles;
     }
 
-    public void setEventDisplay(ListView eventDisplay) {
+    public void setEventDisplay(Label eventDisplay) {
         this.eventDisplay = eventDisplay;
     }
 
@@ -286,7 +287,7 @@ public class Player {
      */
     public SimpleLinkedList<Box> RollDices() throws Exception {
         int dices = ThreadLocalRandom.current().nextInt(2, 13);
-        this.eventDisplay.getItems().add(this.nickname + " got " + dices + " moves.");
+        this.eventDisplay.setText(this.nickname + " got " + dices + " moves.");
         SimpleLinkedList<Box> possibles = this.calcPossibleMoves(dices);
         return possibles;
     }
