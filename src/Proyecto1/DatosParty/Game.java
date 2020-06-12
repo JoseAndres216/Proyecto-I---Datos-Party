@@ -7,6 +7,7 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Game extends Application {
     private static Game instance = null;
@@ -31,9 +32,14 @@ public class Game extends Application {
     }
 
     public static Player getRandomPlayer(Player player) {
-        int random = player.getPlayernumber();
+        int len = Game.getInstance().players.len();
+        int randomInt = ThreadLocalRandom.current().nextInt(len);
         Player randomPlayer = Game.getInstance().getPlayers().accessNode(0);
 
+        while (player == randomPlayer){
+            randomInt = ThreadLocalRandom.current().nextInt(len);
+            randomPlayer = Game.getInstance().getPlayers().accessNode(randomInt);
+        }
         return randomPlayer;
     }
 
@@ -108,11 +114,13 @@ public class Game extends Application {
 
         phase.getPhaselist().accessNode(boxId).setHasStar(true);
     }
-
+    public void startMinigame() throws Exception {
+        this.start(new Stage());
+    }
     @Override
     public void start(Stage primaryStage) throws Exception {
         int option = (int) (Math.random()*((6-1)+1))+1;
-        switch (1) {
+        switch (option) {
             case 1:
                 CardsController cards = new CardsController();
                 cards.start(primaryStage);

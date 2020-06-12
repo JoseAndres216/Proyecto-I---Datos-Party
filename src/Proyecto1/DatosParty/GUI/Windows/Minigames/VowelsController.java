@@ -476,6 +476,8 @@ public class VowelsController extends Application {
                 break;
         }
         Game.getInstance().giveMoney();
+        Stage stage = (Stage)this.lblAuthor.getScene().getWindow();
+        stage.close();
     }
 
     @Override

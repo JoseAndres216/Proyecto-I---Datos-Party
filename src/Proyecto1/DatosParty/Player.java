@@ -252,50 +252,22 @@ public class Player {
                     posibles.insertLast(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1));
                 }
             }
-
-
-
-             /*else {
-
-                int cantidadPorDelante = ((faseRecorrida.phaseList.len() - 1) - actualBoxIndex);
-                if (cantidadPorDelante >= posicionesDisponibles) {
-                    if((actualBoxIndex+posicionesDisponibles)>9 ||(actualBoxIndex+posicionesDisponibles)<0){
-
-                        throw new IllegalArgumentException("Value Unespected: "+ (actualBoxIndex+posicionesDisponibles) );
-
-                    }
-
-                    posibles.insertLast(faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles));
-                    break;
-                } else {
-
-                    i = this.actualPhase.exitPoint;
-                    faseRecorrida = Table.getInstance().getMainPhase();
-                    posicionesDisponibles = (posicionesDisponibles - (cantidadPorDelante + 1));
-                    //i = (i - (cantidadPorDelante + 1));
-
-                }*/
-
-
             i++;
             posicionesDisponibles--;
         }
-
         if (faseRecorrida.isTable) {
             if (i >= 36) {
                 int exceso = i - 36;
                 i = exceso;
-                //throw new IllegalArgumentException("Invalid i value on main table: " + i);
             }
             if (faseRecorrida.isPhaseD) {
                 if (i >= 12) {
                     int exceso = i - 12;
                     i = exceso;
-                    //throw new IllegalArgumentException("Invalid i value on main table: " + i);
                 }
             }
         }
-        posibles.insertLast(faseRecorrida.getPhaselist().accessNode(i + 1)); // inserta el elemento en el que la posicion llega a 0 en el mainTable
+        posibles.insertLast(faseRecorrida.getPhaselist().accessNode(i + 1));
         return posibles;
     }
 

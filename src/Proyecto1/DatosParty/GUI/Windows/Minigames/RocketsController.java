@@ -113,6 +113,8 @@ public class RocketsController  extends Application {
         }
 
         Game.getInstance().giveMoney();
+        Stage stage = (Stage)this.lblPlayer1.getScene().getWindow();
+        stage.close();
     }
 
     public void btnPlaypressed(){
