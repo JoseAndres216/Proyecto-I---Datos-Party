@@ -2,6 +2,7 @@
 
 package Proyecto1.DatosParty.Boxes;
 
+import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Observer.Observable;
 import Proyecto1.DatosParty.Observer.Observer;
 import Proyecto1.DatosParty.Phase;
@@ -25,13 +26,16 @@ public abstract class Box extends Observable {
     protected int y;
     protected int height = 36;
     protected int width = 36;
-    private boolean hasStar;
+    protected boolean hasStar;
     private Player actualPlayer = null;
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
     /**
      * Setters and getters of the class.
      */
+    public void setHasStar(boolean hasStar) {
+        this.hasStar = hasStar;
+    }
     public int getX() {
         return x;
     }
@@ -137,7 +141,16 @@ public abstract class Box extends Observable {
         this.busy = false;
     }
 
-    public abstract void iteract(Player player);
+    public void iteract(Player player) {
+        if(this.hasStar){
+            if(player.getCoins()>=5){
+                player.modifyCoins(false, 5);
+                player.modifyStars(true, 1);
+                this.hasStar = false;
+                Game.getInstance().generateStar();
+            }
+        }
+    }
 
     public abstract String getMessage(Player player);
 
@@ -147,13 +160,5 @@ public abstract class Box extends Observable {
 
     void spawnStar() {
         this.hasStar = true;
-    }
-
-    public void buyStar(Player player) {
-        if (this.hasStar) {
-            player.modifyCoins(false, 50);
-            player.modifyStars(true, 1);
-            this.hasStar = false;
-        }
     }
 }

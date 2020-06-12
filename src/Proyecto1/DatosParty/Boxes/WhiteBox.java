@@ -49,11 +49,18 @@ public class WhiteBox extends Box {
         id.append(this.excelId);
         gc.setFill(Color.BLACK);
         gc.fillText((id.toString()), 10, 150);
+
+        if(this.hasStar){
+            gc.setFill(Color.WHITE);
+            gc.setStroke(Color.BLACK);
+            gc.strokeOval(x+13,y+13,10, 10);
+            gc.setFill(Color.WHITE);
+        }
     }
 
     @Override
     public void iteract(Player player) {
-
+        super.iteract(player);
     }
 
     @Override

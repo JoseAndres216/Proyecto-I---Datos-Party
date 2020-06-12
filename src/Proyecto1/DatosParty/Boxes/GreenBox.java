@@ -50,11 +50,18 @@ public class GreenBox extends Box {
         gc.setFill(Color.BLACK);
         gc.fillText((id.toString()), 10, 150);
 
+        if(this.hasStar){
+            gc.setFill(Color.WHITE);
+            gc.setStroke(Color.WHITE);
+            gc.strokeOval(x+13,y+13,10, 10);
+            gc.setFill(Color.WHITE);
+        }
     }
 
     @Override
     public void iteract(Player player) {
         player.modifyCoins(true, 10);
+        super.iteract(player);
 
     }
 

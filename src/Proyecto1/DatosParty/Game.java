@@ -83,6 +83,29 @@ public class Game {
         }
     }
 
+    public void generateStar(){
+        int boxId = (int) (Math.random()*((77-0)+1))+0;
+        System.out.println(boxId);
+        Phase phase;
+        if (boxId <= 35) {
+            phase = Table.getInstance().mainPhase;
+        } else if (boxId >= 36 && boxId <= 45) {
+            phase = Table.getInstance().phaseA;
+            boxId = boxId-36;
+        } else if (boxId >= 46 && boxId <= 55) {
+            phase = Table.getInstance().phaseB;
+            boxId = boxId-46;
+        } else if (boxId >= 56 && boxId <= 65) {
+            phase = Table.getInstance().phaseC;
+            boxId = boxId-56;
+        } else {
+            phase = Table.getInstance().phaseD;
+            boxId = boxId-66;
+        }
+
+        phase.getPhaselist().accessNode(boxId).setHasStar(true);
+    }
+
     /*
     public SimpleLinkedList<Player> listWithnoPlayer(Player player) throws IOException {
         SimpleLinkedList<Player> list = Game.getInstance().getPlayers();

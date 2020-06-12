@@ -23,6 +23,7 @@ public class Table {
     public Phase phaseD = new Phase(new CircularDoubleList<Box>(), false, "Phase D");
 
     private Canvas canvas;
+    private boolean isStar = false;
 
     public void setCanvas(Canvas canvas) {
         this.canvas = canvas;
@@ -133,6 +134,10 @@ public class Table {
      * @param canvas canvas for drawing the boxes
      */
     public void drawTable() throws Exception {
+        if(isStar==false){
+            Game.getInstance().generateStar();
+            isStar=true;
+        }
         //Generating main table
         int x = 420, y = 140;
         this.mainPhase.getPhaselist().getHead().getData().draw(x, y, canvas);

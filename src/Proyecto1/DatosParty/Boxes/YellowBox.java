@@ -39,6 +39,13 @@ public class YellowBox extends Box {
         //Draw the rectangle
         gc.strokeRect(x, y, this.height, this.width);
         gc.fillRect(x, y, this.height, this.width);
+
+        if(this.hasStar){
+            gc.setFill(Color.WHITE);
+            gc.setStroke(Color.WHITE);
+            gc.strokeOval(x+13,y+13,10, 10);
+            gc.setFill(Color.WHITE);
+        }
     }
 
     public YellowBox() {
@@ -56,6 +63,8 @@ public class YellowBox extends Box {
         System.out.println("The box " + this.excelId + " has the event: " + events.peek());
         events.peek().interact(player);
         events.pop();
+
+        super.iteract(player);
     }
 
     @Override
