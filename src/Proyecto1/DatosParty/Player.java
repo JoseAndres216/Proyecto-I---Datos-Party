@@ -5,6 +5,7 @@ import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.ListView;
 import javafx.scene.paint.Color;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -14,15 +15,17 @@ public class Player {
     private final int playernumber;
     //Reference of the main table
     public MotherList<Box> actualList;
+    public Color color;
     //Configurations for the location of the player on table
     protected Phase actualPhase; // actual phase of the player from A B C D to MainPhase.
-    protected int actualBox; //Index of the box (zero-based index of the phase) ej: player could be phase C, box 8
+    protected int actualBoxIndex; //Index of the box (zero-based index of the phase) ej: player could be phase C, box 8
     private int minigamepoints;
     //Values of the player.
     private int coins;
     private int stars;
-    private Color color;
     private MotherList<Box> mainListReference; // list to move trough
+    private ListView eventDisplay;
+
 
     /**
      * Constructor of the class player
@@ -36,10 +39,12 @@ public class Player {
         this.stars = 1000;
         this.minigamepoints = 0;
         //Ubication on the table
-        this.actualPhase = Table.getInstance().mainPhase; //null means that player is in main table.
+        this.actualPhase = Table.getInstance().mainPhase;
         this.actualList = Table.getInstance().mainPhase.phaseList;
+
         this.mainListReference = Table.getInstance().mainPhase.phaseList; //should be the main table list.
-        this.actualBox = 0;
+        this.actualBoxIndex = 0;
+
         //Identification
         this.nickname = nickname;
         this.playernumber = playerNumber;
@@ -88,8 +93,8 @@ public class Player {
         return mainListReference;
     }
 
-    public int getActualBox() {
-        return actualBox;
+    public int getActualBoxIndex() {
+        return actualBoxIndex;
     }
 
     public MotherList<Box> getActualList() {
@@ -97,12 +102,13 @@ public class Player {
     }
 
     public void MoveTo(Phase newPhase, int actualBox) {
-
+        //eliminar el jugador de la casilla, para no dar conflicto con la verificacio de si hay o no dos
+        this.actualPhase.getPhaselist().accessNode(this.actualBoxIndex).removePlayer();
         this.actualPhase = newPhase;
-        this.actualBox = actualBox;
+        this.actualBoxIndex = actualBox;
 
-        this.actualPhase.getPhaselist().accessNode(this.actualBox).placePlayer(this);//FOR GRAPHIC REPRESENTATION
-        this.actualPhase.getPhaselist().accessNode(this.actualBox).iteract(this);//FOR ITERACTIONS WITH THE BOX
+        this.actualPhase.getPhaselist().accessNode(this.actualBoxIndex).placePlayer(this);//FOR GRAPHIC REPRESENTATION AND RULE THAT SAYS ONE PLAYER PER BOX
+        this.actualPhase.getPhaselist().accessNode(this.actualBoxIndex).iteract(this);//FOR ITERACTIONS WITH THE BOX
 
         try {
             Table.getInstance().drawTable();
@@ -152,15 +158,16 @@ public class Player {
 
         if (gain) {
             String update = " more stars.";
-            System.out.println(this.nickname + " has: " + amount + update);
+            this.eventDisplay.getItems().add(this.nickname + " has: " + amount + update);
+
             this.stars += amount;
         } else {
             if (this.stars - amount < 0) {
-                System.out.println(this.nickname + " hasnt enought stars.");
+                this.eventDisplay.getItems().add(this.nickname + " hasnt enought stars.");
             }
             String update = " less stars.";
             this.stars -= amount;
-            System.out.println(this.nickname + " has: " + amount + update);
+            this.eventDisplay.getItems().add(this.nickname + " has: " + amount + update);
         }
     }
 
@@ -174,14 +181,14 @@ public class Player {
         String update = " more coins.";
         if (gain) {
             this.coins += amount;
-            System.out.println(this.nickname + " earned: " + amount + update);
+            this.eventDisplay.getItems().add(this.nickname + " earned: " + amount + update);
         } else {
             if (this.coins - amount < 0) {
-                System.out.println("Player cant lose that coins " + this.nickname);
+                this.eventDisplay.getItems().add("Player cant lose that coins " + this.nickname);
                 return;
             }
             update = " less coins.";
-            System.out.println(this.nickname + " losed: " + amount + update);
+            this.eventDisplay.getItems().add(this.nickname + " losed: " + amount + update);
 
             this.coins -= amount;
         }
@@ -194,48 +201,106 @@ public class Player {
      * @throws Exception
      */
     public SimpleLinkedList<Box> calcPossibleMoves(int posicionesDisponibles) throws Exception {
-
         SimpleLinkedList<Box> posibles = new SimpleLinkedList<>();
         Phase faseRecorrida = this.actualPhase;
-        int i = this.actualBox;
+        int i = this.actualBoxIndex;
 
-        while (posicionesDisponibles != 1) {//recorre el tablero principal, y se evalua el tipo de casilla que aparece
 
-            if (faseRecorrida.isTable) {
-                if (faseRecorrida.getPhaseListElement(i).isIntersection) {//caso en que el nodo es de tipo interseccion
+        if (!(faseRecorrida.isTable || faseRecorrida.isPhaseD())) {
 
-                    int largoFase = faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().len();
+            int cantidadPorDelante = ((faseRecorrida.phaseList.len() - 1) - actualBoxIndex);
+            if (cantidadPorDelante >= posicionesDisponibles) {
+                if ((actualBoxIndex + posicionesDisponibles) > 9 || (actualBoxIndex + posicionesDisponibles) < 0) {
 
-                    if ((posicionesDisponibles) > (largoFase)) {
-                        //si el numero de casillas dentro de la fase es menor a la cantidad que hay que avanzar, la ignora y ya.
-                        System.out.println("Skipped phase: " + faseRecorrida.getPhaseListElement(i).toString());
-                        i++;
-                    } else {
-                        //si la cantidad de casillas para avanzar el menor o igual a la de la fase, se agrega la casilla que se tiene, se sigue con el
-                        //contador i para seguir recorriendo el main table.
+                    throw new IllegalArgumentException("Value Unespected: " + (actualBoxIndex + posicionesDisponibles));
 
-                        posibles.insertLast(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1));
-                    }
                 }
+
+                posibles.insertLast(faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles));
+
             } else {
-                int cantidadPorDelante = (faseRecorrida.phaseList.len() - 1) - actualBox;
+
+                i = this.actualPhase.exitPoint;
+                faseRecorrida = Table.getInstance().getMainPhase();
+                posicionesDisponibles = (posicionesDisponibles - (cantidadPorDelante + 1));
+                //i = (i - (cantidadPorDelante + 1));
+
+            }
+        }
+        while (posicionesDisponibles != 1) {//recorre el tablero , y se evalua el tipo de casilla que aparece
+
+            if (i >= 36 && faseRecorrida.isTable) {
+                int exceso = i - 36;
+                i = exceso;
+            }
+            if (i >= 12 && faseRecorrida.isPhaseD()) {
+                int exceso = i - 12;
+                i = exceso;
+
+            }
+            if (faseRecorrida.getPhaseListElement(i).isIntersection) {//caso en que el nodo es de tipo interseccion
+
+                int largoFase = faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().len();
+
+                if ((posicionesDisponibles) > (largoFase)) {
+                    //si el numero de casillas dentro de la fase es menor a la cantidad que hay que avanzar, la ignora y ya.
+                    i++;
+                } else {
+                    //si la cantidad de casillas para avanzar el menor o igual a la de la fase, se agrega la casilla que se tiene, se sigue con el
+                    //contador i para seguir recorriendo el main table.
+
+                    posibles.insertLast(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1));
+                }
+            }
+
+
+
+             /*else {
+
+                int cantidadPorDelante = ((faseRecorrida.phaseList.len() - 1) - actualBoxIndex);
                 if (cantidadPorDelante >= posicionesDisponibles) {
-                    posibles.insertLast(faseRecorrida.getPhaseListElement(actualBox + posicionesDisponibles));
+                    if((actualBoxIndex+posicionesDisponibles)>9 ||(actualBoxIndex+posicionesDisponibles)<0){
+
+                        throw new IllegalArgumentException("Value Unespected: "+ (actualBoxIndex+posicionesDisponibles) );
+
+                    }
+
+                    posibles.insertLast(faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles));
                     break;
                 } else {
+
                     i = this.actualPhase.exitPoint;
                     faseRecorrida = Table.getInstance().getMainPhase();
                     posicionesDisponibles = (posicionesDisponibles - (cantidadPorDelante + 1));
-                }
-            }
+                    //i = (i - (cantidadPorDelante + 1));
+
+                }*/
+
+
             i++;
             posicionesDisponibles--;
         }
 
         if (faseRecorrida.isTable) {
-            posibles.insertLast(faseRecorrida.getPhaselist().accessNode(i + 1)); // inserta el elemento en el que la posicion llega a 0 en el mainTable
+            if (i >= 36) {
+                int exceso = i - 36;
+                i = exceso;
+                //throw new IllegalArgumentException("Invalid i value on main table: " + i);
+            }
+            if (faseRecorrida.isPhaseD) {
+                if (i >= 12) {
+                    int exceso = i - 12;
+                    i = exceso;
+                    //throw new IllegalArgumentException("Invalid i value on main table: " + i);
+                }
+            }
         }
+        posibles.insertLast(faseRecorrida.getPhaselist().accessNode(i + 1)); // inserta el elemento en el que la posicion llega a 0 en el mainTable
         return posibles;
+    }
+
+    public void setEventDisplay(ListView eventDisplay) {
+        this.eventDisplay = eventDisplay;
     }
 
     /**
@@ -248,8 +313,9 @@ public class Player {
      * @throws Exception
      */
     public SimpleLinkedList<Box> RollDices() throws Exception {
-        SimpleLinkedList<Box> possibles = this.calcPossibleMoves(ThreadLocalRandom.current().nextInt(13));
-        System.out.println(possibles.toString());
+        int dices = ThreadLocalRandom.current().nextInt(2, 13);
+        this.eventDisplay.getItems().add(this.nickname + " got " + dices + " moves.");
+        SimpleLinkedList<Box> possibles = this.calcPossibleMoves(dices);
         return possibles;
     }
 
@@ -271,7 +337,7 @@ public class Player {
         gc.setStroke(Color.BLACK);
 
         //Draw the figure
-        gc.fillOval((double) this.actualPhase.getPhaselist().accessNode(this.getActualBox()).getX(), (double) this.actualPhase.getPhaselist().accessNode(this.getActualBox()).getY(), 20, 20);
+        gc.fillOval((double) this.actualPhase.getPhaselist().accessNode(this.getActualBoxIndex()).getX(), (double) this.actualPhase.getPhaselist().accessNode(this.getActualBoxIndex()).getY(), 20, 20);
     }
 
 }

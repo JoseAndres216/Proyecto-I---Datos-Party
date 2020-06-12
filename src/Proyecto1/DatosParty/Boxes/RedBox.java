@@ -46,6 +46,11 @@ public class RedBox extends Box {
         //Draw the rectangle
         gc.strokeRect(x, y, this.height, this.width);
         gc.fillRect(x, y, this.height, this.width);
+
+        StringBuilder id = new StringBuilder();
+        id.append(this.excelId);
+        gc.setFill(Color.BLACK);
+        gc.fillText((id.toString()), 10, 150);
     }
 
     @Override
@@ -53,6 +58,10 @@ public class RedBox extends Box {
         player.modifyCoins(false, 10);
     }
 
+    @Override
+    public String getMessage(Player player) {
+        return " loses 10 coins.";
+    }
 
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.

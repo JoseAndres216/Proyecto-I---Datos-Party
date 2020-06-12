@@ -59,6 +59,11 @@ public class IntersectionBox extends Box {
         //Draw the rectangle
         gc.strokeRect(x, y, this.height, this.width);
         gc.fillRect(x, y, this.height, this.width);
+
+        gc.setFill(Color.BLACK);
+        StringBuilder id = new StringBuilder();
+        id.append(this.excelId);
+        gc.fillText((id.toString()), 10, 150);
     }
 
     @Override
@@ -74,10 +79,15 @@ public class IntersectionBox extends Box {
         this.tag = "white";
     }
 
+    @Override
+    public String getMessage(Player player) {
+        return " moves to an empty box.";
+    }
 
 
     /**
      * Method for printing the box in the run panel in order to check the correct behavior of the table.
+     *
      * @return the color of the box.
      */
     @Override

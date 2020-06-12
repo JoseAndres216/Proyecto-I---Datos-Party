@@ -42,8 +42,8 @@ public class SimpleLinkedList <T> implements MotherList<T> {
     @Override
     public T accessNode(int i) {
         if (i > (len - 1)) {
-            System.out.println("index out of range");
-            return null;
+            throw new IllegalArgumentException("Index out of range, max: " + (this.len - 1) + "given :" + i);
+
         } else if (i == (len - 1)) {
             return this.tail.getData();
         }

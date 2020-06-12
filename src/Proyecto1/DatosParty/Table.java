@@ -20,7 +20,7 @@ public class Table {
     public Phase phaseA = new Phase(new SimpleLinkedList<Box>(), false, "Phase A");
     public Phase phaseB = new Phase(new SimpleLinkedList<Box>(), false, "Phase B");
     public Phase phaseC = new Phase(new DoubleLinkedList<Box>(), false, "Phase C");
-    public Phase phaseD = new Phase(new CircularDoubleList<Box>(), true, "Phase D");
+    public Phase phaseD = new Phase(new CircularDoubleList<Box>(), false, "Phase D");
 
     private Canvas canvas;
 
@@ -125,8 +125,8 @@ public class Table {
         this.phaseA.config(3,3,1,  3,  7);//exit point esta basado en el modelo del excel
         this.phaseB.config(0,0,10, 0,  16);//exit point esta basado en el modelo del excel
         this.phaseC.config(3,3,3,  1,  25);//exit point esta basado en el modelo del excel
-        this.phaseD.config(0,0,12, 0,  -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
-
+        this.phaseD.config(0, 0, 12, 0, -1);//exit point es -1 porque la fase D no esta conectada de ninguna forma
+        this.phaseD.setIsPhaseD(true);
     }
 
     /**
@@ -150,10 +150,10 @@ public class Table {
             } else if (i > 27 && i <= 35) {
                 y -= 36;
             }
+            node.getData().setExcelId(i);
             node.getData().draw(x, y, canvas);
             node.getData().setX(x);
             node.getData().setY(y);
-            node.getData().setExcelId(i);
             node = node.getNext();
         }
 

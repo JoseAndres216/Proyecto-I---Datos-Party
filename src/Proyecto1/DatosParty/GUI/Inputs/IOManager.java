@@ -7,46 +7,65 @@ import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 import Proyecto1.DatosParty.Table;
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
-public class InputManager extends Application {
-    private static InputManager instance = null;
+public class IOManager extends Application {
+    private static IOManager instance = null;
     private int playerIndex = 0;
     private VBox root = new VBox();
     private Scene scene = new Scene(root);
+    private boolean started = false;
 
-    private InputManager() {
+    private int size = 30;
+    private String family = "Tw Cen MT Condensed Extra Bold";
+    private Font font = Font.font(family, size);
+
+    private ListView eventDisplay;
+
+
+    private IOManager() {
 
     }
 
-    public static synchronized InputManager getInstance() {
+    public static synchronized IOManager getInstance() {
         if (instance == null) {
-            instance = new InputManager();
+            instance = new IOManager();
         }
         return instance;
     }
 
+    public boolean isStarted() {
+        return this.started;
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
+        this.started = true;
 
         // Set the Size of the VBox
-        root.setMinSize(350, 250);
+        root.setMinSize(350, 450);
         // Set the Properties of the Stage
-        stage.setX(100);
+        stage.setX(370);
         stage.setY(200);
         stage.setMinHeight(300);
         stage.setMinWidth(400);
-        SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
-
+        root.setSpacing(50);
+        root.setAlignment(Pos.BASELINE_CENTER);
+        eventDisplay = Game.getInstance().getEventDisplay();
         this.rollDicesView();
         // Add the scene to the Stage
         stage.setScene(scene);
-        // Set the title of the Stage
-        stage.setTitle("SOS quiero mimir");
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setAlwaysOnTop(true);
         // Display the Stage
         stage.show();
 
@@ -55,25 +74,28 @@ public class InputManager extends Application {
 
     public void rollDicesView() throws Exception {
         Table.getInstance().drawTable();
-        Table.getInstance().drawTable();
         Table.getInstance().drawPlayers();
-        this.getNextIndex();
         Player player = Game.getInstance().getPlayers().accessNode(playerIndex);
         //Create the Text and the players name.
 
-        Text text = new Text("Hello " + player.nickname + ", press the button to roll the dices...:)");
+        Text text = new Text("PLAYING: " + player.nickname);
+        text.setFill(player.color);
 
-        Button rollDicesButton = new Button("Let it roll.");
+        text.setFont(font);
+        text.setTextAlignment(TextAlignment.CENTER);
+        Button rollDicesButton = new Button("ROLL DICES");
 
+        rollDicesButton.setFont(font);
         this.root.getChildren().addAll(text, rollDicesButton);
 
         rollDicesButton.setOnAction((event) -> {    // lambda expression
 
             try {
-                this.root.getChildren().clear();
-                this.selectRoadPathView(player);
+                this.root.getChildren().remove(rollDicesButton);
+                this.selectBoxView(player);
+
             } catch (Exception e) {
-                System.out.println(e);
+                e.printStackTrace();
             }
 
         });
@@ -82,45 +104,55 @@ public class InputManager extends Application {
 
     }
 
-    public void selectRoadPathView(Player player) throws Exception {
+    public void selectBoxView(Player player) throws Exception {
         SimpleLinkedList<Box> list = player.RollDices();
         switch (list.len()) {
             case 1:
-                Button move = new Button(list.accessNode(0).toString());
+                Button move = new Button(list.accessNode(0).getTag().toUpperCase());
+                move.setFont(font);
                 move.setOnAction((event) -> {    // lambda expression
                     try {
-                        root.getChildren().removeAll(move);
-                        this.rollDicesView();
+                        root.getChildren().clear();
+                        this.eventDisplay.getItems().add(String.format("%s moves %dspaces and%s", player.nickname, list.len(), list.accessNode(0).getMessage(player)));
 
                         player.MoveTo(list.accessNode(0).getExcelId());
+                        this.getNextIndex();
+                        this.rollDicesView();
+
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
                 root.getChildren().add(move);
                 break;
             case 2:
-                Button m1 = new Button(list.accessNode(0).toString());
-                Button m2 = new Button(list.accessNode(1).toString());
-
+                Button m1 = new Button(list.accessNode(0).getTag().toUpperCase());
+                Button m2 = new Button(list.accessNode(1).getTag().toUpperCase());
+                m1.setFont(font);
+                m2.setFont(font);
                 m1.setOnAction((event) -> {    // lambda expression
                     try {
+                        this.eventDisplay.getItems().add(player.nickname + list.accessNode(0).getMessage(player));
                         player.MoveTo(list.accessNode(0).getExcelId());
-                        root.getChildren().removeAll(m1, m2);
+                        root.getChildren().clear();
+                        this.getNextIndex();
                         this.rollDicesView();
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
                 m2.setOnAction((event) -> {    // lambda expression
                     try {
+                        this.eventDisplay.getItems().add(player.nickname + list.accessNode(1).getMessage(player));
                         player.MoveTo(list.accessNode(1).getExcelId());
                         root.getChildren().removeAll(m1, m2);
+                        root.getChildren().clear();
+                        this.getNextIndex();
                         this.rollDicesView();
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
@@ -128,34 +160,38 @@ public class InputManager extends Application {
                 root.getChildren().add(m2);
                 break;
             case 3:
-                Button m21 = new Button(list.accessNode(0).toString());
-                Button m22 = new Button(list.accessNode(1).toString());
-                Button m23 = new Button(list.accessNode(2).toString());
-
+                Button m21 = new Button(list.accessNode(0).getTag().toUpperCase());
+                Button m22 = new Button(list.accessNode(1).getTag().toUpperCase());
+                Button m23 = new Button(list.accessNode(2).getTag().toUpperCase());
+                m21.setFont(font);
+                m22.setFont(font);
+                m23.setFont(font);
                 m21.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(0).getExcelId());
                         root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
                 m22.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(1).getExcelId());
+                        //list.accessNode(1).placePlayer(player);
                         root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
                 m23.setOnAction((event) -> {    // lambda expression
                     try {
                         player.MoveTo(list.accessNode(2).getExcelId());
+                        //list.accessNode(2).placePlayer(player);
                         root.getChildren().removeAll(m21, m22, m23);
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
 
                 });
@@ -164,8 +200,7 @@ public class InputManager extends Application {
                 root.getChildren().add(m22);
                 break;
             case 0:
-                System.out.println("The list is 0 len");
-                break;
+                throw new IllegalArgumentException("Empty possible moves");
             default:
                 throw new IllegalArgumentException("The possibles are more than 3.");
         }

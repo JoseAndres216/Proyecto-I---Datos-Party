@@ -7,6 +7,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class YellowBox extends Box {
+    private String message;
 
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
@@ -18,12 +19,6 @@ public class YellowBox extends Box {
         Box.id = id;
         this.tag = "yellow";
     }
-
-     public YellowBox() {this.tag = "yellow";}
-     /**
-     * Constructor 2 of the class: For just instantiating the class.
-     */
-
 
     /**
      * Method for drawing the box on the canvas.
@@ -46,12 +41,26 @@ public class YellowBox extends Box {
         gc.fillRect(x, y, this.height, this.width);
     }
 
+    public YellowBox() {
+        this.tag = "yellow";
+    }
+
+    /**
+     * Constructor 2 of the class: For just instantiating the class.
+     */
+
+
     @Override
     public void iteract(Player player) {
         Stack<Event> events = Event.getEventStack();
         System.out.println("The box " + this.excelId + " has the event: " + events.peek());
         events.peek().interact(player);
         events.pop();
+    }
+
+    @Override
+    public String getMessage(Player player) {
+        return Event.getEventStack().peek().toString();
     }
 
 
