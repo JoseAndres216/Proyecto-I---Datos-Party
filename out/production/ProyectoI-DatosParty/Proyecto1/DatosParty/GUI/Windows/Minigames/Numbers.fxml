@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Proyecto1.DatosParty.GUI.Windows.Minigames.NumbersController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71c04f" height="151.0" layoutX="-21.0" layoutY="357.0" stroke="#71c04f" strokeLineCap="ROUND" strokeType="OUTSIDE" width="1237.0" />
+      <Button fx:id="btnNum1" layoutX="42.0" layoutY="391.0" mnemonicParsing="false" onMousePressed="#btnNum1pressed" text="1">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum2" layoutX="155.0" layoutY="393.0" mnemonicParsing="false" onMousePressed="#btnNum2pressed" text="2">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum3" layoutX="269.0" layoutY="392.0" mnemonicParsing="false" onMousePressed="#btnNum3pressed" text="3">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum4" layoutX="382.0" layoutY="394.0" mnemonicParsing="false" onMousePressed="#btnNum4pressed" text="4">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum5" layoutX="499.0" layoutY="392.0" mnemonicParsing="false" onMousePressed="#btnNum5pressed" text="5">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum6" layoutX="615.0" layoutY="392.0" mnemonicParsing="false" onMousePressed="#btnNum6pressed" text="6">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum7" layoutX="728.0" layoutY="394.0" mnemonicParsing="false" onMousePressed="#btnNum7pressed" text="7">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum8" layoutX="842.0" layoutY="393.0" mnemonicParsing="false" onMousePressed="#btnNum8pressed" text="8">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum9" layoutX="955.0" layoutY="395.0" mnemonicParsing="false" onMousePressed="#btnNum9pressed" text="9">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum0" layoutX="1072.0" layoutY="393.0" mnemonicParsing="false" onMousePressed="#btnNum0pressed" text="0">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="240.0" layoutX="336.0" layoutY="57.0" stroke="#71c04f" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="533.0" />
+      <Label layoutX="246.0" layoutY="541.0" text="This is a lucky game, choose a number!">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblsecretNumber" layoutX="563.0" layoutY="68.0" text="?">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="200.0" />
+         </font>
+      </Label>
+      <Label layoutX="221.0" layoutY="609.0" text="Try to guess the secret number, the player who comes closest wins!">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
