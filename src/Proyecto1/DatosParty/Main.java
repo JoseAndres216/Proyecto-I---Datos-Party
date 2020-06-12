@@ -14,12 +14,10 @@ public class Main extends Application {
 
     public static void main(String[] args) throws Exception {
         launch(args);
-
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-
         Parent root = FXMLLoader.load(getClass().getResource("\\GUI\\Windows\\MainMenu.fxml"));
         stage.setAlwaysOnTop(false);
         stage.setTitle("Datos Party!");

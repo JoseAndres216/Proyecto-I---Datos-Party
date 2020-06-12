@@ -1,11 +1,14 @@
 package Proyecto1.DatosParty;
 
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
+import Proyecto1.DatosParty.GUI.Windows.Minigames.*;
+import javafx.application.Application;
 import javafx.scene.control.ListView;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Game {
+public class Game extends Application {
     private static Game instance = null;
     private SimpleLinkedList<Player> players = new SimpleLinkedList<>();
     private Table gameTable;
@@ -105,6 +108,40 @@ public class Game {
 
         phase.getPhaselist().accessNode(boxId).setHasStar(true);
     }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        int option = (int) (Math.random()*((6-1)+1))+1;
+        switch (1) {
+            case 1:
+                CardsController cards = new CardsController();
+                cards.start(primaryStage);
+                break;
+            case 2:
+                FormulaController formula = new FormulaController();
+                formula.start(primaryStage);
+                break;
+            case 3:
+                LuckyStickController luckystick = new LuckyStickController();
+                luckystick.start(primaryStage);
+                break;
+            case 4:
+                NumbersController numbers = new NumbersController();
+                numbers.start(primaryStage);
+                break;
+            case 5:
+                RocketsController rockets = new RocketsController();
+                rockets.start(primaryStage);
+                break;
+            case 6:
+                VowelsController vowels= new VowelsController();
+                vowels.start(primaryStage);
+                break;
+            default:
+                throw new IllegalArgumentException("No minigame to play");
+        }
+    }
+
 
     /*
     public SimpleLinkedList<Player> listWithnoPlayer(Player player) throws IOException {

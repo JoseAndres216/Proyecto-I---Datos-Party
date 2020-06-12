@@ -1,19 +1,24 @@
 package Proyecto1.DatosParty.GUI.Windows.Minigames;
 
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
-import Proyecto1.DatosParty.Events.Event;
 import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
 
-public class VowelsController extends Minigame{
+public class VowelsController extends Application {
     private int option = (int) (Math.random()*((9-0)+1))+0;
     private SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
     private SimpleLinkedList<Player> num12 = new SimpleLinkedList<>(), num14 = new SimpleLinkedList<>(), num15 = new SimpleLinkedList<>(), num16 = new SimpleLinkedList<>(), num17 = new SimpleLinkedList<>(), num18 = new SimpleLinkedList<>(), num19= new SimpleLinkedList<>(), num22 = new SimpleLinkedList<>(), num52 = new SimpleLinkedList<>(), num53 = new SimpleLinkedList<>();
@@ -34,8 +39,6 @@ public class VowelsController extends Minigame{
     @FXML Button btnNum53;
     @FXML Button btnGo;
 
-
-    @Override
     public void play(SimpleLinkedList<Player> players) throws IOException, InterruptedException {
         this.players = players;
     }
@@ -476,12 +479,14 @@ public class VowelsController extends Minigame{
     }
 
     @Override
-    public void interact(Player player) {
-
-    }
-
-    @Override
-    public int compareTo(Event o) {
-        return 0;
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Vowels.fxml"));
+        primaryStage.setAlwaysOnTop(true);
+        primaryStage.setTitle("Datos Party!");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.resizableProperty().setValue(false);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setFullScreen(false);
+        primaryStage.show();
     }
 }

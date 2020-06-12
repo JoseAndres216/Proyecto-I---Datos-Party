@@ -141,7 +141,7 @@ public abstract class Box extends Observable {
         this.busy = false;
     }
 
-    public void iteract(Player player) {
+    public void iteract(Player player){
         if(this.hasStar){
             if(player.getCoins()>=5){
                 player.modifyCoins(false, 5);

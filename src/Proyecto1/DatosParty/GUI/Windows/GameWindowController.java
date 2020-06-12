@@ -45,7 +45,6 @@ public class GameWindowController {
     }
 
     public void pressedExitbutton(Event event) throws Exception {
-
-
+        Game.getInstance().start(new Stage());
     }
 }

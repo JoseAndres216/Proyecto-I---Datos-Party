@@ -1,19 +1,24 @@
 package Proyecto1.DatosParty.GUI.Windows.Minigames;
 
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
-import Proyecto1.DatosParty.Events.Event;
 import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
+import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class RocketsController extends Minigame{
+public class RocketsController  extends Application {
     private SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
     int points1 = 0, points2 = 0, points3 = 0, points4 = 0;
 
@@ -31,8 +36,6 @@ public class RocketsController extends Minigame{
     @FXML TextField txtPoints3;
     @FXML TextField txtPoints4;
 
-
-    @Override
     public void play(SimpleLinkedList<Player> players) throws IOException, InterruptedException {
         this.players=players;
         for (int i = 0; i < players.len(); i++) {
@@ -155,12 +158,14 @@ public class RocketsController extends Minigame{
     }
 
     @Override
-    public void interact(Player player) {
-
-    }
-
-    @Override
-    public int compareTo(Event o) {
-        return 0;
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Rockets.fxml"));
+        primaryStage.setAlwaysOnTop(true);
+        primaryStage.setTitle("Datos Party!");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.resizableProperty().setValue(false);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setFullScreen(false);
+        primaryStage.show();
     }
 }

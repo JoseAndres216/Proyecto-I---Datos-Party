@@ -1,16 +1,21 @@
 package Proyecto1.DatosParty.GUI.Windows.Minigames;
 
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
-import Proyecto1.DatosParty.Events.Event;
 import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
+import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class NumbersController extends Minigame {
+public class NumbersController extends Application {
     int player = 0;
     int theNumber = (int) (Math.random()*((9-0)+1))+0;
     private SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
@@ -29,7 +34,6 @@ public class NumbersController extends Minigame {
     @FXML Button btnNum9;
     @FXML Button btnNum0;
 
-    @Override
     public void play(SimpleLinkedList<Player> players) throws IOException {
         for (int i = 0; i < players.len()-1; i++) {
             players.accessNode(i).setMinigamepoints(0);
@@ -588,12 +592,14 @@ public class NumbersController extends Minigame {
     }
 
     @Override
-    public int compareTo(Event o) {
-        return 0;
-    }
-
-    @Override
-    public void interact(Player player) {
-
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Numbers.fxml"));
+        primaryStage.setAlwaysOnTop(true);
+        primaryStage.setTitle("Datos Party!");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.resizableProperty().setValue(false);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setFullScreen(false);
+        primaryStage.show();
     }
 }

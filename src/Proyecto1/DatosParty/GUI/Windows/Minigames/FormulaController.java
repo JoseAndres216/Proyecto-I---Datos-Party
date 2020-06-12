@@ -1,19 +1,24 @@
 package Proyecto1.DatosParty.GUI.Windows.Minigames;
 
 import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
-import Proyecto1.DatosParty.Events.Event;
 import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
+import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class FormulaController extends Minigame{
+public class FormulaController extends Application {
     private SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
     int position1 = 0, position2 = 0, position3 = 0, position4 = 0;
 
@@ -31,8 +36,6 @@ public class FormulaController extends Minigame{
     @FXML ImageView imgCar3;
     @FXML ImageView imgCar4;
 
-
-    @Override
     public void play(SimpleLinkedList<Player> players) throws IOException, InterruptedException {
         this.players = players;
 
@@ -149,12 +152,14 @@ public class FormulaController extends Minigame{
     }
 
     @Override
-    public void interact(Player player) {
-
-    }
-
-    @Override
-    public int compareTo(Event o) {
-        return 0;
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Formula.fxml"));
+        primaryStage.setAlwaysOnTop(true);
+        primaryStage.setTitle("Datos Party!");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.resizableProperty().setValue(false);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setFullScreen(false);
+        primaryStage.show();
     }
 }
