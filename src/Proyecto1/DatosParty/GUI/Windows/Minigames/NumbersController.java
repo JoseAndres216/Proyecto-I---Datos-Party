@@ -589,6 +589,8 @@ public class NumbersController extends Application {
             System.out.println(players.accessNode(i).nickname + " puntuo: " + players.accessNode(i).getMinigamepoints());
         }
         Game.getInstance().giveMoney();
+        Stage stage = (Stage)this.btnNum0.getScene().getWindow();
+        stage.close();
     }
 
     @Override

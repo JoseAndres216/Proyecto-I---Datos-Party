@@ -51,3 +51,13 @@ $src/Proyecto1/DatosParty/Player.java,0\5\05b1297ba190935188b71fe43fd4baa56fe8f
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 R
 "src/Proyecto1/DatosParty/Game.java,0\3\03ae275bd0030d3666f9fd448b3835a4db67a6a2
+V
+&src/Proyecto1/DatosParty/mainTest.java,9\0\90f7572b9f7b4b1ba9f3cf804c0da964ed8d499f
+b
+2src/Proyecto1/DatosParty/Events/TestingEvents.java,c\c\cc6d675624e669980ed21370304ed33c6c0374db
+l
+<src/Proyecto1/DatosParty/GUI/Windows/MainMenuController.java,8\a\8ae4c33bc2c609257b0a1388c2f6befb414e3bed
+n
+>src/Proyecto1/DatosParty/GUI/Windows/GameWindowController.java,1\a\1aa33599b1be65ede076ce3c5c72642405668cb5
+e
+5src/Proyecto1/DatosParty/GUI/Inputs/InputManager.java,6\1\6105a1395fe48281e415914d9d748f5d8e06fae8

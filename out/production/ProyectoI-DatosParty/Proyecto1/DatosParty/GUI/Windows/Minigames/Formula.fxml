@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Proyecto1.DatosParty.GUI.Windows.Minigames.FormulaController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#349a48" height="678.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1203.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e3e3e" height="103.0" layoutX="21.0" layoutY="397.0" stroke="#3e3e3e" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="5.0" width="1160.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e3e3e" height="103.0" layoutX="21.0" layoutY="272.0" stroke="#3e3e3e" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="5.0" width="1160.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e3e3e" height="103.0" layoutX="21.0" layoutY="149.0" stroke="#3e3e3e" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="5.0" width="1160.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e3e3e" height="103.0" layoutX="21.0" layoutY="23.0" stroke="#3e3e3e" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="5.0" width="1160.0" />
+      <Label layoutX="57.0" layoutY="537.0" text="This is an ability and speed game!" textFill="#efefef">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="605.0" text="Wins the game the first player tha cross the finish line!" textFill="#efefef">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="65.0" layoutX="82.0" layoutY="41.0" stroke="#efefef" strokeType="INSIDE" strokeWidth="5.0" width="70.0" />
+      <Label alignment="CENTER" layoutX="42.0" layoutY="39.0" prefHeight="67.0" prefWidth="151.0" text="Q" textFill="#efefef" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="65.0" layoutX="82.0" layoutY="168.0" stroke="#efefef" strokeType="INSIDE" strokeWidth="5.0" width="70.0" />
+      <Label alignment="CENTER" layoutX="42.0" layoutY="166.0" prefHeight="67.0" prefWidth="151.0" text="R" textFill="#efefef" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="65.0" layoutX="82.0" layoutY="291.0" stroke="#efefef" strokeType="INSIDE" strokeWidth="5.0" width="70.0" />
+      <Label alignment="CENTER" layoutX="43.0" layoutY="289.0" prefHeight="67.0" prefWidth="151.0" text="U" textFill="#efefef" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="65.0" layoutX="82.0" layoutY="416.0" stroke="#efefef" strokeType="INSIDE" strokeWidth="5.0" width="70.0" />
+      <Label alignment="CENTER" layoutX="42.0" layoutY="414.0" prefHeight="67.0" prefWidth="151.0" text="P" textFill="#efefef" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnPlay" alignment="CENTER" contentDisplay="CENTER" layoutX="714.0" layoutY="551.0" mnemonicParsing="false" onKeyReleased="#keyPressed" onMousePressed="#btnPlaypressed" prefHeight="85.0" prefWidth="148.0" text="Play" textAlignment="CENTER">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="103.0" fitWidth="103.0" layoutX="935.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/FinishLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="103.0" fitWidth="103.0" layoutX="935.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/FinishLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="103.0" fitWidth="103.0" layoutX="935.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/FinishLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="103.0" fitWidth="103.0" layoutX="935.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/FinishLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCar1" fitHeight="143.0" fitWidth="153.0" layoutX="170.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Car.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCar2" fitHeight="143.0" fitWidth="153.0" layoutX="170.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Car.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCar3" fitHeight="143.0" fitWidth="153.0" layoutX="170.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Car.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCar4" fitHeight="143.0" fitWidth="153.0" layoutX="170.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Car.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#e6f779" layoutX="1187.0" layoutY="830.0" radius="312.0" stroke="#e6f779" strokeType="INSIDE" />
+      <Circle fill="#77bdff" layoutX="1225.0" layoutY="685.0" radius="137.0" stroke="#77bdff" strokeType="INSIDE" />
+      <Circle fill="#77bdff" layoutX="1114.0" layoutY="727.0" radius="137.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="10.0" />
+      <Circle fill="#77bdff" layoutX="1225.0" layoutY="685.0" radius="137.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="10.0" />
+      <Circle fill="#77bdff" layoutX="1120.0" layoutY="737.0" radius="137.0" stroke="#77bdff" strokeType="INSIDE" />
+      <ImageView fitHeight="64.0" fitWidth="59.0" layoutX="942.0" layoutY="581.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Palm2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="53.0" layoutX="1104.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Palm.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblPlayer1" alignment="CENTER" layoutX="2.0" layoutY="51.0" prefHeight="48.0" prefWidth="100.0" rotate="90.0" text="Player 1" textFill="#efefef" visible="false" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPlayer2" alignment="CENTER" layoutX="2.0" layoutY="177.0" prefHeight="48.0" prefWidth="100.0" rotate="90.0" text="Player 1" textFill="#efefef" visible="false" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPlayer3" alignment="CENTER" layoutX="2.0" layoutY="300.0" prefHeight="48.0" prefWidth="100.0" rotate="90.0" text="Player 1" textFill="#efefef" visible="false" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPlayer4" alignment="CENTER" layoutX="2.0" layoutY="425.0" prefHeight="48.0" prefWidth="100.0" rotate="90.0" text="Player 1" textFill="#efefef" visible="false" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWinner1" alignment="CENTER" layoutX="480.0" layoutY="48.0" prefHeight="48.0" prefWidth="151.0" text="Winner" textFill="#ffec58" visible="false" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWinner2" alignment="CENTER" layoutX="480.0" layoutY="174.0" prefHeight="48.0" prefWidth="151.0" text="Winner" textFill="#ffec58" visible="false" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWinner3" alignment="CENTER" layoutX="480.0" layoutY="297.0" prefHeight="48.0" prefWidth="151.0" text="Winner" textFill="#ffec58" visible="false" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWinner4" alignment="CENTER" layoutX="480.0" layoutY="421.0" prefHeight="48.0" prefWidth="151.0" text="Winner" textFill="#ffec58" visible="false" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="50.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

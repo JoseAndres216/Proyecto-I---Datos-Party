@@ -286,6 +286,8 @@ public class LuckyStickController extends Application {
                 break;
         }
         Game.getInstance().giveMoney();
+        Stage stage = (Stage)this.imgStick1.getScene().getWindow();
+        stage.close();
     }
 
     @Override

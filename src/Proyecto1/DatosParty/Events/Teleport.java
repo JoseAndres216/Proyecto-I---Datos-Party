@@ -54,7 +54,7 @@ public class Teleport extends Event   {
     public void interact(Player player) {
 
         Phase phase = this.phasePicker();
-        int random = generateRandomBox(phase.phaseList.len());
+        int random = generateRandomBox(phase.phaseList.len()-2);
         player.MoveTo(phase, random);
     }
 

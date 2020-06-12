@@ -175,7 +175,8 @@ public class CardsController extends Application {
         if (card4 != null) {
             card4.setMinigamepoints(numCard4);
         }
-
+        Stage stage = (Stage)this.btnChoose1.getScene().getWindow();
+        stage.close();
         Game.getInstance().giveMoney();
     }
 

@@ -8,9 +8,20 @@ import Proyecto1.DatosParty.Player;
 //import Proyecto1.DatosParty.GUI.Windows.Minigames.RockPaperScissors;
 
 public class Duel extends Event {
+
+    public Duel(){
+        this.tag = "PvP";
+    }
+    @Override
+    public String toString() {
+        return "Duel{" +
+                "tag='" + tag + '\'' +
+                '}';
+    }
+
     @Override
     public void interact(Player player) {
-
+        System.out.println("PvP activado para: " + player.nickname );
     }
 
     @Override
