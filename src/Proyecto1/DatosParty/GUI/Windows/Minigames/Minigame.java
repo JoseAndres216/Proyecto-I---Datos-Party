@@ -9,6 +9,6 @@ import java.io.IOException;
 public  abstract class Minigame extends Event {
 
 
-    public abstract void play(SimpleLinkedList<Player> players) throws IOException;
+    public abstract void play(SimpleLinkedList<Player> players) throws IOException, InterruptedException;
 
 }
