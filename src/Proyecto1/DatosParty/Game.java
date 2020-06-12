@@ -6,8 +6,8 @@ import java.io.IOException;
 
 public class Game {
     private static Game instance = null;
-    private SimpleLinkedList<Player> players = new SimpleLinkedList<>();
-    private Table gameTable;
+    private final SimpleLinkedList<Player> players = new SimpleLinkedList<>();
+    private final Table gameTable;
     private int cantidadRondas;
 
 
@@ -58,12 +58,16 @@ public class Game {
 
     public void giveMoney() throws IOException {
         for (int i = 0; i <= players.len()-1; i++) {
-            if(players.accessNode(i).getMinigamepoints()==4){
+            if (players.accessNode(i).getMinigamepoints()==5) {
+                players.accessNode(i).modifyCoins(false, 5);
+            }else if(players.accessNode(i).getMinigamepoints()==4){
                 players.accessNode(i).modifyCoins(true, 5);
             }else if(players.accessNode(i).getMinigamepoints()==3){
                 players.accessNode(i).modifyCoins(true,3);
             }else if(players.accessNode(i).getMinigamepoints()==2){
                 players.accessNode(i).modifyCoins(true,2);
+            }else if(players.accessNode(i).getMinigamepoints()== 1){
+                players.accessNode(i).modifyCoins(true,0);
             }else{
                 players.accessNode(i).modifyCoins(true,0);
             }
