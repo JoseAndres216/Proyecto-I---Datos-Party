@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Proyecto1.DatosParty.GUI.Windows.Minigames.VowelsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="151.0" layoutX="-11.0" layoutY="368.0" stroke="#71c04f" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="5.0" width="1237.0" />
+      <Button fx:id="btnNum12" disable="true" layoutX="52.0" layoutY="401.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum12pressed" text="12" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum14" disable="true" layoutX="165.0" layoutY="403.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum14pressed" text="14" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum15" disable="true" layoutX="279.0" layoutY="402.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum15pressed" text="15" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum16" disable="true" layoutX="392.0" layoutY="404.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum16pressed" text="16" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum17" disable="true" layoutX="509.0" layoutY="402.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum17pressed" text="17" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum18" disable="true" layoutX="625.0" layoutY="402.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum18pressed" text="18" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum19" disable="true" layoutX="738.0" layoutY="404.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum19pressed" text="19" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum22" disable="true" layoutX="852.0" layoutY="403.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum22pressed" text="22" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum52" disable="true" layoutX="965.0" layoutY="405.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum52pressed" text="52" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNum53" disable="true" layoutX="1082.0" layoutY="403.0" maxHeight="84.0" maxWidth="87.53125" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnNum53pressed" text="53" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="280.0" layoutX="97.0" layoutY="41.0" stroke="#71c04f" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="1010.0" />
+      <Label layoutX="227.0" layoutY="546.0" text="This is an ability and speed game!">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="619.0" text="Just wins the player who guess the number of vowels of the qoute above">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQuote" alignment="CENTER" layoutX="114.0" layoutY="55.0" prefHeight="202.0" prefWidth="977.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAuthor" layoutX="115.0" layoutY="253.0" prefHeight="56.0" prefWidth="977.0" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGo" layoutX="1006.0" layoutY="558.0" maxHeight="84.0" maxWidth="133.0" minHeight="84.0" minWidth="87.53125" mnemonicParsing="false" onMousePressed="#btnGopressed" prefHeight="84.0" prefWidth="133.0" text="GO!" textFill="#71c04f" wrapText="true">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
