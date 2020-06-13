@@ -25,8 +25,10 @@ public class Table {
     private Canvas canvas;
     private boolean isStar = false;
 
-    public void setCanvas(Canvas canvas) {
+    public void setCanvas(Canvas canvas) throws Exception {
         this.canvas = canvas;
+        this.drawTable();
+        this.drawPlayers();
     }
 
     //Intialization of the main table.
@@ -211,7 +213,7 @@ public class Table {
                 randomBox = new WhiteBox(counterCasillasPrincipal);
                 break;
             default:
-                System.out.println("Algo paso al generar la casilla, el random era: " + randomNum);
+                //throw new IllegalStateException("Algo paso al generar la casilla, el random era: " + randomNum);
                 randomBox = new WhiteBox(counterCasillasPrincipal);
         }
         return randomBox;

@@ -39,6 +39,7 @@ public class Player {
         this.coins = 1000;
         this.stars = 1000;
         this.minigamepoints = 0;
+
         //Ubication on the table
         this.actualPhase = Table.getInstance().mainPhase;
         this.actualList = Table.getInstance().mainPhase.phaseList;
@@ -53,12 +54,9 @@ public class Player {
         switch (playerNumber) {
             case 1:
                 this.avatar = new Image("Proyecto1/DatosParty/GUI/Resources/images/p1.png");
-                color = Color.PURPLE;
-                break;
+                 break;
             case 2:
                 this.avatar = new Image("Proyecto1/DatosParty/GUI/Resources/images/p2.png");
-                color = Color.ORANGE;
-
                 break;
             case 3:
                 this.avatar = new Image("Proyecto1/DatosParty/GUI/Resources/images/p3.png");
@@ -105,10 +103,9 @@ public class Player {
         return actualList;
     }
 
-    public void MoveTo(Phase newPhase, int actualBox) {
+    public void MoveTo(Phase newPhase, int actualBox) throws Exception {
         //eliminar el jugador de la casilla, para no dar conflicto con la verificacio de si hay o no dos
         this.actualPhase.getPhaselist().accessNode(this.actualBoxIndex).removePlayer();
-        System.out.println(this.toString() + " new pos( " + newPhase + ", " + actualBox + " )");
         this.actualPhase = newPhase;
         this.actualBoxIndex = actualBox;
 
@@ -129,7 +126,7 @@ public class Player {
      *
      * @param box
      */
-    public void MoveTo(int boxExcelid) {
+    public void MoveTo(int boxExcelid) throws Exception {
         Phase phase = null;
         int index;
         if (boxExcelid <= 35) {
@@ -148,7 +145,6 @@ public class Player {
             phase = Table.getInstance().phaseD;
             index = boxExcelid - 66;
         }
-
         MoveTo(phase, index);
     }
 
@@ -159,7 +155,6 @@ public class Player {
      * @param amount amount of stars to earn.
      */
     public void modifyStars(boolean gain, int amount) {
-
         if (gain) {
             String update = " more stars.";
             //this.eventDisplay.setText(this.nickname + " has: " + amount + update);
@@ -293,10 +288,9 @@ public class Player {
      * @throws Exception
      */
     public SimpleLinkedList<Box> RollDices() throws Exception {
-        int dices = ThreadLocalRandom.current().nextInt(3, 13);
+        int dices = ThreadLocalRandom.current().nextInt(4, 13);
         this.eventDisplay.setText(this.nickname + " got " + dices + " moves.");
         SimpleLinkedList<Box> possibles = this.calcPossibleMoves(dices);
-        System.out.println(possibles);
         return possibles;
     }
 

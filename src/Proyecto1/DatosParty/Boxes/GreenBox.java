@@ -64,7 +64,7 @@ public class GreenBox extends Box {
     }
 
     @Override
-    public void iteract(Player player) {
+    public void iteract(Player player) throws Exception {
         player.modifyCoins(true, 10);
         super.iteract(player);
 
@@ -72,7 +72,8 @@ public class GreenBox extends Box {
 
     @Override
     public String getMessage(Player player) {
-        return " wins 10 coins.";
+        return new StringBuilder().append(player.nickname).append(" wins 10 coins.").toString();
+
     }
 
 

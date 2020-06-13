@@ -68,14 +68,14 @@ public class RedBox extends Box {
     }
 
     @Override
-    public void iteract(Player player) {
+    public void iteract(Player player) throws Exception {
         super.iteract(player);
         player.modifyCoins(false, 10);
     }
 
     @Override
     public String getMessage(Player player) {
-        return " loses 10 coins.";
+        return new StringBuilder().append(player.nickname).append(" loses 10 coins.").toString();
     }
 
     /**

@@ -1,5 +1,6 @@
 package Proyecto1.DatosParty.Events;
 
+import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 
 /**
@@ -23,11 +24,10 @@ public class EarnStars extends Event {
 
     @Override
     public void interact(Player player) {
-        int counter = 0;
-
         player.modifyStars(true, this.amount);
+        String message = player.nickname + " earned " + amount + " stars.";
+        Game.getInstance().getEventDisplay().setText(message);
 
-        counter++;
 
     }
 

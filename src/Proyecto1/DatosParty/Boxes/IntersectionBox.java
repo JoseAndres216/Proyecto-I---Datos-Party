@@ -78,7 +78,7 @@ public class IntersectionBox extends Box {
     }
 
     @Override
-    public void iteract(Player player) {
+    public void iteract(Player player) throws Exception {
         super.iteract(player);
     }
 

@@ -26,13 +26,13 @@ public class StealCoins extends Event {
     @Override
     public void interact(Player winnerOfCoins) {
         Player losesCoins = Game.getRandomPlayer(winnerOfCoins);
-        //generate the random int of coins to gain/lose
-
         int coins = ThreadLocalRandom.current().nextInt(0, winnerOfCoins.getCoins());
 
 
         winnerOfCoins.modifyCoins(true, coins);
         losesCoins.modifyCoins(false, coins);
+        Game.getInstance().getEventDisplay().setText(winnerOfCoins.nickname + " stole " + coins + " coins from " + losesCoins.nickname);
+
     }
 
     @Override

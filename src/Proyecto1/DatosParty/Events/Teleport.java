@@ -1,47 +1,17 @@
 package Proyecto1.DatosParty.Events;
 
-import Proyecto1.DatosParty.Phase;
+import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
-import Proyecto1.DatosParty.Table;
 
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Teleport extends Event   {
 
-
+    private String tag = "Teleport";
 
     public int generateRandomBox(int max){
         return ThreadLocalRandom.current().nextInt(0, max+1);
-    }
-
-    /**
-     * Method for selecting a random Phase, from the class Table.
-     * @return Phase class.
-     */
-    public Phase phasePicker(){
-        Phase generated = null;
-        int randomInt =  ThreadLocalRandom.current().nextInt(0, 5);
-        switch (randomInt){
-            case 0:
-                generated = Table.getInstance().getPhaseA();
-                break;
-            case 1:
-                generated = Table.getInstance().getPhaseB();
-                break;
-            case 2:
-                generated = Table.getInstance().getPhaseC();
-                break;
-            case 3:
-                generated = Table.getInstance().getPhaseD();
-                break;
-            case 4:
-                generated = Table.getInstance().getMainPhase();
-                break;
-            default:
-                System.out.println("Something went wrong generating the phase");
-        }
-        return generated;
     }
 
     /**
@@ -51,15 +21,13 @@ public class Teleport extends Event   {
      * @throws IOException must only have one player.
      */
     @Override
-    public void interact(Player player) {
+    public void interact(Player player) throws Exception {
 
-        Phase phase = this.phasePicker();
-        int random = generateRandomBox(phase.phaseList.len()-2);
-        player.MoveTo(phase, random);
-    }
 
-    public Teleport() {
-        this.tag = "Teleport";
+        int random = generateRandomBox(77);
+
+        player.MoveTo(random);
+        Game.getInstance().getEventDisplay().setText(player.nickname + " teleports to: " + player.getActualPhase() + ", " + player.getActualBoxIndex());
     }
 
     @Override

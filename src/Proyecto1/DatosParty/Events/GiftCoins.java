@@ -34,15 +34,13 @@ public class GiftCoins extends Event {
     /**
      * Method to start the minigame
      *
-     * @param player list of players
+     * @param afected list of players
      * @throws IOException list must have 2-3-4 players
      */
     @Override
     public void interact(Player afected) {
 
         SimpleLinkedList<Player> players = Game.listWithnoPlayer(afected);
-        System.out.println(players);
-
 
         int n = afected.getCoins() + 1;
         int coinsToWin;
@@ -51,12 +49,14 @@ public class GiftCoins extends Event {
                 coinsToWin = this.randomCoins(true, n);
                 afected.modifyCoins(false, coinsToWin);
                 players.accessNode(0).modifyCoins(true, coinsToWin);
+                Game.getInstance().getEventDisplay().setText(afected.nickname + " gifted " + (coinsToWin));
                 break;
             case 2:
                 coinsToWin = this.randomCoins(true,n);
                 afected.modifyCoins(false, coinsToWin);
                 players.accessNode(0).modifyCoins(true, coinsToWin / 2);
                 players.accessNode(1).modifyCoins(true, coinsToWin / 2);
+                Game.getInstance().getEventDisplay().setText(afected.nickname + " gifted " + (coinsToWin / 2));
                 break;
             case 3:
                 coinsToWin = this.randomCoins(false,n);
@@ -64,11 +64,13 @@ public class GiftCoins extends Event {
                 players.accessNode(0).modifyCoins(true, coinsToWin / 3);
                 players.accessNode(1).modifyCoins(true, coinsToWin / 3);
                 players.accessNode(2).modifyCoins(true, coinsToWin / 3);
+                Game.getInstance().getEventDisplay().setText(afected.nickname + " gifted " + (coinsToWin / 3));
                 break;
 
             default:
                 System.out.println("something went wrong with GiftCoins event.");
         }
+
     }
 
     @Override

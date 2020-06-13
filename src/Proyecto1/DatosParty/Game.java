@@ -164,8 +164,7 @@ public class Game extends Application {
             return;
         }
         this.playedRounds++;
-
-        //this.start(new Stage());
+        this.start(new Stage());
     }
 
     @Override

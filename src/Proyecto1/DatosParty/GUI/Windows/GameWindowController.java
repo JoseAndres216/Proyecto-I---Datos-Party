@@ -7,6 +7,7 @@ import Proyecto1.DatosParty.Player;
 import Proyecto1.DatosParty.Table;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -34,13 +35,14 @@ public class GameWindowController {
     public void pressedStart(Event event) throws Exception {
         this.exitButton.setStyle("-fx-background-color: #16676c; ");
         this.startButton.setVisible(false);
-
         Table.getInstance().setCanvas(canvas);
         Table.getInstance().drawTable();
         Table.getInstance().drawPlayers();
 
         SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
         for (int i = 0; i < players.len(); i++) {
+            this.eventDisplayer.setAlignment(Pos.CENTER);
+            this.eventDisplayer.setWrapText(true);
             players.accessNode(i).setEventDisplay(this.eventDisplayer);
         }
 

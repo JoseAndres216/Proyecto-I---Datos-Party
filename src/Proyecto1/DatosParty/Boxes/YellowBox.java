@@ -66,9 +66,8 @@ public class YellowBox extends Box {
 
 
     @Override
-    public void iteract(Player player) {
+    public void iteract(Player player) throws Exception {
         Stack<Event> events = Event.getEventStack();
-        System.out.println("The box " + this.excelId + " has the event: " + events.peek());
         events.peek().interact(player);
         events.pop();
 
@@ -77,7 +76,8 @@ public class YellowBox extends Box {
 
     @Override
     public String getMessage(Player player) {
-        return Event.getEventStack().peek().toString();
+        return new StringBuilder().append(player.nickname).append(" triggered: ").append(Event.getEventStack().peek().toString()).toString();
+
     }
 
 
@@ -90,7 +90,6 @@ public class YellowBox extends Box {
     public String toString() {
         return "YellowBox{" +
                 "excelId=" + excelId +
-
                 '}';
     }
 }

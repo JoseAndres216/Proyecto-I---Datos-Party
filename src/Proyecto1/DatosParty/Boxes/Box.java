@@ -165,12 +165,13 @@ public abstract class Box extends Observable {
         this.busy = false;
     }
 
-    public void iteract(Player player){
-        if(this.hasStar){
-            if(player.getCoins()>=5){
+    public void iteract(Player player) throws Exception {
+        if (this.hasStar) {
+            if (player.getCoins() >= 5) {
                 player.modifyCoins(false, 5);
                 player.modifyStars(true, 1);
                 this.hasStar = false;
+                Game.getInstance().getEventDisplay().setText(player.nickname + " got the star!!!");
                 Game.getInstance().generateStar();
             }
         }
@@ -188,7 +189,6 @@ public abstract class Box extends Observable {
     }
 
     public void highlight() {
-        System.out.println("highlited: " + this);
         this.isHilighted = true;
     }
 }
