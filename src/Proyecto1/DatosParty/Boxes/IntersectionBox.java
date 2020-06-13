@@ -8,6 +8,11 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
+/** Class of implementing the intersection box, it has no events asociated, this box is the secret key to find
+ * the possible ways on the table, it stores inside a phase instance and an exit point.
+ *
+ */
+
 public class IntersectionBox extends Box {
 
     //  //  //  //  //  //  //  //  //  //              ATRIBUTES                //  //  //  //  //  //  //  //  //  //
@@ -16,7 +21,7 @@ public class IntersectionBox extends Box {
 
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
-    /**
+    /*
      * Setters and getters of the class.
      */
     public MotherList<Box> getList() {

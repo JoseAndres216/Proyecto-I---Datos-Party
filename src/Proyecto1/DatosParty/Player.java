@@ -10,6 +10,10 @@ import javafx.scene.image.Image;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Class for the implementation of the player, it allows the sowfware to move, draw and interct with players.
+ *
+ */
 public class Player {
 
     //Configurations for the location of the player on table
@@ -117,7 +121,7 @@ public class Player {
      *
      * @param newPhase  phase to move the player
      * @param actualBox zero-based index of the new box.
-     * @throws Exception
+     * @throws Exception if the index of the new box, doesnt apply for the new phaese.
      */
     public void MoveTo(Phase newPhase, int actualBox) throws Exception {
         //Eliminates the player from the old box
@@ -144,7 +148,8 @@ public class Player {
      * Move the player to a box given its id, which was defined on the prototype of the board, and as the board ist always the same
      * we can assume the values are right.
      *
-     * @param box id of the new box
+     * @param boxExcelid id of the new box
+     * @throws Exception if the index of the acces() its out of range
      */
     public void MoveTo(int boxExcelid) throws Exception {
         Phase phase = null;
@@ -215,9 +220,9 @@ public class Player {
 
     /**
      * @param avaliableMoves cantidad de casillas disponibles para avanzar
-     * @param startPoint     punto desde el cual se recorre la lista (principal)
-     * @return
-     * @throws Exception
+     * @return list with the possible boxes to move.
+     * @throws Exception from the list, if the index its out of range, or if the
+     * value is unespected, what means that something went wrong
      */
     public SimpleLinkedList<Box> calcPossibleMoves(int avaliableMoves) throws Exception {
         //Simple list for saving the posibilities
@@ -366,9 +371,8 @@ public class Player {
      * y se envia la lista al controller de la ventana que se usa para elegir
      * una casilla
      *
-     * @param result
-     * @return
-     * @throws Exception
+      * @return returns a list with the possible moves after rolling the dices.
+     * @throws Exception from the acces() method on list.
      */
     public SimpleLinkedList<Box> rollDices() throws Exception {
         int dices = ThreadLocalRandom.current().nextInt(4, 13);
@@ -389,7 +393,7 @@ public class Player {
      * Method for drawing the player's avatar on the table.
      *
      * @param canvas Canvas from Game instance.
-     * @throws Exception
+     * @throws Exception from the draw image method.
      */
     public void drawPlayer(Canvas canvas) throws Exception {
         // Get the grapics context of the canvas

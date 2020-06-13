@@ -34,6 +34,7 @@ public abstract class Box extends Observable {
 
     /**
      * Setters and getters of the class.
+     * @param hasStar, true if the box has an star, false if not.
      */
     public void setHasStar(boolean hasStar) {
         this.hasStar = hasStar;
@@ -66,7 +67,7 @@ public abstract class Box extends Observable {
 
     /**
      * Constructor 1 of the class: for creating an instantiation of the class whit it's respective ID.
-     * @param id
+     * @param id idenfitication of the box.
      */
      public Box(int id){
         this.id = id;

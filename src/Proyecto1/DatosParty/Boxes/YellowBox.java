@@ -6,16 +6,14 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+/** Class of implementing the green box, it has the capacity to trigger an event from the event stack.*/
 
 public class YellowBox extends Box {
     private String message;
 
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
-    /**
-     * Constructor 1 of the class: for creating an instantiation of the class whit it's respective ID.
-     * @param id
-     */
+
     public YellowBox(int id) {
         Box.id = id;
         this.tag = "yellow";

@@ -6,15 +6,12 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
+/** Class of implementing the white box, it has no capacity to interact with the player. */
 public class WhiteBox extends Box {
 
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
-    /**
-     * Constructor 1 of the class: for creating an instantiation of the class whit it's respective ID.
-     *
-     * @param id
-     */
+
     public WhiteBox(int id) {
         Box.id = id;
         this.tag = "white";

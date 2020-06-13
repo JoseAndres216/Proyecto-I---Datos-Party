@@ -7,14 +7,13 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
+/** Class of implementing the green box, it has the hability to give 10 coins to a player, when placed on it.
+ */
 public class GreenBox extends Box {
 
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
-    /**
-     * Constructor 1 of the class: for creating an instantiation of the class whit it's respective ID.
-     * @param id
-     */
+
     public GreenBox(int id) {
         Box.id = id;
         this.tag = "green";

@@ -15,16 +15,21 @@ import java.util.concurrent.ThreadLocalRandom;
  * Class Table, used for the implementation of the phase A, B, C, D and the main phase.
  */
 public class Table {
-    //configuration for the singleton.
+    /**Configuration for the singleton.*/
     private static Table instance = null;
-    //Intialization of the Phases, (the main table will not be a phase)
+
+    /**Intialization of the Phases A */
     public Phase phaseA = new Phase(new SimpleLinkedList<Box>(), false, "Phase A");
+    /**Intialization of the Phases B */
     public Phase phaseB = new Phase(new SimpleLinkedList<Box>(), false, "Phase B");
+    /**Intialization of the Phases C */
     public Phase phaseC = new Phase(new DoubleLinkedList<Box>(), false, "Phase C");
+    /**Intialization of the Phases D */
     public Phase phaseD = new Phase(new CircularDoubleList<Box>(), false, "Phase D");
     //UI element, for drawing the table and the players.
+    /**Canvas for drawing the UI elements.*/
     private Canvas canvas;
-    //says if theres a star in the phase.
+    /**Says if theres a star in the phase.*/
     private boolean isStar = false;
 
     public void setCanvas(Canvas canvas) throws Exception {
@@ -70,8 +75,8 @@ public class Table {
 
     /**
      * Method for generating a random box, for creating the main table.
-     *
-     * @return
+     * @param counterCasillasPrincipal used for asigning the id.
+     * @return a random box, can be red, yellow, green, white
      */
     public Box getRandomBox(int counterCasillasPrincipal) {
         int randomNum = ThreadLocalRandom.current().nextInt(0, 4);
@@ -100,7 +105,8 @@ public class Table {
 
 
     /**
-     * @param canvas canvas for drawing the boxes
+     * Method for drawing the table and the phases,
+     * @throws Exception if  theres something wrong drawing on the canvas.
      */
     public void drawTable() throws Exception {
         this.canvas.getGraphicsContext2D().clearRect(0, 0, 1200, 1200);
@@ -217,7 +223,7 @@ public class Table {
     /**
      * Draws all the players' avatar on the table.
      *
-     * @throws Exception
+     * @throws Exception from the draw method.
      */
     public void drawPlayers() throws Exception {
         SimpleLinkedList<Player> players = Game.getInstance().getPlayers();

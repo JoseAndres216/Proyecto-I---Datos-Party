@@ -35,8 +35,7 @@ public class GiftCoins extends Event {
      * Method to start the minigame
      *
      * @param afected list of players
-     * @throws IOException list must have 2-3-4 players
-     */
+      */
     @Override
     public void interact(Player afected) {
 

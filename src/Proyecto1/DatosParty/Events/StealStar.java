@@ -15,8 +15,7 @@ public class StealStar extends Event{
      * Method to start the event
      *
      * @param starWinner list of players
-     * @throws IOException list must have 2 players
-     */
+      */
     @Override
     public void interact(Player starWinner) {
 

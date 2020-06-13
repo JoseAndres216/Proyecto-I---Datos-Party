@@ -43,7 +43,7 @@ public class Game extends Application {
      * This method its used for generating the minigames and all the events.
      *
      * @param player player that can't be on the list.
-     * @return SimpleLinkedList<Player> with the other players.
+     * @return SimpleLinkedList with the other players.
      */
     public static SimpleLinkedList<Player> otherPlayers(Player player) {
         SimpleLinkedList<Player> list = Game.getInstance().getPlayers();
@@ -124,7 +124,7 @@ public class Game extends Application {
     /**
      * Runs the players list after a minigame and gives the respective amount of coins.
      *
-     * @throws IOException
+     * @throws IOException if cant acces one of the players.
      */
     public void giveMoney() throws IOException {
         for (int i = 0; i <= players.len() - 1; i++) {
@@ -201,7 +201,7 @@ public class Game extends Application {
     /**
      * Starts a new round, executes a minigame and re-evaluate the positions, also uptates the UI components.
      *
-     * @throws Throwable
+     * @throws Throwable from the start method.
      */
     public void nextRound() throws Throwable {
         if (this.playedRounds == this.cantidadRondas) {
@@ -224,7 +224,7 @@ public class Game extends Application {
      * Starts a minigame, for facility, all minigames are generated on a new window.
      *
      * @param primaryStage a stage instance to draw the window.
-     * @throws Exception
+     * @throws Exception from the start stage method.
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
