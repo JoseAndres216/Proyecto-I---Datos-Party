@@ -125,8 +125,6 @@ public class Game extends Application {
 
     public void updatePlayers() {
         //sort the list
-
-
         for (SimpleNode<Player> first = OrderedPlayerList.getHead(); first.getNext() != null; first = first.getNext()) {
             SimpleNode<Player> smaller = first;
             SimpleNode<Player> temp = smaller.getNext();
@@ -146,8 +144,9 @@ public class Game extends Application {
         }
         int counter = 1;
         StringBuilder toAdd = new StringBuilder();
+        toAdd.append("Positions Table: ").append("\nPlayer     Coins     Stars").append("\n");
         for (SimpleNode<Player> first = OrderedPlayerList.getHead(); first != null; first = first.getNext()) {
-            toAdd.append(counter).append("- ").append(first.getData().nickname).append("\n");
+            toAdd.append(counter).append("- ").append(first.getData().nickname).append("          ").append(first.getData().getCoins()).append("     ").append(first.getData().getStars()).append("\n");
             counter++;
         }
         this.positions.setText(toAdd.toString());

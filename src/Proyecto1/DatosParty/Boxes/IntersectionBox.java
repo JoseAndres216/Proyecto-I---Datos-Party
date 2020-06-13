@@ -67,10 +67,12 @@ public class IntersectionBox extends Box {
             gc.drawImage(star, x, y);
         }
         if (this.isHilighted) {
-            gc.setStroke(Color.WHITE);
-            gc.setLineWidth(3);
-
+            gc.setStroke(Color.BLACK);
+            gc.setLineWidth(5);
             gc.strokeRect(x, y, this.height, this.width);
+
+            gc.setLineWidth(1);
+            gc.strokeText(new StringBuilder().append(this.excelId).toString(), x + 6, y + (this.width) / 2 + 2);
             this.isHilighted = false;
         }
     }

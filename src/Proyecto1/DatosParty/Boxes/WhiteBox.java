@@ -56,8 +56,10 @@ public class WhiteBox extends Box {
         }
         if (this.isHilighted) {
             gc.setStroke(Color.BLACK);
-            gc.setLineWidth(3);
+            gc.setLineWidth(5);
             gc.strokeRect(x, y, this.height, this.width);
+            gc.setLineWidth(1);
+            gc.strokeText(new StringBuilder().append(this.excelId).toString(), x + 6, y + (this.width) / 2 + 2);
             this.isHilighted = false;
         }
     }
@@ -69,7 +71,7 @@ public class WhiteBox extends Box {
 
     @Override
     public String getMessage(Player player) {
-        return " moves to an empty box.";
+        return new StringBuilder().append(player.nickname).append(" moves to an empty box.").toString();
     }
 
     /**

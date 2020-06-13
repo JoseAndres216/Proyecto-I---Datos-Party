@@ -13,7 +13,7 @@
     <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#16676c" height="684.0" layoutX="-4.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="1211.0" />
         <Canvas fx:id="canvas" height="675.0" onMousePressed="#pressedStart" width="1200.0" />
-      <Label fx:id="positions" layoutX="1056.0" layoutY="80.0" prefHeight="193.0" prefWidth="130.0" textAlignment="JUSTIFY" textFill="WHITE">
+      <Label fx:id="positions" layoutX="926.0" layoutY="62.0" prefHeight="211.0" prefWidth="260.0" textAlignment="JUSTIFY" textFill="WHITE">
          <font>
             <Font name="Tw Cen MT Condensed" size="23.0" />
          </font>
