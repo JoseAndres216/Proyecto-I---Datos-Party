@@ -15,16 +15,17 @@ public class StealStar extends Event{
      * Method to start the event
      *
      * @param starWinner list of players
-     * @throws IOException list must have 2 players
-     */
+      */
     @Override
     public void interact(Player starWinner) {
 
 
-        Player losesCoins = Game.getRandomPlayer(starWinner); //obtener jugador random de la clase Game
+        Player losesStar = Game.getRandomPlayer(starWinner); //obtener jugador random de la clase Game
 
         starWinner.modifyStars(true, 1);
-        losesCoins.modifyStars(false, 1);
+        losesStar.modifyStars(false, 1);
+        Game.getInstance().getEventDisplay().setText(starWinner.nickname + " stole " + losesStar + " coins from " + losesStar.nickname);
+
     }
 
     @Override

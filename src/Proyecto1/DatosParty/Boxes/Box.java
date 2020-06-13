@@ -24,14 +24,17 @@ public abstract class Box extends Observable {
     public boolean isIntersection = false;
     protected int x;
     protected int y;
-    protected int height = 36;
-    protected int width = 36;
+    protected int height = 32;
+    protected int width = 32;
     protected boolean hasStar;
+    protected boolean isHilighted = false;
     private Player actualPlayer = null;
+    private String phaseTag;
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
     /**
      * Setters and getters of the class.
+     * @param hasStar, true if the box has an star, false if not.
      */
     public void setHasStar(boolean hasStar) {
         this.hasStar = hasStar;
@@ -64,7 +67,7 @@ public abstract class Box extends Observable {
 
     /**
      * Constructor 1 of the class: for creating an instantiation of the class whit it's respective ID.
-     * @param id
+     * @param id idenfitication of the box.
      */
      public Box(int id){
         this.id = id;
@@ -91,9 +94,30 @@ public abstract class Box extends Observable {
         this.busy = newState;
     }
 
-    public int getExcelId() { return excelId; }
+    public int getExcelId() {
+        return excelId;
+    }
 
-    public void setExcelId(int excelId) { this.excelId = excelId; }
+    public void setExcelId(int excelId) {
+        this.excelId = excelId;
+
+        if (this.excelId <= 35) {
+            this.phaseTag = "Main Phase";
+
+        } else if (this.excelId >= 36 && this.excelId <= 45) {
+            this.phaseTag = "Phase A";
+
+        } else if (this.excelId >= 46 && this.excelId <= 55) {
+            this.phaseTag = "Phase B";
+
+        } else if (this.excelId >= 56 && this.excelId <= 65) {
+            this.phaseTag = "Phase C";
+
+        } else {
+            this.phaseTag = "Phase D";
+
+        }
+    }
 
     /**
      * Method for attaching a observer to the box
@@ -118,7 +142,8 @@ public abstract class Box extends Observable {
      * @param canvas canvas for drawing the boxes
      */
     public void draw(int x, int y, Canvas canvas) {
-
+        this.x = x;
+        this.y = y;
     }
 
     /**
@@ -141,12 +166,13 @@ public abstract class Box extends Observable {
         this.busy = false;
     }
 
-    public void iteract(Player player){
-        if(this.hasStar){
-            if(player.getCoins()>=5){
+    public void iteract(Player player) throws Exception {
+        if (this.hasStar) {
+            if (player.getCoins() >= 5) {
                 player.modifyCoins(false, 5);
                 player.modifyStars(true, 1);
                 this.hasStar = false;
+                Game.getInstance().getEventDisplay().setText(player.nickname + " got the star!!!");
                 Game.getInstance().generateStar();
             }
         }
@@ -155,10 +181,15 @@ public abstract class Box extends Observable {
     public abstract String getMessage(Player player);
 
     public String getTag() {
-        return this.tag;
+
+        return this.tag + " on " + this.phaseTag;
     }
 
     void spawnStar() {
         this.hasStar = true;
+    }
+
+    public void highlight() {
+        this.isHilighted = true;
     }
 }

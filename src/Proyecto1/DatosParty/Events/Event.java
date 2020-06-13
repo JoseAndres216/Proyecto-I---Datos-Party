@@ -102,13 +102,11 @@ public abstract class Event implements Comparable<Event> {
 
     //Configuration of events
 
-    public abstract void interact(Player player);
+    public abstract void interact(Player player) throws Exception;
 
     @Override
     public String toString() {
-        return "Event{" +
-                "tag='" + tag + '\'' +
-                '}';
+        return this.tag + " event.";
     }
 
 }

@@ -3,7 +3,7 @@ package Proyecto1.DatosParty.DataStructures.BaseModels;
 /**
  * Base model for the implementation of the lists
  *
- * @param <T>
+ * @param <T> generic value of the content of the list.
  */
 public interface MotherList<T> {
 
@@ -11,7 +11,7 @@ public interface MotherList<T> {
 
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
-    /**
+    /*
      * Setters and getters of the class
      */
     FatherNode<T> getHead();

@@ -408,6 +408,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/GameWindow.fxml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/GameWindowController.java">
           <value>
             <set />

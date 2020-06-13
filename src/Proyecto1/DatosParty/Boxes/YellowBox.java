@@ -4,17 +4,16 @@ import Proyecto1.DatosParty.Events.Event;
 import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+/** Class of implementing the green box, it has the capacity to trigger an event from the event stack.*/
 
 public class YellowBox extends Box {
     private String message;
 
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
-    /**
-     * Constructor 1 of the class: for creating an instantiation of the class whit it's respective ID.
-     * @param id
-     */
+
     public YellowBox(int id) {
         Box.id = id;
         this.tag = "yellow";
@@ -28,23 +27,30 @@ public class YellowBox extends Box {
      * @param canvas canvas for drawing the boxes
      */
     public void draw(int x, int y, Canvas canvas) {
-
+        super.draw(x, y, canvas);
         // Get the grapics context of the canvas
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         //set the color
-        gc.setFill(Color.YELLOW);
+        gc.setFill(Color.valueOf("#dae028"));
         gc.setStroke(Color.BLACK);
 
         //Draw the rectangle
-        gc.strokeRect(x, y, this.height, this.width);
+        //gc.strokeRect(x, y, this.height, this.width);
         gc.fillRect(x, y, this.height, this.width);
 
-        if(this.hasStar){
-            gc.setFill(Color.WHITE);
-            gc.setStroke(Color.WHITE);
-            gc.strokeOval(x+13,y+13,10, 10);
-            gc.setFill(Color.WHITE);
+        if (this.hasStar) {
+
+            Image star = new Image("Proyecto1/DatosParty/GUI/Resources/images/star.png");
+            gc.drawImage(star, x, y);
+        }
+        if (this.isHilighted) {
+            gc.setStroke(Color.BLACK);
+            gc.setLineWidth(5);
+            gc.strokeRect(x, y, this.height, this.width);
+            gc.setLineWidth(1);
+            gc.strokeText(new StringBuilder().append(this.excelId).toString(), x + 6, y + (this.width) / 2 + 2);
+            this.isHilighted = false;
         }
     }
 
@@ -58,9 +64,8 @@ public class YellowBox extends Box {
 
 
     @Override
-    public void iteract(Player player) {
+    public void iteract(Player player) throws Exception {
         Stack<Event> events = Event.getEventStack();
-        System.out.println("The box " + this.excelId + " has the event: " + events.peek());
         events.peek().interact(player);
         events.pop();
 
@@ -69,7 +74,8 @@ public class YellowBox extends Box {
 
     @Override
     public String getMessage(Player player) {
-        return Event.getEventStack().peek().toString();
+        return new StringBuilder().append(player.nickname).append(" triggered: ").append(Event.getEventStack().peek().toString()).toString();
+
     }
 
 
@@ -82,7 +88,6 @@ public class YellowBox extends Box {
     public String toString() {
         return "YellowBox{" +
                 "excelId=" + excelId +
-
                 '}';
     }
 }

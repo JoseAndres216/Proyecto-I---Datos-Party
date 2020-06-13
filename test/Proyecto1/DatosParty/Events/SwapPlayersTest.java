@@ -4,14 +4,12 @@ import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class SwapPlayersTest {
 
     @Test
-    public void interact() {
-        Player stuntMan1  = new Player(1, "stunt man 1");
-        Player stuntMan2  = new Player(2, "stunt man 2");
+    public void interact() throws Exception {
+        Player stuntMan1 = new Player(1, "stunt man 1");
+        Player stuntMan2 = new Player(2, "stunt man 2");
 
         Game.getInstance().addPlayer(stuntMan1);
         Game.getInstance().addPlayer(stuntMan2);
