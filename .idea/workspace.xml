@@ -20,7 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee66dd22-e32e-4710-af44-09944fffcbea" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoI-DatosParty.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoI-DatosParty.iml" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/Box.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/Box.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/GreenBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/GreenBox.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/IntersectionBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Boxes/IntersectionBox.class" afterDir="false" />
@@ -29,6 +36,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/GiftCoins.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/GiftCoins.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/StealStar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/StealStar.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Help/HelpWindowStart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Help/HelpWindowStart.class" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Minigame.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissors.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissors.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissorsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissorsController.class" afterDir="false" />
@@ -38,6 +46,10 @@
       <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissors.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissors.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissorsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Table.class" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +86,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Jose Andres &lt;joseandres216@gmail.com&gt;" />
         <option value="Eduardo Zumbado Granados &lt;42503164+eduardo2108@users.noreply.github.com&gt;" />
+        <option value="Jose Andres &lt;joseandres216@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -136,8 +148,8 @@
       <recent name="Proyecto1.cr.ac.tec.CE1103.Proyecto1" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="Proyecto1.DatosParty.Events" />
       <recent name="Proyecto1.DatosParty" />
+      <recent name="Proyecto1.DatosParty.Events" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -190,17 +202,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EventTest.getEventStack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.nextRoundSorter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProyectoI-DatosParty" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Proyecto1.DatosParty.Events.*" />
+          <option name="PATTERN" value="Proyecto1.DatosParty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Proyecto1.DatosParty.Events" />
-      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.Events.EventTest" />
-      <option name="METHOD_NAME" value="getEventStack" />
+      <option name="PACKAGE_NAME" value="Proyecto1.DatosParty" />
+      <option name="MAIN_CLASS_NAME" value="Proyecto1.DatosParty.GameTest" />
+      <option name="METHOD_NAME" value="nextRoundSorter" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -256,10 +268,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.PlayerTest.OnlyOnePossible" />
+        <item itemvalue="JUnit.GameTest.nextRoundSorter" />
         <item itemvalue="JUnit.SwapPlayersTest.interact" />
         <item itemvalue="JUnit.SwapPlayersTest" />
-        <item itemvalue="JUnit.EventTest.getEventStack" />
-        <item itemvalue="JUnit.PlayerTest.OnlyOnePossible" />
       </list>
     </recent_temporary>
   </component>
@@ -439,7 +451,42 @@
       <option name="project" value="LOCAL" />
       <updated>1591946110330</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="The player's avatar can move through the table.">
+      <created>1592031491732</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1592031491732</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Centred the numbers on box highlighting">
+      <created>1592034149433</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1592034149433</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Se inicia a trabajar en el recorrido de la fase D y C, de manera reversa.">
+      <created>1592037998790</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1592037998790</updated>
+    </task>
+    <task id="LOCAL-00026" summary="ready backwards moving on phase C">
+      <created>1592039138499</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1592039138499</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Documented some classes and some small fixes">
+      <created>1592046406750</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1592046406750</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,8 +518,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added SimpleList for implementation of game stages" />
-    <MESSAGE value="Added directories and SimpleLinkedList is complete, part of [PD-06] user storie." />
     <MESSAGE value="Implemented DoubleLinkedList and it's methods." />
     <MESSAGE value="Implemented method for getting a node, given it´s position on list, and print and reversePrint in doubly linked list." />
     <MESSAGE value="Added images for the help window, bug makes images dont appear on window." />
@@ -493,7 +538,12 @@
     <MESSAGE value="Solved bug when moving through the end of a circular list." />
     <MESSAGE value="ready the implementation of mechanism for controlling the facing of two players on the same box" />
     <MESSAGE value="Fixed bug that generated exception when moving one space on a phase, and ready one way moving on phase D." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug that generated exception when moving one space on a phase, and ready one way moving on phase D." />
+    <MESSAGE value="The player's avatar can move through the table." />
+    <MESSAGE value="Centred the numbers on box highlighting" />
+    <MESSAGE value="Se inicia a trabajar en el recorrido de la fase D y C, de manera reversa." />
+    <MESSAGE value="ready backwards moving on phase C" />
+    <MESSAGE value="Documented some classes and some small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documented some classes and some small fixes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -502,10 +552,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" width="814" height="728" key="#Intentions/0.0.1536.834@0.0.1536.834" timestamp="1590979207228" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1592004291231">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1592026747995">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1592004291231" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1592026747995" />
     <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1591761536365" />
     <state x="618" y="305" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1591980978665">
       <screen x="0" y="0" width="1536" height="834" />
@@ -537,88 +587,116 @@
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-725" y="231" key="#xdebugger.evaluate/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590952299256" />
-    <state x="0" y="20" key="CommitChangelistDialog2" timestamp="1591946109259">
+    <state x="516" y="141" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592051371191">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="516" y="141" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.834@0.0.1536.834" timestamp="1592051371191" />
+    <state x="0" y="20" key="CommitChangelistDialog2" timestamp="1592046405887">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="0" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591941210630" />
     <state x="231" y="6" key="CommitChangelistDialog2/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590956145492" />
-    <state x="0" y="20" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1591946109259" />
-    <state x="147" y="76" width="1228" height="695" key="DiffContextDialog" timestamp="1591752412052">
+    <state x="0" y="20" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1592046405887" />
+    <state x="147" y="76" width="1228" height="695" key="DiffContextDialog" timestamp="1592029664350">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="147" y="76" width="1228" height="695" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1591752412052" />
+    <state x="147" y="76" width="1228" height="695" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1592029664350" />
     <state x="184" y="98" width="1536" height="892" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591602465180" />
-    <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1591999361451">
+    <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1592051370232">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="740" y="-806" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590214274619" />
     <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590705528050" />
-    <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1591999361451" />
+    <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1592051370232" />
     <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591601670759" />
+<<<<<<< Updated upstream
     <state width="938" height="295" key="GridCell.Tab.0.bottom" timestamp="1592074440844">
       <screen x="0" y="0" width="1920" height="1080" />
+=======
+    <state width="1493" height="356" key="GridCell.Tab.0.bottom" timestamp="1592073002944">
+      <screen x="0" y="0" width="1536" height="834" />
+>>>>>>> Stashed changes
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404924" />
     <state width="1493" height="91" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.bottom/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788713" />
-    <state width="1493" height="356" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592004946640" />
+    <state width="1493" height="356" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592073002944" />
     <state width="1877" height="492" key="GridCell.Tab.0.bottom/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
+<<<<<<< Updated upstream
     <state width="938" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592074440844" />
     <state width="938" height="295" key="GridCell.Tab.0.center" timestamp="1592074440844">
       <screen x="0" y="0" width="1920" height="1080" />
+=======
+    <state width="1493" height="356" key="GridCell.Tab.0.center" timestamp="1592073002944">
+      <screen x="0" y="0" width="1536" height="834" />
+>>>>>>> Stashed changes
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
     <state width="1493" height="91" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.center/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788712" />
-    <state width="1493" height="356" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592004946640" />
+    <state width="1493" height="356" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592073002944" />
     <state width="1877" height="492" key="GridCell.Tab.0.center/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
+<<<<<<< Updated upstream
     <state width="938" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592074440844" />
     <state width="938" height="295" key="GridCell.Tab.0.left" timestamp="1592074440844">
       <screen x="0" y="0" width="1920" height="1080" />
+=======
+    <state width="1493" height="356" key="GridCell.Tab.0.left" timestamp="1592073002943">
+      <screen x="0" y="0" width="1536" height="834" />
+>>>>>>> Stashed changes
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
     <state width="1493" height="91" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.left/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788712" />
-    <state width="1493" height="356" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592004946640" />
+    <state width="1493" height="356" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592073002943" />
     <state width="1877" height="492" key="GridCell.Tab.0.left/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
+<<<<<<< Updated upstream
     <state width="938" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592074440844" />
     <state width="938" height="295" key="GridCell.Tab.0.right" timestamp="1592074440844">
       <screen x="0" y="0" width="1920" height="1080" />
+=======
+    <state width="1493" height="356" key="GridCell.Tab.0.right" timestamp="1592073002944">
+      <screen x="0" y="0" width="1536" height="834" />
+>>>>>>> Stashed changes
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
     <state width="1493" height="91" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.right/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788713" />
-    <state width="1493" height="356" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592004946640" />
+    <state width="1493" height="356" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592073002944" />
     <state width="1877" height="492" key="GridCell.Tab.0.right/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
+<<<<<<< Updated upstream
     <state width="938" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592074440844" />
     <state width="1493" height="318" key="GridCell.Tab.1.bottom" timestamp="1591987279584">
+=======
+    <state width="1493" height="234" key="GridCell.Tab.1.bottom" timestamp="1592040823896">
+>>>>>>> Stashed changes
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="40" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591939753774" />
     <state width="944" height="986" key="GridCell.Tab.1.bottom/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590955248524" />
-    <state width="1493" height="318" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591987279584" />
-    <state width="1493" height="318" key="GridCell.Tab.1.center" timestamp="1591987279584">
+    <state width="1493" height="234" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592040823896" />
+    <state width="1493" height="234" key="GridCell.Tab.1.center" timestamp="1592040823896">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="40" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591939753774" />
     <state width="944" height="986" key="GridCell.Tab.1.center/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590955248524" />
-    <state width="1493" height="318" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1591987279584" />
-    <state width="1493" height="318" key="GridCell.Tab.1.left" timestamp="1591987279584">
+    <state width="1493" height="234" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1592040823896" />
+    <state width="1493" height="234" key="GridCell.Tab.1.left" timestamp="1592040823896">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="40" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591939753774" />
     <state width="944" height="986" key="GridCell.Tab.1.left/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590955248524" />
-    <state width="1493" height="318" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1591987279584" />
-    <state width="1493" height="318" key="GridCell.Tab.1.right" timestamp="1591987279584">
+    <state width="1493" height="234" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1592040823896" />
+    <state width="1493" height="234" key="GridCell.Tab.1.right" timestamp="1592040823896">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="40" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591939753774" />
     <state width="944" height="986" key="GridCell.Tab.1.right/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590955248524" />
-    <state width="1493" height="318" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1591987279584" />
+    <state width="1493" height="234" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1592040823896" />
     <state x="184" y="90" key="MergeDialog" timestamp="1591602995761">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -656,11 +734,15 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1590118204939" />
+<<<<<<< Updated upstream
     <state x="116" y="122" width="1688" height="837" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592073004471" />
     <state x="533" y="136" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1591982356204">
+=======
+    <state x="533" y="136" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592006601334">
+>>>>>>> Stashed changes
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="533" y="136" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.834@0.0.1536.834" timestamp="1591982356204" />
+    <state x="533" y="136" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.834@0.0.1536.834" timestamp="1592006601334" />
     <state x="499" y="183" key="extract.method.dialog" timestamp="1591765612471">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -685,23 +767,16 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1590715241116" />
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1591894206994" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1591980428863">
+    <state x="361" y="67" key="scopes" timestamp="1592049481910">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="67" key="scopes/0.0.1536.834@0.0.1536.834" timestamp="1592049481910" />
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup" timestamp="1592036819198">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1591937382658" />
     <state x="539" y="-895" width="840" height="864" key="search.everywhere.popup/0.0.1536.834/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1590376804466" />
-    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1591980428863" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="431" y="147" width="672" height="687" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1592036819198" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProyectoI_DatosParty$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1591898019392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -278,6 +278,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/BaseModels/FatherNode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Proyecto1/DatosParty/DataStructures/BaseModels/MotherList.java">
           <value>
             <set />
@@ -674,6 +679,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/test/Proyecto1/DatosParty/Events/SwapPlayersTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/test/Proyecto1/DatosParty/GameTest.java">
           <value>
             <set />
           </value>
