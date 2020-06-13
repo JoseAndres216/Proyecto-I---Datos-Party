@@ -28,6 +28,10 @@ public class SimpleCircularList<T> implements MotherList<T> {
         return null;
     }
 
+    public FatherNode<T> getHead() {
+        return this.head;
+    }
+
     public void insertLast(T data) {
         SimpleNode<T> simpleNode = new SimpleNode(data);
         if (isEmpty()) {
@@ -43,10 +47,6 @@ public class SimpleCircularList<T> implements MotherList<T> {
             simpleNode.setNext(this.head);
             this.extension++;
         }
-    }
-
-    public void insertSpecialNode(FatherNode newNode) {
-
     }
 
     @Override
@@ -85,10 +85,6 @@ public class SimpleCircularList<T> implements MotherList<T> {
         }
         stringBuilder.append("]");
         return stringBuilder.toString();
-    }
-
-    public FatherNode<T> getHead() {
-        return this.head;
     }
 
 }

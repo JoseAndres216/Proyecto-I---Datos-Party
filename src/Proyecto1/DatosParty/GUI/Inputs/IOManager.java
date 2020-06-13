@@ -64,7 +64,7 @@ public class IOManager extends Application {
         // Set the Size of the VBox
         root.setMinSize(150, 200);
         root.setMaxSize(150, 200);
-        root.setBackground(new Background(new BackgroundFill(Color.valueOf("#3aa5ab"), CornerRadii.EMPTY, Insets.EMPTY)));
+        root.setBackground(new Background(new BackgroundFill(Color.valueOf("#081626"), CornerRadii.EMPTY, Insets.EMPTY)));
         stage.setResizable(false);
         // Set the Properties of the Stage
         stage.setX(370);

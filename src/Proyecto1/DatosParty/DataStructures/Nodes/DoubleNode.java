@@ -17,14 +17,6 @@ public class DoubleNode<T> implements FatherNode<T> {
         this.data = data;
     }
 
-
-    public DoubleNode(T data, DoubleNode<T> prev, DoubleNode<T> next) {
-        this.data = data;
-        this.prev = prev;
-        this.next = next;
-
-    }
-
     @Override
     public void setData(T newData) {
 
@@ -32,6 +24,17 @@ public class DoubleNode<T> implements FatherNode<T> {
 
     @Override
     public void setNext(FatherNode next) {
+
+    }
+
+    public void setNext(DoubleNode next) {
+
+        this.next = next;
+    }
+
+    public void setPrev(DoubleNode prev) {
+
+        this.prev = prev;
 
     }
 
@@ -43,21 +46,14 @@ public class DoubleNode<T> implements FatherNode<T> {
         return next;
     }
 
-    public void setNext(DoubleNode next) {
 
-        this.next = next;
-    }
 
     public DoubleNode getPrev() {
 
         return prev;
     }
 
-    public void setPrev(DoubleNode prev) {
 
-        this.prev = prev;
-
-    }
 
 
 }

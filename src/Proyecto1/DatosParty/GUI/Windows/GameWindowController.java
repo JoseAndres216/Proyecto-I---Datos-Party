@@ -33,7 +33,7 @@ public class GameWindowController {
     Label positions;
 
     public void pressedStart(Event event) throws Exception {
-        this.exitButton.setStyle("-fx-background-color: #16676c; ");
+        this.exitButton.setStyle("-fx-background-color: #081626; ");
         this.startButton.setVisible(false);
         Table.getInstance().setCanvas(canvas);
         Table.getInstance().drawTable();
@@ -58,6 +58,10 @@ public class GameWindowController {
     public void pressedExitbutton(Event event) throws Throwable {
         Stage stage = (Stage) (this.exitButton.getScene().getWindow());
         stage.close();
-        IOManager.getInstance().close();
+        try {
+            IOManager.getInstance().close();
+        } catch (Exception e) {
+            System.out.println("Game Over!");
+        }
     }
 }

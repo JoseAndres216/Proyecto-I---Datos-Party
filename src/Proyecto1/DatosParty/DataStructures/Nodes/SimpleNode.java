@@ -9,7 +9,7 @@ import Proyecto1.DatosParty.DataStructures.BaseModels.FatherNode;
  */
 public class SimpleNode<T> implements FatherNode<T> {
 
-    private SimpleNode next = null;
+    private SimpleNode<T> next = null;
     private T data = null;
 
     public SimpleNode(T data) {

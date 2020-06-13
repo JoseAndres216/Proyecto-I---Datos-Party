@@ -32,19 +32,6 @@ public class DoubleLinkedList<T> implements MotherList<T> {
         return this.tail;
     }
 
-    public void insertFirst(T data) {
-        DoubleNode newElement = new DoubleNode<T>(data);
-        if (this.head == null) {
-            this.head = this.tail = newElement;
-            this.len++;
-        } else {
-            newElement.setNext(this.head);
-            this.head.setPrev(newElement);
-            this.head = newElement;
-            this.len++;
-        }
-    }
-
     public void insertLast(T data) {
         DoubleNode newElement = new DoubleNode<T>(data);
         if (this.head == null) {
