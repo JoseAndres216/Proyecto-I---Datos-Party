@@ -32,7 +32,20 @@ public class GameWindowController {
     @FXML
     Label positions;
 
+    @FXML
+    Label lblPhaseA;
+    @FXML
+    Label lblPhaseB;
+    @FXML
+    Label lblPhaseC;
+    @FXML
+    Label lblPhaseD;
+
     public void pressedStart(Event event) throws Exception {
+        lblPhaseA.setVisible(true);
+        lblPhaseB.setVisible(true);
+        lblPhaseC.setVisible(true);
+        lblPhaseD.setVisible(true);
         this.exitButton.setStyle("-fx-background-color: #081626; ");
         this.startButton.setVisible(false);
         Table.getInstance().setCanvas(canvas);
