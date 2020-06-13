@@ -1,0 +1,17 @@
+Proyecto1.DatosParty
+Proyecto1.DatosParty.Boxes
+Proyecto1.DatosParty.DataStructures.BaseModels
+Proyecto1.DatosParty.DataStructures.CircularDoubleList
+Proyecto1.DatosParty.DataStructures.DoubleLinkedList
+Proyecto1.DatosParty.DataStructures.Nodes
+Proyecto1.DatosParty.DataStructures.SimpleCircularList
+Proyecto1.DatosParty.DataStructures.SimpleLinkedList
+Proyecto1.DatosParty.DataStructures.Stack
+Proyecto1.DatosParty.Events
+Proyecto1.DatosParty.GUI.Dice
+Proyecto1.DatosParty.GUI.Help
+Proyecto1.DatosParty.GUI.Inputs
+Proyecto1.DatosParty.GUI.Windows
+Proyecto1.DatosParty.GUI.Windows.Minigames
+Proyecto1.DatosParty.GUI.table
+Proyecto1.DatosParty.Observer

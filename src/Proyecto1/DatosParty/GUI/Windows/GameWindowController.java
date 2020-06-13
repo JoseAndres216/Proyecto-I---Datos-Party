@@ -7,9 +7,10 @@ import Proyecto1.DatosParty.Player;
 import Proyecto1.DatosParty.Table;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class GameWindowController {
@@ -23,28 +24,40 @@ public class GameWindowController {
     Button startButton;
 
     @FXML
-    ListView eventDisplayer;
+    Label eventDisplayer;
 
+    @FXML
+    Label roundCounter;
 
-    public void drawPhases(Event event) throws Exception {
+    @FXML
+    Label positions;
+
+    public void pressedStart(Event event) throws Exception {
+        this.exitButton.setStyle("-fx-background-color: #16676c; ");
+        this.startButton.setVisible(false);
         Table.getInstance().setCanvas(canvas);
-
         Table.getInstance().drawTable();
         Table.getInstance().drawPlayers();
 
         SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
         for (int i = 0; i < players.len(); i++) {
+            this.eventDisplayer.setAlignment(Pos.CENTER);
+            this.eventDisplayer.setWrapText(true);
             players.accessNode(i).setEventDisplay(this.eventDisplayer);
         }
 
         Game.getInstance().setEventDisplay(this.eventDisplayer);
+        Game.getInstance().setRoundCounter(this.roundCounter);
+        Game.getInstance().setPositionsTable(this.positions);
 
         if (!IOManager.getInstance().isStarted()) {
             IOManager.getInstance().start(new Stage());
         }
     }
 
-    public void pressedExitbutton(Event event) throws Exception {
-        Game.getInstance().startMinigame();
+    public void pressedExitbutton(Event event) throws Throwable {
+        Stage stage = (Stage) (this.exitButton.getScene().getWindow());
+        stage.close();
+        IOManager.getInstance().close();
     }
 }

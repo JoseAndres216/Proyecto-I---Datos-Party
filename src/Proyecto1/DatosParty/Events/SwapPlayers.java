@@ -19,7 +19,7 @@ public class SwapPlayers extends Event{
      * @param player1 list of players
      */
     @Override
-    public void interact(Player player1) {
+    public void interact(Player player1) throws Exception {
         Player player2 = Game.getRandomPlayer(player1);
 
         Phase phaseP1 = player1.getActualPhase();

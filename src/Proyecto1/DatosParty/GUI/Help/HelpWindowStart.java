@@ -11,12 +11,7 @@ import javafx.stage.StageStyle;
  * Class for drawing the help window, it has its own main method
  */
 public class HelpWindowStart extends Application {
-    /**
-     * method for drawing help window, a normal window with always on top feature
-     *
-     * @param stage
-     * @throws Exception IO exception from the FXML loader
-     */
+
     private static HelpWindowStart instance = null;
 
     private HelpWindowStart() {
@@ -39,7 +34,11 @@ public class HelpWindowStart extends Application {
         return instance;
 
     }
-
+    /**
+     * method for drawing help window, a normal window with always on top feature
+     * @param stage a new stage for drawing the window
+     * @throws Exception from the start method.
+     */
     public void start(Stage stage) throws Exception {
         if (this.open) {
 

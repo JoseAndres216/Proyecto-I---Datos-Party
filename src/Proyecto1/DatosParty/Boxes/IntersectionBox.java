@@ -5,7 +5,13 @@ import Proyecto1.DatosParty.Phase;
 import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+
+/** Class of implementing the intersection box, it has no events asociated, this box is the secret key to find
+ * the possible ways on the table, it stores inside a phase instance and an exit point.
+ *
+ */
 
 public class IntersectionBox extends Box {
 
@@ -15,7 +21,7 @@ public class IntersectionBox extends Box {
 
     //  //  //  //  //  //  //  //  //  //               METHODS                 //  //  //  //  //  //  //  //  //  //
 
-    /**
+    /*
      * Setters and getters of the class.
      */
     public MotherList<Box> getList() {
@@ -47,34 +53,37 @@ public class IntersectionBox extends Box {
      * @param canvas canvas for drawing the boxes
      */
     public void draw(int x, int y, Canvas canvas) {
-
+        super.draw(x, y, canvas);
         // Get the grapics context of the canvas
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         //set the color
-        gc.setFill(Color.WHITE);
-
+        gc.setFill(Color.valueOf("#efefef"));
         gc.setStroke(Color.BLACK);
 
         //Draw the rectangle
-        gc.strokeRect(x, y, this.height, this.width);
+        //gc.strokeRect(x, y, this.height, this.width);
         gc.fillRect(x, y, this.height, this.width);
 
-        gc.setFill(Color.BLACK);
-        StringBuilder id = new StringBuilder();
-        id.append(this.excelId);
-        gc.fillText((id.toString()), 10, 150);
 
-        if(this.hasStar){
-            gc.setFill(Color.WHITE);
+        if (this.hasStar) {
+
+            Image star = new Image("Proyecto1/DatosParty/GUI/Resources/images/star.png");
+            gc.drawImage(star, x, y);
+        }
+        if (this.isHilighted) {
             gc.setStroke(Color.BLACK);
-            gc.strokeOval(x+13,y+13,10, 10);
-            gc.setFill(Color.WHITE);
+            gc.setLineWidth(5);
+            gc.strokeRect(x, y, this.height, this.width);
+
+            gc.setLineWidth(1);
+            gc.strokeText(new StringBuilder().append(this.excelId).toString(), x + 6, y + (this.width) / 2 + 2);
+            this.isHilighted = false;
         }
     }
 
     @Override
-    public void iteract(Player player) {
+    public void iteract(Player player) throws Exception {
         super.iteract(player);
     }
 

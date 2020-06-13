@@ -9,7 +9,7 @@ public class Observable {
     /**
      * Method for attaching a observer
      *
-     * @param observer
+     * @param observer an observer to attach to the subject.
      */
     public void attach(Observer observer) {
         this.observer = observer;

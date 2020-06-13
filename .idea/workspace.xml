@@ -20,72 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee66dd22-e32e-4710-af44-09944fffcbea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/META-INF/ProyectoI-DatosParty.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Inputs/IOManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Earth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/FinishLine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Hand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Mars.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Moon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Palm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Palm2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Rocket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Satellite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/ShootingStar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Resources/images/Stick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Cards.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/CardsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Formula.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/FormulaController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/LuckyStick.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/LuckyStickController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Numbers.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/NumbersController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissors.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RockPaperScissorsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Rockets.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RocketsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/Vowels.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/VowelsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Minigames/RockPaperScissors.class~Updated upstream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/EventTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/SwapPlayersTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/ProyectoI-DatosParty/Proyecto1/DatosParty/PlayerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Proyecto1/DatosParty/Events/EventTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Proyecto1/DatosParty/Events/SwapPlayersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/13f2d9a4bcbeffc49fe6b75da60f083c9a6aae35" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/13f2d9a4bcbeffc49fe6b75da60f083c9a6aae35" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/66673294848dccbae9517a9ce1c2cef3eb54e207" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/66673294848dccbae9517a9ce1c2cef3eb54e207" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8bb7339aa178a0b666ea6e1e4de5d9c8f52bf87b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8bb7339aa178a0b666ea6e1e4de5d9c8f52bf87b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c96e86a4ff57aaf2bce7eb5202091ffa63e84cae" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c96e86a4ff57aaf2bce7eb5202091ffa63e84cae" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoI-DatosParty.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoI-DatosParty.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Duel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Duel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Event.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Teleport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Events/Teleport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Inputs/IOManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Inputs/IOManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/GameWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/GameWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/GameWindowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/GameWindowController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RocketsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/GUI/Windows/Minigames/RocketsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Minigames/RockPaperScissors.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProyectoI-DatosParty/Proyecto1/DatosParty/Table.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Duel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Duel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Teleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Events/Teleport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Inputs/IOManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Inputs/IOManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/GameWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/GameWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/GameWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/GameWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/CardsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/CardsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/FormulaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/FormulaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/LuckyStickController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/LuckyStickController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/NumbersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/NumbersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RocketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/RocketsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/VowelsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/GUI/Windows/Minigames/VowelsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proyecto1/DatosParty/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -551,10 +499,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" width="814" height="728" key="#Intentions/0.0.1536.834@0.0.1536.834" timestamp="1590979207228" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1591982570305">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1592004291231">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1591982570305" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1592004291231" />
     <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1591761536365" />
     <state x="618" y="305" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1591980978665">
       <screen x="0" y="0" width="1536" height="834" />
@@ -578,6 +526,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591600873936" />
+    <state x="499" y="164" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1592004525629">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="164" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.834@0.0.1536.834" timestamp="1592004525629" />
     <state x="-725" y="231" key="#xdebugger.evaluate" timestamp="1590952299256">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
@@ -600,41 +552,41 @@
     <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590705528050" />
     <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1591999361451" />
     <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591601670759" />
-    <state width="1493" height="356" key="GridCell.Tab.0.bottom" timestamp="1592002807367">
+    <state width="1493" height="356" key="GridCell.Tab.0.bottom" timestamp="1592004946640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404924" />
     <state width="1493" height="91" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.bottom/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788713" />
-    <state width="1493" height="356" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592002807367" />
+    <state width="1493" height="356" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592004946640" />
     <state width="1877" height="492" key="GridCell.Tab.0.bottom/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="1493" height="356" key="GridCell.Tab.0.center" timestamp="1592002807367">
+    <state width="1493" height="356" key="GridCell.Tab.0.center" timestamp="1592004946640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
     <state width="1493" height="91" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.center/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788712" />
-    <state width="1493" height="356" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592002807367" />
+    <state width="1493" height="356" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592004946640" />
     <state width="1877" height="492" key="GridCell.Tab.0.center/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="1493" height="356" key="GridCell.Tab.0.left" timestamp="1592002807366">
+    <state width="1493" height="356" key="GridCell.Tab.0.left" timestamp="1592004946640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
     <state width="1493" height="91" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.left/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788712" />
-    <state width="1493" height="356" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592002807366" />
+    <state width="1493" height="356" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592004946640" />
     <state width="1877" height="492" key="GridCell.Tab.0.left/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
-    <state width="1493" height="356" key="GridCell.Tab.0.right" timestamp="1592002807367">
+    <state width="1493" height="356" key="GridCell.Tab.0.right" timestamp="1592004946640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1877" height="492" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590299404923" />
     <state width="1493" height="91" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591941175326" />
     <state width="1493" height="600" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1590960318127" />
     <state width="1493" height="94" key="GridCell.Tab.0.right/0.0.1536.834/0.-1080.1920.1050@0.0.1536.834" timestamp="1590381788713" />
-    <state width="1493" height="356" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592002807367" />
+    <state width="1493" height="356" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592004946640" />
     <state width="1877" height="492" key="GridCell.Tab.0.right/0.0.1536.864/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1590300783086" />
     <state width="1493" height="318" key="GridCell.Tab.1.bottom" timestamp="1591987279584">
       <screen x="0" y="0" width="1536" height="834" />
@@ -736,7 +688,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Proyecto1/DatosParty/Game.java</url>
-          <line>74</line>
+          <line>78</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>

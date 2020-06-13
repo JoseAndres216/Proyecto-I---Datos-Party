@@ -6,20 +6,12 @@ import Proyecto1.DatosParty.DataStructures.BaseModels.MotherList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Phase {
-
+    //Settings for the phase.
     public MotherList<Box> phaseList;
     public int exitPoint;
     public boolean isTable;
     public boolean isPhaseD = false;
     private String tag;
-
-    public boolean isPhaseD() {
-        return isPhaseD;
-    }
-
-    public void setIsPhaseD(boolean phaseD) {
-        isPhaseD = phaseD;
-    }
 
     public Phase(MotherList list, boolean isTable, String tag) {
         this.phaseList = list;
@@ -39,6 +31,14 @@ public class Phase {
         return exitPoint;
     }
 
+    public boolean isPhaseD() {
+        return isPhaseD;
+    }
+
+    public void setIsPhaseD(boolean phaseD) {
+        isPhaseD = phaseD;
+    }
+
     /**
      * @param greenBoxes  amount of green boxes
      * @param redBoxes    amount of red boxes
@@ -46,7 +46,7 @@ public class Phase {
      * @param whiteBoxes  amount of white boxes
      * @param exitPoint   zero-based index position of the mainTable list box that is the exit point fo the phase (-1) on the phase D
      */
-    public void config(int greenBoxes, int redBoxes, int yellowBoxes, int whiteBoxes, int exitPoint ) {
+    public void config(int greenBoxes, int redBoxes, int yellowBoxes, int whiteBoxes, int exitPoint) {
         this.generatePhases(greenBoxes, redBoxes, yellowBoxes, whiteBoxes);
         this.exitPoint = exitPoint;
 
