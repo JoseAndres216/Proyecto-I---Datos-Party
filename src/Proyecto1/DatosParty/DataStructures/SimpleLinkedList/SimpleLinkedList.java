@@ -8,6 +8,11 @@ public class SimpleLinkedList <T> implements MotherList<T> {
     private SimpleNode<T> tail = null;
     private int len = 0;
 
+    public void swap(SimpleNode<T> i, SimpleNode<T> j) {
+        T temp = i.getData();
+        i.setData(j.getData());
+        j.setData(temp);
+    }
     public SimpleNode<T> getHead() {
         return this.head;
     }

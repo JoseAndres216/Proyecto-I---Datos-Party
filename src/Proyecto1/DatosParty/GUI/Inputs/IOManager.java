@@ -33,7 +33,7 @@ public class IOManager extends Application {
     private Label eventDisplay;
 
     public void close(){
-        Stage stage = (Stage)(this.eventDisplay.getScene().getWindow());
+        Stage stage = (Stage)(this.root.getScene().getWindow());
         stage.close();
     }
     private IOManager() {

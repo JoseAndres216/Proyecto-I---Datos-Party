@@ -26,10 +26,14 @@ public class GameWindowController {
     @FXML
     Label eventDisplayer;
 
+    @FXML
+    Label roundCounter;
+
+    @FXML
+    Label positions;
 
     public void drawPhases(Event event) throws Exception {
         Table.getInstance().setCanvas(canvas);
-
         Table.getInstance().drawTable();
         Table.getInstance().drawPlayers();
 
@@ -39,6 +43,8 @@ public class GameWindowController {
         }
 
         Game.getInstance().setEventDisplay(this.eventDisplayer);
+        Game.getInstance().setRoundCounter(this.roundCounter);
+        Game.getInstance().setPositionsTable(this.positions);
 
         if (!IOManager.getInstance().isStarted()) {
             IOManager.getInstance().start(new Stage());
