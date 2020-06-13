@@ -8,7 +8,6 @@ import Proyecto1.DatosParty.Observer.Observer;
 import Proyecto1.DatosParty.Phase;
 import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
-
 /**
  * This class is the base for all the other boxes.
  */

@@ -32,14 +32,17 @@
                         <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
                      </font>
                   </Text>
-                  <Button fx:id="Rock1" graphicTextGap="0.0" layoutX="5.0" layoutY="129.0" mnemonicParsing="false" mouseTransparent="true" onKeyPressed="#Rock1Pressed" prefHeight="74.0" prefWidth="74.0">
+                  <Button fx:id="Rock1" cancelButton="true" graphicTextGap="0.0" layoutX="5.0" layoutY="129.0"
+                          mnemonicParsing="false" mouseTransparent="true" onKeyPressed="#Rock1Pressed" prefHeight="74.0"
+                          prefWidth="74.0">
                      <graphic>
-                        <ImageView fitHeight="74.0" fitWidth="74.0" onKeyPressed="#Rock1Pressed" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="74.0" fitWidth="74.0" mouseTransparent="true" onKeyPressed="#Rock1Pressed"
+                                   pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Rock.png" />
+                              <Image url="@../../Resources/images/Rock.png"/>
                            </image>
                            <viewport>
-                              <Rectangle2D height="74.0" width="74.0" />
+                              <Rectangle2D height="74.0" width="74.0"/>
                            </viewport>
                         </ImageView>
                      </graphic>
@@ -48,9 +51,10 @@
                      </cursor></Button>
                   <Button fx:id="Paper1" layoutX="105.0" layoutY="129.0" mnemonicParsing="false" mouseTransparent="true" onKeyPressed="#Paper1Pressed" prefHeight="74.0" prefWidth="74.0">
                      <graphic>
-                        <ImageView fitHeight="74.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="74.0" fitWidth="74.0" mouseTransparent="true" pickOnBounds="true"
+                                   preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Paper.png" />
+                              <Image url="@../../Resources/images/Paper.png"/>
                            </image>
                         </ImageView>
                      </graphic>
@@ -60,9 +64,10 @@
                   </Button>
                   <Button fx:id="Scissors1" layoutX="205.0" layoutY="129.0" mnemonicParsing="false" mouseTransparent="true" onKeyPressed="#Scissors1Pressed" prefHeight="74.0" prefWidth="74.0">
                      <graphic>
-                        <ImageView fitHeight="74.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="74.0" fitWidth="74.0" mouseTransparent="true" pickOnBounds="true"
+                                   preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Scissors.png" />
+                              <Image url="@../../Resources/images/Scissors.png"/>
                            </image>
                         </ImageView>
                      </graphic>
@@ -114,9 +119,10 @@
                   </Button>
                   <Button fx:id="Scissors2" layoutX="205.0" layoutY="129.0" mnemonicParsing="false" mouseTransparent="true" onKeyPressed="#Scissors2Pressed" prefHeight="74.0" prefWidth="74.0">
                      <graphic>
-                        <ImageView fitHeight="74.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView id="Scissors2" fitHeight="74.0" fitWidth="74.0" onKeyPressed="#Scissors2Pressed"
+                                   pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Scissors.png" />
+                              <Image url="@../../Resources/images/Scissors.png"/>
                            </image>
                         </ImageView>
                      </graphic>

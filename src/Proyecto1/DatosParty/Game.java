@@ -134,8 +134,10 @@ public class Game extends Application {
                 players.accessNode(i).modifyCoins(true, 3);
             } else if (players.accessNode(i).getMinigamepoints() == 2) {
                 players.accessNode(i).modifyCoins(true, 2);
-            } else {
+            } else if (players.accessNode(i).getMinigamepoints() == 1) {
                 players.accessNode(i).modifyCoins(true, 0);
+            } else {
+                players.accessNode(i).modifyCoins(false, 5);
             }
         }
     }
