@@ -12,22 +12,40 @@ import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Game extends Application {
+    //setting for the singleton pattern
     private static Game instance = null;
+
+    //List to hold all the players
     private SimpleLinkedList<Player> players = new SimpleLinkedList<>();
+
+    //Duplicate of the players list, but ordered.
+    SimpleLinkedList<Player> OrderedPlayerList;
+
+    //Game table
     private Table gameTable;
+
+    //settings for the game
     private int cantidadRondas = 10;
     private int playedRounds = 1;
+
+    //UI components.
     private Label eventDisplay;
     private Label roundCounter;
     private Label positions;
-    SimpleLinkedList<Player> OrderedPlayerList;
+
     private Game() {
         this.gameTable = Table.getInstance();
         OrderedPlayerList = this.players;
-
     }
 
-    public static SimpleLinkedList<Player> listWithnoPlayer(Player player) {
+    /**
+     * Returns a list with al the players, except the one passed as a parameter.
+     * This method its used for generating the minigames and all the events.
+     *
+     * @param player player that can't be on the list.
+     * @return SimpleLinkedList<Player> with the other players.
+     */
+    public static SimpleLinkedList<Player> otherPlayers(Player player) {
         SimpleLinkedList<Player> list = Game.getInstance().getPlayers();
         SimpleLinkedList<Player> newList = new SimpleLinkedList();
         for (int i = 0; i < list.len(); i++) {
@@ -38,6 +56,14 @@ public class Game extends Application {
         return newList;
     }
 
+    /**
+     * This method is for getting a random player, different of the given
+     * Its used mostly on the events like swap players or steal coins/star, because the player that activates the event
+     * need a random player to exe the event.
+     *
+     * @param player player
+     * @return a random player
+     */
     public static Player getRandomPlayer(Player player) {
         int len = Game.getInstance().players.len();
         int randomInt = ThreadLocalRandom.current().nextInt(len);
@@ -50,6 +76,11 @@ public class Game extends Application {
         return randomPlayer;
     }
 
+    /**
+     * Singleton for the Game class, its important because it allows to use the same instance of the class in different parts of the code.
+     *
+     * @return the instance of the Game class
+     */
     synchronized static public Game getInstance() {
         if (instance == null) {
             instance = new Game();
@@ -61,19 +92,40 @@ public class Game extends Application {
         return players;
     }
 
-    public void addPlayer(Player player) {
-        this.players.insertLast(player);
+    public Label getEventDisplay() {
+        if (this.eventDisplay != null) {
+            return this.eventDisplay;
+        } else {
+            throw new IllegalStateException("The instance of event Display still null");
+        }
+    }
+
+    public void setRoundCounter(Label roundCounter) {
+        this.roundCounter = roundCounter;
+        this.roundCounter.setText("1/" + this.cantidadRondas);
+    }
+
+    public void setPositionsTable(Label positions) {
+        this.positions = positions;
+    }
+
+    public void setEventDisplay(Label eventDisplay) {
+        this.eventDisplay = eventDisplay;
     }
 
     public void setRounds(int amount) {
         this.cantidadRondas = amount;
     }
 
-    @Override
-    public String toString() {
-        return "Instancia de clase Game";
+    public void addPlayer(Player player) {
+        this.players.insertLast(player);
     }
 
+    /**
+     * Runs the players list after a minigame and gives the respective amount of coins.
+     *
+     * @throws IOException
+     */
     public void giveMoney() throws IOException {
         for (int i = 0; i <= players.len() - 1; i++) {
             if (players.accessNode(i).getMinigamepoints() == 4) {
@@ -88,18 +140,9 @@ public class Game extends Application {
         }
     }
 
-    public Label getEventDisplay() {
-        if (this.eventDisplay != null) {
-            return this.eventDisplay;
-        } else {
-            throw new IllegalStateException("The instance of event Display still null");
-        }
-    }
-
-    public void setEventDisplay(Label eventDisplay) {
-        this.eventDisplay = eventDisplay;
-    }
-
+    /**
+     * Generates a random star on the table.
+     */
     public void generateStar() {
         int boxId = (int) (Math.random() * ((77 - 0) + 1)) + 0;
         System.out.println(boxId);
@@ -123,6 +166,9 @@ public class Game extends Application {
         phase.getPhaselist().accessNode(boxId).setHasStar(true);
     }
 
+    /**
+     * Re-sorts the sorted list of players, for getting the positions and eventually, the winner.
+     */
     public void updatePlayers() {
         //sort the list
         for (SimpleNode<Player> first = OrderedPlayerList.getHead(); first.getNext() != null; first = first.getNext()) {
@@ -152,6 +198,11 @@ public class Game extends Application {
         this.positions.setText(toAdd.toString());
     }
 
+    /**
+     * Starts a new round, executes a minigame and re-evaluate the positions, also uptates the UI components.
+     *
+     * @throws Throwable
+     */
     public void nextRound() throws Throwable {
         if (this.playedRounds == this.cantidadRondas) {
             this.updatePlayers();
@@ -163,10 +214,18 @@ public class Game extends Application {
             IOManager.getInstance().close();
             return;
         }
+
         this.playedRounds++;
+        this.roundCounter.setText(this.playedRounds + "/" + this.cantidadRondas);
         this.start(new Stage());
     }
 
+    /**
+     * Starts a minigame, for facility, all minigames are generated on a new window.
+     *
+     * @param primaryStage a stage instance to draw the window.
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         int option = (int) (Math.random() * ((6 - 1) + 1)) + 1;
@@ -200,12 +259,8 @@ public class Game extends Application {
         }
     }
 
-    public void setRoundCounter(Label roundCounter) {
-        this.roundCounter = roundCounter;
-        this.roundCounter.setText("1/" + this.cantidadRondas);
-    }
-
-    public void setPositionsTable(Label positions) {
-        this.positions = positions;
+    @Override
+    public String toString() {
+        return "Instancia de clase Game";
     }
 }

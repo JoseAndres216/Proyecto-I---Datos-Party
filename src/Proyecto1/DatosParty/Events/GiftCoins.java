@@ -40,7 +40,7 @@ public class GiftCoins extends Event {
     @Override
     public void interact(Player afected) {
 
-        SimpleLinkedList<Player> players = Game.listWithnoPlayer(afected);
+        SimpleLinkedList<Player> players = Game.otherPlayers(afected);
 
         int n = afected.getCoins() + 1;
         int coinsToWin;

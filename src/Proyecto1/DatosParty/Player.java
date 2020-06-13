@@ -7,24 +7,25 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
 
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Player {
-    public final String nickname;
-    private final int playernumber;
-    //Reference of the main table
-    public MotherList<Box> actualList;
-    public Color color;
+
     //Configurations for the location of the player on table
     protected Phase actualPhase; // actual phase of the player from A B C D to MainPhase.
     protected int actualBoxIndex; //Index of the box (zero-based index of the phase) ej: player could be phase C, box 8
-    private int minigamepoints;
+    public MotherList<Box> actualList;//actual phase list.
+    private MotherList<Box> mainListReference; // list to move trough, always its the mainList
+
     //Values of the player.
+    public final String nickname;
+    private final int ID;
+    private int minigamepoints;
     private int coins;
     private int stars;
-    private MotherList<Box> mainListReference; // list to move trough
+
+    //Settings for UI
     private Label eventDisplay;
     private Image avatar;
 
@@ -36,25 +37,25 @@ public class Player {
      */
     public Player(int playerNumber, String nickname) {
         //Settings for game
-        this.coins = 1000;
-        this.stars = 1000;
+        this.coins = 25;
+        this.stars = 1;
         this.minigamepoints = 0;
 
         //Ubication on the table
-        this.actualPhase = Table.getInstance().phaseC;
-        this.actualList = Table.getInstance().phaseC.phaseList;
-
+        this.actualPhase = Table.getInstance().mainPhase;
+        this.actualList = Table.getInstance().mainPhase.phaseList;
         this.mainListReference = Table.getInstance().mainPhase.phaseList; //should be the main table list.
-        this.actualBoxIndex = 4;
+        this.actualBoxIndex = 0;
 
         //Identification
         this.nickname = nickname;
-        this.playernumber = playerNumber;
+        this.ID = playerNumber;
 
+        //swith for setting the avatar
         switch (playerNumber) {
             case 1:
                 this.avatar = new Image("Proyecto1/DatosParty/GUI/Resources/images/p1.png");
-                 break;
+                break;
             case 2:
                 this.avatar = new Image("Proyecto1/DatosParty/GUI/Resources/images/p2.png");
                 break;
@@ -75,8 +76,8 @@ public class Player {
         return stars;
     }
 
-    public int getPlayernumber() {
-        return playernumber;
+    public int getID() {
+        return ID;
     }
 
     public int getMinigamepoints() {
@@ -103,28 +104,47 @@ public class Player {
         return actualList;
     }
 
+    public Image getAvatar() {
+        return this.avatar;
+    }
+
+    public void setEventDisplay(Label eventDisplay) {
+        this.eventDisplay = eventDisplay;
+    }
+
+    /**
+     * Moves a player to a different box
+     *
+     * @param newPhase  phase to move the player
+     * @param actualBox zero-based index of the new box.
+     * @throws Exception
+     */
     public void MoveTo(Phase newPhase, int actualBox) throws Exception {
-        //eliminar el jugador de la casilla, para no dar conflicto con la verificacio de si hay o no dos
+        //Eliminates the player from the old box
         this.actualPhase.getPhaselist().accessNode(this.actualBoxIndex).removePlayer();
+
+        //Set the new values of the box.
         this.actualPhase = newPhase;
         this.actualBoxIndex = actualBox;
 
+        //Interacting with the new box
         this.actualPhase.getPhaselist().accessNode(this.actualBoxIndex).placePlayer(this);//FOR GRAPHIC REPRESENTATION AND RULE THAT SAYS ONE PLAYER PER BOX
         this.actualPhase.getPhaselist().accessNode(this.actualBoxIndex).iteract(this);//FOR ITERACTIONS WITH THE BOX
+
+        //Updates the table with the new position
+        Table.getInstance().drawTable();
+        Table.getInstance().drawPlayers();
+        //Uptades the board, because coins and stars could change in the new box.
         Game.getInstance().updatePlayers();
-        try {
-            Table.getInstance().drawTable();
-            Table.getInstance().drawPlayers();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
 
     }
 
     /**
-     * mediante una verificacion >< determina la fase segun el numero de id, basado en el excel.
+     * Move the player to a box given its id, which was defined on the prototype of the board, and as the board ist always the same
+     * we can assume the values are right.
      *
-     * @param box
+     * @param box id of the new box
      */
     public void MoveTo(int boxExcelid) throws Exception {
         Phase phase = null;
@@ -156,18 +176,18 @@ public class Player {
      */
     public void modifyStars(boolean gain, int amount) {
         if (gain) {
-            String update = " more stars.";
-            //this.eventDisplay.setText(this.nickname + " has: " + amount + update);
-
+            String update = " stars.";
+            this.eventDisplay.setText((this.nickname + " earned " + amount + update).toUpperCase());
             this.stars += amount;
         } else {
             if (this.stars - amount < 0) {
-                //this.eventDisplay.setText(this.nickname + " hasnt enought stars.");
+                this.eventDisplay.setText((this.nickname + " hasnt enought stars.").toUpperCase());
             }
-            String update = " less stars.";
+            String update = " stars.";
             this.stars -= amount;
-           // this.eventDisplay.setText(this.nickname + " has: " + amount + update);
+            this.eventDisplay.setText((this.nickname + " losed " + amount + update).toUpperCase());
         }
+        Game.getInstance().updatePlayers();
     }
 
     /**
@@ -177,120 +197,168 @@ public class Player {
      * @param amount amount of coins to earn.
      */
     public void modifyCoins(boolean gain, int amount) {
-        String update = " more coins.";
+        String update = " coins.";
         if (gain) {
             this.coins += amount;
-            //this.eventDisplay.setText(this.nickname + " earned: " + amount + update);
+            this.eventDisplay.setText((this.nickname + " earned " + amount + update).toUpperCase());
         } else {
             if (this.coins - amount < 0) {
-                //this.eventDisplay.setText("Player cant lose that coins " + this.nickname);
+                this.eventDisplay.setText(("Player cant lose that coins " + this.nickname).toUpperCase());
                 return;
             }
-            update = " less coins.";
-            //this.eventDisplay.setText(this.nickname + " losed: " + amount + update);
-
+            update = " coins.";
+            this.eventDisplay.setText((this.nickname + " losed " + amount + update).toUpperCase());
             this.coins -= amount;
         }
+        Game.getInstance().updatePlayers();
     }
 
     /**
-     * @param posicionesDisponibles cantidad de casillas disponibles para avanzar
-     * @param startPoint            punto desde el cual se recorre la lista (principal)
+     * @param avaliableMoves cantidad de casillas disponibles para avanzar
+     * @param startPoint     punto desde el cual se recorre la lista (principal)
      * @return
      * @throws Exception
      */
-    public SimpleLinkedList<Box> calcPossibleMoves(int posicionesDisponibles) throws Exception {
-        SimpleLinkedList<Box> posibles = new SimpleLinkedList<>();
-        Phase faseRecorrida = this.actualPhase;
-        int i = this.actualBoxIndex;
+    public SimpleLinkedList<Box> calcPossibleMoves(int avaliableMoves) throws Exception {
+        //Simple list for saving the posibilities
+        SimpleLinkedList<Box> possibles = new SimpleLinkedList<>();
 
-        if (!(faseRecorrida.isTable || faseRecorrida.isPhaseD())) {
-            //si la lista es de la fase c, es decir, es una lista doble.
-            if (faseRecorrida.toString() == "Phase C") {
+        //set a temporal reference for avoiding trouble on lost reference.
+        Phase tempPhase = this.actualPhase;
+        int tempIndex = this.actualBoxIndex;
+
+        //if the phae its the A, B or C phase
+        if (!(tempPhase.isTable || tempPhase.isPhaseD())) {
+            //If its phase C, this if its used for the backwards movement.
+            if (tempPhase.toString() == "Phase C") {
                 int cantidadDetras = (actualBoxIndex);
-                if (cantidadDetras >= posicionesDisponibles) {
-                    if (!posibles.is(faseRecorrida.getPhaseListElement(actualBoxIndex - posicionesDisponibles))) {
-                        posibles.insertLast(faseRecorrida.getPhaseListElement(actualBoxIndex - posicionesDisponibles));
-                        faseRecorrida.getPhaseListElement(actualBoxIndex - posicionesDisponibles).highlight();
-                        faseRecorrida.getPhaseListElement(actualBoxIndex - posicionesDisponibles).highlight();
+                //case when there is a possible backwards movement.
+                if (cantidadDetras >= avaliableMoves) {
+                    //checks if the box isnt already on the new list.
+                    if (!possibles.is(tempPhase.getPhaseListElement(actualBoxIndex - avaliableMoves))) {
+                        possibles.insertLast(tempPhase.getPhaseListElement(actualBoxIndex - avaliableMoves));
+                        tempPhase.getPhaseListElement(actualBoxIndex - avaliableMoves).highlight();
+                        tempPhase.getPhaseListElement(actualBoxIndex - avaliableMoves).highlight();
                     }
                 }
             }
-            int cantidadPorDelante = ((faseRecorrida.phaseList.len() - 1) - actualBoxIndex);
-            if (cantidadPorDelante >= posicionesDisponibles) {
-                if ((actualBoxIndex + posicionesDisponibles) > 9 || (actualBoxIndex + posicionesDisponibles) < 0) {
-
-                    throw new IllegalArgumentException("Value Unespected: " + (actualBoxIndex + posicionesDisponibles));
-
+            int avaliableForward = ((tempPhase.phaseList.len() - 1) - actualBoxIndex);
+            //In the case of phase A and B, evaluates if the possible move its inside the same phase.
+            if (avaliableForward >= avaliableMoves) {
+                //safety check of the values of the counter.
+                if ((actualBoxIndex + avaliableMoves) > 9 || (actualBoxIndex + avaliableMoves) < 0) {
+                    throw new IllegalArgumentException("Value Unespected: " + (actualBoxIndex + avaliableMoves));
                 }
-                if (!posibles.is(faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles))) {
-                    posibles.insertLast(faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles));
-                    faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles).highlight();
-                    faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles).highlight();
+                //if the counter is good, checks if the box isnt already added, if not, adds it.
+                if (!possibles.is(tempPhase.getPhaseListElement(actualBoxIndex + avaliableMoves))) {
+                    possibles.insertLast(tempPhase.getPhaseListElement(actualBoxIndex + avaliableMoves));
+                    tempPhase.getPhaseListElement(actualBoxIndex + avaliableMoves).highlight();
+                    tempPhase.getPhaseListElement(actualBoxIndex + avaliableMoves).highlight();
                 }
 
-            } else {
+            }
+            //case in which the result cant be in the phase.
+            else {
+                //sets the counter to the exit point of the phase, (obtained from the prototype)
+                tempIndex = this.actualPhase.exitPoint;
+                //changes the temporal reference of the phase, to the main phase
+                tempPhase = Table.getInstance().getMainPhase();
+                //reduces the possible moves, by calculating the moves that took to get out of the phase.
+                avaliableMoves = (avaliableMoves - (avaliableForward + 1));
 
-                i = this.actualPhase.exitPoint;
-                faseRecorrida = Table.getInstance().getMainPhase();
-                posicionesDisponibles = (posicionesDisponibles - (cantidadPorDelante + 1));
-                //i = (i - (cantidadPorDelante + 1));
 
             }
         }
-        while (posicionesDisponibles != 1) {//recorre el tablero , y se evalua el tipo de casilla que aparece
+        //goes box by box checking its phase, this while works on the phase D and the main phase.
 
-            if (i >= 36 && faseRecorrida.isTable) {
-                int exceso = i - 36;
-                i = exceso;
+        while (avaliableMoves != 1) {
+            //if its in the main phase.
+            if (tempPhase.isTable) {
+                //where dealing with circular list, so have to deal with the counter
+                if (tempIndex >= 36) {
+                    int excess = tempIndex - 36;
+                    tempIndex = excess;
+                }
             }
-            if (i >= 12 && faseRecorrida.isPhaseD()) {
-                int exceso = i - 12;
-                i = exceso;
+            //if the phase its the phase D
+            if (tempPhase.isPhaseD()) {
+                //where dealing with circular list, so have to deal with the counter
+                if (tempIndex >= 12) {
+                    int excess = tempIndex - 12;
+                    tempIndex = excess;
+                }
+                //calculates the result of going backwards on the phase
+                int backwardsMoves = actualBoxIndex - avaliableMoves;
+                //checks if the result is an positive number
+                if (backwardsMoves >= 0) {
+                    //checks if the box its already added and if not, adds it.
+                    if (!possibles.is(tempPhase.getPhaseListElement(backwardsMoves))) {
+                        tempPhase.getPhaseListElement(backwardsMoves).highlight();
+                        possibles.insertLast(tempPhase.getPhaseListElement(backwardsMoves));
+                    }
 
-            }
-            if (faseRecorrida.getPhaseListElement(i).isIntersection) {//caso en que el nodo es de tipo interseccion
-
-                int largoFase = faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().len();
-
-                if ((posicionesDisponibles) > (largoFase)) {
-                    //si el numero de casillas dentro de la fase es menor a la cantidad que hay que avanzar, la ignora y ya.
-                    i++;
                 } else {
-                    //si la cantidad de casillas para avanzar el menor o igual a la de la fase, se agrega la casilla que se tiene, se sigue con el
-                    //contador i para seguir recorriendo el main table.
-                    if (!posibles.is(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1))) {
-                        faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1).highlight();
-                        posibles.insertLast(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1));
-                        faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1);
+                    //if the result was a negative number, uses this while to calculate the new index.
+                    int j = tempIndex;
+                    int backwardsMovesAvaliable = avaliableMoves;
+                    while (backwardsMovesAvaliable != 0) {
+                        //checks if the index its negative
+                        if (j < 0) {
+                            //sets the value to the last index of the list
+                            j = 11;
+                        }
+                        j--;
+                        backwardsMovesAvaliable--;
+                    }
+                    //checks if the box with the calculated intex its in the results
+                    //if not, adds it.
+                    if (!possibles.is(tempPhase.getPhaseListElement(j))) {
+                        tempPhase.getPhaseListElement(j).highlight();
+                        possibles.insertLast(tempPhase.getPhaseListElement(j));
+
+                    }
+
+                }
+            }
+            //if the box its an intersection
+            if (tempPhase.getPhaseListElement(tempIndex).isIntersection) {//caso en que el nodo es de tipo interseccion
+                //gets the len of the list stored inside
+                int phaseLenght = tempPhase.getPhaseListElement(tempIndex).getPhase().getPhaselist().len();
+                //if the result isnt inside the phase, just skips the phase.
+                if ((avaliableMoves) > (phaseLenght)) {
+                    tempIndex++;
+                } else {
+                    //if the result its inside the phase, uses aritmethc calcs to add it, and keeps going throug the main table.
+                    //checks if the list already has the box and if the result its inside.
+                    if (!possibles.is(tempPhase.getPhaseListElement(tempIndex).getPhase().getPhaselist().accessNode(avaliableMoves - 1))) {
+                        tempPhase.getPhaseListElement(tempIndex).getPhase().getPhaselist().accessNode(avaliableMoves - 1).highlight();
+                        possibles.insertLast(tempPhase.getPhaseListElement(tempIndex).getPhase().getPhaselist().accessNode(avaliableMoves - 1));
+                        tempPhase.getPhaseListElement(tempIndex).getPhase().getPhaselist().accessNode(avaliableMoves - 1);
                     }
                 }
             }
-            i++;
-            posicionesDisponibles--;
+            //moves to the next box and discounts the move from the remaining moves.
+            tempIndex++;
+            avaliableMoves--;
         }
-        if (faseRecorrida.isTable) {
-            if (i >= 36) {
-                int exceso = i - 36;
-                i = exceso;
+        if (tempPhase.isTable) {
+            if (tempIndex >= 36) {
+                int exceso = tempIndex - 36;
+                tempIndex = exceso;
             }
-            if (faseRecorrida.isPhaseD) {
-                if (i >= 12) {
-                    int exceso = i - 12;
-                    i = exceso;
+            if (tempPhase.isPhaseD) {
+                if (tempIndex >= 12) {
+                    int exceso = tempIndex - 12;
+                    tempIndex = exceso;
                 }
             }
         }
-        if (!posibles.is(faseRecorrida.getPhaselist().accessNode(i + 1))) {
-            posibles.insertLast(faseRecorrida.getPhaselist().accessNode(i + 1));
-            faseRecorrida.getPhaselist().accessNode(i + 1).highlight();
+        if (!possibles.is(tempPhase.getPhaselist().accessNode(tempIndex + 1))) {
+            possibles.insertLast(tempPhase.getPhaselist().accessNode(tempIndex + 1));
+            tempPhase.getPhaselist().accessNode(tempIndex + 1).highlight();
         }
 
-        return posibles;
-    }
-
-    public void setEventDisplay(Label eventDisplay) {
-        this.eventDisplay = eventDisplay;
+        return possibles;
     }
 
     /**
@@ -302,38 +370,35 @@ public class Player {
      * @return
      * @throws Exception
      */
-    public SimpleLinkedList<Box> RollDices() throws Exception {
+    public SimpleLinkedList<Box> rollDices() throws Exception {
         int dices = ThreadLocalRandom.current().nextInt(4, 13);
         this.eventDisplay.setText(this.nickname + " got " + dices + " moves.");
-        SimpleLinkedList<Box> possibles = this.calcPossibleMoves(2);
+        SimpleLinkedList<Box> possibles = this.calcPossibleMoves(dices);
         return possibles;
     }
 
     @Override
     public String toString() {
         return "Player{" +
-                "playernumber=" + playernumber +
+                "playernumber=" + ID +
                 ", nickname='" + nickname + '\'' +
                 '}';
     }
 
+    /**
+     * Method for drawing the player's avatar on the table.
+     *
+     * @param canvas Canvas from Game instance.
+     * @throws Exception
+     */
     public void drawPlayer(Canvas canvas) throws Exception {
-
         // Get the grapics context of the canvas
         GraphicsContext gc = canvas.getGraphicsContext2D();
-
-        //set the color
-        gc.setFill(this.color);
-        gc.setStroke(Color.BLACK);
-
-        //Draw the figure
-        // gc.fillOval((double) this.actualPhase.getPhaselist().accessNode(this.getActualBoxIndex()).getX(), (double) this.actualPhase.getPhaselist().accessNode(this.getActualBoxIndex()).getY(), 20, 20);
+        //Draw the image.
         gc.drawImage(this.avatar, this.actualPhase.phaseList.accessNode(this.actualBoxIndex).getX(), this.actualPhase.phaseList.accessNode(this.actualBoxIndex).getY());
     }
 
-    public Image getAvatar() {
-        return this.avatar;
-    }
+
 }
 
 

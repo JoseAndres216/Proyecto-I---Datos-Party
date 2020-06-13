@@ -65,6 +65,7 @@ public class IOManager extends Application {
         root.setMinSize(150, 200);
         root.setMaxSize(150, 200);
         root.setBackground(new Background(new BackgroundFill(Color.valueOf("#3aa5ab"), CornerRadii.EMPTY, Insets.EMPTY)));
+        stage.setResizable(false);
         // Set the Properties of the Stage
         stage.setX(370);
         stage.setY(200 + 20);
@@ -119,7 +120,7 @@ public class IOManager extends Application {
     }
 
     public void selectBoxView(Player player) throws Exception {
-        SimpleLinkedList<Box> list = player.RollDices();
+        SimpleLinkedList<Box> list = player.rollDices();
         Table.getInstance().drawTable();
         Table.getInstance().drawPlayers();
         System.out.println(list);

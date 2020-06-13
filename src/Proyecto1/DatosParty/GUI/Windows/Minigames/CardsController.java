@@ -176,8 +176,8 @@ public class CardsController extends Application {
             card4.setMinigamepoints(numCard4);
         }
         Stage stage = (Stage)this.btnChoose1.getScene().getWindow();
-        stage.close();
         Game.getInstance().giveMoney();
+        stage.close();
     }
 
     @Override

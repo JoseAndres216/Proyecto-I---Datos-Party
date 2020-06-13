@@ -12,17 +12,19 @@ import javafx.scene.canvas.Canvas;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Class Table
+ * Class Table, used for the implementation of the phase A, B, C, D and the main phase.
  */
 public class Table {
+    //configuration for the singleton.
     private static Table instance = null;
     //Intialization of the Phases, (the main table will not be a phase)
     public Phase phaseA = new Phase(new SimpleLinkedList<Box>(), false, "Phase A");
     public Phase phaseB = new Phase(new SimpleLinkedList<Box>(), false, "Phase B");
     public Phase phaseC = new Phase(new DoubleLinkedList<Box>(), false, "Phase C");
     public Phase phaseD = new Phase(new CircularDoubleList<Box>(), false, "Phase D");
-
+    //UI element, for drawing the table and the players.
     private Canvas canvas;
+    //says if theres a star in the phase.
     private boolean isStar = false;
 
     public void setCanvas(Canvas canvas) throws Exception {
@@ -66,6 +68,34 @@ public class Table {
         return mainPhase;
     }
 
+    /**
+     * Method for generating a random box, for creating the main table.
+     *
+     * @return
+     */
+    public Box getRandomBox(int counterCasillasPrincipal) {
+        int randomNum = ThreadLocalRandom.current().nextInt(0, 4);
+        Box randomBox;
+        switch (randomNum) {
+            case 0:
+                randomBox = new GreenBox(counterCasillasPrincipal);
+                break;
+            case 1:
+                randomBox = new YellowBox(counterCasillasPrincipal);
+                break;
+            case 2:
+                randomBox = new RedBox(counterCasillasPrincipal);
+                break;
+            case 3:
+                randomBox = new WhiteBox(counterCasillasPrincipal);
+                break;
+            default:
+                //throw new IllegalStateException("Algo paso al generar la casilla, el random era: " + randomNum);
+                randomBox = new WhiteBox(counterCasillasPrincipal);
+        }
+        return randomBox;
+    }
+
     //Creating the main table
 
 
@@ -74,7 +104,7 @@ public class Table {
      */
     public void drawTable() throws Exception {
         this.canvas.getGraphicsContext2D().clearRect(0, 0, 1200, 1200);
-        if(isStar==false){
+        if (isStar == false) {
             Game.getInstance().generateStar();
             isStar=true;
         }
@@ -184,39 +214,16 @@ public class Table {
         }
     }
 
+    /**
+     * Draws all the players' avatar on the table.
+     *
+     * @throws Exception
+     */
     public void drawPlayers() throws Exception {
         SimpleLinkedList<Player> players = Game.getInstance().getPlayers();
         for (int i = 0; i < players.len(); i++) {
             players.accessNode(i).drawPlayer(canvas);
         }
-    }
-
-    /**
-     * Method for generating a random box, for creating the main table.
-     *
-     * @return
-     */
-    public Box getRandomBox(int counterCasillasPrincipal) {
-        int randomNum = ThreadLocalRandom.current().nextInt(0, 4);
-        Box randomBox;
-        switch (randomNum) {
-            case 0:
-                randomBox = new GreenBox(counterCasillasPrincipal);
-                break;
-            case 1:
-                randomBox = new YellowBox(counterCasillasPrincipal);
-                break;
-            case 2:
-                randomBox = new RedBox(counterCasillasPrincipal);
-                break;
-            case 3:
-                randomBox = new WhiteBox(counterCasillasPrincipal);
-                break;
-            default:
-                //throw new IllegalStateException("Algo paso al generar la casilla, el random era: " + randomNum);
-                randomBox = new WhiteBox(counterCasillasPrincipal);
-        }
-        return randomBox;
     }
 
     //Method for puttin together the phases and the main table.
