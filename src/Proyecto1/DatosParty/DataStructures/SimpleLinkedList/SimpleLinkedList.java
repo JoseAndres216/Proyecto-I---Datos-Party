@@ -84,4 +84,22 @@ public class SimpleLinkedList <T> implements MotherList<T> {
         stringBuilder.append(" ]");
         return stringBuilder.toString();
     }
+
+    public boolean is(T data) {
+        boolean is = false;
+        if (this.head == null) {
+            is = false;
+        }
+
+        SimpleNode<T> temp = this.head;
+        while (temp != null) {
+            if (temp.getData() == data) {
+                is = true;
+                break;
+            }
+            temp = temp.getNext();
+        }
+        return is;
+    }
+
 }

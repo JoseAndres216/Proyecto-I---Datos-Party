@@ -41,11 +41,11 @@ public class Player {
         this.minigamepoints = 0;
 
         //Ubication on the table
-        this.actualPhase = Table.getInstance().mainPhase;
-        this.actualList = Table.getInstance().mainPhase.phaseList;
+        this.actualPhase = Table.getInstance().phaseC;
+        this.actualList = Table.getInstance().phaseC.phaseList;
 
         this.mainListReference = Table.getInstance().mainPhase.phaseList; //should be the main table list.
-        this.actualBoxIndex = 0;
+        this.actualBoxIndex = 4;
 
         //Identification
         this.nickname = nickname;
@@ -204,9 +204,18 @@ public class Player {
         Phase faseRecorrida = this.actualPhase;
         int i = this.actualBoxIndex;
 
-
         if (!(faseRecorrida.isTable || faseRecorrida.isPhaseD())) {
-
+            //si la lista es de la fase c, es decir, es una lista doble.
+            if (faseRecorrida.toString() == "Phase C") {
+                int cantidadDetras = (actualBoxIndex);
+                if (cantidadDetras >= posicionesDisponibles) {
+                    if (!posibles.is(faseRecorrida.getPhaseListElement(actualBoxIndex - posicionesDisponibles))) {
+                        posibles.insertLast(faseRecorrida.getPhaseListElement(actualBoxIndex - posicionesDisponibles));
+                        faseRecorrida.getPhaseListElement(actualBoxIndex - posicionesDisponibles).highlight();
+                        faseRecorrida.getPhaseListElement(actualBoxIndex - posicionesDisponibles).highlight();
+                    }
+                }
+            }
             int cantidadPorDelante = ((faseRecorrida.phaseList.len() - 1) - actualBoxIndex);
             if (cantidadPorDelante >= posicionesDisponibles) {
                 if ((actualBoxIndex + posicionesDisponibles) > 9 || (actualBoxIndex + posicionesDisponibles) < 0) {
@@ -214,10 +223,11 @@ public class Player {
                     throw new IllegalArgumentException("Value Unespected: " + (actualBoxIndex + posicionesDisponibles));
 
                 }
-
-                posibles.insertLast(faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles));
-                faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles).highlight();
-                faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles).highlight();
+                if (!posibles.is(faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles))) {
+                    posibles.insertLast(faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles));
+                    faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles).highlight();
+                    faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles).highlight();
+                }
 
             } else {
 
@@ -249,9 +259,11 @@ public class Player {
                 } else {
                     //si la cantidad de casillas para avanzar el menor o igual a la de la fase, se agrega la casilla que se tiene, se sigue con el
                     //contador i para seguir recorriendo el main table.
-                    faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1).highlight();
-                    posibles.insertLast(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1));
-                    faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1);
+                    if (!posibles.is(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1))) {
+                        faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1).highlight();
+                        posibles.insertLast(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1));
+                        faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1);
+                    }
                 }
             }
             i++;
@@ -269,8 +281,11 @@ public class Player {
                 }
             }
         }
-        posibles.insertLast(faseRecorrida.getPhaselist().accessNode(i + 1));
-        faseRecorrida.getPhaselist().accessNode(i + 1).highlight();
+        if (!posibles.is(faseRecorrida.getPhaselist().accessNode(i + 1))) {
+            posibles.insertLast(faseRecorrida.getPhaselist().accessNode(i + 1));
+            faseRecorrida.getPhaselist().accessNode(i + 1).highlight();
+        }
+
         return posibles;
     }
 
@@ -290,7 +305,7 @@ public class Player {
     public SimpleLinkedList<Box> RollDices() throws Exception {
         int dices = ThreadLocalRandom.current().nextInt(4, 13);
         this.eventDisplay.setText(this.nickname + " got " + dices + " moves.");
-        SimpleLinkedList<Box> possibles = this.calcPossibleMoves(dices);
+        SimpleLinkedList<Box> possibles = this.calcPossibleMoves(2);
         return possibles;
     }
 

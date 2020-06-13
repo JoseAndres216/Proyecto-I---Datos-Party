@@ -9,7 +9,10 @@ public class PlayerTest {
     public void OnlyOnePossible() throws Exception {
 
         Player StuntMan = new Player(1, "StuntMan");
-        SimpleLinkedList<Box> got = StuntMan.calcPossibleMoves(15);
+        Game.getInstance().addPlayer(StuntMan);
+        StuntMan.MoveTo(Table.getInstance().phaseC, 5);
+        SimpleLinkedList<Box> got = StuntMan.calcPossibleMoves(1);
+        System.out.println(got);
 
 
     }
