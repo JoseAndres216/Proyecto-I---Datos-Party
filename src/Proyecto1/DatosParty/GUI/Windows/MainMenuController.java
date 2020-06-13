@@ -63,6 +63,7 @@ public class MainMenuController {
             Parent gameWindow = FXMLLoader.load(this.getClass().getResource("GameWindow.fxml"));
             Stage stage = (Stage) playButton.getScene().getWindow();
             stage.setScene(new Scene(gameWindow));
+
         }else{
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Hey!");

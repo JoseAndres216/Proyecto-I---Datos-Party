@@ -39,7 +39,7 @@
                         <ImageView fitHeight="74.0" fitWidth="74.0" mouseTransparent="true" onKeyPressed="#Rock1Pressed"
                                    pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Rock.png"/>
+                              <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Rock.png"/>
                            </image>
                            <viewport>
                               <Rectangle2D height="74.0" width="74.0"/>
@@ -54,7 +54,7 @@
                         <ImageView fitHeight="74.0" fitWidth="74.0" mouseTransparent="true" pickOnBounds="true"
                                    preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Paper.png"/>
+                              <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Paper.png"/>
                            </image>
                         </ImageView>
                      </graphic>
@@ -67,7 +67,7 @@
                         <ImageView fitHeight="74.0" fitWidth="74.0" mouseTransparent="true" pickOnBounds="true"
                                    preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Scissors.png"/>
+                              <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Scissors.png"/>
                            </image>
                         </ImageView>
                      </graphic>
@@ -103,7 +103,7 @@
                      <graphic>
                         <ImageView fitHeight="74.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Rock.png" />
+                              <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Rock.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -112,7 +112,7 @@
                      <graphic>
                         <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="205.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Paper.png" />
+                              <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Paper.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -122,7 +122,7 @@
                         <ImageView id="Scissors2" fitHeight="74.0" fitWidth="74.0" onKeyPressed="#Scissors2Pressed"
                                    pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Resources/images/Scissors.png"/>
+                              <Image url="@/Proyecto1/DatosParty/GUI/Resources/images/Scissors.png"/>
                            </image>
                         </ImageView>
                      </graphic>

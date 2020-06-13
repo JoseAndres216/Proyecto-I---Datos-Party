@@ -5,6 +5,8 @@ import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import Proyecto1.DatosParty.GUI.Inputs.IOManager;
 import Proyecto1.DatosParty.GUI.Windows.Minigames.*;
 import javafx.application.Application;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -208,8 +210,13 @@ public class Game extends Application {
     public void nextRound() throws Throwable {
         if (this.playedRounds == this.cantidadRondas) {
             this.updatePlayers();
-            System.out.println("Finished game");
-            System.out.println("Winner winner chicken dinner: " + OrderedPlayerList.getHead().getData().nickname);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("CONGRATS!");
+            alert.setHeaderText(this.OrderedPlayerList.accessNode(0).nickname + " smacked all players\n\nWinner winner chicken dinner!!");
+            alert.showAndWait().ifPresent(reply -> {
+                if (reply == ButtonType.OK) {
+                }
+            });
 
             Stage escena = (Stage) (this.getEventDisplay().getScene().getWindow());
             escena.close();
