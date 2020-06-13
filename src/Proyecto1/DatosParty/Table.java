@@ -71,6 +71,7 @@ public class Table {
      * @param canvas canvas for drawing the boxes
      */
     public void drawTable() throws Exception {
+
         if(isStar==false){
             Game.getInstance().generateStar();
             isStar=true;

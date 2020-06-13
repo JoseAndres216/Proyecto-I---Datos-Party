@@ -4,6 +4,7 @@ package Proyecto1.DatosParty.Boxes;
 import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 public class GreenBox extends Box {
@@ -20,7 +21,7 @@ public class GreenBox extends Box {
     }
 
     public GreenBox() {
-        this.tag = "white";
+        this.tag = "green";
     }
     /**
      * Constructor 2 of the class: For just instantiating the class.
@@ -36,6 +37,7 @@ public class GreenBox extends Box {
      */
     public void draw(int x, int y, Canvas canvas) {
 
+        super.draw(x, y, canvas);
         // Get the grapics context of the canvas
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
@@ -43,18 +45,19 @@ public class GreenBox extends Box {
         gc.setFill(Color.GREEN);
         gc.setStroke(Color.BLACK);
         //Draw the rectangle
-        gc.strokeRect(x, y, this.height, this.width);
-        gc.fillRect(x, y, this.height, this.width);
-        StringBuilder id = new StringBuilder();
-        id.append(this.excelId);
-        gc.setFill(Color.BLACK);
-        gc.fillText((id.toString()), 10, 150);
 
-        if(this.hasStar){
-            gc.setFill(Color.WHITE);
+        gc.fillRect(x, y, this.height, this.width);
+
+        if (this.isHilighted) {
             gc.setStroke(Color.WHITE);
-            gc.strokeOval(x+13,y+13,10, 10);
-            gc.setFill(Color.WHITE);
+            gc.setLineWidth(3);
+            gc.strokeRect(x, y, this.height, this.width);
+            this.isHilighted = false;
+        }
+
+        if (this.hasStar) {
+            Image star = new Image("Proyecto1/DatosParty/GUI/Resources/images/star.png");
+            gc.drawImage(star, x, y);
         }
     }
 

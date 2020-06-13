@@ -10,13 +10,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.concurrent.TimeUnit;
 
 public class Game extends Application {
     private static Game instance = null;
     private SimpleLinkedList<Player> players = new SimpleLinkedList<>();
     private Table gameTable;
-    private int cantidadRondas = 5;
+    private int cantidadRondas = 10;
     private int playedRounds = 1;
     private Label eventDisplay;
     private Label roundCounter;
@@ -25,6 +24,7 @@ public class Game extends Application {
     private Game() {
         this.gameTable = Table.getInstance();
         OrderedPlayerList = this.players;
+
     }
 
     public static SimpleLinkedList<Player> listWithnoPlayer(Player player) {
@@ -148,12 +148,13 @@ public class Game extends Application {
         StringBuilder toAdd = new StringBuilder();
         for (SimpleNode<Player> first = OrderedPlayerList.getHead(); first != null; first = first.getNext()) {
             toAdd.append(counter).append("- ").append(first.getData().nickname).append("\n");
+            counter++;
         }
         this.positions.setText(toAdd.toString());
     }
 
     public void nextRound() throws Throwable {
-        if (this.playedRounds == 1) {
+        if (this.playedRounds == this.cantidadRondas) {
             this.updatePlayers();
             System.out.println("Finished game");
             System.out.println("Winner winner chicken dinner: " + OrderedPlayerList.getHead().getData().nickname);
@@ -165,7 +166,7 @@ public class Game extends Application {
         }
         this.playedRounds++;
 
-        this.start(new Stage());
+        //this.start(new Stage());
     }
 
     @Override
@@ -203,23 +204,10 @@ public class Game extends Application {
 
     public void setRoundCounter(Label roundCounter) {
         this.roundCounter = roundCounter;
+        this.roundCounter.setText("1/" + this.cantidadRondas);
     }
 
     public void setPositionsTable(Label positions) {
         this.positions = positions;
     }
-
-
-    /*
-    public SimpleLinkedList<Player> listWithnoPlayer(Player player) throws IOException {
-        SimpleLinkedList<Player> list = Game.getInstance().getPlayers();
-        SimpleLinkedList<Player> newList = new SimpleLinkedList();
-        for (int i = 0; i < list.len(); i++) {
-            if(list.accessNode(i)!=player){
-                newList.insertLast(list.accessNode(i));
-            }
-        }
-        return newList;
-    }
-     */
 }

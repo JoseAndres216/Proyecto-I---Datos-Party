@@ -10,7 +10,6 @@ import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 public class GameWindowController {
@@ -32,7 +31,10 @@ public class GameWindowController {
     @FXML
     Label positions;
 
-    public void drawPhases(Event event) throws Exception {
+    public void pressedStart(Event event) throws Exception {
+        this.exitButton.setStyle("-fx-background-color: #16676c; ");
+        this.startButton.setVisible(false);
+
         Table.getInstance().setCanvas(canvas);
         Table.getInstance().drawTable();
         Table.getInstance().drawPlayers();
@@ -52,6 +54,8 @@ public class GameWindowController {
     }
 
     public void pressedExitbutton(Event event) throws Throwable {
-        Game.getInstance().nextRound();
+        Stage stage = (Stage) (this.exitButton.getScene().getWindow());
+        stage.close();
+        IOManager.getInstance().close();
     }
 }

@@ -5,6 +5,7 @@ import Proyecto1.DatosParty.Phase;
 import Proyecto1.DatosParty.Player;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 public class IntersectionBox extends Box {
@@ -47,29 +48,30 @@ public class IntersectionBox extends Box {
      * @param canvas canvas for drawing the boxes
      */
     public void draw(int x, int y, Canvas canvas) {
-
+        super.draw(x, y, canvas);
         // Get the grapics context of the canvas
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         //set the color
-        gc.setFill(Color.WHITE);
-
+        gc.setFill(Color.valueOf("#efefef"));
         gc.setStroke(Color.BLACK);
 
         //Draw the rectangle
-        gc.strokeRect(x, y, this.height, this.width);
+        //gc.strokeRect(x, y, this.height, this.width);
         gc.fillRect(x, y, this.height, this.width);
 
-        gc.setFill(Color.BLACK);
-        StringBuilder id = new StringBuilder();
-        id.append(this.excelId);
-        gc.fillText((id.toString()), 10, 150);
 
-        if(this.hasStar){
-            gc.setFill(Color.WHITE);
-            gc.setStroke(Color.BLACK);
-            gc.strokeOval(x+13,y+13,10, 10);
-            gc.setFill(Color.WHITE);
+        if (this.hasStar) {
+
+            Image star = new Image("Proyecto1/DatosParty/GUI/Resources/images/star.png");
+            gc.drawImage(star, x, y);
+        }
+        if (this.isHilighted) {
+            gc.setStroke(Color.WHITE);
+            gc.setLineWidth(3);
+
+            gc.strokeRect(x, y, this.height, this.width);
+            this.isHilighted = false;
         }
     }
 

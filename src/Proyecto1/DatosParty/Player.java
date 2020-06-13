@@ -6,7 +6,7 @@ import Proyecto1.DatosParty.DataStructures.SimpleLinkedList.SimpleLinkedList;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -26,7 +26,7 @@ public class Player {
     private int stars;
     private MotherList<Box> mainListReference; // list to move trough
     private Label eventDisplay;
-
+    private Image avatar;
 
     /**
      * Constructor of the class player
@@ -52,16 +52,19 @@ public class Player {
 
         switch (playerNumber) {
             case 1:
-                color = Color.DARKBLUE;
+                this.avatar = new Image("Proyecto1/DatosParty/GUI/Resources/images/p1.png");
+                color = Color.PURPLE;
                 break;
             case 2:
-                color = Color.DARKGREY;
+                this.avatar = new Image("Proyecto1/DatosParty/GUI/Resources/images/p2.png");
+                color = Color.ORANGE;
+
                 break;
             case 3:
-                color = Color.DARKRED;
+                this.avatar = new Image("Proyecto1/DatosParty/GUI/Resources/images/p3.png");
                 break;
             case 4:
-                color = Color.DARKGREEN;
+                this.avatar = new Image("Proyecto1/DatosParty/GUI/Resources/images/p4.png");
 
         }
     }
@@ -105,6 +108,7 @@ public class Player {
     public void MoveTo(Phase newPhase, int actualBox) {
         //eliminar el jugador de la casilla, para no dar conflicto con la verificacio de si hay o no dos
         this.actualPhase.getPhaselist().accessNode(this.actualBoxIndex).removePlayer();
+        System.out.println(this.toString() + " new pos( " + newPhase + ", " + actualBox + " )");
         this.actualPhase = newPhase;
         this.actualBoxIndex = actualBox;
 
@@ -217,6 +221,8 @@ public class Player {
                 }
 
                 posibles.insertLast(faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles));
+                faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles).highlight();
+                faseRecorrida.getPhaseListElement(actualBoxIndex + posicionesDisponibles).highlight();
 
             } else {
 
@@ -248,8 +254,9 @@ public class Player {
                 } else {
                     //si la cantidad de casillas para avanzar el menor o igual a la de la fase, se agrega la casilla que se tiene, se sigue con el
                     //contador i para seguir recorriendo el main table.
-
+                    faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1).highlight();
                     posibles.insertLast(faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1));
+                    faseRecorrida.getPhaseListElement(i).getPhase().getPhaselist().accessNode(posicionesDisponibles - 1);
                 }
             }
             i++;
@@ -268,6 +275,7 @@ public class Player {
             }
         }
         posibles.insertLast(faseRecorrida.getPhaselist().accessNode(i + 1));
+        faseRecorrida.getPhaselist().accessNode(i + 1).highlight();
         return posibles;
     }
 
@@ -285,9 +293,10 @@ public class Player {
      * @throws Exception
      */
     public SimpleLinkedList<Box> RollDices() throws Exception {
-        int dices = ThreadLocalRandom.current().nextInt(2, 13);
+        int dices = ThreadLocalRandom.current().nextInt(3, 13);
         this.eventDisplay.setText(this.nickname + " got " + dices + " moves.");
         SimpleLinkedList<Box> possibles = this.calcPossibleMoves(dices);
+        System.out.println(possibles);
         return possibles;
     }
 
@@ -309,9 +318,13 @@ public class Player {
         gc.setStroke(Color.BLACK);
 
         //Draw the figure
-        gc.fillOval((double) this.actualPhase.getPhaselist().accessNode(this.getActualBoxIndex()).getX(), (double) this.actualPhase.getPhaselist().accessNode(this.getActualBoxIndex()).getY(), 20, 20);
+        // gc.fillOval((double) this.actualPhase.getPhaselist().accessNode(this.getActualBoxIndex()).getX(), (double) this.actualPhase.getPhaselist().accessNode(this.getActualBoxIndex()).getY(), 20, 20);
+        gc.drawImage(this.avatar, this.actualPhase.phaseList.accessNode(this.actualBoxIndex).getX(), this.actualPhase.phaseList.accessNode(this.actualBoxIndex).getY());
     }
 
+    public Image getAvatar() {
+        return this.avatar;
+    }
 }
 
 
