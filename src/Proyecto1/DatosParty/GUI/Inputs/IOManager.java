@@ -64,10 +64,10 @@ public class IOManager extends Application {
         // Set the Size of the VBox
         root.setMinSize(150, 200);
         root.setMaxSize(150, 200);
-        root.setBackground(new Background(new BackgroundFill(Color.valueOf("#3aa5ab"), CornerRadii.EMPTY, Insets.EMPTY)));
+        root.setBackground(new Background(new BackgroundFill(Color.valueOf("#efefef"), CornerRadii.EMPTY, Insets.EMPTY)));
         stage.setResizable(false);
         // Set the Properties of the Stage
-        stage.setX(370);
+        stage.setX(490);
         stage.setY(200 + 20);
         stage.setMinHeight(300);
         stage.setMinWidth(400);
@@ -93,7 +93,7 @@ public class IOManager extends Application {
         //Create the Text and the players name.
 
         Text text = new Text("PLAYING: " + player.nickname.toUpperCase());
-        text.setFill(Color.WHITE);
+        text.setFill(Color.BLACK);
 
         text.setFont(font);
         text.setTextAlignment(TextAlignment.CENTER);

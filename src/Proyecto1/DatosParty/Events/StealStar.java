@@ -3,14 +3,7 @@ package Proyecto1.DatosParty.Events;
 import Proyecto1.DatosParty.Game;
 import Proyecto1.DatosParty.Player;
 
-import java.io.IOException;
-
 public class StealStar extends Event{
-
-    public StealStar() {
-        this.tag = "Steal star";
-    }
-
     /**
      * Method to start the event
      *

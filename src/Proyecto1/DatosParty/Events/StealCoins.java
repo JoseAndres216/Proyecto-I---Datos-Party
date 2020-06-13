@@ -12,12 +12,6 @@ public class StealCoins extends Event {
         this.tag = "Steal coins";
     }
 
-    private int generateRandomInt() {
-        int max = 10;
-        int min = 2;
-        return ThreadLocalRandom.current().nextInt(min, max + 1);
-    }
-
     /**
      * Method for stealing coins to a random player
      *

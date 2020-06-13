@@ -55,47 +55,6 @@ public class CircularDoubleList<T> implements MotherList<T> {
         }
     }
 
-
-    public int searchPosition(T data) {
-        DoubleNode<T> temp = this.head;
-        int position = 1;
-        if (temp.getData().equals(data)) {
-            return position;
-        } else {
-            temp = temp.getNext();
-            position++;
-        }
-        while (temp != this.head) {
-            if (temp.getData().equals(data)) {
-                return position;
-            } else {
-                temp = temp.getNext();
-                position++;
-            }
-        }
-        return -1;
-    }
-
-    public void deleteFirstnode() {
-        DoubleNode<T> temp = this.head;
-        while (temp.getNext() != this.head) {
-            temp = temp.getNext();
-        }
-        temp.setNext(temp.getNext().getNext());
-        this.head = temp.getNext();
-        this.head.setPrev(temp);
-
-    }
-
-    public void deleteLastNode() {
-        DoubleNode<T> temp = this.head;
-        while (temp.getNext().getNext() != this.head) {
-            temp = temp.getNext();
-        }
-        temp.setNext(this.head);
-        this.head.setPrev(temp);
-    }
-
     public T accessNode(int index) throws IllegalArgumentException {
         if (index < 0 || index >= this.extension) {
             throw new IllegalArgumentException("Index out of range, given: " + index + " max: " + (this.len() - 1));
